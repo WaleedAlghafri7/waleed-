@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #121212;
+            color: #fff;
+        }
+        .slide-content{
+            display: none;
+        }
+        .slide{
+            display: none;
+        }
+
+        .content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .profile-container {
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .profile-content {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .profile-section {
+            background: #2d2d2d;
+            border-radius: 10px;
+            padding: 1.5rem;
+            height: fit-content;
+        }
+
+        .profile-section h2 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #404040;
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #b3b3b3;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #404040;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #1e1e1e;
+            color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #666;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.1);
+        }
+
+        .save-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .save-btn:hover {
+            background: #404040;
+        }
+
+        .preferences {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .preference-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #b3b3b3;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #404040;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #666;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        @media (max-width: 1200px) {
+            .profile-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header section remains unchanged -->
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h1>Profile</h1>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h2>Personal Information</h2>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname" value="User Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" value="user@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Change Password</h2>
+                        <form class="password-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" name="confirm-password">
+                            </div>
+                            <button type="submit" class="save-btn">Change Password</button>
+                        </form>
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Preferences</h2>
+                        <div class="preferences">
+                            <div class="preference-item">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Receive notifications for new content</span>
+                            </div>
+                            <div class="preference-item">
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Receive email notifications</span>
+                            </div>
+                            <div class="preference-item">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                                <span>Dark Mode</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

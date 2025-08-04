@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="notifications-container">
+                <div class="notifications-header">
+                    <h1>Notifications</h1>
+                    <div class="notifications-actions">
+                        <button class="mark-all-read">Mark All as Read</button>
+                        <button class="clear-all">Clear All</button>
+                    </div>
+                </div>
+                <div class="notifications-list">
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h3>New Movie</h3>
+                            <p>Movie "Movie Title" has been added to the library</p>
+                            <span class="notification-time">5 minutes ago</span>
+                        </div>
+                        <button class="mark-read">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h3>New Episode</h3>
+                            <p>A new episode of "Series Title" is now available</p>
+                            <span class="notification-time">1 hour ago</span>
+                        </div>
+                        <button class="mark-read">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h3>Rating Update</h3>
+                            <p>Your rating for "Movie Title" has been updated</p>
+                            <span class="notification-time">2 days ago</span>
+                        </div>
+                        <button class="mark-read">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h3>Reminder</h3>
+                            <p>Don't forget to watch the new episode of your favorite series</p>
+                            <span class="notification-time">3 days ago</span>
+                        </div>
+                        <button class="mark-read">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="notifications.js"></script>
+</body>
+</html> 

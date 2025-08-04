@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="auth-container">
+                <div class="auth-box">
+                    <div class="auth-header">
+                        <h1>Login</h1>
+                        <p>Welcome back! Please login to your account.</p>
+                    </div>
+                    <form id="login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                Remember me
+                            </label>
+                            <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="auth-button">Login</button>
+                    </form>
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="register.html">Create Account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 

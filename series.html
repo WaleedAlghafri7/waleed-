@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series - CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // تهيئة البحث
+            function initializeSearch() {
+                const searchIcon = document.querySelector('.search-icon');
+                const searchInput = document.querySelector('.search input');
+                const searchContainer = document.querySelector('.search-input-container');
+
+                // Toggle search input
+                searchIcon.addEventListener('click', () => {
+                    searchIcon.classList.toggle('active');
+                    searchInput.classList.toggle('active');
+                    if (searchInput.classList.contains('active')) {
+                        searchInput.focus();
+                    }
+                });
+
+                // Handle search
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const searchQuery = searchInput.value.trim();
+                        if (searchQuery) {
+                            window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
+                        }
+                    }
+                });
+
+                // Close search when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
+                        searchIcon.classList.remove('active');
+                        searchInput.classList.remove('active');
+                    }
+                });
+            }
+
+            // تهيئة قائمة المستخدم
+            function initializeUserMenu() {
+                const userIcon = document.querySelector('.user-icon');
+                const userDropdown = document.querySelector('.user-dropdown');
+                const menuButton = document.querySelector('.list-siting-button');
+                const menuItems = document.querySelector('.list-siting-item');
+
+                userIcon.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    userDropdown.classList.toggle('active');
+                    menuItems.classList.remove('active');
+                    menuButton.classList.remove('active');
+                });
+
+                menuButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menuItems.classList.toggle('active');
+                    menuButton.classList.toggle('active');
+                    userDropdown.classList.remove('active');
+                });
+
+                userDropdown.addEventListener('click', (e) => {
+                    e.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
+                });
+
+                menuItems.addEventListener('click', (e) => {
+                    e.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
+                });
+
+                document.addEventListener('click', () => {
+                    userDropdown.classList.remove('active');
+                    menuItems.classList.remove('active');
+                    menuButton.classList.remove('active');
+                });
+
+                // إغلاق القوائم عند الضغط على ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        userDropdown.classList.remove('active');
+                        menuItems.classList.remove('active');
+                        menuButton.classList.remove('active');
+                    }
+                });
+            }
+
+            // تحديث تهيئة الصفحة
+            document.addEventListener('DOMContentLoaded', () => {
+                initializeSearch();
+                initializeUserMenu();
+            }); 
+        </script>
+
+        <!-- Series Content -->
+        <div class="content">
+            <div class="series-page">
+                <div class="filters-section">
+                    <div class="filter-group">
+                        <h3>Genre</h3>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Action">Action</button>
+                            <button class="filter-btn" data-filter="Drama">Drama</button>
+                            <button class="filter-btn" data-filter="Comedy">Comedy</button>
+                            <button class="filter-btn" data-filter="Crime">Crime</button>
+                            <button class="filter-btn" data-filter="Documentary">Documentary</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Status</h3>
+                        <div class="filter-options">
+                            <button class="status-btn active" data-status="all">All</button>
+                            <button class="status-btn" data-status="ongoing">Ongoing</button>
+                            <button class="status-btn" data-status="completed">Completed</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h3>Sort By</h3>
+                        <select id="sort-select" class="sort-select">
+                            <option value="rating-desc">Rating (High to Low)</option>
+                            <option value="rating-asc">Rating (Low to High)</option>
+                            <option value="year-desc">Year (Newest)</option>
+                            <option value="year-asc">Year (Oldest)</option>
+                            <option value="title-asc">Title (A-Z)</option>
+                            <option value="title-desc">Title (Z-A)</option>
+                            <option value="episodes-desc">Episodes (Most)</option>
+                            <option value="episodes-asc">Episodes (Least)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="series-grid">
+                    <!-- Series will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div id="footer-container"></div>
+    </div>
+
+    <script>
+        // جلب الهيدر والفوتر
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Load and display series
+        async function loadSeries() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                let series = data.series;
+
+                // Apply genre filter
+                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                if (activeFilter !== 'all') {
+                    series = series.filter(show => 
+                        show.genre.toLowerCase().includes(activeFilter.toLowerCase())
+                    );
+                }
+
+                // Apply status filter
+                const activeStatus = document.querySelector('.status-btn.active').dataset.status;
+                if (activeStatus !== 'all') {
+                    series = series.filter(show => show.status === activeStatus);
+                }
+
+                // Apply sorting
+                const sortValue = document.getElementById('sort-select').value;
+                series.sort((a, b) => {
+                    switch(sortValue) {
+                        case 'rating-desc':
+                            return (b.rating === '--' ? 0 : parseFloat(b.rating)) - (a.rating === '--' ? 0 : parseFloat(a.rating));
+                        case 'rating-asc':
+                            return (a.rating === '--' ? 0 : parseFloat(a.rating)) - (b.rating === '--' ? 0 : parseFloat(b.rating));
+                        case 'year-desc':
+                            return b.year - a.year;
+                        case 'year-asc':
+                            return a.year - b.year;
+                        case 'title-asc':
+                            return a.title.localeCompare(b.title);
+                        case 'title-desc':
+                            return b.title.localeCompare(a.title);
+                        case 'episodes-desc':
+                            return b.episodes - a.episodes;
+                        case 'episodes-asc':
+                            return a.episodes - b.episodes;
+                        default:
+                            return 0;
+                    }
+                });
+
+                displaySeries(series);
+            } catch (error) {
+                console.error('Error loading series:', error);
+            }
+        }
+
+        function displaySeries(series) {
+            const seriesGrid = document.querySelector('.series-grid');
+            seriesGrid.innerHTML = '';
+
+            if (series.length === 0) {
+                seriesGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-tv" style="font-size: 48px; margin-bottom: 20px;"></i>
+                        <p>No series found</p>
+                        <p style="color: rgba(255, 255, 255, 0.5); margin-top: 10px;">Try different filters</p>
+                    </div>`;
+                return;
+            }
+
+            series.forEach(show => {
+                const card = document.createElement('div');
+                card.className = 'series-card';
+                card.onclick = () => window.location.href = `content.html?id=${show.id}&type=series`;
+
+                card.innerHTML = `
+                    <div class="status-indicator ${show.status}">
+                        <i class="fas ${show.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
+                    </div>
+                    <img src="${show.image}" alt="${show.title}">
+                    <div class="series-info">
+                        <h3>${show.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${show.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${show.year ? show.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                seriesGrid.appendChild(card);
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSeries();
+
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    loadSeries();
+                });
+            });
+
+            // Status filter functionality
+            const statusButtons = document.querySelectorAll('.status-btn');
+            statusButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    statusButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    loadSeries();
+                });
+            });
+
+            // Sort functionality
+            document.getElementById('sort-select').addEventListener('change', loadSeries);
+
+            // Search functionality
+            const searchInput = document.querySelector('.search input');
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

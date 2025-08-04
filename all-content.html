@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Content - CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="all-content">
+                <div class="section-header">
+                    <h2>All Content</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="movies">Movies</button>
+                        <button class="filter-btn" data-filter="series">Series</button>
+                        <select class="sort-select">
+                            <option value="latest">Latest</option>
+                            <option value="rating">Rating</option>
+                            <option value="popularity">Popularity</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="content-grid">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+            <div id="footer-container"></div>
+        </div>
+    </div>
+    <script>
+        // تهيئة البحث
+        function initializeSearch() {
+            const searchIcon = document.querySelector('.search-icon');
+            const searchInput = document.querySelector('.search input');
+            const searchContainer = document.querySelector('.search-input-container');
+
+            searchIcon.addEventListener('click', () => {
+                searchIcon.classList.toggle('active');
+                searchInput.classList.toggle('active');
+                if (searchInput.classList.contains('active')) {
+                    searchInput.focus();
+                }
+            });
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const searchQuery = searchInput.value.trim();
+                    if (searchQuery) {
+                        window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
+                    }
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
+                    searchIcon.classList.remove('active');
+                    searchInput.classList.remove('active');
+                }
+            });
+        }
+
+        // تهيئة قائمة المستخدم
+        function initializeUserMenu() {
+            const userIcon = document.querySelector('.user-icon');
+            const userDropdown = document.querySelector('.user-dropdown');
+            const menuButton = document.querySelector('.list-siting-button');
+            const menuItems = document.querySelector('.list-siting-item');
+
+            userIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                userDropdown.classList.toggle('active');
+                menuItems.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+
+            menuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuItems.classList.toggle('active');
+                menuButton.classList.toggle('active');
+                userDropdown.classList.remove('active');
+            });
+
+            userDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            menuItems.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            document.addEventListener('click', () => {
+                userDropdown.classList.remove('active');
+                menuItems.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    userDropdown.classList.remove('active');
+                    menuItems.classList.remove('active');
+                    menuButton.classList.remove('active');
+                }
+            });
+        }
+
+        // تحميل وعرض المحتوى
+        async function loadContent() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                
+                let allContent = [...data.movies, ...data.series];
+                
+                // تطبيق الفلتر النشط
+                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                if (activeFilter !== 'all') {
+                    allContent = allContent.filter(item => 
+                        activeFilter === 'movies' ? !item.seasons : item.seasons
+                    );
+                }
+
+                // تطبيق الترتيب
+                const sortValue = document.querySelector('.sort-select').value;
+                switch (sortValue) {
+                    case 'rating':
+                        allContent.sort((a, b) => b.rating - a.rating);
+                        break;
+                    case 'popularity':
+                        allContent.sort((a, b) => b.popularity - a.popularity);
+                        break;
+                    default: // latest
+                        allContent.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+                }
+
+                displayContent(allContent);
+            } catch (error) {
+                console.error('Error loading content:', error);
+            }
+        }
+
+        function displayContent(content) {
+            const contentGrid = document.querySelector('.content-grid');
+            contentGrid.innerHTML = '';
+
+            if (content.length === 0) {
+                contentGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-film" style="font-size: 48px; margin-bottom: 20px;"></i>
+                        <p>No content found</p>
+                        <p style="color: rgba(255, 255, 255, 0.5); margin-top: 10px;">Try different filters</p>
+                    </div>`;
+                return;
+            }
+
+            content.forEach(item => {
+                const card = document.createElement('div');
+                card.className = item.seasons ? 'series-card' : 'movie-card';
+                card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}`;
+                
+                card.innerHTML = `
+                    ${item.seasons ? `
+                        <div class="status-indicator ${item.status}">
+                            <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
+                        </div>
+                    ` : ''}
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="series-info">
+                        <h3>${item.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${item.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${item.year ? item.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                contentGrid.appendChild(card);
+            });
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeSearch();
+            initializeUserMenu();
+            loadContent();
+
+            // إضافة مستمعي الأحداث للفلترة والترتيب
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    loadContent();
+                });
+            });
+
+            const sortSelect = document.querySelector('.sort-select');
+            sortSelect.addEventListener('change', loadContent);
+        });
+    </script>
+</body>
+</html> 

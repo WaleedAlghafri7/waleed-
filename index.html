@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="search">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" placeholder="Search for movies or series...">
+                </div>
+            </div>
+            <div class="name-wab">
+                <p>CineStream</p>
+            </div>
+            <div class="user-list">
+                <div class="list-siting">
+                    <button class="list-siting-button">
+                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="list-siting-item">
+                        <button onclick="window.location.href='index.html'" class="active">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </button>
+                        <button onclick="window.location.href='movies.html'">
+                            <i class="fas fa-film"></i>
+                            Movies
+                        </button>
+                        <button onclick="window.location.href='series.html'">
+                            <i class="fas fa-tv"></i>
+                            Series
+                        </button>
+                        <button onclick="window.location.href='all-content.html'">
+                            <i class="fas fa-th-large"></i>
+                            All Content
+                        </button>
+                    </div>
+                </div>
+                <!-- Auth Buttons -->
+                
+                <div class="user-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h4 id="user-name">User Name</h4>
+                            <p id="user-email">user@email.com</p>
+                        </div>
+                    </div>
+                    <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                            <a href="register.html" class="btn btn-register">
+                                <i class="fas fa-user-plus"></i>
+                                Register
+                            </a>
+                        </div>
+                        <button onclick="window.location.href='profile.html'">
+                            <i class="fa-solid fa-user-gear"></i>
+                            Profile Settings
+                        </button>
+                        <button onclick="window.location.href='notifications.html'">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button onclick="window.location.href='settings.html'">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </button>
+                        <button class="logout-btn">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="slider-container">
+                <div class="slider"> 
+                    <!-- This section will be filled dynamically from data.json -->
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Latest Movies</h2>
+                    <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="movies-grid">
+                    <!-- This section will be filled dynamically from data.json -->
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Most Popular Movies</h2>
+                    <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="movies-grid popular-movies-grid">
+                    <!-- This section will be filled dynamically from data.json -->
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Latest TV Series</h2>
+                    <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="series-grid">
+                    <!-- This section will be filled dynamically from data.json -->
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Most Popular Series</h2>
+                    <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="series-grid popular-series-grid">
+                    <!-- This section will be filled dynamically from data.json -->
+                </div>
+            </div>
+        </div>
+        <div id="footer-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script type="module">
+        import DataManager from './dataManager.js';
+        import Slider from './slider.js';
+
+        const dataManager = new DataManager();
+        let slider;
+
+        // Load and display data
+        async function loadContent() {
+            try {
+                await dataManager.loadData();
+                
+                // Display latest movies (sorted by ID descending)
+                const latestMovies = dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 8);
+                displayMovies(latestMovies, '.movies-grid');
+
+                // Display most popular movies (sorted by rating descending)
+                const popularMovies = dataManager.sortMovies(dataManager.movies, 'rating-desc').slice(0, 8);
+                displayMovies(popularMovies, '.popular-movies-grid');
+
+                // Display latest series (sorted by ID descending)
+                const latestSeries = dataManager.sortSeries(dataManager.series, 'year-desc').slice(0, 8);
+                displaySeries(latestSeries, '.series-grid');
+
+                // Display most popular series (sorted by rating descending)
+                const popularSeries = dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 8);
+                displaySeries(popularSeries, '.popular-series-grid');
+
+                // Initialize slider
+                initializeSlider();
+            } catch (error) {
+                console.error('Error loading content:', error);
+            }
+        }
+
+        // Display movies
+        function displayMovies(movies, containerSelector) {
+            const moviesGrid = document.querySelector(containerSelector);
+            moviesGrid.innerHTML = '';
+
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                card.onclick = () => window.location.href = `content.html?id=${movie.id}&type=movie`;
+
+                // Only show: image, title, rating, year
+                card.innerHTML = `
+                    <img src="${movie.image}" alt="${movie.title}">
+                    <div class="movie-info">
+                        <h3>${movie.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${movie.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${movie.year ? movie.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                moviesGrid.appendChild(card);
+            });
+        }
+
+        // Display series
+        function displaySeries(series, containerSelector) {
+            const seriesGrid = document.querySelector(containerSelector);
+            seriesGrid.innerHTML = '';
+
+            series.forEach(show => {
+                const card = document.createElement('div');
+                card.className = 'series-card';
+                card.onclick = () => window.location.href = `content.html?id=${show.id}&type=series`;
+                
+                // Only show: image, title, rating, year
+                card.innerHTML = `
+                    <img src="${show.image}" alt="${show.title}">
+                    <div class="series-info">
+                        <h3>${show.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${show.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${show.year ? show.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                seriesGrid.appendChild(card);
+            });
+        }
+
+        // Initialize slider
+        function initializeSlider() {
+            const sliderContainer = document.querySelector('.slider-container');
+            const slides = [...dataManager.movies, ...dataManager.series]
+                .sort((a, b) => b.id - a.id)
+                .slice(0, 6); // Show only 6 slides
+
+            // Create new slider instance
+            slider = new Slider(sliderContainer, {
+                autoplay: true,
+                autoplaySpeed: 5000, // 5 seconds per slide
+                transitionSpeed: 800, // Transition speed between slides
+                showDots: true,
+                showArrows: true,
+                loop: true, // Enable continuous loop
+                onSlideClick: (slide) => {
+                    // Navigate to content page when slide is clicked
+                    const contentType = slide.seasons ? 'series' : 'movie';
+                    window.location.href = `content.html?id=${slide.id}&type=${contentType}`;
+                }
+            });
+
+            // Update slider with items
+            slider.updateSlides(slides);
+        }
+
+        // Load header and footer
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
+</body>
+
+</html>
