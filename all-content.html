@@ -106,10 +106,16 @@
                         <button class="filter-btn active" data-filter="all">All</button>
                         <button class="filter-btn" data-filter="movies">Movies</button>
                         <button class="filter-btn" data-filter="series">Series</button>
+                        <select class="genre-select">
+                            <option value="all">All Genres</option>
+                        </select>
                         <select class="sort-select">
                             <option value="latest">Latest</option>
                             <option value="rating">Rating</option>
                             <option value="popularity">Popularity</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="az">A-Z</option>
+                            <option value="za">Z-A</option>
                         </select>
                     </div>
                 </div>
@@ -117,8 +123,8 @@
                     <!-- Content will be populated by JavaScript -->
                 </div>
             </div>
-            <div id="footer-container"></div>
         </div>
+        <div id="footer-container"></div>
     </div>
     <script>
         // تهيئة البحث
@@ -196,15 +202,52 @@
             });
         }
 
+        // استخراج جميع الأنواع من البيانات
+        function extractGenres(data) {
+            const genresSet = new Set();
+            const addGenres = (arr) => {
+                arr.forEach(item => {
+                    if (item.genre) {
+                        if (Array.isArray(item.genre)) {
+                            item.genre.forEach(g => genresSet.add(g.trim()));
+                        } else if (typeof item.genre === 'string') {
+                            item.genre.split(',').forEach(g => genresSet.add(g.trim()));
+                        }
+                    }
+                });
+            };
+            addGenres(data.movies || []);
+            addGenres(data.series || []);
+            return Array.from(genresSet).filter(g => g && g.toLowerCase() !== 'unknown').sort();
+        }
+
         // تحميل وعرض المحتوى
+        let globalData = null;
+        let genresPopulated = false;
+
         async function loadContent() {
             try {
-                const response = await fetch('data.json');
-                const data = await response.json();
-                
+                if (!globalData) {
+                    const response = await fetch('data.json');
+                    globalData = await response.json();
+                }
+                const data = globalData;
                 let allContent = [...data.movies, ...data.series];
-                
-                // تطبيق الفلتر النشط
+
+                // Populate genres dropdown once
+                if (!genresPopulated) {
+                    const genres = extractGenres(data);
+                    const genreSelect = document.querySelector('.genre-select');
+                    genres.forEach(genre => {
+                        const opt = document.createElement('option');
+                        opt.value = genre;
+                        opt.textContent = genre;
+                        genreSelect.appendChild(opt);
+                    });
+                    genresPopulated = true;
+                }
+
+                // تطبيق الفلتر النشط (Movies/Series)
                 const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
                 if (activeFilter !== 'all') {
                     allContent = allContent.filter(item => 
@@ -212,17 +255,76 @@
                     );
                 }
 
-                // تطبيق الترتيب
+                // فلترة حسب النوع
+                const genreValue = document.querySelector('.genre-select').value;
+                if (genreValue && genreValue !== 'all') {
+                    allContent = allContent.filter(item => {
+                        if (!item.genre) return false;
+                        if (Array.isArray(item.genre)) {
+                            return item.genre.map(g => g.trim().toLowerCase()).includes(genreValue.toLowerCase());
+                        } else if (typeof item.genre === 'string') {
+                            return item.genre.split(',').map(g => g.trim().toLowerCase()).includes(genreValue.toLowerCase());
+                        }
+                        return false;
+                    });
+                }
+
+                // تطبيق الترتيب (تم التعديل هنا)
                 const sortValue = document.querySelector('.sort-select').value;
                 switch (sortValue) {
                     case 'rating':
-                        allContent.sort((a, b) => b.rating - a.rating);
+                        allContent.sort((a, b) => {
+                            const ra = typeof a.rating === 'number' ? a.rating : parseFloat(a.rating) || 0;
+                            const rb = typeof b.rating === 'number' ? b.rating : parseFloat(b.rating) || 0;
+                            return rb - ra;
+                        });
                         break;
                     case 'popularity':
-                        allContent.sort((a, b) => b.popularity - a.popularity);
+                        allContent.sort((a, b) => {
+                            const pa = typeof a.popularity === 'number' ? a.popularity : parseFloat(a.popularity) || 0;
+                            const pb = typeof b.popularity === 'number' ? b.popularity : parseFloat(b.popularity) || 0;
+                            return pb - pa;
+                        });
+                        break;
+                    case 'oldest':
+                        allContent.sort((a, b) => {
+                            const getDate = (item) => {
+                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.releaseDate) return new Date(item.releaseDate);
+                                if (item.addedDate) return new Date(item.addedDate);
+                                return new Date(0);
+                            };
+                            return getDate(a) - getDate(b);
+                        });
+                        break;
+                    case 'az':
+                        allContent.sort((a, b) => {
+                            const ta = (a.title || '').toLowerCase();
+                            const tb = (b.title || '').toLowerCase();
+                            if (ta < tb) return -1;
+                            if (ta > tb) return 1;
+                            return 0;
+                        });
+                        break;
+                    case 'za':
+                        allContent.sort((a, b) => {
+                            const ta = (a.title || '').toLowerCase();
+                            const tb = (b.title || '').toLowerCase();
+                            if (ta > tb) return -1;
+                            if (ta < tb) return 1;
+                            return 0;
+                        });
                         break;
                     default: // latest
-                        allContent.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+                        allContent.sort((a, b) => {
+                            const getDate = (item) => {
+                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.releaseDate) return new Date(item.releaseDate);
+                                if (item.addedDate) return new Date(item.addedDate);
+                                return new Date(0);
+                            };
+                            return getDate(b) - getDate(a);
+                        });
                 }
 
                 displayContent(allContent);
@@ -293,6 +395,24 @@
 
             const sortSelect = document.querySelector('.sort-select');
             sortSelect.addEventListener('change', loadContent);
+
+            const genreSelect = document.querySelector('.genre-select');
+            genreSelect.addEventListener('change', loadContent);
+            // Load header and footer
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
         });
     </script>
 </body>

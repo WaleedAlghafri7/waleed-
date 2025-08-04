@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies - CineStream</title>
+    <title>All Content - CineStream</title>
     <link rel="icon" type="image/png" href="CineStream web.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <!-- Header -->
@@ -100,130 +96,309 @@
                 </div>
             </div>
         </div>
-        <script>
-            // تهيئة البحث
-            function initializeSearch() {
-                const searchIcon = document.querySelector('.search-icon');
-                const searchInput = document.querySelector('.search input');
-                const searchContainer = document.querySelector('.search-input-container');
 
-                // Toggle search input
-                searchIcon.addEventListener('click', () => {
-                    searchIcon.classList.toggle('active');
-                    searchInput.classList.toggle('active');
-                    if (searchInput.classList.contains('active')) {
-                        searchInput.focus();
-                    }
-                });
-
-                // Handle search
-                searchInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        const searchQuery = searchInput.value.trim();
-                        if (searchQuery) {
-                            window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
-                        }
-                    }
-                });
-
-                // Close search when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
-                        searchIcon.classList.remove('active');
-                        searchInput.classList.remove('active');
-                    }
-                });
-            }
-
-            // تهيئة قائمة المستخدم
-            function initializeUserMenu() {
-                const userIcon = document.querySelector('.user-icon');
-                const userDropdown = document.querySelector('.user-dropdown');
-                const menuButton = document.querySelector('.list-siting-button');
-                const menuItems = document.querySelector('.list-siting-item');
-
-                userIcon.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    userDropdown.classList.toggle('active');
-                    menuItems.classList.remove('active');
-                    menuButton.classList.remove('active');
-                });
-
-                menuButton.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    menuItems.classList.toggle('active');
-                    menuButton.classList.toggle('active');
-                    userDropdown.classList.remove('active');
-                });
-
-                userDropdown.addEventListener('click', (e) => {
-                    e.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
-                });
-
-                menuItems.addEventListener('click', (e) => {
-                    e.stopPropagation(); // منع إغلاق القائمة عند النقر داخلها
-                });
-
-                document.addEventListener('click', () => {
-                    userDropdown.classList.remove('active');
-                    menuItems.classList.remove('active');
-                    menuButton.classList.remove('active');
-                });
-
-                // إغلاق القوائم عند الضغط على ESC
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        userDropdown.classList.remove('active');
-                        menuItems.classList.remove('active');
-                        menuButton.classList.remove('active');
-                    }
-                });
-            }
-
-            // تحديث تهيئة الصفحة
-            document.addEventListener('DOMContentLoaded', () => {
-                initializeSearch();
-                initializeUserMenu();
-            }); 
-        </script>
-
-        <!-- Movies Content -->
+        <!-- Content -->
         <div class="content">
-            <div class="movies-page">
-                <div class="filters-section">
-                    <div class="filter-group">
-                        <h3>Genre</h3>
-                        <div class="filter-options">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="Action">Action</button>
-                            <button class="filter-btn" data-filter="Comedy">Comedy</button>
-                            <button class="filter-btn" data-filter="Drama">Drama</button>
-                            <button class="filter-btn" data-filter="Horror">Horror</button>
-                            <button class="filter-btn" data-filter="Romance">Romance</button>
-                        </div>
-                    </div>
-                    <div class="filter-group">
-                        <h3>Sort By</h3>
-                        <select id="sort-select" class="sort-select">
-                            <option value="rating-desc">Rating (High to Low)</option>
-                            <option value="rating-asc">Rating (Low to High)</option>
-                            <option value="year-desc">Year (Newest)</option>
-                            <option value="year-asc">Year (Oldest)</option>
-                            <option value="title-asc">Title (A-Z)</option>
-                            <option value="title-desc">Title (Z-A)</option>
+            <div class="all-content">
+                <div class="section-header">
+                    <h2>All Movies</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all" style="display:none;">All</button>
+                        <button class="filter-btn" data-filter="movies" style="display:none;">Movies</button>
+                        <button class="filter-btn" data-filter="series" style="display:none;">Series</button>
+                        <select class="genre-select">
+                            <option value="all">All Genres</option>
+                        </select>
+                        <select class="sort-select">
+                            <option value="latest">Latest</option>
+                            <option value="rating">Rating</option>
+                            <option value="popularity">Popularity</option>
+                            <option value="oldest">Oldest</option>
+                            <option value="az">A-Z</option>
+                            <option value="za">Z-A</option>
                         </select>
                     </div>
                 </div>
-                <div class="movies-grid">
-                    <!-- Movies will be populated by JavaScript -->
+                <div class="content-grid">
+                    <!-- Content will be populated by JavaScript -->
                 </div>
             </div>
         </div>
+        <div id="footer-container"></div>
     </div>
-    <div id="footer-container"></div>
-
     <script>
-        // جلب الهيدر والفوتر
+        // تهيئة البحث
+        function initializeSearch() {
+            const searchIcon = document.querySelector('.search-icon');
+            const searchInput = document.querySelector('.search input');
+            const searchContainer = document.querySelector('.search-input-container');
+
+            searchIcon.addEventListener('click', () => {
+                searchIcon.classList.toggle('active');
+                searchInput.classList.toggle('active');
+                if (searchInput.classList.contains('active')) {
+                    searchInput.focus();
+                }
+            });
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const searchQuery = searchInput.value.trim();
+                    if (searchQuery) {
+                        window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
+                    }
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
+                    searchIcon.classList.remove('active');
+                    searchInput.classList.remove('active');
+                }
+            });
+        }
+
+        // تهيئة قائمة المستخدم
+        function initializeUserMenu() {
+            const userIcon = document.querySelector('.user-icon');
+            const userDropdown = document.querySelector('.user-dropdown');
+            const menuButton = document.querySelector('.list-siting-button');
+            const menuItems = document.querySelector('.list-siting-item');
+
+            userIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                userDropdown.classList.toggle('active');
+                menuItems.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+
+            menuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menuItems.classList.toggle('active');
+                menuButton.classList.toggle('active');
+                userDropdown.classList.remove('active');
+            });
+
+            userDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            menuItems.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            document.addEventListener('click', () => {
+                userDropdown.classList.remove('active');
+                menuItems.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    userDropdown.classList.remove('active');
+                    menuItems.classList.remove('active');
+                    menuButton.classList.remove('active');
+                }
+            });
+        }
+
+        // استخراج جميع الأنواع من البيانات
+        function extractGenres(data) {
+            const genresSet = new Set();
+            const addGenres = (arr) => {
+                arr.forEach(item => {
+                    if (item.genre) {
+                        if (Array.isArray(item.genre)) {
+                            item.genre.forEach(g => genresSet.add(g.trim()));
+                        } else if (typeof item.genre === 'string') {
+                            item.genre.split(',').forEach(g => genresSet.add(g.trim()));
+                        }
+                    }
+                });
+            };
+            addGenres(data.movies || []);
+            addGenres(data.series || []);
+            return Array.from(genresSet).filter(g => g && g.toLowerCase() !== 'unknown').sort();
+        }
+
+        // تحميل وعرض المحتوى
+        let globalData = null;
+        let genresPopulated = false;
+
+        async function loadContent() {
+            try {
+                if (!globalData) {
+                    const response = await fetch('data.json');
+                    globalData = await response.json();
+                }
+                const data = globalData;
+                let allContent = [...data.movies];
+
+                // Populate genres dropdown once
+                if (!genresPopulated) {
+                    const genres = extractGenres(data);
+                    const genreSelect = document.querySelector('.genre-select');
+                    genres.forEach(genre => {
+                        const opt = document.createElement('option');
+                        opt.value = genre;
+                        opt.textContent = genre;
+                        genreSelect.appendChild(opt);
+                    });
+                    genresPopulated = true;
+                }
+
+                // تطبيق الفلتر النشط (Movies/Series)
+                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                if (activeFilter !== 'all') {
+                    allContent = allContent.filter(item => 
+                        activeFilter === 'movies' ? !item.seasons : item.seasons
+                    );
+                }
+
+                // فلترة حسب النوع
+                const genreValue = document.querySelector('.genre-select').value;
+                if (genreValue && genreValue !== 'all') {
+                    allContent = allContent.filter(item => {
+                        if (!item.genre) return false;
+                        if (Array.isArray(item.genre)) {
+                            return item.genre.map(g => g.trim().toLowerCase()).includes(genreValue.toLowerCase());
+                        } else if (typeof item.genre === 'string') {
+                            return item.genre.split(',').map(g => g.trim().toLowerCase()).includes(genreValue.toLowerCase());
+                        }
+                        return false;
+                    });
+                }
+
+                // تطبيق الترتيب (تم التعديل هنا)
+                const sortValue = document.querySelector('.sort-select').value;
+                switch (sortValue) {
+                    case 'rating':
+                        allContent.sort((a, b) => {
+                            const ra = typeof a.rating === 'number' ? a.rating : parseFloat(a.rating) || 0;
+                            const rb = typeof b.rating === 'number' ? b.rating : parseFloat(b.rating) || 0;
+                            return rb - ra;
+                        });
+                        break;
+                    case 'popularity':
+                        allContent.sort((a, b) => {
+                            const pa = typeof a.popularity === 'number' ? a.popularity : parseFloat(a.popularity) || 0;
+                            const pb = typeof b.popularity === 'number' ? b.popularity : parseFloat(b.popularity) || 0;
+                            return pb - pa;
+                        });
+                        break;
+                    case 'oldest':
+                        allContent.sort((a, b) => {
+                            const getDate = (item) => {
+                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.releaseDate) return new Date(item.releaseDate);
+                                if (item.addedDate) return new Date(item.addedDate);
+                                return new Date(0);
+                            };
+                            return getDate(a) - getDate(b);
+                        });
+                        break;
+                    case 'az':
+                        allContent.sort((a, b) => {
+                            const ta = (a.title || '').toLowerCase();
+                            const tb = (b.title || '').toLowerCase();
+                            if (ta < tb) return -1;
+                            if (ta > tb) return 1;
+                            return 0;
+                        });
+                        break;
+                    case 'za':
+                        allContent.sort((a, b) => {
+                            const ta = (a.title || '').toLowerCase();
+                            const tb = (b.title || '').toLowerCase();
+                            if (ta > tb) return -1;
+                            if (ta < tb) return 1;
+                            return 0;
+                        });
+                        break;
+                    default: // latest
+                        allContent.sort((a, b) => {
+                            const getDate = (item) => {
+                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.releaseDate) return new Date(item.releaseDate);
+                                if (item.addedDate) return new Date(item.addedDate);
+                                return new Date(0);
+                            };
+                            return getDate(b) - getDate(a);
+                        });
+                }
+
+                displayContent(allContent);
+            } catch (error) {
+                console.error('Error loading content:', error);
+            }
+        }
+
+        function displayContent(content) {
+            const contentGrid = document.querySelector('.content-grid');
+            contentGrid.innerHTML = '';
+
+            if (content.length === 0) {
+                contentGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-film" style="font-size: 48px; margin-bottom: 20px;"></i>
+                        <p>No content found</p>
+                        <p style="color: rgba(255, 255, 255, 0.5); margin-top: 10px;">Try different filters</p>
+                    </div>`;
+                return;
+            }
+
+            content.forEach(item => {
+                const card = document.createElement('div');
+                card.className = item.seasons ? 'series-card' : 'movie-card';
+                card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}`;
+                
+                card.innerHTML = `
+                    ${item.seasons ? `
+                        <div class="status-indicator ${item.status}">
+                            <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
+                        </div>
+                    ` : ''}
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="series-info">
+                        <h3>${item.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${item.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${item.year ? item.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                contentGrid.appendChild(card);
+            });
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeSearch();
+            initializeUserMenu();
+            loadContent();
+
+            // إضافة مستمعي الأحداث للفلترة والترتيب
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    loadContent();
+                });
+            });
+
+            const sortSelect = document.querySelector('.sort-select');
+            sortSelect.addEventListener('change', loadContent);
+
+            const genreSelect = document.querySelector('.genre-select');
+            genreSelect.addEventListener('change', loadContent);
+            // Load header and footer
         fetch('header.html')
             .then(res => res.text())
             .then(data => {
@@ -236,117 +411,9 @@
                 document.getElementById('footer-container').innerHTML = data;
             });
 
-        // Load and display movies
-        async function loadMovies() {
-            try {
-                const response = await fetch('data.json');
-                const data = await response.json();
-                let movies = data.movies;
-
-                // Apply filters
-                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
-                if (activeFilter !== 'all') {
-                    movies = movies.filter(movie =>
-                        movie.genre.toLowerCase().includes(activeFilter.toLowerCase())
-                    );
-                }
-
-                // Apply sorting
-                const sortValue = document.getElementById('sort-select').value;
-                movies.sort((a, b) => {
-                    switch (sortValue) {
-                        case 'rating-desc':
-                            return (b.rating === '--' ? 0 : parseFloat(b.rating)) - (a.rating === '--' ? 0 : parseFloat(a.rating));
-                        case 'rating-asc':
-                            return (a.rating === '--' ? 0 : parseFloat(a.rating)) - (b.rating === '--' ? 0 : parseFloat(b.rating));
-                        case 'year-desc':
-                            return b.year - a.year;
-                        case 'year-asc':
-                            return a.year - b.year;
-                        case 'title-asc':
-                            return a.title.localeCompare(b.title);
-                        case 'title-desc':
-                            return b.title.localeCompare(a.title);
-                        default:
-                            return 0;
-                    }
-                });
-
-                displayMovies(movies);
-            } catch (error) {
-                console.error('Error loading movies:', error);
-            }
-        }
-
-        function displayMovies(movies) {
-            const moviesGrid = document.querySelector('.movies-grid');
-            moviesGrid.innerHTML = '';
-
-            if (movies.length === 0) {
-                moviesGrid.innerHTML = `
-                    <div class="no-results">
-                        <i class="fas fa-film" style="font-size: 48px; margin-bottom: 20px;"></i>
-                        <p>No movies found</p>
-                        <p style="color: rgba(255, 255, 255, 0.5); margin-top: 10px;">Try different filters</p>
-                    </div>`;
-                return;
-            }
-
-            movies.forEach(movie => {
-                const card = document.createElement('div');
-                card.className = 'movie-card';
-                card.onclick = () => window.location.href = `content.html?id=${movie.id}&type=movie`;
-
-                card.innerHTML = `
-                    <img src="${movie.image}" alt="${movie.title}">
-                    <div class="movie-info">
-                        <h3>${movie.title}</h3>
-                        <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${movie.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${movie.year ? movie.year : ''}</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-
-                moviesGrid.appendChild(card);
-            });
-        }
-        
-
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', () => {
-            loadMovies();
-
-            // Filter functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    loadMovies();
-                });
-            });
-
-            // Sort functionality
-            document.getElementById('sort-select').addEventListener('change', loadMovies);
-
-            // Search functionality
-            const searchInput = document.querySelector('.search input');
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    const query = searchInput.value.trim();
-                    if (query) {
-                        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-                    }
-                }
-            });
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
         });
     </script>
 </body>
-
-</html>
+</html> 

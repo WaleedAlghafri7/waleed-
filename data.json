@@ -129,13 +129,16 @@
         {
             "id": 10,
             "title": "You're Cordially Invited",
-            "genre": "Comedy",
+            "genre": "Romantic Comedy, Comedy, Romance",
             "year": 2025,
             "rating": 5.5,
             "duration": "1h 49min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ec50pMNyIshL0blt1q8dUEbIa2G.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt21227864/img",
-            "description": "When two weddings are double-booked at the same venue, the father of one bride and the sister of the other bride try to preserve the wedding weekend.\n\n"
+            "description": "When two weddings are double-booked at the same venue, the father of one bride and the sister of the other bride try to preserve the wedding weekend.\n\n",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "R"
         },
         {
             "id": 11,
@@ -146,18 +149,24 @@
             "duration": "1h 29min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/89wNiexZdvLQ41OQWIsQy4O6jAQ.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt10954718/img",
-            "description": "After a policeman and his police dog are fused together to turn into Dog Man, he must stop the villainous Petey the Cat from cloning himself and creating an evil kitten, doubling his evil abilities.\n"
+            "description": "After a policeman and his police dog are fused together to turn into Dog Man, he must stop the villainous Petey the Cat from cloning himself and creating an evil kitten, doubling his evil abilities.\n",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "PG"
         },
         {
             "id": 12,
             "title": "Southern Chronicles",
-            "genre": "Comedy",
+            "genre": "Comedy, Drama, Romance",
             "year": 2024,
             "rating": 8.7,
             "duration": "2h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2peyJP4L5SdvDslCWwKP4KLUiGZ.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt14064760/img",
-            "description": "It follows Rimants who is more interested in playing rugby, listening to music and dealing on the black market than studying for school, but when he falls in love with Monika, his faith in love and the future is tested.\n"
+            "description": "It follows Rimants who is more interested in playing rugby, listening to music and dealing on the black market than studying for school, but when he falls in love with Monika, his faith in love and the future is tested.\n",
+            "language": " Lithuanian",
+            "country": "Lithuania",
+            "ageRating": ""
         },
         {
             "id": 13,
@@ -168,7 +177,10 @@
             "duration": "2h 49min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt0816692/img",
-            "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.\n\n"
+            "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.\n\n",
+            "language": "English",
+            "country": " United States, United Kingdom, Canada",
+            "ageRating": "PG-13"
         },
         {
             "id": 14,
@@ -179,7 +191,10 @@
             "duration": "2h 32min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt0468569/img",
-            "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness."
+            "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+            "language": " English, Mandarin",
+            "country": " United States, United Kingdom",
+            "ageRating": "PG-13"
         },
         {
             "id": 15,
@@ -190,18 +205,24 @@
             "duration": "2h 28min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/gqby0RhyehP3uRrzmdyUZ0CgPPe.jpg",
-            "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
+            "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+            "language": " English, Japanese, French",
+            "country": "United States, United Kingdom",
+            "ageRating": "PG-13"
         },
         {
             "id": 16,
             "title": "Superman",
             "genre": "Action, Adventure, Sci-Fi",
             "year": 2025,
-            "rating": 7.6,
+            "rating": 7.5,
             "duration": "2h 9min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xkd2yNgaZ7b2Xxh5lxBcL8VnNX2.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt5950044/img",
-            "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n"
+            "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n",
+            "language": "English",
+            "country": "United States. Canada, Australia, New Zealand",
+            "ageRating": "PG-13"
         },
         {
             "id": 1754045989408,
@@ -1309,13 +1330,17 @@
         {
             "id": 20,
             "title": "Surviving Black Hawk Down",
-            "genre": "Documentary",
+            "genre": "Documentary, History, War",
             "year": 2025,
-            "duration": "52min",
+            "rating": 7.4,
+            "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/K2pPWcpbkcnECZaUcgYVjPFMHL.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt35435624/img",
             "description": "An in-depth documentary series revisiting the infamous Battle of Mogadishu through the eyes of survivors.",
-            "status": "ongoing",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "18+",
+            "status": "completed",
             "seasons": [
                 {
                     "season_number": 1,
@@ -1325,36 +1350,39 @@
                             "description": "Somalia, 1993. An effort to end famine and civil war turns violent when a US mission to take out a rebel leader ends in the death of multiple civilians.",
                             "image": "https://episodes.metahub.space/tt35435624/1/1/w780.jpg",
                             "addedDate": "2025-02-10",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "A Wall of Lead",
                             "description": "A routine raid to capture two of Aidid's lieutenants turns into a chaotic rescue operation when the Army Rangers are met with fierce Somali counterfire.",
                             "image": "https://episodes.metahub.space/tt35435624/1/2/w780.jpg",
                             "addedDate": "2025-02-10",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": "No Way Out",
                             "description": "As news of the botched Black Hawk operation rattles America, video of a captive pilot shocks the globe. Will he be rescued?",
                             "image": "https://episodes.metahub.space/tt35435624/1/3/w780.jpg",
                             "addedDate": "2025-02-10",
-                            "rating": ""
+                            "rating": "7.7"
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 21,
             "title": "Newtopia",
-            "genre": "Drama, Comedy",
+            "genre": "Drama, Comedy, Action",
             "year": 2025,
-            "duration": "52min",
+            "rating": 6.6,
+            "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cIC36RA59lg9ruYtPc7UA3f72yy.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt32199328/img",
             "description": "A soldier faces a zombie outbreak during military service. His girlfriend, an engineer, navigates zombie-ridden Seoul. Both fight through the undead-infested city, striving to reunite amid the chaos.",
+            "language": "Korean",
+            "country": "South Korea",
+            "ageRating": "",
             "status": "ongoing",
             "seasons": [
                 {
@@ -1365,72 +1393,75 @@
                             "description": "Young-joo breaks up with her boyfriend, Jae-yoon. He accepts the breakup with a heartfelt voice message. Upon hearing this, Young-joo heads to his workplace, but she encounters an unexpected incident on her way there.",
                             "image": "https://episodes.metahub.space/tt32199328/1/1/w780.jpg",
                             "addedDate": "2025-04-01",
-                            "rating": ""
+                            "rating": "6.9"
                         },
                         {
                             "title": "",
                             "description": "Jae-yoon and In-ho find a plane crashing into the heart of Seoul. Young-joo and Jin-wook confront zombies and team up with Tae-shik. Together, they begin their fight for survival.",
                             "image": "https://episodes.metahub.space/tt32199328/1/2/w780.jpg",
                             "addedDate": "2025-04-08",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": "",
                             "description": "Jae-yoon, In-ho, Soo-jeong, and Chef Jung return to the air defense unit. However, even the base they thought was safe begins to face the threat of zombies. Young-joo decides to go alone to Tower 77 A, where Jae-yoon is located.",
                             "image": "https://episodes.metahub.space/tt32199328/1/3/w780.jpg",
                             "addedDate": "2025-04-15",
-                            "rating": ""
+                            "rating": "7.2"
                         },
                         {
                             "title": "",
                             "description": "Jae-yoon and Young-joo reminisce about their happy past. Jae-yoon and his squad mourn the loss of their comrades. Young-joo's group encounters Tripeater, who has been bitten by a zombie but has not yet turned.",
                             "image": "https://episodes.metahub.space/tt32199328/1/4/w780.jpg",
                             "addedDate": "2025-04-22",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "",
                             "description": "A military sergeant must guide his platoon to safety after their base becomes overrun with zombies, while another group of survivors faces danger at the facility's entrance.",
                             "image": "https://episodes.metahub.space/tt32199328/1/5/w780.jpg",
                             "addedDate": "2025-04-29",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "",
                             "description": "Young-joo is left by herself at the Express Bus Terminal Station, but a stroke of luck leads her to a metro staff office, where she gathers supplies to battle the zombies. Meanwhile, Jae-yoon's group reaches Eden Hotel, where they run into Arron Park, who has survived there alone. But the group gets split up by an unexpected attack by the zombies, throwing them into separate hotel rooms.",
                             "image": "https://episodes.metahub.space/tt32199328/1/6/w780.jpg",
                             "addedDate": "2025-05-06",
-                            "rating": ""
+                            "rating": "7.9"
                         },
                         {
                             "title": "",
                             "description": "On her way to Suseo Station, Young-joo meets a special person who helps her. She relentlessly fights the zombies alone on her way to her boyfriend. Meanwhile, Jae-yoon and the squad reach the 35th floor through the ducts.",
                             "image": "https://episodes.metahub.space/tt32199328/1/7/w780.jpg",
                             "addedDate": "2025-05-13",
-                            "rating": ""
+                            "rating": "7.2"
                         },
                         {
                             "title": "",
                             "description": "Jae-yoon escapes the A Tower first and saves others with a brilliant idea. But they must endure another goodbye. In the meantime, Young-joo runs into people who are even more brutal than zombies.",
                             "image": "https://episodes.metahub.space/tt32199328/1/8/w780.jpg",
                             "addedDate": "2025-05-20",
-                            "rating": ""
+                            "rating": "7.4"
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 22,
             "title": "Cassandra",
             "genre": "Drama, Sci-Fi, Fantasy",
             "year": 2025,
-            "duration": "49min",
+            "rating": 6.7,
+            "duration": "50min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/62TJdt6GlzdRbyWY9RYWjljgg3b.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt29135600/img",
             "description": "Germany's oldest smart home awakens its AI helper Cassandra after decades when a new family moves in. Cassandra, determined never to be abandoned again, manipulates events using the home's resources to become part of the family.",
-            "status": "ongoing",
+            "language": "German",
+            "country": " Germany",
+            "ageRating": "18+",
+            "status": "completed",
             "seasons": [
                 {
                     "season_number": 1,
@@ -1440,57 +1471,60 @@
                             "description": "Samira moves her family into a 1970s smart home. Her curiosity turns into suspicion when her son reactivates the house's long-dormant Al assistant.",
                             "image": "https://episodes.metahub.space/tt29135600/1/1/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.7"
                         },
                         {
                             "title": " Wer bin ich?",
                             "description": "Cassandra begins to turn Samira's family against her. Fynn takes an interest in a classmate. In 1971, a woman suspects her husband of infidelity.",
                             "image": "https://episodes.metahub.space/tt29135600/1/2/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.8"
                         },
                         {
                             "title": "Endspiel",
                             "description": "Feeling isolated, Samira tries to convince David of Cassandra's intentions. In 1971, a mother goes to extreme lengths to protect her son",
                             "image": "https://episodes.metahub.space/tt29135600/1/3/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.8"
                         },
                         {
                             "title": "Ein Kinderspiel",
                             "description": "Fynn goes looking for Steve. Tensions reach a boiling point during Juno's playdate. In 1964, a medical experiment takes a terrible turn.",
                             "image": "https://episodes.metahub.space/tt29135600/1/4/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.0"
                         },
                         {
                             "title": "Du bist nicht allein",
                             "description": "With Samira out of the house, Cassandra takes her family hostage. In 1972, Cassandra adapts to her new living circumstances.",
                             "image": "https://episodes.metahub.space/tt29135600/1/5/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.2"
                         },
                         {
                             "title": "Frohe Weihnachten",
                             "description": "Convinced that her family is in danger, Samira attempts to return home. Meanwhile, Cassandra asserts full control over the house.",
                             "image": "https://episodes.metahub.space/tt29135600/1/6/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.4"
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 23,
             "title": "The Åre Murders",
-            "genre": "Drama, Crime",
+            "genre": "Drama, Crime, Mystery",
             "year": 2025,
-            "duration": "43min",
+            "rating": 6.7,
+            "duration": "45min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9hUh2yK71us4uO3cKeDq9ONu69.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt23664162/img",
             "description": "A Stockholm detective under internal investigation heads to a ski resort to unwind, until a young girl's disappearance compels her back to work.",
+            "language": "Swedish",
+            "country": "Sweden",
+            "ageRating": "18+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -1501,50 +1535,53 @@
                             "description": "Stockholm police officer Hanna arrives in Åre but soon joins the search effort for a girl who went missing on her way home from a party.",
                             "image": "https://episodes.metahub.space/tt23664162/1/1/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.9"
                         },
                         {
                             "title": "Offermakaren: Del 2",
                             "description": "Daniel discovers Hanna's secret, while her cleaner Zuhra is concealing something of her own. Annika and Bosse throw a mulled-wine night.",
                             "image": "https://episodes.metahub.space/tt23664162/1/2/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.9"
                         },
                         {
                             "title": "Offermakaren: Del 3",
                             "description": "Hanna gets important information from Ebba. Amanda's father is sure he knows what happened. A clue from Zuhra brings everything to a head.",
                             "image": "https://episodes.metahub.space/tt23664162/1/3/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.0"
                         },
                         {
                             "title": "Hidden in Shadows: Part 1",
                             "description": "A couple of months after solving Amanda's case, a new crime shocks Åre just as Daniel prepares to go on parental leave",
                             "image": "https://episodes.metahub.space/tt23664162/1/4/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.8"
                         },
                         {
                             "title": "Hidden in Shadows: Part 2",
                             "description": "The police search for Rebecka and look to solve Johan's murder. Hanna and Daniel receive surprising news that leads them in a new direction.",
                             "image": "https://episodes.metahub.space/tt23664162/1/5/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "6.9"
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 24,
             "title": "Apple Cider Vinegar",
-            "genre": "Drama, Crime",
+            "genre": "Drama, Crime, Biography",
             "year": 2025,
+            "rating": 7.2,
             "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5Ov4ZX2NKCpyKZicXZ6MdQasnAq.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt30428143/img",
             "description": "The life of wellness guru Belle Gibson, who had a large social media following, where she pretended to be suffering from cancer but keeping the disease under control using self-care therapies. She confessed that none of it was true.",
+            "language": "English",
+            "country": " Australia, United Kingdom",
+            "ageRating": "18+",
             "status": "completed",
             "seasons": [
                 {
@@ -1555,57 +1592,60 @@
                             "description": "A rare and unexpected diagnosis puts Milla's carefree life on hold. Belle's anxieties begin to spiral when her baby shower doesn't go as planned.",
                             "image": "https://episodes.metahub.space/tt30428143/1/1/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.1"
                         },
                         {
                             "title": "Clean Sheets",
                             "description": "Milla takes her treatment into her own hands. Belle turns to Clive, a shy IT expert, for comfort. An enamored Belle meets Milla for the first time.",
                             "image": "https://episodes.metahub.space/tt30428143/1/2/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.0"
                         },
                         {
                             "title": "Pink Dolphins",
                             "description": "In the wake of devastating news, Clive struggles to cope while Belle dives into work. Lucy's frustration grows as Justin digs into Belle's past.",
                             "image": "https://episodes.metahub.space/tt30428143/1/3/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.1"
                         },
                         {
                             "title": "Mama Aya",
                             "description": "Lucy seeks new experiences on a mind-bending trip to Peru. Chanelle joins Belle as her popularity soars, and Milla's world begins to unravel.",
                             "image": "https://episodes.metahub.space/tt30428143/1/4/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.1"
                         },
                         {
                             "title": "Casseroles",
                             "description": "As scrutiny mounts, Belle faces tough questions about her health. Milla turns to family for help while Justin finds a new angle for his article.",
                             "image": "https://episodes.metahub.space/tt30428143/1/5/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.4"
                         },
                         {
                             "title": "Tapeworm",
                             "description": "At a funeral, Belle scrambles to stick to her story, but the article yields surprising reactions. Can her wellness empire survive a web of lies?",
                             "image": "https://episodes.metahub.space/tt30428143/1/6/w780.jpg",
                             "addedDate": "2025-02-06",
-                            "rating": ""
+                            "rating": "7.3"
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 25,
             "title": "Common Side Effects",
-            "genre": "Animation, Comedy",
+            "genre": "Animation, Comedy, Drama",
             "year": 2024,
+            "rating": 8.5,
             "duration": "30min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/a8X5XXP49DHrySTXJMUIN5HI1Wz.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt28093628/img",
             "description": "Follows former high school lab mates Marshall and Frances as they unravel a conspiracy involving big pharma and the government to suppress knowledge of a rare fungus secret that may contain the solution to cure all world's diseases.\n",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "18+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -1616,174 +1656,204 @@
                             "description": "High school lab partners Marshall and Frances uncover a conspiracy by big pharma and the government to suppress a rare mushroom that could cure all diseases.",
                             "image": "https://episodes.metahub.space/tt28093628/1/1/w780.jpg",
                             "addedDate": "2025-02-02",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "Lakeshore Limited",
                             "description": "Marshall is on the run, trying to flee New York; Frances confides to her boss, Rick, about the mushroom; Rick sends her to Marshall's farm to get more, but the situation gets out of hand.",
                             "image": "https://episodes.metahub.space/tt28093628/1/2/w780.jpg",
                             "addedDate": "2025-02-02",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": " Hildy",
                             "description": "Marshall seeks advice from his old mentor, Hildy. Copano and Harrington are drawn further into the mystery of the mushrooms obtained at the raid.",
                             "image": "https://episodes.metahub.space/tt28093628/1/3/w780.jpg",
                             "addedDate": "2025-02-09",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": "Dumpsite",
                             "description": "Marshall buys a plot of land near a chemical waste site with a plan to grow more mushrooms; Frances rushes home from Europe after a huge development; Copano and Harrington investigate a connection between Marshall and Frances.",
                             "image": "https://episodes.metahub.space/tt28093628/1/4/w780.jpg",
                             "addedDate": "2025-02-16",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "Star-Tel-Lite",
                             "description": "Marshall, Frances, and their crazy neighbors deal with the aftermath of a dangerous incident.",
                             "image": "https://episodes.metahub.space/tt28093628/1/5/w780.jpg",
                             "addedDate": "2025-02-23",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "In the System",
                             "description": "Marshall arrives in jail and learns that some very important people refuse to let him out, while danger lurks around every corner; Frances makes a fateful decision; Copano and Harrington pick up the pieces.",
                             "image": "https://episodes.metahub.space/tt28093628/1/6/w780.jpg",
                             "addedDate": "2025-03-02",
-                            "rating": ""
+                            "rating": "8.4"
                         },
                         {
                             "title": "Blowfish",
                             "description": "Marshall is rescued by another inmate, but now Marshall owes him a favor; desperate to get out of prison, he works on a risky plan when he runs into a surprising ally; Frances grapples with a life-changing event.",
                             "image": "https://episodes.metahub.space/tt28093628/1/7/w780.jpg",
                             "addedDate": "2025-03-09",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": "Amelia & Wyatt",
                             "description": "After being declared dead, Marshall Cuso and Amelia must resolve unfinished business by staying hidden. Francis deals with his supposed loss while facing unexpected changes in the development of Reutical mushrooms.",
                             "image": "https://episodes.metahub.space/tt28093628/1/8/w780.jpg",
                             "addedDate": "2025-03-16",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "Cliff's Edge",
                             "description": "Marshall discovers what Hildy has been up to, but obstacles remain. Copano and Harrington zero in on Marshall's location .",
                             "image": "https://episodes.metahub.space/tt28093628/1/9/w780.jpg",
                             "addedDate": "2025-03-23",
-                            "rating": ""
+                            "rating": "8.8"
                         },
                         {
                             "title": "Raid",
                             "description": "The FBI/DEA raid the compound, resulting in awful consequences. The fate of the mushroom is decided.",
                             "image": "https://episodes.metahub.space/tt28093628/1/10/w780.jpg",
                             "addedDate": "2025-03-30",
+                            "rating": "9.0"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 26,
             "title": "Your Friendly Neighborhood Spider-Man",
-            "genre": "Animation, Action",
+            "genre": "Animation, Action, Adventure",
             "year": 2025,
-            "duration": "28min",
+            "rating": 7.5,
+            "duration": "33min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kjcsNeqF52YUQ2rUBGLMHwLkxvR.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt16027074/img",
             "description": "An animated series following Peter Parker's early days as Spider-Man, balancing high school life with superhero responsibilities.",
+            "language": "English",
+            "country": "United States, Japan",
+            "ageRating": "PG",
             "status": "ongoing",
             "seasons": [
                 {
                     "season_number": 1,
                     "episodes": [
                         {
-                            "title": "Origin Story",
-                            "description": "Peter Parker is bitten by a radioactive spider.",
+                            "title": "Amazing Fantasy",
+                            "description": "During high school orientation, Peter's life is forever changed. A new era of Spider-Man begins here.",
                             "image": "https://episodes.metahub.space/tt16027074/1/1/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-01-29",
+                            "rating": "7.3"
                         },
                         {
-                            "title": "First Swing",
-                            "description": "Peter tests his new powers and faces his first villain.",
+                            "title": "The Parker Luck",
+                            "description": "Peter begins an exclusive internship, but his first day is way more complicated than he expected.",
                             "image": "https://episodes.metahub.space/tt16027074/1/2/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-01-29",
+                            "rating": "7.2"
                         },
                         {
-                            "title": "Balancing Act",
-                            "description": "Peter struggles to balance school and hero life.",
+                            "title": "Secret Identity Crisis",
+                            "description": "Peter deals with the fallout of his secret revealed. Meanwhile, Lonnie's perfect life falls apart.",
                             "image": "https://episodes.metahub.space/tt16027074/1/3/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-05",
+                            "rating": "7.4"
                         },
                         {
-                            "title": "The New Suit",
-                            "description": "Peter designs his first Spider-Man suit and tries to keep his identity secret from his friends.",
+                            "title": "Hitting the Big Time",
+                            "description": "Peter and Norman work through creative differences, while Lonnie undergoes a loyalty test.",
                             "image": "https://episodes.metahub.space/tt16027074/1/4/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-05",
+                            "rating": "7.3"
                         },
                         {
-                            "title": "Web of Lies",
-                            "description": "Rumors about Spider-Man spread at school, putting Peter in a difficult position.",
+                            "title": "The Unicorn Unleashed!",
+                            "description": "Peter makes a new friend. Meanwhile, Lonnie finds himself in the sights of a dangerous gang.",
                             "image": "https://episodes.metahub.space/tt16027074/1/5/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-05",
+                            "rating": "7.5"
                         },
                         {
-                            "title": "Villain Unmasked",
-                            "description": "Peter discovers the true identity of his new enemy.",
+                            "title": "Duel with the Devil",
+                            "description": "Peter's night off is derailed when he must suit up to stop a mysterious intruder.",
                             "image": "https://episodes.metahub.space/tt16027074/1/6/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-12",
+                            "rating": "8.0"
                         },
                         {
-                            "title": "Friendly Neighborhood",
-                            "description": "Spider-Man helps his community while facing challenges from a mysterious new threat.",
+                            "title": "Scorpion Rising",
+                            "description": "Peter and Lonnie face the consequences of their secret lives. Spider-Man faces his biggest threat.",
                             "image": "https://episodes.metahub.space/tt16027074/1/7/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-12",
+                            "rating": "8.4"
                         },
                         {
-                            "title": "Power and Responsibility",
-                            "description": "Peter learns a hard lesson about the consequences of his actions.",
+                            "title": "Tangled Web",
+                            "description": "Norman gives Spider-Man an ultimatum, causing Peter to do some soul-searching.",
                             "image": "https://episodes.metahub.space/tt16027074/1/8/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-12",
+                            "rating": "7.5"
                         },
                         {
-                            "title": "The Big Test",
-                            "description": "Peter must choose between an important school event and saving the city.",
+                            "title": "Hero or Menace",
+                            "description": "Spider-Man swings into action, as Lonnie looks to settle a score and Norman visits an old friend.",
                             "image": "https://episodes.metahub.space/tt16027074/1/9/w780.jpg",
-                            "addedDate": "",
-                            "rating": ""
+                            "addedDate": "2025-02-19",
+                            "rating": "8.2"
                         },
                         {
-                            "title": "Showdown",
-                            "description": "Spider-Man faces his greatest challenge yet in a battle that will define his legacy.",
+                            "title": "If This Be My Destiny...",
+                            "description": "Peter's internship takes a dark turn with the arrival of an unexpected visitor.",
                             "image": "https://episodes.metahub.space/tt16027074/1/10/w780.jpg",
+                            "addedDate": "2025-02-19",
+                            "rating": "8.7"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "",
+                            "description": "",
+                            "image": "",
                             "addedDate": "",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 27,
             "title": "Paradise",
-            "genre": "Drama, Thriller",
+            "genre": "Drama, Thriller, Action",
             "year": 2025,
+            "rating": 7.9,
             "duration": "50min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sJUti0JDtE1IYl7RVJARAGyKHqz.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt27444205/img",
             "description": "A Secret Service agent investigates the murder of a former president in a seemingly peaceful community.",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "18+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -1794,71 +1864,86 @@
                             "description": "It's just another day in Paradise until Xavier Collins discovers one of the world's most powerful individuals has been viciously murdered. Xavier analyzes the crime scene while recalling his complex relationship with the victim.",
                             "image": "https://episodes.metahub.space/tt27444205/1/1/w780.jpg",
                             "addedDate": "2025-01-26",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "Sinatra",
                             "description": "Agent Xavier Collins is interrogated. Samantha Redmond (codenamed Sinatra) begins to reassure the community as she reflects on how she got to Paradise.",
                             "image": "https://episodes.metahub.space/tt27444205/1/2/w780.jpg",
                             "addedDate": "2025-01-28",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "The Architect of Social Well-Being",
                             "description": "Isolated, Xavier seeks answers on his own and cautiously turns to Dr. Gabriela Torabi. Meanwhile, Billy and Jane feel the pressure from Robinson's investigation.",
                             "image": "https://episodes.metahub.space/tt27444205/1/3/w780.jpg",
                             "addedDate": "2025-01-28",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
                             "title": "Agent Billy Pace",
                             "description": "The citizens of Paradise celebrate at the annual carnival. Xavier and Billy delve deeper into their investigation.",
                             "image": "https://episodes.metahub.space/tt27444205/1/4/w780.jpg",
                             "addedDate": "2025-02-04",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": " In the Palaces of Crowned Kings",
                             "description": "Xavier faces the consequences of his investigation, forcing him to consider how to proceed. Meanwhile, Cal's family history and his last days are examined.",
                             "image": "https://episodes.metahub.space/tt27444205/1/5/w780.jpg",
                             "addedDate": "2025-02-11",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "You Asked for Miracles",
                             "description": "Xavier and Robinson execute their plans as Sinatra strives to maintain Paradise's current state.",
                             "image": "https://episodes.metahub.space/tt27444205/1/6/w780.jpg",
                             "addedDate": "2025-02-18",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "The Day",
                             "description": "Sinatra and Xavier confront the past, returning to the harrowing day that brought them to Paradise.",
                             "image": "https://episodes.metahub.space/tt27444205/1/7/w780.jpg",
                             "addedDate": "2025-02-25",
-                            "rating": ""
+                            "rating": "9.5"
                         },
                         {
                             "title": "The Man Who Kept the Secrets",
                             "description": "Xavier and Robinson race to find President Bradford's murderer before it's too late.",
                             "image": "https://episodes.metahub.space/tt27444205/1/8/w780.jpg",
                             "addedDate": "2025-03-04",
+                            "rating": "8.0"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "",
+                            "description": "",
+                            "image": "https://episodes.metahub.space/tt27444205/2/1/w780.jpg",
+                            "addedDate": "2026-01-28",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 28,
             "title": "One Piece",
             "genre": "Action, Adventure, Comedy",
             "year": 2023,
+            "rating": 8.3,
             "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lXl3ZbY5TksOdt6eYgdyg6vsnFW.jpg",
             "backdrop": "https://m.media-amazon.com/images/M/MV5BYjI0YWJhZTUtMTJhNy00OTEzLThkMjItOThkMmIzMmU4YjliXkEyXkFqcGc@._V1_SX1920.jpg",
             "description": "In a seafaring world, a young pirate captain sets out with his crew to attain the title of Pirate King, and to discover the mythical treasure known as 'One Piece.'",
+            "language": "English",
+            "country": " United Kingdom, United States, South Africa, Japan",
+            "ageRating": "16+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -1869,75 +1954,86 @@
                             "description": "A boy named Monkey D. Luffy embarks on a journey to attain the greatest treasure: the one piece. After the former pirate king's public execution 22 years ago, the world has entered a great pirate era, and Luffy aims to be at the top.",
                             "image": "https://episodes.metahub.space/tt11737520/1/1/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "The Man in the Straw Hat",
                             "description": "Luffy, Zoro, and Nami find themselves imprisoned on an island overtaken by the deranged clown pirate, Buggy. Koby joins the Marines and proves his mettle.",
                             "image": "https://episodes.metahub.space/tt11737520/1/2/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "Tell No Tales",
                             "description": "Luffy, Zoro, and Nami meet Usopp in the Syrup Village a small, peaceful village. Usopp tells all sorts of lies about his adventures he has never been to his friend, Kaya, who has been sick in bed for over a year since she lost her parents.",
                             "image": "https://episodes.metahub.space/tt11737520/1/3/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "The Pirates Are Coming",
                             "description": "Luffy, Zoro, and Nami fight their way through Kaya's mansion, which has now become a prison. Usopp enlists the help of Koby, Helmeppo, and the Marines. Luffy finally gets the ship of his dreams as Garp closes in.",
                             "image": "https://episodes.metahub.space/tt11737520/1/4/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "Eat at Baratie!",
                             "description": "Luffy and the gang are tested in their ability to fight together on the high seas. They arrive at Baratie, a floating restaurant, where they encounter Sanji, a young chef with a love of fine dining. A duel on the docks shocks the group.",
                             "image": "https://episodes.metahub.space/tt11737520/1/5/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
                             "title": "The Chef and the Chore Boy",
                             "description": "Sanji's past is revealed as a new threat emerges.",
                             "image": "https://episodes.metahub.space/tt11737520/1/6/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
                             "title": "The Girl with the Sawfish Tattoo",
                             "description": "Garp is one step away from finding Luffy as he arrives at Baratie. Luffy and the boys all travel to Coco Village; in an attempt to find the estranged and distraught Nami, they meet a villager that has a dark and painful history with her.",
                             "image": "https://episodes.metahub.space/tt11737520/1/7/w780.jpg",
                             "addedDate": "2023-08-31",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
                             "title": "Worst in the East",
                             "description": "Luffy and the others charge towards Arlong Park after a broken Nami utters the words \"Help me.\" Luffy encounters Arlong meanwhile the gang fend off against Arlong's crew as a cheeky Buggy makes his escape. A new pirate crew is born.",
                             "image": "https://episodes.metahub.space/tt11737520/1/8/w780.jpg",
                             "addedDate": "2023-08-31",
+                            "rating": "9.1"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": " The Beginning and the End",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 29,
             "title": "Squid Game",
             "genre": "Action, Drama, Mystery",
             "year": 2021,
-            "rating": 0,
+            "rating": 8,
             "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/2meX1nMdScFOoV4370rqHWKmXhY.jpg",
             "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. A tempting prize awaits, but with deadly high stakes.",
-            "language": "",
-            "country": "",
-            "ageRating": "",
+            "language": " Korean, English, Urdu",
+            "country": "South Korea",
+            "ageRating": "18+",
             "status": "completed",
             "seasons": [
                 {
@@ -1948,63 +2044,63 @@
                             "description": "Hoping to win easy money, a broke and desperate Gi-hun agrees to take part in an enigmatic game. Not long into the first round, unforeseen horrors unfold.",
                             "image": "https://episodes.metahub.space/tt10919420/1/1/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "8.3"
                         },
                         {
                             "title": "Jiok",
                             "description": "Split on whether to continue or quit, the group holds a vote. But their realities in the outside world may prove to be just as unforgiving as the game.",
                             "image": "https://episodes.metahub.space/tt10919420/1/2/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
                             "title": "Usan-eul sseun namja",
                             "description": "A few players enter the next round - which promises equal doses of sweet and deadly - with hidden advantages. Meanwhile, Jun-ho sneaks his way inside.",
                             "image": "https://episodes.metahub.space/tt10919420/1/3/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "Jollyeodo pyeonmeokgi",
                             "description": "As alliances form among the players, no one is safe in the dorm after lights-out. The third game challenges Gi-hun's team to think strategically.",
                             "image": "https://episodes.metahub.space/tt10919420/1/4/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "8.4"
                         },
                         {
                             "title": "Pyeongdeung-han sesang",
                             "description": "Gi-hun and his team take turns keeping guard through the night. The masked men encounter trouble with their co-conspirators.",
                             "image": "https://episodes.metahub.space/tt10919420/1/5/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "Kkanbu",
                             "description": "Players pair off for the fourth game. Gi-hun grapples with a moral dilemma, Sang-woo chooses self-preservation and Sae-byeok shares her untold story.",
                             "image": "https://episodes.metahub.space/tt10919420/1/6/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "9.2"
                         },
                         {
                             "title": "VIPS",
                             "description": "The Masked Leader welcomes VIP guests to the facility for a front-row viewing of the show. In the fifth game, some players crack under pressure.",
                             "image": "https://episodes.metahub.space/tt10919420/1/7/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "Peuronteumaen",
                             "description": "Ahead of the last round, distrust and disgust run deep among the finalists. Jun-ho makes a getaway, determined to expose the game's dirty secrets.",
                             "image": "https://episodes.metahub.space/tt10919420/1/8/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "7.9"
                         },
                         {
                             "title": "Unsu joeun nal",
                             "description": "The final round presents another cruel test but this time, how it ends depends on just one player. The game's creator steps out of the shadows.",
                             "image": "https://episodes.metahub.space/tt10919420/1/9/w780.jpg",
                             "addedDate": "2021-09-17",
-                            "rating": ""
+                            "rating": "7.6"
                         }
                     ]
                 },
@@ -2016,49 +2112,49 @@
                             "description": "A vengeful Gi-hun makes a U-turn at the airport. Later, in his hideout, he intensifies his search for the elusive recruiter who is seeking new players.",
                             "image": "https://episodes.metahub.space/tt10919420/2/1/w780.jpg",
                             "addedDate": "2024-09-20",
-                            "rating": ""
+                            "rating": "7.9"
                         },
                         {
                             "title": "Hallowin pati",
                             "description": "Gi-hun finally gets hold of an invitation, marked for Halloween day. In a tense moment facing Jun-ho, they reveal their truths to each other.",
                             "image": "https://episodes.metahub.space/tt10919420/2/2/w780.jpg",
                             "addedDate": "2024-09-27",
-                            "rating": ""
+                            "rating": "7.2"
                         },
                         {
                             "title": "001",
                             "description": "New players gather for a chance to win 45.6 billion won. After an intense first round, the survivors' fates hang in the balance - down to one final vote.",
                             "image": "https://episodes.metahub.space/tt10919420/2/3/w780.jpg",
                             "addedDate": "2024-10-04",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": "Yeoseot gaeui dari",
                             "description": "The players prepare for the next game: a six-legged pentathlon, where each team member must clear a mini-game to survive -- or face collective elimination.",
                             "image": "https://episodes.metahub.space/tt10919420/2/4/w780.jpg",
                             "addedDate": "2024-10-11",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "Han pan deo",
                             "description": "Kang No-eul earns enemies for her unruly actions. Nerves fray to the breaking point as the remaining players vote on whether to move to the next round.",
                             "image": "https://episodes.metahub.space/tt10919420/2/5/w780.jpg",
                             "addedDate": "2024-10-18",
-                            "rating": ""
+                            "rating": "7.3"
                         },
                         {
                             "title": "O X",
                             "description": "Jun-ho and his team prepare to infiltrate a suspicious island. As monetary stakes and tensions rise, players split into two opposing factions.",
                             "image": "https://episodes.metahub.space/tt10919420/2/6/w780.jpg",
                             "addedDate": "2024-10-25",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": " Chinguwa jeok",
                             "description": "The remaining players strategize on how to survive the night. Gi-hun proposes a risky plan--but he will need trustworthy allies to carry it out.",
                             "image": "https://episodes.metahub.space/tt10919420/2/7/w780.jpg",
                             "addedDate": "2024-11-01",
-                            "rating": ""
+                            "rating": "7.1"
                         }
                     ]
                 },
@@ -2070,42 +2166,42 @@
                             "description": "No-eul infiltrates a dangerous operation with a risky plan. A new game is announced: hide-and-seek, where one group holds a key and the other a knife.",
                             "image": "https://episodes.metahub.space/tt10919420/3/1/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "7.3"
                         },
                         {
                             "title": "Byeol-i bichnaneun bam",
                             "description": "The games resume, and Gi-hun fixates on confronting Kang Dae-ho. Meanwhile, Kim Jun-hee faces a sudden crisis that pushes her willpower to its limits.",
                             "image": "https://episodes.metahub.space/tt10919420/3/2/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
                             "title": " Dangsin-ui tas-i anida",
                             "description": "Jun-ho's team gets close to finding the island. Jang Geum-ja makes a desperate plea to Gi-hun to help Jun-hee. The VIPs discuss a cruel proposal.",
                             "image": "https://episodes.metahub.space/tt10919420/3/3/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "222",
                             "description": "Even as Gi-hun supports Jun-hee amid rising tensions, she must make a pivotal decision. Before the final game, the Front Man gives Gi-hun an ultimatum.",
                             "image": "https://episodes.metahub.space/tt10919420/3/4/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "o/_|_|",
                             "description": "No-eul tries to gain the upper hand in negotiations, but her plans backfire. Gi-hun faces a moral crossroads, testing his limits - how far will he go?",
                             "image": "https://episodes.metahub.space/tt10919420/3/5/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
                             "title": "Saram-eun...",
                             "description": "As Jun-ho races to reach the island, tensions peak in the final round. The last players face an impossible situation in the closing minutes of the game.",
                             "image": "https://episodes.metahub.space/tt10919420/3/6/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "6.7"
                         }
                     ]
                 }
@@ -2489,9 +2585,9 @@
                         {
                             "title": "",
                             "description": "",
-                            "image": "",
+                            "image": "https://episodes.metahub.space/tt32612521/1/4/w780.jpg",
                             "addedDate": "2025-08-03",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": "",
@@ -2642,10 +2738,14 @@
             "title": "Dandadan",
             "genre": "Animation, Action, Adventure",
             "year": 2024,
+            "rating": 8.3,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt30217403/img",
             "description": "When Momo and Okarun's beliefs clash, they're thrown into a world of ghosts, aliens and awakened powers.",
+            "language": "Japanese, English",
+            "country": " Japan",
+            "ageRating": "18+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -2656,84 +2756,84 @@
                             "description": "Momo believes in ghosts, but not aliens. Okarun believes in aliens, but not ghosts. In their quests to prove each other wrong, they learn the shocking truth that both aliens and ghosts really exist and are out to get them.",
                             "image": "https://episodes.metahub.space/tt30217403/1/1/w780.jpg",
                             "addedDate": "2024-09-13",
-                            "rating": ""
+                            "rating": "8.6"
                         },
                         {
                             "title": "Sorette uchûjin ja ne",
                             "description": "Okarun is cursed by Turbo Granny, and Momo uses her newly found psychic powers to curb Turbo Granny from running out of control. Dawn breaks, and the two of them temporarily find shelter in Momo's house.",
                             "image": "https://episodes.metahub.space/tt30217403/1/2/w780.jpg",
                             "addedDate": "2024-10-10",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "Babâ to babâ ga gekitotsu jan ka",
                             "description": "Okarun transforms from Turbo Granny's curse. He goes berserk unable to control his power, but Momo's grandmother Seiko, saves them in the nick of time. To lift the curse, Momo and Okarun decide to play tag with Turbo Granny.",
                             "image": "https://episodes.metahub.space/tt30217403/1/3/w780.jpg",
                             "addedDate": "2024-10-17",
-                            "rating": ""
+                            "rating": "7.9"
                         },
                         {
                             "title": "Tâbo Babâ o buttobasô",
                             "description": "To settle the score with Turbo Granny, Momo and Okarun show up at the promised tunnel. They start the game of tag to pull the location-bound spirit away, and they managed to capture Turbo Granny using Momo's psychic",
                             "image": "https://episodes.metahub.space/tt30217403/1/4/w780.jpg",
                             "addedDate": "2024-10-24",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
                             "title": "Tama wa doko jan yo",
                             "description": "Victorious against Turbo Granny, Momo and Okarun regain peace. They have gotten closer through the traumatic experience, but they find their relationship to be awkward. That is when Okarun discloses something important to Momo.",
                             "image": "https://episodes.metahub.space/tt30217403/1/5/w780.jpg",
                             "addedDate": "2024-10-31",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": "Yabê onna ga kita",
                             "description": "Momo, Okarun and Turbo Granny search for the missing golden ball. They search all over the school and find out that a girl named Aira is in possession of a ball. Perhaps the effects of the ball, but Aira can now see invisible things",
                             "image": "https://episodes.metahub.space/tt30217403/1/6/w780.jpg",
                             "addedDate": "2024-11-07",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "Yasashii sekai e",
                             "description": "Momo and Okarun manage to weaken Acrobatic Silky, but make a shocking discovery regarding Aira. Acrobatic Silky suggests a surprising way to help.",
                             "image": "https://episodes.metahub.space/tt30217403/1/7/w780.jpg",
                             "addedDate": "2024-11-14",
-                            "rating": ""
+                            "rating": "9.7"
                         },
                         {
                             "title": "Nanka moyamoya suru jan yo",
                             "description": "The battle against Acrobatic Silky is over, Aira's romantic feelings stem from how Okarun saved her. As Momo, Okarun, and Aira's feelings intertwine, Serpoians make another appearance, and the three of them are trapped in void",
                             "image": "https://episodes.metahub.space/tt30217403/1/8/w780.jpg",
                             "addedDate": "2024-11-21",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "Gattai! Serupo Dôbâ Dêmon Nesshî!",
                             "description": "Aira has awakened the powers of Acrobatic Silky within her and proceeds to have a seesaw battle against the Serpoians and the Dover Demon. Momo and Okarun join the fray, intensifying the battle.",
                             "image": "https://episodes.metahub.space/tt30217403/1/9/w780.jpg",
                             "addedDate": "2024-11-28",
-                            "rating": ""
+                            "rating": "8.4"
                         },
                         {
                             "title": "Kyatoru myûtirêshon o kimi wa mita ka",
                             "description": "Momo, Okarun, and Aira make it through the alien assault by combining their powers. However, the Dover Demon that they thought they had defeated",
                             "image": "https://episodes.metahub.space/tt30217403/1/10/w780.jpg",
                             "addedDate": "2024-12-05",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "Hatsukoi no hito",
                             "description": "Momo's childhood friend, Jiji, appears and begins living in Momo's house. Jiji has been worrying about apparitions in the house he moved into. Okarun is clearly disturbed hearing that Jiji is Momo's first love.",
                             "image": "https://episodes.metahub.space/tt30217403/1/11/w780.jpg",
                             "addedDate": "2024-12-12",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
                             "title": "Noroi no ie e rettsu gô",
                             "description": "Momo and Okarun head to Jiji's house in a hot springs district to investigate the case of Jiji's family. Okarun feels gloomy looking at how close Momo and Jiji are.",
                             "image": "https://episodes.metahub.space/tt30217403/1/12/w780.jpg",
                             "addedDate": "2024-12-19",
-                            "rating": ""
+                            "rating": "7.5"
                         }
                     ]
                 },
@@ -2745,35 +2845,35 @@
                             "description": "As Momo fends off an attack in the outdoor hot spring, Okarun and Jiji panic over how to handle the mysterious room. Just then, the doorbell rings.",
                             "image": "https://episodes.metahub.space/tt30217403/2/1/w780.jpg",
                             "addedDate": "2025-07-03",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": "Jashi",
                             "description": "Jiji tries to stop Momo and Okarun, who are being controlled by telepathic waves, from committing suicide.",
                             "image": "https://episodes.metahub.space/tt30217403/2/2/w780.jpg",
                             "addedDate": "2025-07-10",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
                             "title": "Yurusanê ze",
-                            "description": "",
+                            "description": "Jiji's possessed by the Evil Eye. Okarun battles him while dodging Death Worm poison attacks underground. Unable to abandon Jiji, he tells Momo to escape alone. Above ground, Momo plans to use sunlight against the Death Worm.",
                             "image": "https://episodes.metahub.space/tt30217403/2/3/w780.jpg",
                             "addedDate": "2025-07-17",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
                             "title": "Yabasugi jan yo",
-                            "description": "",
+                            "description": "Momo surfaces the Mongolian Death Worm, triggering a volcano. She uses the worm as a fire hose against the lava, but the Kito family interferes. Evil Eye-possessed Jiji appears, worsening the situation.",
                             "image": "https://episodes.metahub.space/tt30217403/2/4/w780.jpg",
                             "addedDate": "2025-07-24",
-                            "rating": ""
+                            "rating": "9.0"
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt30217403/2/5/w780.jpg",
                             "addedDate": "2025-07-31",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "",
@@ -2826,18 +2926,21 @@
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 33,
             "title": "Sakamoto Days",
             "genre": "Animation, Action, Adventure",
             "year": 2025,
+            "rating": 7.4,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wRpCqsJFyKNuh5FMegNPrhzp2NF.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt17069148/img",
             "description": "Once the world's most feared hitman, Taro Sakamoto falls in love with Store Clerk Aoi. Leaving his violent past, he retires to live a peaceful life. But old enemies threaten to pull him back into the life he thought he'd left for good.",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "18+",
             "status": "ongoing",
             "seasons": [
                 {
@@ -2848,159 +2951,158 @@
                             "description": "Sakamoto enjoys a quiet life in retirement with his family. But one day, an old colleague demands he return to the assassin world -- or face consequences.",
                             "image": "https://episodes.metahub.space/tt17069148/1/1/w780.jpg",
                             "addedDate": "2025-01-11",
-                            "rating": ""
+                            "rating": "7.9"
                         },
                         {
                             "title": "Vs. Son Hee and Bacho",
                             "description": "While out on an errand, Sakamoto and Shin encounter Lu Shaotang, the daughter of a mafia boss, who's on the run and targeted by twin assassins.",
                             "image": "https://episodes.metahub.space/tt17069148/1/2/w780.jpg",
                             "addedDate": "2025-01-18",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": " Welcome to Sugar Park",
                             "description": "Sakamoto's ex-colleague arrives with news of a one-billion-yen bounty on Sakamoto's head. For safety, Sakamoto takes his family to Sugar Park, where he must fend off assassination attempts while pretending to enjoy a fun day out..",
                             "image": "https://episodes.metahub.space/tt17069148/1/3/w780.jpg",
                             "addedDate": "2025-01-25",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
                             "title": "Hard-Boiled",
                             "description": "With the poison-wielding hitman taken out, the Sakamotos head to their next attraction, where they're ambushed by Dondenkai Ltd's ultimate assassin duo.",
                             "image": "https://episodes.metahub.space/tt17069148/1/4/w780.jpg",
                             "addedDate": "2025-02-01",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
-                            "title": " Heisuke Mashimo",
+                            "title": "Source of Strength",
                             "description": "Sakamoto goes all out in a fierce one-on-one duel with Boiled. Meanwhile, ORDER members are tasked with handling a serial case targeting assassins.",
                             "image": "https://episodes.metahub.space/tt17069148/1/5/w780.jpg",
                             "addedDate": "2025-02-08",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
-                            "title": "Jurassic Bastard",
+                            "title": "Heisuke Mashimo",
                             "description": "A poverty stricken sniper, Heisuke Mashimo, hunts down Sakamoto for reputation and the reward bounty. However, not recognising Sakamoto's new form, he ends up joining a paintball competition with Sakamoto and Shin instead.",
                             "image": "https://episodes.metahub.space/tt17069148/1/6/w780.jpg",
                             "addedDate": "2025-02-15",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
-                            "title": "Sakamoto's vs. the Lab",
+                            "title": "Jurassic Bastard",
                             "description": "A mysterious group, from 'The Lab', kidnap Lu mistaking her for Shin.",
                             "image": "https://episodes.metahub.space/tt17069148/1/7/w780.jpg",
                             "addedDate": "2025-02-22",
-                            "rating": ""
+                            "rating": "7.4"
+                        },
+                        {
+                            "title": "Sakamoto's vs. the Lab",
+                            "description": "The battle at the Lab reaches new heights as Sakamoto and Shin fight to regain control of their bodies from the mad scientist's control.",
+                            "image": "https://episodes.metahub.space/tt17069148/1/8/w780.jpg",
+                            "addedDate": "2025-03-01",
+                            "rating": "7.9"
                         },
                         {
                             "title": "All Aboard",
-                            "description": "The battle at the Lab reaches new heights as Sakamoto and Shin fight to regain control of their bodies from the mad scientist's control.",
-                            "image": "https://episodes.metahub.space/tt17069148/1/8/w780.jpg",
-                            "addedDate": "2025-03-31",
-                            "rating": ""
-                        },
-                        {
-                            "title": "Bathhouse Roughhouse",
                             "description": "The battle between Taro Sakamoto and Kashima continues, as the legendary hit-man had the obvious upper hand. On the other hand, Shin continued his battle against Seba as Heisuke joined the battle, giving the them an upper hand.",
                             "image": "https://episodes.metahub.space/tt17069148/1/9/w780.jpg",
                             "addedDate": "2025-03-08",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
-                            "title": "Casino Battle",
+                            "title": "Bathhouse Roughhouse",
                             "description": "Exhausted from their battle, the crew heads to a local bathhouse but finds it too dangerous to relax. Later, a mysterious man arrives in search of Lu.",
                             "image": "https://episodes.metahub.space/tt17069148/1/10/w780.jpg",
                             "addedDate": "2025-03-15",
-                            "rating": ""
+                            "rating": "7.3"
                         },
                         {
-                            "title": "Overload",
+                            "title": "Casino Battle",
                             "description": "The crew faces Wutang in a high-stakes casino showdown to learn who issued Sakamoto's bounty. Meanwhile, X sends a group of vicious assassins their way.",
                             "image": "https://episodes.metahub.space/tt17069148/1/11/w780.jpg",
                             "addedDate": "2025-03-22",
-                            "rating": ""
+                            "rating": "7.3"
                         },
                         {
-                            "title": "Just Desserts",
+                            "title": "Overload",
                             "description": "Revolves around Shin and Lu encountering Saw, a serial killer who seeks to give people exciting deaths. Meanwhile, The Order plans to eliminate the escaped death row inmates targeting Sakamoto.",
                             "image": "https://episodes.metahub.space/tt17069148/1/12/w780.jpg",
                             "addedDate": "2025-07-14",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
-                            "title": "Kyoushuu",
-                            "description": "",
+                            "title": "Just Desserts",
+                            "description": "Shin's evolving mind-reading helps him and Lu battle Saw. Lu's \"Mafia Drunk\" mode finishes Saw, who then gets killed by Hyo. Osaragi brutally defeats Dump. ending with Aoi seemingly in danger due to Slur's schemes.",
                             "image": "https://episodes.metahub.space/tt17069148/1/13/w780.jpg",
                             "addedDate": "2025-07-21",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
-                            "title": "",
+                            "title": "Strong Assault",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/14/w780.jpg",
                             "addedDate": "2025-07-28",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
+                            "title": "Round and Round the Tower",
+                            "description": "As Apart reveals his past-unable to form human connections and seeking meaning through killing- Meanwhile, X is moving with a hidden agenda that could shake the assassin world to its core..",
                             "image": "https://episodes.metahub.space/tt17069148/1/15/w780.jpg",
-                            "addedDate": "2025-08-04",
-                            "rating": ""
+                            "addedDate": "2025-07-29",
+                            "rating": "8.7"
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/16/w780.jpg",
-                            "addedDate": "2025-08-11",
+                            "addedDate": "2025-08-05",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/17/w780.jpg",
-                            "addedDate": "2025-08-18",
+                            "addedDate": "2025-08-12",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/18/w780.jpg",
-                            "addedDate": "2025-08-25",
+                            "addedDate": "2025-08-19",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/19/w780.jpg",
-                            "addedDate": "2025-09-01",
+                            "addedDate": "2025-08-26",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/20/w780.jpg",
-                            "addedDate": "2025-09-08",
+                            "addedDate": "2025-09-02",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/21/w780.jpg",
-                            "addedDate": "2025-09-15",
+                            "addedDate": "2025-09-09",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "https://episodes.metahub.space/tt17069148/1/22/w780.jpg",
-                            "addedDate": "2025-09-22",
+                            "addedDate": "2025-09-16",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "rating": 0
+            ]
         },
         {
             "id": 34,
@@ -3021,56 +3123,70 @@
                             "description": "Luffy sets sail and begins his adventure to find the One Piece.",
                             "image": "https://episodes.metahub.space/tt0388629/1/1/w780.jpg",
                             "addedDate": "1999-10-20",
-                            "rating": ""
+                            "rating": 8.2
                         },
                         {
                             "title": "Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!",
                             "description": "Luffy seeks out Zoro to join his crew.",
                             "image": "https://episodes.metahub.space/tt0388629/1/2/w780.jpg",
                             "addedDate": "1999-11-17",
-                            "rating": ""
+                            "rating": 8.1
                         },
                         {
                             "title": "Morgan vs. Luffy! Who's This Beautiful Young Girl?",
                             "description": "Luffy faces off against Captain Morgan and meets Coby.",
                             "image": "https://episodes.metahub.space/tt0388629/1/3/w780.jpg",
                             "addedDate": "1999-11-24",
-                            "rating": ""
+                            "rating": 8.0
                         },
                         {
                             "title": "Luffy's Past! Enter Red-Haired Shanks!",
                             "description": "A flashback reveals Luffy's inspiration to become a pirate.",
                             "image": "https://episodes.metahub.space/tt0388629/1/4/w780.jpg",
                             "addedDate": "1999-12-01",
-                            "rating": ""
+                            "rating": 8.3
                         },
                         {
                             "title": "A Terrifying Mysterious Power! Captain Buggy the Clown Pirate!",
                             "description": "Luffy encounters Buggy the Clown, a devil fruit user.",
                             "image": "https://episodes.metahub.space/tt0388629/1/5/w780.jpg",
                             "addedDate": "1999-12-08",
-                            "rating": ""
+                            "rating": 8.0
                         },
                         {
                             "title": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
                             "description": "Luffy battles one of Buggy's top men.",
                             "image": "https://episodes.metahub.space/tt0388629/1/6/w780.jpg",
                             "addedDate": "1999-12-15",
-                            "rating": ""
+                            "rating": 7.9
                         },
                         {
                             "title": "Epic Showdown! Swordsman Zoro vs. Acrobat Cabaji!",
                             "description": "Zoro shows his skills in a fierce sword fight.",
                             "image": "https://episodes.metahub.space/tt0388629/1/7/w780.jpg",
                             "addedDate": "1999-12-22",
-                            "rating": ""
+                            "rating": 8.1
                         },
                         {
                             "title": "Who Will Win? Showdown Between the True Powers of the Devil!",
                             "description": "Luffy faces Buggy in an intense fight.",
                             "image": "https://episodes.metahub.space/tt0388629/1/8/w780.jpg",
                             "addedDate": "1999-12-29",
-                            "rating": ""
+                            "rating": 8.2
+                        },
+                        {
+                            "title": "The Honorable Liar? Captain Usopp",
+                            "description": "The crew meets the notorious liar, Usopp.",
+                            "image": "https://episodes.metahub.space/tt0388629/1/9/w780.jpg",
+                            "addedDate": "2000-01-05",
+                            "rating": 7.8
+                        },
+                        {
+                            "title": "The Weirdest Guy Ever! Jango the Hypnotist",
+                            "description": "The crew faces Jango, a hypnotist with strange powers.",
+                            "image": "https://episodes.metahub.space/tt0388629/1/10/w780.jpg",
+                            "addedDate": "2000-01-12",
+                            "rating": 7.7
                         }
                     ]
                 },
@@ -3081,167 +3197,205 @@
                             "title": "The Worst Man in the Eastern Seas! Fish-Man Pirate Arlong",
                             "description": "Luffy and crew hear tales of the powerful fish-man Arlong.",
                             "image": "https://episodes.metahub.space/tt0388629/2/1/w780.jpg",
-                            "addedDate": "2000-01-12",
-                            "rating": ""
+                            "addedDate": "2000-01-19",
+                            "rating": 8.0
                         },
                         {
                             "title": "Luffy Submerged! Zoro vs. Hatchan the Octopus",
                             "description": "Zoro takes on a fish-man swordsman to save Luffy.",
                             "image": "https://episodes.metahub.space/tt0388629/2/2/w780.jpg",
-                            "addedDate": "2000-01-19",
-                            "rating": ""
+                            "addedDate": "2000-01-26",
+                            "rating": 8.1
                         },
                         {
                             "title": "Proud Warriors! Sanji and Usopp's Fierce Battles",
                             "description": "Sanji and Usopp prove their worth in battle.",
                             "image": "https://episodes.metahub.space/tt0388629/2/3/w780.jpg",
-                            "addedDate": "2000-01-26",
-                            "rating": ""
+                            "addedDate": "2000-02-02",
+                            "rating": 8.0
                         },
                         {
                             "title": "Luffy's Anger! A Dirty Trick in a Sacred Battle",
                             "description": "Luffy finally joins the fight against Arlong.",
                             "image": "https://episodes.metahub.space/tt0388629/2/4/w780.jpg",
-                            "addedDate": "2000-02-02",
-                            "rating": ""
+                            "addedDate": "2000-02-09",
+                            "rating": 8.2
                         },
                         {
                             "title": "Luffy Stands Up! Ending the Evil Fish-Man!",
                             "description": "The final showdown between Luffy and Arlong begins.",
                             "image": "https://episodes.metahub.space/tt0388629/2/5/w780.jpg",
-                            "addedDate": "2000-02-09",
-                            "rating": ""
+                            "addedDate": "2000-02-16",
+                            "rating": 8.3
                         },
                         {
                             "title": "The First Obstacle? Giant Whale Laboon Appears",
                             "description": "The crew encounters a giant whale on the Grand Line.",
                             "image": "https://episodes.metahub.space/tt0388629/2/6/w780.jpg",
-                            "addedDate": "2000-02-16",
-                            "rating": ""
+                            "addedDate": "2000-02-23",
+                            "rating": 7.9
                         },
                         {
                             "title": "A Promise Between Men! Luffy and the Whale Vow to Meet Again",
                             "description": "Luffy makes a strange promise to a whale named Laboon.",
                             "image": "https://episodes.metahub.space/tt0388629/2/7/w780.jpg",
-                            "addedDate": "2000-02-23",
-                            "rating": ""
+                            "addedDate": "2000-03-01",
+                            "rating": 8.0
                         },
                         {
                             "title": "The Town of Beginnings and Endings - Loguetown",
                             "description": "The crew arrives at Loguetown, where the Pirate King was executed.",
                             "image": "https://episodes.metahub.space/tt0388629/2/8/w780.jpg",
-                            "addedDate": "2000-03-01",
-                            "rating": ""
+                            "addedDate": "2000-03-08",
+                            "rating": 8.1
                         },
                         {
                             "title": "Buggy's Revenge! The Man Who Smiles at the Execution Stand!",
                             "description": "Buggy returns for revenge as Luffy faces danger.",
                             "image": "https://episodes.metahub.space/tt0388629/2/9/w780.jpg",
-                            "addedDate": "2000-03-08",
-                            "rating": ""
+                            "addedDate": "2000-03-15",
+                            "rating": 8.0
                         },
                         {
                             "title": "The Legend Has Begun! Head for the Grand Line",
                             "description": "The crew officially sets sail for the Grand Line.",
                             "image": "https://episodes.metahub.space/tt0388629/2/10/w780.jpg",
-                            "addedDate": "2000-03-15",
-                            "rating": ""
-                        },
-                        {
-                            "title": "Survive! The Deadly Giant Battle",
-                            "description": "The Straw Hats are caught in a sudden storm.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/11/w780.jpg",
                             "addedDate": "2000-03-22",
-                            "rating": ""
+                            "rating": 8.2
+                        }
+                    ]
+                },
+                {
+                    "season_number": 3,
+                    "episodes": [
+                        {
+                            "title": "Nami's Sick? Beyond the Snow Falling on the Sea!",
+                            "description": "The crew faces a new challenge as Nami falls ill.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/1/w780.jpg",
+                            "addedDate": "2000-03-29",
+                            "rating": 8.1
                         },
                         {
-                            "title": "A Desperate Situation! The Mystery of the Island",
-                            "description": "The crew finds a mysterious girl named Apis.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/12/w780.jpg",
+                            "title": "Adventure on Drum Island! The Island Where Snow Lives",
+                            "description": "The Straw Hats arrive at Drum Island in search of a doctor.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/2/w780.jpg",
+                            "addedDate": "2000-04-05",
+                            "rating": 8.2
+                        },
+                        {
+                            "title": "Doctor Kureha! The Witch of Drum Island",
+                            "description": "The crew meets the mysterious Dr. Kureha.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/3/w780.jpg",
                             "addedDate": "2000-04-12",
-                            "rating": ""
+                            "rating": 8.0
                         },
                         {
-                            "title": "Erik's Evil Plot! The Ancient Dragon!",
-                            "description": "The crew discovers a rare and ancient dragon.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/13/w780.jpg",
+                            "title": "Tony Tony Chopper! The Cotton Candy-Loving Reindeer",
+                            "description": "A new friend joins the crew: Chopper the reindeer.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/4/w780.jpg",
                             "addedDate": "2000-04-19",
-                            "rating": ""
+                            "rating": 8.3
                         },
                         {
-                            "title": "Protect the Dragon! The Crew Fights Back",
-                            "description": "Luffy and friends protect the dragon from Navy threats.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/14/w780.jpg",
+                            "title": "Wapol the Bliking! The Tin-Plate Wapol's Army",
+                            "description": "The Straw Hats face off against Wapol and his men.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/5/w780.jpg",
                             "addedDate": "2000-04-26",
-                            "rating": ""
+                            "rating": 8.0
                         },
                         {
-                            "title": "Finale on Warship Island! Farewell, Apis!",
-                            "description": "The adventure on Warship Island comes to an end.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/15/w780.jpg",
+                            "title": "The Island Where Snow Lives! The Climb Up Drum Rockies",
+                            "description": "Luffy braves the elements to save Nami.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/6/w780.jpg",
                             "addedDate": "2000-05-03",
-                            "rating": ""
+                            "rating": 8.1
                         },
                         {
-                            "title": "A New Journey Begins! Heading into the Grand Line!",
-                            "description": "The Straw Hats prepare to face the unknown.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/16/w780.jpg",
+                            "title": "The Blue-Nosed Reindeer! Chopper's Secret",
+                            "description": "Chopper's tragic past is revealed.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/7/w780.jpg",
                             "addedDate": "2000-05-10",
-                            "rating": ""
+                            "rating": 8.2
                         },
                         {
-                            "title": "Surprise Encounter! A Legendary Whale and a Lonely Promise",
-                            "description": "Laboon reappears with an emotional twist.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/17/w780.jpg",
+                            "title": "The Doctor Who is Called a Witch! Kureha's True Ability",
+                            "description": "Dr. Kureha shows her true skills as a doctor.",
+                            "image": "https://episodes.metahub.space/tt0388629/3/8/w780.jpg",
                             "addedDate": "2000-05-17",
-                            "rating": ""
-                        },
+                            "rating": 8.0
+                        }
+                    ]
+                },
+                {
+                    "season_number": 4,
+                    "episodes": [
                         {
-                            "title": "Adventure in Twin Cape! Crocus the Lighthouse Keeper",
-                            "description": "The crew meets an old man who knows the Grand Line well.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/18/w780.jpg",
+                            "title": "Alabasta's Hero and a Ballerina on the Ship!",
+                            "description": "The crew sails to Alabasta and meets new faces.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/1/w780.jpg",
                             "addedDate": "2000-05-24",
-                            "rating": ""
+                            "rating": 8.1
                         },
                         {
-                            "title": "A Mystery Ship Appears! The Dangerous Trap!",
-                            "description": "The Straw Hats are caught in a naval ambush.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/19/w780.jpg",
+                            "title": "The Adventure in Alabasta! The Desert Kingdom",
+                            "description": "The Straw Hats arrive in the desert kingdom of Alabasta.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/2/w780.jpg",
                             "addedDate": "2000-05-31",
-                            "rating": ""
+                            "rating": 8.2
                         },
                         {
-                            "title": "The Pirate Ship from the Past! The Ghost Ship Appears!",
-                            "description": "The crew boards a haunted pirate ship.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/20/w780.jpg",
+                            "title": "The Battle Begins! Showdown at Rainbase",
+                            "description": "The crew faces Crocodile and Baroque Works.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/3/w780.jpg",
                             "addedDate": "2000-06-07",
-                            "rating": ""
+                            "rating": 8.3
                         },
                         {
-                            "title": "The Dreaded Captain! The Power of Commander Erik",
-                            "description": "The Navy intensifies its pursuit of the Straw Hats.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/21/w780.jpg",
+                            "title": "Rebel Army vs. Royal Army! The Final Showdown",
+                            "description": "A civil war erupts in Alabasta.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/4/w780.jpg",
                             "addedDate": "2000-06-14",
-                            "rating": ""
+                            "rating": 8.2
                         },
                         {
-                            "title": "Farewell to Grand Line! The Beginning of the Real Adventure",
-                            "description": "The crew embarks on their next big journey.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/22/w780.jpg",
+                            "title": "The Secret of the Ancient Weapon! Pluton",
+                            "description": "The mystery of the ancient weapon Pluton is revealed.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/5/w780.jpg",
                             "addedDate": "2000-06-21",
-                            "rating": ""
+                            "rating": 8.1
+                        },
+                        {
+                            "title": "Farewell to Vivi! A Grand Departure",
+                            "description": "The crew says goodbye to Princess Vivi.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/6/w780.jpg",
+                            "addedDate": "2000-06-28",
+                            "rating": 8.0
+                        },
+                        {
+                            "title": "The Pirates' Banquet and Operation Escape Alabasta!",
+                            "description": "The Straw Hats celebrate their victory.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/7/w780.jpg",
+                            "addedDate": "2000-07-05",
+                            "rating": 8.1
+                        },
+                        {
+                            "title": "The First Patient! The Untold Story of the Rumble Ball",
+                            "description": "Chopper's medical skills are put to the test.",
+                            "image": "https://episodes.metahub.space/tt0388629/4/8/w780.jpg",
+                            "addedDate": "2000-07-12",
+                            "rating": 8.0
                         }
                     ]
                 }
             ],
-            "rating": 0
+            "rating": 8.2
         },
         {
             "id": 35,
             "title": "The Fragrant Flower Blooms with Dignity",
             "genre": "Animation, Comedy, Drama",
             "year": 2025,
-            "rating": 0,
+            "rating": 8.8,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcAKLwLJf6G8QaoGdJyxrVCHBnY.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt36592690/img",
@@ -3259,32 +3413,32 @@
                             "description": "While helping at his family's patisserie, Rintaro meets Kaoruko. He fears his appearance has scared her off - but she returns the next day to see him.",
                             "image": "https://episodes.metahub.space/tt36592690/1/1/w780.jpg",
                             "addedDate": "2025-06-06",
-                            "rating": ""
+                            "rating": "8.8"
                         },
                         {
                             "title": "Chidori and Kikyo",
                             "description": "Tensions between the two schools escalate during a commotion at Chidori's gates. Later, Rintaro finds a surprise visitor waiting at the patisserie.",
                             "image": "https://episodes.metahub.space/tt36592690/1/2/w780.jpg",
                             "addedDate": "2025-06-13",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
                             "title": "Yasashii Hito",
                             "description": "Desperate to improve their grades, Rintaro and Shohei cram in the library. There, Rintaro runs into Kaoruko, but their tender moment gets interrupted.",
                             "image": "https://episodes.metahub.space/tt36592690/1/3/w780.jpg",
                             "addedDate": "2025-06-20",
-                            "rating": ""
+                            "rating": "8.6"
                         },
                         {
                             "title": "Kokoro no Ondo",
                             "description": "Though Rintaro becomes more comfortable with Kaoruko during their study session, he faces unexpectedly strong opposition to their growing bond.",
                             "image": "https://episodes.metahub.space/tt36592690/1/4/w780.jpg",
                             "addedDate": "2025-06-27",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
+                            "title": " Premonition of a New Beginning",
+                            "description": "While celebrating passing the mid-term exams, Shohei, Ayato and Saku nearly discover Rintaro's secret. Will he finally tell them the truth ?",
                             "image": "https://episodes.metahub.space/tt36592690/1/5/w780.jpg",
                             "addedDate": "2025-08-02",
                             "rating": ""

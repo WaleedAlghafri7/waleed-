@@ -200,6 +200,7 @@
             </div>
         </div>
     </div>
+    <div id="footer-container" style="margin: 10px;"></div>
 
     <script>
         // Get search query from URL
@@ -290,6 +291,21 @@
                 loadSearchResults(); // Reload results with new filter
             });
         });
+        // Load header and footer
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
 
         // Search input functionality
         const searchInput = document.querySelector('.search input');
