@@ -487,13 +487,15 @@ body {
     width: 10px;
     height: 10px;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .dot.active {
     background: #ffd700;
+    width: 30px;
+    border-radius: 5px;
     transform: scale(1.2);
 }
 
@@ -1711,6 +1713,7 @@ body {
     line-height: 1.5;
     opacity: 0.9;
     display: -webkit-box;
+    height: 65px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
