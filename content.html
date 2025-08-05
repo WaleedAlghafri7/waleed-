@@ -333,6 +333,38 @@
                 opacity: 0.6;
             }
         }
+        /* Custom styles for season navigation buttons */
+        .season-nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px 0 0 0;
+        }
+        .season-nav-btn {
+            background-color: rgba(104, 104, 104, 0.171);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            width: 20%;
+        }
+        .season-nav-btn:disabled {
+            display: none;
+            background: #888;
+            color: #eee;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
     </style>
 </head>
 
@@ -584,6 +616,17 @@
                                 <div class="episodes-grid" id="episodesGrid">
                                     <!-- سيتم تعبئة الحلقات ديناميكياً -->
                                 </div>
+                                <!-- أزرار الانتقال بين المواسم (أرقام المواسم) -->
+                                <div class="season-nav-buttons" id="seasonNavButtons" style="display:none;">
+                                    <button class="season-nav-btn" id="prevSeasonBtn">
+                                        <i class="fas fa-arrow-left"></i>
+                                        <span id="prevSeasonNumber"></span>
+                                    </button>
+                                    <button class="season-nav-btn" id="nextSeasonBtn">
+                                        <span id="nextSeasonNumber"></span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -619,6 +662,7 @@
 
         const dataManager = new DataManager();
         let currentContent = null;
+        let currentSeasonIdx = 0; // متغير لتتبع الموسم الحالي
 
         // استخراج المعرف والنوع من الرابط بالطريقة الجديدة
         const params = new URLSearchParams(window.location.search);
@@ -848,6 +892,11 @@
         function initializeEpisodes(series) {
             const seasonSelect = document.getElementById('seasonSelect');
             const episodesGrid = document.getElementById('episodesGrid');
+            const seasonNavButtons = document.getElementById('seasonNavButtons');
+            const prevSeasonBtn = document.getElementById('prevSeasonBtn');
+            const nextSeasonBtn = document.getElementById('nextSeasonBtn');
+            const prevSeasonNumber = document.getElementById('prevSeasonNumber');
+            const nextSeasonNumber = document.getElementById('nextSeasonNumber');
 
             // Clear existing options
             seasonSelect.innerHTML = '';
@@ -862,14 +911,69 @@
 
             // Load episodes for first season by default
             if (series.seasons.length > 0) {
-                loadEpisodes(series, 0);
+                currentSeasonIdx = 0;
+                loadEpisodes(series, currentSeasonIdx);
+            }
+
+            // Show/hide nav buttons
+            if (series.seasons.length > 1) {
+                seasonNavButtons.style.display = 'flex';
+            } else {
+                seasonNavButtons.style.display = 'none';
             }
 
             // عند تغيير الموسم
             seasonSelect.onchange = function () {
                 const selectedSeasonIdx = parseInt(this.value);
-                loadEpisodes(series, selectedSeasonIdx);
+                currentSeasonIdx = selectedSeasonIdx;
+                loadEpisodes(series, currentSeasonIdx);
+                updateSeasonNavButtons(series);
             };
+
+            // أزرار الانتقال
+            prevSeasonBtn.onclick = function () {
+                if (currentSeasonIdx > 0) {
+                    currentSeasonIdx--;
+                    seasonSelect.value = currentSeasonIdx;
+                    loadEpisodes(series, currentSeasonIdx);
+                    updateSeasonNavButtons(series);
+                }
+            };
+            nextSeasonBtn.onclick = function () {
+                if (currentSeasonIdx < series.seasons.length - 1) {
+                    currentSeasonIdx++;
+                    seasonSelect.value = currentSeasonIdx;
+                    loadEpisodes(series, currentSeasonIdx);
+                    updateSeasonNavButtons(series);
+                }
+            };
+
+            // تحديث حالة الأزرار عند البداية
+            updateSeasonNavButtons(series);
+        }
+
+        // تحديث تفعيل أزرار المواسم وتغيير النص إلى رقم الموسم
+        function updateSeasonNavButtons(series) {
+            const prevSeasonBtn = document.getElementById('prevSeasonBtn');
+            const nextSeasonBtn = document.getElementById('nextSeasonBtn');
+            const prevSeasonNumber = document.getElementById('prevSeasonNumber');
+            const nextSeasonNumber = document.getElementById('nextSeasonNumber');
+
+            // أزرار التفعيل
+            prevSeasonBtn.disabled = (currentSeasonIdx === 0);
+            nextSeasonBtn.disabled = (currentSeasonIdx === series.seasons.length - 1);
+
+            // أرقام المواسم
+            if (currentSeasonIdx > 0) {
+                prevSeasonNumber.textContent = `Season ${series.seasons[currentSeasonIdx - 1].season_number}`;
+            } else {
+                prevSeasonNumber.textContent = '';
+            }
+            if (currentSeasonIdx < series.seasons.length - 1) {
+                nextSeasonNumber.textContent = `Season ${series.seasons[currentSeasonIdx + 1].season_number}`;
+            } else {
+                nextSeasonNumber.textContent = '';
+            }
         }
 
         // Load episodes for selected season (بنية المواسم الجديدة)
@@ -1117,4 +1221,4 @@
     </script>
 </body>
 
-</html
+</html>
