@@ -104,6 +104,8 @@
             </div>
         </div>
         <div class="content">
+            <!-- Best Rated Section -->
+            
             <div class="slider-container">
                 <div class="slider"> 
                     <!-- This section will be filled dynamically from data.json -->
@@ -112,6 +114,14 @@
                     <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
                     <div class="slider-dots"></div>
                     <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="content-section" id="best-rated-section">
+                <div class="section-header">
+                    <h2>Top Rated</h2>
+                </div>
+                <div class="best-rated-grid">
+                    <!-- سيتم تعبئة أفضل 3 أفلام وأفضل 3 مسلسلات ديناميكياً -->
                 </div>
             </div>
 
@@ -154,6 +164,14 @@
                     <!-- This section will be filled dynamically from data.json -->
                 </div>
             </div>
+            <div class="content-section" id="latest-episodes-section">
+                <div class="section-header">
+                    <h2>Latest Episodes</h2>
+                </div>
+                <div class="latest-episodes-grid">
+                    <!-- سيتم تعبئة آخر الحلقات ديناميكياً -->
+                </div>
+            </div>
         </div>
         <div id="footer-container"></div>
     </div>
@@ -171,7 +189,11 @@
         async function loadContent() {
             try {
                 await dataManager.loadData();
-                
+
+                // Top Rated Section (mixed)
+                const bestRatedMixed = getTopRatedMixed(8);
+                displayBestRatedMixed(bestRatedMixed);
+
                 // Display latest movies (sorted by ID descending)
                 const latestMovies = dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 8);
                 displayMovies(latestMovies, '.movies-grid');
@@ -187,6 +209,10 @@
                 // Display most popular series (sorted by rating descending)
                 const popularSeries = dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 8);
                 displaySeries(popularSeries, '.popular-series-grid');
+
+                // Latest Episodes Section
+                const latestEpisodes = dataManager.getLatestEpisodes(10);
+                displayLatestEpisodes(latestEpisodes);
 
                 // Initialize slider
                 initializeSlider();
@@ -254,6 +280,64 @@
                 `;
 
                 seriesGrid.appendChild(card);
+            });
+        }
+
+        // جلب أفضل 3 عناصر مختلطة (أفلام ومسلسلات)
+        function getTopRatedMixed(count = 3) {
+            const all = [
+                ...dataManager.movies.map(m => ({...m, _type: 'movie'})),
+                ...dataManager.series.map(s => ({...s, _type: 'series'}))
+            ];
+            return all
+                .filter(item => item.rating && item.rating !== '--')
+                .sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
+                .slice(0, count);
+        }
+
+        // عرض أفضل 3 عناصر مختلطة
+        function displayBestRatedMixed(items) {
+            const grid = document.querySelector('.best-rated-grid');
+            grid.innerHTML = '';
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'best-rated-card';
+                card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item._type}`;
+                card.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="series-info">
+                        <h3>${item.title}</h3>
+                        <div class="movie-details">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${item.rating}</span>
+                            </div>
+                            <div class="year">
+                                <span>${item.year ? item.year : ''}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // عرض آخر الحلقات المضافة
+        function displayLatestEpisodes(episodes) {
+            const grid = document.querySelector('.latest-episodes-grid');
+            grid.innerHTML = '';
+            episodes.forEach(ep => {
+                const card = document.createElement('div');
+                card.className = 'latest-episode-card';
+                card.onclick = () => window.location.href = `content.html?id=${ep.seriesId}&type=series`;
+                card.innerHTML = `
+                    <img src="${ep.image || 'https://via.placeholder.com/110x110?text=No+Image'}" alt="${ep.title}">
+                    <div class="latest-episode-info">
+                        <div class="ep-title">${ep.title || ''}</div>
+                        <div class="series-title">${ep.seriesTitle || ''}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
             });
         }
 

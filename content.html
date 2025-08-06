@@ -343,7 +343,7 @@
         .season-nav-btn {
             background-color: rgba(104, 104, 104, 0.171);
             color: white;
-            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.1); /* أضف حد أزرق */
             padding: 12px 20px;
             border-radius: 8px;
             cursor: pointer;
@@ -369,6 +369,7 @@
 </head>
 
 <body>
+      
     <div class="container">
         <!-- Header -->
         <div class="header">
@@ -455,7 +456,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Content Details -->
         <div class="content">
             <div class="content-details">
@@ -651,10 +651,16 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
         <div id="footer-container"></div>
+        <button class="back-arrow" onclick="history.back()" aria-label="رجوع">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </div>
     <script src="script.js"></script>
     <script type="module">
@@ -905,7 +911,12 @@
             series.seasons.forEach((season, idx) => {
                 const option = document.createElement('option');
                 option.value = idx;
-                option.textContent = `Season ${season.season_number}`;
+                // إضافة نوع القسم (part) بجانب رقم الموسم إذا كان موجودًا
+                let seasonText = `Season ${season.season_number}`;
+                if (season.part && season.part !== '') {
+                    seasonText += ` - Part ${season.part}`;
+                }
+                option.textContent = seasonText;
                 seasonSelect.appendChild(option);
             });
 
@@ -963,14 +974,22 @@
             prevSeasonBtn.disabled = (currentSeasonIdx === 0);
             nextSeasonBtn.disabled = (currentSeasonIdx === series.seasons.length - 1);
 
-            // أرقام المواسم
+            // أرقام المواسم مع نوع القسم (part) إذا وجد
             if (currentSeasonIdx > 0) {
-                prevSeasonNumber.textContent = `Season ${series.seasons[currentSeasonIdx - 1].season_number}`;
+                let prevText = `Season ${series.seasons[currentSeasonIdx - 1].season_number}`;
+                if (series.seasons[currentSeasonIdx - 1].part && series.seasons[currentSeasonIdx - 1].part !== '') {
+                    prevText += ` - Part ${series.seasons[currentSeasonIdx - 1].part}`;
+                }
+                prevSeasonNumber.textContent = prevText;
             } else {
                 prevSeasonNumber.textContent = '';
             }
             if (currentSeasonIdx < series.seasons.length - 1) {
-                nextSeasonNumber.textContent = `Season ${series.seasons[currentSeasonIdx + 1].season_number}`;
+                let nextText = `Season ${series.seasons[currentSeasonIdx + 1].season_number}`;
+                if (series.seasons[currentSeasonIdx + 1].part && series.seasons[currentSeasonIdx + 1].part !== '') {
+                    nextText += ` - Part ${series.seasons[currentSeasonIdx + 1].part}`;
+                }
+                nextSeasonNumber.textContent = nextText;
             } else {
                 nextSeasonNumber.textContent = '';
             }

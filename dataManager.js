@@ -155,4 +155,63 @@ export default class DataManager {
             return false;
         }
     }
+
+    // أفضل 3 أفلام حسب التقييم
+    getTopRatedMovies(count = 6) {
+        return this.sortMovies(this.movies, 'rating-desc').slice(0, count);
+    }
+
+    // أفضل 3 مسلسلات حسب التقييم
+    getTopRatedSeries(count = 6) {
+        return this.sortSeries(this.series, 'rating-desc').slice(0, count);
+    }
+
+    // آخر الحلقات المضافة (من جميع المسلسلات)
+    getLatestEpisodes(count = 6) {
+        const episodes = [];
+        const now = new Date();
+        this.series.forEach(series => {
+            if (series.seasons && Array.isArray(series.seasons)) {
+                series.seasons.forEach(season => {
+                    // دعم بنية الحلقات مباشرة أو داخل أجزاء
+                    if (season.episodes && Array.isArray(season.episodes)) {
+                        season.episodes.forEach(ep => {
+                            if (ep.addedDate && new Date(ep.addedDate) <= now) {
+                                episodes.push({
+                                    ...ep,
+                                    seriesId: series.id,
+                                    seriesTitle: series.title,
+                                    seasonNumber: season.season_number
+                                });
+                            }
+                        });
+                    }
+                    if (season.parts && Array.isArray(season.parts)) {
+                        season.parts.forEach(part => {
+                            if (part.episodes && Array.isArray(part.episodes)) {
+                                part.episodes.forEach(ep => {
+                                    if (ep.addedDate && new Date(ep.addedDate) <= now) {
+                                        episodes.push({
+                                            ...ep,
+                                            seriesId: series.id,
+                                            seriesTitle: series.title,
+                                            seasonNumber: season.season_number,
+                                            partNumber: part.part_number
+                                        });
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        // ترتيب حسب تاريخ الإضافة (addedDate) تنازلياً
+        episodes.sort((a, b) => {
+            if (!a.addedDate) return 1;
+            if (!b.addedDate) return -1;
+            return new Date(b.addedDate) - new Date(a.addedDate);
+        });
+        return episodes.slice(0, count);
+    }
 } 
