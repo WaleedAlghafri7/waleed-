@@ -2575,7 +2575,8 @@ body {
     .series-grid,
     .trending-grid,
     .best-rated-grid,
-    .content-grid {
+    .content-grid,
+    .results-grid {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
         gap: 10px;
     }
