@@ -237,6 +237,20 @@
             "language": "English",
             "country": "United States",
             "ageRating": "PG"
+        },
+        {
+            "id": 1754566567171,
+            "title": "Jujutsu Kaisen 0",
+            "genre": "Animation, Action, Shonen",
+            "year": 2021,
+            "rating": 7.8,
+            "duration": "1h 52min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/rcEDPOOOUTLFxLLQJggfLffbofe.jpg",
+            "description": "The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers.",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "PG-13"
         }
     ],
     "series": [
@@ -2587,7 +2601,7 @@
                             "description": "",
                             "image": "https://image.tmdb.org/t/p/original/7Y3O7q3mOt9f4FSChUIFyAZyRGa.jpg",
                             "addedDate": "2025-08-03",
-                            "rating": "8.2"
+                            "rating": "8.1"
                         },
                         {
                             "title": "",
@@ -2873,7 +2887,7 @@
                             "description": "Momo rescues Okarun and they make it home safely, while Jiji remains under Evil Eye's possession.",
                             "image": "https://image.tmdb.org/t/p/original/pkENUMWDpL5hT8Rln4poJHrpM7V.jpg",
                             "addedDate": "2025-07-31",
-                            "rating": "8.1"
+                            "rating": "8.2"
                         },
                         {
                             "title": "Kazoku ni narimashita",
@@ -3441,7 +3455,7 @@
                             "description": "While celebrating passing the mid-term exams, Shohei, Ayato and Saku nearly discover Rintaro's secret. Will he finally tell them the truth ?",
                             "image": "https://episodes.metahub.space/tt36592690/1/5/w780.jpg",
                             "addedDate": "2025-08-02",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "",
@@ -3883,7 +3897,7 @@
                             "description": "Kaiju No. 9 appears for the third time, splitting in two and overwhelming the Defense Force.",
                             "image": "https://image.tmdb.org/t/p/original/C5mc4rl8nkcU8cOYkpAgc8hKTy.jpg",
                             "addedDate": "2025-08-02",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
                             "title": "",
@@ -3939,6 +3953,374 @@
                             "description": "",
                             "image": "",
                             "addedDate": "2025-09-27",
+                            "rating": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1754566250630,
+            "title": "Jujutsu Kaisen",
+            "genre": "Animation, Action, Shonen",
+            "year": 2020,
+            "rating": 8.5,
+            "duration": "24min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kjWDfeq8PY2UNDityFEzj3CF7KA.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
+            "description": "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "16+",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": "Ryomen Sukuna",
+                            "description": "As Itadori Yuuji cares for his grandpa, Jujutsu sorcerer Fushiguro Megumi worries that he's carrying a cursed object of rare power. The Occult club messes with something far beyond their understanding",
+                            "image": "https://image.tmdb.org/t/p/original/3wymoL9HYpllpFrcD8VCvemktGg.jpg",
+                            "addedDate": "2020-10-02",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "For Myself",
+                            "description": "Following the delay of his secret execution, Yuji is brought to Tokyo Metropolitan Curse Technical School. He's interviewed by the principal, who tests his convictions to see if he's worthy of becoming a sorcerer.",
+                            "image": "https://image.tmdb.org/t/p/original/k5U9vkpy31UiqCkEc6x6OPBBB0R.jpg",
+                            "addedDate": "2020-10-10",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Girl of Steel",
+                            "description": "A new freshman arrives to join the Itadori and Fushiguro group. She barely arrives in Tokyo, and is already put to the test on her first exorcism mission.",
+                            "image": "https://image.tmdb.org/t/p/original/foMCHRzZVfCTvrmfWWeWViBzvZH.jpg",
+                            "addedDate": "2020-10-17",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": "Curse Womb Must Die",
+                            "description": "The three Jujutsu first years are sent to rescue inmates of a detention center haunted by a Cursed Womb. With the potential to spawn a Special Grade Cursed Spirit, the young Sorcerers are faced with the choice to run or die.",
+                            "image": "https://image.tmdb.org/t/p/original/7AxWD8EGwgurIeNoS40YidIlbcT.jpg",
+                            "addedDate": "2020-10-23",
+                            "rating": "8.8"
+                        },
+                        {
+                            "title": "Curse Womb Must Die -II-",
+                            "description": "Yuuji fails to regain control of his own body, forcing Fushiguro to take drastic measures. Meanwhile, the school's veterans finally introduce themselves.",
+                            "image": "https://image.tmdb.org/t/p/original/xXIK0xhHMThQkSkbBMAznaUTubj.jpg",
+                            "addedDate": "2020-10-31",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "After Rain",
+                            "description": "Yuji and Sukuna have a conversation outside the material plane, while Gojo expresses his desire to bring about a revolution in the Jujutsu world - through education.",
+                            "image": "https://image.tmdb.org/t/p/original/p7iB7X4BBr1vxeIjfeIelKZWaeS.jpg",
+                            "addedDate": "2020-11-07",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "Assault",
+                            "description": "While in transit, Gojo is suddenly attacked by the special-grade cursed spirit, Jogo. After launching several attacks that never hit, Jogo comes face-to-face with Gojo's strength.",
+                            "image": "https://image.tmdb.org/t/p/original/ggoWW4AChFzqNkVNr941EhRqTiX.jpg",
+                            "addedDate": "2020-11-14",
+                            "rating": "9.2"
+                        },
+                        {
+                            "title": "Boredom",
+                            "description": "Kugisaki and Fushiguro continue to prepare for the Exchange Event, but some visitors from Kyoto decide to jump the gun and test their colleagues in the capital.",
+                            "image": "https://image.tmdb.org/t/p/original/6RmiWPTEzDIOLmGI3zYo2GqVeOW.jpg",
+                            "addedDate": "2020-11-21",
+                            "rating": "7.5"
+                        },
+                        {
+                            "title": "Small Fry and Reverse Retribution",
+                            "description": "Junpei is a fragile boy, who suffers at school, and who is about to find refuge in the world of curses. Meanwhile, Yuuji investigates murders alongside a new partner: Nanami.",
+                            "image": "https://image.tmdb.org/t/p/original/6hsZIkinuai7bAE1cQYXEUIkjju.jpg",
+                            "addedDate": "2020-11-28",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Idle Transfiguration",
+                            "description": "Itadori's assignment is to investigate whether or not Junpei possesses sorcerer potential or is just an ordinary person. If he shows he has potential, he is to bring him in for questioning. Kento confronts the curse that is guiding Junpei.",
+                            "image": "https://image.tmdb.org/t/p/original/rYa2K1q24GNb3dgAvgZm6K6OTzj.jpg",
+                            "addedDate": "2020-12-05",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "Narrow-minded",
+                            "description": "Kento's fight with the curse that is manipulating Junpei goes into overtime. Itadori makes contact with Junpei.",
+                            "image": "https://image.tmdb.org/t/p/original/dVRE3XvFfgm8BRww4AqxokPMds1.jpg",
+                            "addedDate": "2020-12-12",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "To You, Someday",
+                            "description": "Yuji tries to reach what's left of Junpei's heart with both his fists and his words.",
+                            "image": "https://image.tmdb.org/t/p/original/yCvQNEZA4FC4yupgV9Ll8Hp7dCZ.jpg",
+                            "addedDate": "2020-12-19",
+                            "rating": "9.4"
+                        },
+                        {
+                            "title": "Tomorrow",
+                            "description": "Yuji and Kento continue their battle against Mahito, who develops his powers in unexpected ways.",
+                            "image": "https://image.tmdb.org/t/p/original/ritCXU7BUcNodAVMMiTOAkrSigF.jpg",
+                            "addedDate": "2020-12-26",
+                            "rating": "9.3"
+                        },
+                        {
+                            "title": "Kyoto Sister School Exchange Event: Group Battle 0",
+                            "description": "In the aftermath of the battle with Mahito, both sides have returned to their usual routines. Yuji finally goes back to school, but his surprise return doesn't exactly go over well with his peers.",
+                            "image": "https://image.tmdb.org/t/p/original/wzimi19uWzAboYzDjYUDpdhEMUO.jpg",
+                            "addedDate": "2021-01-16",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": "Kyoto Sister School Exchange Event: Group Battle 1",
+                            "description": "Itadori Yuji and the rest of Tokyo Metropolitan Curse Technical School engage into their team battle against their sister school from Kyoto. However with the entire Kyoto team against Yuji, will he be able to last with his short training?",
+                            "image": "https://image.tmdb.org/t/p/original/hoZfRWj2ROpzPnuKf45CUPzCRQE.jpg",
+                            "addedDate": "2021-01-23",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "Kyoto Sister School Exchange Event: Group Battle 2",
+                            "description": "Aoi Todo and Itadori Yuji continue to battle it out, with the former determined to strengthen his new best friend. Meanwhile, Panda discovers Ultimate Mechamaru's secrets while showing a more powerful side of him during their battle",
+                            "image": "https://image.tmdb.org/t/p/original/bDM0qdyzYUMhNpIH9AUkz7okbRE.jpg",
+                            "addedDate": "2021-01-30",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "Kyoto Sister School Exchange Event: Group Battle 3",
+                            "description": "Miwa and Maki engage in a battle of strength while Nishimiya tackles Nobara. The battle is interrupted by Mai and the twins battle it out revealing secrets about their clan.",
+                            "image": "https://image.tmdb.org/t/p/original/7BMedKvP6i1wIK7vLgL3v2BnRHe.jpg",
+                            "addedDate": "2021-02-05",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "Sage",
+                            "description": "Megumi and Noritoshi confront their similarities and differences through battle. However, the Goodwill Event is suddenly upheaved by a sudden invasion!",
+                            "image": "https://image.tmdb.org/t/p/original/haxqbRAfpDuS9MIEBk9ToRLNuxt.jpg",
+                            "addedDate": "2021-02-12",
+                            "rating": "8.8"
+                        },
+                        {
+                            "title": "Black Flash",
+                            "description": "The special grade cursed spirit Hanami has invaded the Goodwill Event! Can the students survive the onslaught and escape the curtain with their lives?",
+                            "image": "https://image.tmdb.org/t/p/original/qpDxYXnn0ZkoLPz0lB6iQZVIkHM.jpg",
+                            "addedDate": "2021-02-19",
+                            "rating": "9.4"
+                        },
+                        {
+                            "title": "Nonstandard",
+                            "description": "Yuji and Todo continue their battle with the special grade curse. Satoru finds a way to enter the battlefield.",
+                            "image": "https://image.tmdb.org/t/p/original/f15D3bnszZigSKbc85wL8ItwLKn.jpg",
+                            "addedDate": "2021-02-26",
+                            "rating": "9.5"
+                        },
+                        {
+                            "title": "Jujutsu Koshien",
+                            "description": "After the events interruption, the school tournament continues with a baseball match.",
+                            "image": "https://image.tmdb.org/t/p/original/jhTrnQKXpc7rxDwM1Wm7ulKf71P.jpg",
+                            "addedDate": "2021-03-05",
+                            "rating": "7.4"
+                        },
+                        {
+                            "title": "The Origin of Blind Obedience",
+                            "description": "Megumi, Nobara, and Yuji are sent out to investigate the mysterious deaths connected to the Saitama Urami East Junior High. Meanwhile, Mahito and Geto continue their schemes, incarnating one of the Cursed Womb: Death Paintings.",
+                            "image": "https://image.tmdb.org/t/p/original/y1dNQyQtjmhYRIhdU6arnUPagcl.jpg",
+                            "addedDate": "2021-03-12",
+                            "rating": "7.7"
+                        },
+                        {
+                            "title": "The Origin of Blind Obedience - 2 -",
+                            "description": "The battle begins, and the group is split. Fighting a familiar foe, Megumi uses a new technique, and reflects on his past. Nobara and Yuji fight Cursed Womb: Death Paintings Kechizu and Eso.",
+                            "image": "https://image.tmdb.org/t/p/original/eLxlqoRzD7HPe8JgiJd5iGpXpaf.jpg",
+                            "addedDate": "2021-03-20",
+                            "rating": "9.0"
+                        },
+                        {
+                            "title": "Accomplices",
+                            "description": "The Cursed Wombs: Death Paintings, Eso and Kechizu, face off against Itadori and Kugisaki--however, the two begin to rot after they're bathed in the blood of Eso and Kechizu.",
+                            "image": "https://image.tmdb.org/t/p/original/zIG6nADGUqJYDBXEsDaYyzYjHgH.jpg",
+                            "addedDate": "2021-03-27",
+                            "rating": "9.3"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "Hidden Inventory",
+                            "description": "Year 2006. Sorceress Utahime and Mei Mei are investigating a Western-style mansion that has a history. Suddenly, the building begins to collapse and they are thrown into the air.",
+                            "image": "https://image.tmdb.org/t/p/original/wR1ss0SiN0EjKOPgrGfCm9FzdVD.jpg",
+                            "addedDate": "2023-07-06",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "Hidden Inventory: Part 2",
+                            "description": "Gojo and Geto are assigned the task of guarding and erasing a \"Star Plasma Vessel\" Riko Amanai when two groups try to get rid of her.",
+                            "image": "https://image.tmdb.org/t/p/original/xNMW94wR8jfsXZbMK3XD2ftOUd0.jpg",
+                            "addedDate": "2023-07-13",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Hidden Inventory: Part 3",
+                            "description": "Gojo, Geto and Amanai rescue Kuroi. They then set off together to the island of Okinawa. However, back in Tokyo, the group is ambushed by somebody with only one goal - to prevent the fusion of Riko Amanai and Tengen.",
+                            "image": "https://image.tmdb.org/t/p/original/sxJNdWf4K2SWwW48vM0wrd3q72j.jpg",
+                            "addedDate": "2023-07-20",
+                            "rating": "9.5"
+                        },
+                        {
+                            "title": "Hidden Inventory: Part 4",
+                            "description": "\"Let's go home, Riko-chan.\" The moment Geto extends a hand to Amanai, the worst that could possibly happen does. Geto is left dumbstruck as Toji Fushiguro makes his appearance. Toji then declares that he killed Satoru Gojo.",
+                            "image": "https://image.tmdb.org/t/p/original/rdZ34EfVGxAQG6cYd14ILdZH4HY.jpg",
+                            "addedDate": "2023-07-27",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Premature Death",
+                            "description": "Gojo becomes the strongest and starts handling missions alone. Geto feels lost while tirelessly exorcising and absorbing cursed spirits until another sorcerer appears, spreading her ideology on Geto.",
+                            "image": "https://image.tmdb.org/t/p/original/gjWLlxTUqzf7t4HsMQhUCxke5EW.jpg",
+                            "addedDate": "2023-08-03",
+                            "rating": "9.1"
+                        },
+                        {
+                            "title": "It's Like That",
+                            "description": "After finishing a mission one day, Itadori decides to go to the movies, Kugisaki decides to go shopping, and Fushiguro goes home. After parting ways Kugisaki is approached by a woman who suddenly asks if she was with Itadori.",
+                            "image": "https://image.tmdb.org/t/p/original/5sVDG2UKlryQ3YhAMzSHKwXE0nF.jpg",
+                            "addedDate": "2023-08-31",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Evening Festival",
+                            "description": "The fight between Mahito and Mechamaru continues. A few days later, on October 31, 2018, an unknown curtain is cast over Shibuya. The people trapped inside repeat only one thing: \"Bring Satoru Gojo.\"",
+                            "image": "https://image.tmdb.org/t/p/original/AwgGz4NcjZEv65DoCx4sOoZ2hdn.jpg",
+                            "addedDate": "2023-09-07",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "The Shibuya Incident",
+                            "description": "Satoru Gojo enters Shibuya. The fight between the strongest sorcerer and the most evil curses begins. Meanwhile, Yuji works with Mei Mei and Ui Ui in order to get Yuji to be Gojo's backup as soon as possible.",
+                            "image": "https://image.tmdb.org/t/p/original/A4ORKOp3WUrBBgAOJ9TuVsXXM0d.jpg",
+                            "addedDate": "2023-09-15",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Shibuya Incident - Gate, Open",
+                            "description": "The battle between Gojo and the cursed spirits continues and reaches a climax with an unexpected arrival.",
+                            "image": "https://image.tmdb.org/t/p/original/b282HYBGD5IrWs4Upt8ziJe7cqC.jpg",
+                            "addedDate": "2023-09-21",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Pandemonium",
+                            "description": "Gojo has been sealed in the Prison realm. It's time for the three sorcerer groups to enter Shibuya, save entrapped civilians and rescue Satoru Gojo.",
+                            "image": "https://image.tmdb.org/t/p/original/dwk4fLKU6gXpYBdUkCgRWuhhqvA.jpg",
+                            "addedDate": "2023-09-28",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "Seance",
+                            "description": "Team Nanami regroups with Yuji and formulate a plan to rescue Satoru Gojo. Yuji, Megumi and Takuma encounter a sorcerer capable of contacting the dead.",
+                            "image": "https://image.tmdb.org/t/p/original/2r3m0ITrrs5KXZyrvXnr3o1tdLN.jpg",
+                            "addedDate": "2023-10-05",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "Dull Knife",
+                            "description": "The curtain preventing the sorcerers from entering Shibuya Station is finally lifted and the teams can continue their rescue operation. However, with Ino heavily injured, Yuji and Megumi must split up. Nobara encounters a curse user.",
+                            "image": "https://image.tmdb.org/t/p/original/cgtji6H4ir93jaEYr47dTvhgWJ5.jpg",
+                            "addedDate": "2023-10-12",
+                            "rating": "9.0"
+                        },
+                        {
+                            "title": "Red Scale",
+                            "description": "Yuji finally arrives at Shibuya Station, but is met with unexpected opposition.",
+                            "image": "https://image.tmdb.org/t/p/original/1E35zqL4Q6GKkqYOmrM8hFHtNjr.jpg",
+                            "addedDate": "2023-10-19",
+                            "rating": "9.5"
+                        },
+                        {
+                            "title": "Fluctuations",
+                            "description": "As Mei Mei approaches Shibuya Station, Kenjaku meets her midway and calls out a special grade disease curse that she must defeat. Meanwhile, Naobito, Nanami and Maki encounter a curse.",
+                            "image": "https://image.tmdb.org/t/p/original/uUIXH9nBl7HFoaomIlL4CTolq39.jpg",
+                            "addedDate": "2023-10-26",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "Fluctuations - Part 2",
+                            "description": "Nanami, Maki, and Naobito are driven to the edge after the Special-Grade Cursed Spirit, Dagon, activates his Domain Expansion. Fushiguro gives them a glimpse of a way to escape death, then Toji intrudes upon the fight.",
+                            "image": "https://image.tmdb.org/t/p/original/vzNGwCOfpuytEmR2UO29trlodjy.jpg",
+                            "addedDate": "2023-11-02",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Thunderclap",
+                            "description": "Megumi is overwhelmed by Toji's pure power as he attacks the young sorcerer. Meanwhile, Panda and Kusakabe get entangled in the battle between Jogo and Sukuna.",
+                            "image": "https://image.tmdb.org/t/p/original/g9yiVw2BHqThSeevyuKBoJrsTpM.jpg",
+                            "addedDate": "2023-11-09",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Thunderclap - Part 2",
+                            "description": "In a desperate situation, Megumi forces Haruta into an unbeatable exorcism ritual against the out-of-control Mahoraga, his strongest shikigami, but Sukuna intervenes to ensure his plans with Megumi go on without any problems.",
+                            "image": "https://image.tmdb.org/t/p/original/ibeda2mrG8pZu26gVvlZaQfDW5E.jpg",
+                            "addedDate": "2023-11-16",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Right and Wrong",
+                            "description": "Yuji regains control of his body, only to witness the damage caused by Sukuna's merciless rampage. Meanwhile, Nanami, badly injured and delirious, confronts a group of transfigured humans and reunites with a familiar foe.",
+                            "image": "https://image.tmdb.org/t/p/original/rAZeDUOFLQoLgEqcjvNoMy7lmpB.jpg",
+                            "addedDate": "2023-11-23",
+                            "rating": "9.1"
+                        },
+                        {
+                            "title": "Right and Wrong - Part 2",
+                            "description": "Yuji and Mahito's fight continues. However, Yuji is unaware that Mahito has already divided into two beings, one of which is battling Nobara elsewhere. He intends to use her to permanently crush Yuji's spirit.",
+                            "image": "https://image.tmdb.org/t/p/original/irunrX4hAbsTWUTZpWNJXg1Asbv.jpg",
+                            "addedDate": "2023-11-30",
+                            "rating": "9.1"
+                        },
+                        {
+                            "title": "Right and Wrong - Part 3",
+                            "description": "Yuji's determination falters when Mahito attacks Nobara, but just as things appear bleak, Yuji's best friend arrives, reigniting his spirit. Now all three go beyond their limits as they fight to kill.",
+                            "image": "https://image.tmdb.org/t/p/original/lItVwAU21e8qp14AaulanGtkJDY.jpg",
+                            "addedDate": "2023-12-07",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Metamorphosis",
+                            "description": "Mahito's fight against Yuji and Todo continues. Thanks to everything that happened during his battle with these sorcerers, Mahito finally discovers the true nature of his soul and takes on a new deadly form.",
+                            "image": "https://image.tmdb.org/t/p/original/pg4bblgq3ywpFOphH5tEerg7Tu8.jpg",
+                            "addedDate": "2023-12-14",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Metamorphosis - Part 2",
+                            "description": "The Shibuya incident is coming to an end and many groups of jujutsu sorcerers are getting ready for what may happen next. Meanwhile, Yuji's victory over Mahito is short-lived as the two are confronted by the mastermind behind everything.",
+                            "image": "https://image.tmdb.org/t/p/original/sBcwd2U4aVIGixTIuxjOe8QBDEY.jpg",
+                            "addedDate": "2023-12-22",
+                            "rating": "9.2"
+                        },
+                        {
+                            "title": "Shibuya Incident - Gate, Close",
+                            "description": "The Shibuya Incident comes to a close. Yuki and Geto argue over their ideals of cursed energy. A long awaited sorcerer returns to the cursed filled Japan to execute.",
+                            "image": "https://image.tmdb.org/t/p/original/oZXG2hKiueV4A9RSbV6ZMNdhWyz.jpg",
+                            "addedDate": "2023-12-28",
+                            "rating": "8.6"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 3,
+                    "episodes": [
+                        {
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "",
                             "rating": ""
                         }
                     ]
