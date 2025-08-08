@@ -415,6 +415,9 @@ body {
 .slide-content h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .slide-content .genre {

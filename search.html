@@ -231,6 +231,15 @@
                     );
                 }
 
+                // Sort results by title (الترتيب حسب الاسم)
+                results.sort((a, b) => {
+                    const titleA = (a.title || '').toLowerCase();
+                    const titleB = (b.title || '').toLowerCase();
+                    if (titleA < titleB) return -1;
+                    if (titleA > titleB) return 1;
+                    return 0;
+                });
+
                 displayResults(results);
             } catch (error) {
                 console.error('Error loading search results:', error);

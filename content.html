@@ -1149,7 +1149,7 @@
                             return { ...movie, similarityScore };
                         })
                         .sort((a, b) => b.similarityScore - a.similarityScore)
-                        .slice(0, 6);
+                        .slice(0, 8);
 
                 } else if (contentType === 'series') {
                     similarContent = data.series
@@ -1165,7 +1165,7 @@
                             return { ...series, similarityScore };
                         })
                         .sort((a, b) => b.similarityScore - a.similarityScore)
-                        .slice(0, 6);
+                        .slice(0, 8);
                 }
 
                 displaySimilarContent(similarContent, contentType);

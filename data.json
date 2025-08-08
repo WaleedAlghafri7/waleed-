@@ -251,6 +251,132 @@
             "language": " Japanese",
             "country": "Japan",
             "ageRating": "PG-13"
+        },
+        {
+            "id": 1754622212375,
+            "title": "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
+            "genre": "Anime, Action, Fantasy",
+            "year": 2020,
+            "rating": 8.7,
+            "duration": "2h 18min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wq1UG5lPCKpOJgmgpKJszKvoMUe.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/kRlqWz54iI9K1PjI15cwvtHjnSw.jpg",
+            "description": "Tanjiro teams up with Zenitsu and Inosuke to investigate missing person cases on the mountain Natagumo. They slowly begin to realize the entire mountain is being controlled by a family of Demon spider creatures.\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754622327721,
+            "title": "Demon Slayer: Kimetsu No Yaiba - To the Hashira Training",
+            "genre": "Anime, Action, Shonen",
+            "year": 2024,
+            "rating": 7.2,
+            "duration": "1h 44min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3daOEMQCOGU2n9EbUC0PICnUCek.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/byFQpmElaxa4sPwS0d9qQMTtygw.jpg",
+            "description": "Tanjiro undergoes rigorous training with the Stone Hashira, Himejima, in his quest to become a Hashira. Meanwhile, Muzan continues to search for Nezuko and Ubuyashiki.",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": "R"
+        },
+        {
+            "id": 1754622421306,
+            "title": "Demon Slayer: Kimetsu no Yaiba - Sibling's Bond",
+            "genre": "Anime, Action, Animation",
+            "year": 2019,
+            "rating": 8.5,
+            "duration": "1h 45min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xnXeOfHXsgCRi4u75OPU2U3kZsO.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/8NEvnVKeGMLEXG45MMNqxJLcM4y.jpg",
+            "description": "Tanjiro finds his family massacred and the only survivor, his sister Nezuko Kamado, turned into a demon. However, to his surprise, Nezuko still shows signs of human emotions and thoughts.",
+            "language": " Japanese",
+            "country": " Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754622545134,
+            "title": "Demon Slayer: Kimetsu no Yaiba - Tsuzumi Mansion Arc",
+            "genre": "Anime, Action, Animation",
+            "year": 2021,
+            "rating": 8.5,
+            "duration": "1h 27min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2yiDQCDj7hlq2SwLojV9xrFkCnr.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/dg0RUo5puPyJjRJQJ87kPs0C6Bd.jpg",
+            "description": "Tanjiro ventures to the south-southeast where he encounters a cowardly young man named Zenitsu Agatsuma. He is a fellow survivor from Final Selection and his sparrow asks Tanjiro to help keep him in line.",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754622631424,
+            "title": "Demon Slayer: Kimetsu No Yaiba - To the Swordsmith Village",
+            "genre": "Anime, Action, Shonen",
+            "year": 2023,
+            "rating": 7.6,
+            "duration": "1h 50min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hEhGrcST85vMd63PBDgPBqih2tR.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
+            "description": "Tanjiro needs to bring a definitive end to Upper Rank Six. After the dust settles, he goes with his sister Nezuko to the Swordsmith Village in search of a new sword.\n",
+            "language": " Japanese",
+            "country": " Japan",
+            "ageRating": "R"
+        },
+        {
+            "id": 1754622695746,
+            "title": "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
+            "genre": "Anime, Action, Animation",
+            "year": 2021,
+            "rating": 8.5,
+            "duration": "1h 43min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t2w332ARBJxy1G65abj8C7VNjeW.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/6EUCHkb3rmqy08EP07oMPZbjpZR.jpg",
+            "description": "Tanjiro ventures to Asakusa, Tokyo for his second mission with the Demon Slayer Corps.",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754622768945,
+            "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+            "genre": "Anime, Action, Shonen",
+            "year": 2020,
+            "rating": 8.2,
+            "duration": "1h 57min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
+            "description": "After his family was brutally murdered and his sister turned into a demon, Tanjiro Kamado's journey as a demon slayer began. Tanjiro and his comrades embark on a new mission aboard the Mugen Train, on track to despair.\n",
+            "language": " Japanese",
+            "country": " Japan",
+            "ageRating": "18+"
+        },
+        {
+            "id": 1754622870862,
+            "title": "Demon Slayer: Kimetsu no Yaiba - The Hashira Meeting Arc",
+            "genre": "Anime, Action, Animation",
+            "year": 2020,
+            "rating": 7.8,
+            "duration": "1h 45min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/j1FpReEQXp8JsgNQZcfGvzeXNoI.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/daeD5T4MxFk5MppZlaNZoaK6lE9.jpg",
+            "description": "Tanjiro and Nezuko have been apprehended by the Demon Slayer Hashira, a group of extremely skilled swordfighters. Tanjiro undergoes trial for violating the Demon Slayer code, specifically smuggling Nezuko, a Demon, onto Mt. Natagumo.",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754622949726,
+            "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
+            "genre": "Anime, Action, Shonen",
+            "year": 2025,
+            "rating": 9,
+            "duration": "2h 30min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
+            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+            "language": "Japanese",
+            "country": " Japan",
+            "ageRating": ""
         }
     ],
     "series": [
@@ -4326,6 +4452,484 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 1754620258505,
+            "title": "Demon Slayer: Kimetsu no Yaiba",
+            "genre": "Animation, Action, Adventure",
+            "year": 2019,
+            "rating": 8.6,
+            "duration": "24min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/3GQKYh6Trm8pxd2AypovoYQf4Ay.jpg",
+            "description": "A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.",
+            "language": " Japanese, English",
+            "country": " Japan",
+            "ageRating": "18+",
+            "status": "completed",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": "Cruelty",
+                            "description": "Tanjiro Kamado's life gets turned upside down when he finds out that his family was murdered by demons.",
+                            "image": "https://image.tmdb.org/t/p/original/l2C38X6RsbD5gom4iGvFe6yuPEy.jpg",
+                            "addedDate": "2021-01-22",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Trainer Sakonji Urokodaki",
+                            "description": "Tanjiro and Nezuko head for Mt. Sagiri per Giyu Tomioka's urges. On their way, Tanjiro encounters another demon.",
+                            "image": "https://image.tmdb.org/t/p/original/r2MZH3snLABIpqUPj8YOF9HIaBf.jpg",
+                            "addedDate": "2019-04-13",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "Sabito and Makomo",
+                            "description": "Sakonji Urokodaki starts training Tanjiro for Final Selection, the test for joining the Demon Slayer Corp, an organization that has been hunting demons since ancient times.",
+                            "image": "https://image.tmdb.org/t/p/original/m9sWQLtoU1G5jdHOYUnykin0xxw.jpg",
+                            "addedDate": "2019-04-20",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "Final Selection",
+                            "description": "To pass the Final Selection, Tanjiro uses the techniques he learned from Sakonji Urokodaki and begins his fight against a demon on Mt. Fajikasane.",
+                            "image": "https://image.tmdb.org/t/p/original/kH6Ir9EWGoqkTMoiQnx5fJmwY2I.jpg",
+                            "addedDate": "2019-04-27",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "My Own Steel",
+                            "description": "There are only four swordsmen left come dawn of the seventh day and they are issued Demon Slayer Corps uniforms and messengers crows.",
+                            "image": "https://image.tmdb.org/t/p/original/fWsUsEVYaOHh6bPkgH7HeQxotmP.jpg",
+                            "addedDate": "2019-05-04",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": " Swordsman Accompanying a Demon",
+                            "description": "In uniform and with a sword in his hand Tanjiro continues his main quest to find the demon who murdered his family.",
+                            "image": "https://image.tmdb.org/t/p/original/qd0lN2R3wzbUyXbSEQEO19nkGah.jpg",
+                            "addedDate": "2019-05-11",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Muzan Kibutsuji",
+                            "description": "With Tanjiro backed into a corner by demons its Nezuko's turn to attack and prove that she no longer needs her brother's protection.",
+                            "image": "https://image.tmdb.org/t/p/original/aR1bB3ltg1FjGc6N3xBpiYz7Huo.jpg",
+                            "addedDate": "2019-05-18",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "The Smell of Enchanting Blood",
+                            "description": "Two demons, Tamayo and Yushiro come to Tanjiro's rescue. Tamayo guides Tanjiro and Nezuko to her house where Tanjiro learns how to return demons to humans.",
+                            "image": "https://image.tmdb.org/t/p/original/hnvD3jFov03BLjvGrqTueXZfvwL.jpg",
+                            "addedDate": "2019-05-25",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "Temari Demon and Arrow Demon",
+                            "description": "Two demons, Tamayo and Yushiro come to Tanjiro's rescue. Tamayo guides Tanjiro and Nezuko to her house where Tanjiro learns how to return demons to humans.",
+                            "image": "https://image.tmdb.org/t/p/original/pMST9IQizKO4EE6P54yFFMBz7vE.jpg",
+                            "addedDate": "2019-06-01",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "Together Forever",
+                            "description": "With Tamayo coming to Nezuko's aid the battle reaches its climax. Tanjiro learns about the Twelve Demon Moons organization.",
+                            "image": "https://image.tmdb.org/t/p/original/nDbVix8vunXKj6zLcVEaxwF7YTq.jpg",
+                            "addedDate": "2019-06-08",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "Tsuzumi Mansion",
+                            "description": "Tanjiro heads to his next location southeast; on the way he meats Zenitsu, one of the swordsmen of the FInal Selection.",
+                            "image": "https://image.tmdb.org/t/p/original/xKOewshyBZcisLUWrOQjEGe650L.jpg",
+                            "addedDate": "2019-06-15",
+                            "rating": "7.2"
+                        },
+                        {
+                            "title": "The Boar Bares Its Fangs, Zenitsu Sleeps",
+                            "description": "Tanjiro gets separated from Zenitsu when he enters a mysterious house where he encounters another demon.",
+                            "image": "https://image.tmdb.org/t/p/original/qrPsA5eNGH4sPwMImUhOvlShd7U.jpg",
+                            "addedDate": "2019-06-22",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Something More Important Than Life",
+                            "description": "Inside the mysterious house, Tanjiro battles Kyogai - The Drum Demon while Zenitsu tries to bring Shoichi to safety.",
+                            "image": "https://image.tmdb.org/t/p/original/5bkqsmM0qLu37yJOF9PQwwcyExt.jpg",
+                            "addedDate": "2019-06-29",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "The House with the Wisteria Family Crest",
+                            "description": "After defeating Kyogai, Tanjiro steps outside where he spots Inosuke who is eager to fight him. After a short tussle Tanjiro, Inosuke , Nezuko and Zenitsu head to a manor where they are taken in by an old woman.",
+                            "image": "https://image.tmdb.org/t/p/original/AgDZ0yW2Me7pB7ZLVb4ynbBxRZp.jpg",
+                            "addedDate": "2019-07-06",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": "Mount Natagumo",
+                            "description": "Tanjiro heads to his next location to a mountain northwest and he brings Inosuke and Zenitsu with him. Upon arriving on the spiderweb swarmed mountain Tanjiro and Inosuke soon run into Demon Slayers entangled in spider webs.",
+                            "image": "https://image.tmdb.org/t/p/original/8CNCZfubtFYzvuo4GgIDCSXBYvj.jpg",
+                            "addedDate": "2019-07-13",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Letting Someone Else Go First",
+                            "description": "Tanjiro and Inosuke head farther up the mountain while battling Demon Slayers trapped by spider webs. Soon they find out that the Spider Demon family is behind it all.",
+                            "image": "https://image.tmdb.org/t/p/original/5onw1Gg17048SoUZIuoT7FsO90a.jpg",
+                            "addedDate": "2019-07-20",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "You Must Master a Single Thing",
+                            "description": "Zenitsu finds himself alone in the woods where he encounters a spider with a human face. Despite being terrified he does his best and manages to defeat the spider human using a new technique.",
+                            "image": "https://image.tmdb.org/t/p/original/oKOrMhozP1BX6gWiJAcuZVSm6Zd.jpg",
+                            "addedDate": "2019-07-27",
+                            "rating": "9.0"
+                        },
+                        {
+                            "title": "A Forged Bond",
+                            "description": "High up on the mountain Tanjiro and Inosuke face off against Father Spider Demon, one of the Twelve Demon Moons (or at least they think so).",
+                            "image": "https://image.tmdb.org/t/p/original/ra7dCRS9E39fnhHieFKF47ldESl.jpg",
+                            "addedDate": "2019-08-03",
+                            "rating": "9.0"
+                        },
+                        {
+                            "title": "Hinokami",
+                            "description": "Inosuke confronts his savior. Zenitsu lies still near his death. Tanjiro faces what seems to be an unstoppable enemy, and in a moment of desperation, recalls his past.",
+                            "image": "https://image.tmdb.org/t/p/original/b4o8DMgM61MJymZMFyR2nRnOifl.jpg",
+                            "addedDate": "2019-08-10",
+                            "rating": "9.7"
+                        },
+                        {
+                            "title": "Pretend Family",
+                            "description": "With his life flashing before his eyes Rui remembers the family he created. Meanwhile, Shinobu arrives on the mountain to stop Rui's older sister.",
+                            "image": "https://image.tmdb.org/t/p/original/zEBhEj2Dt58vqAUsEWv6DOCz5RJ.jpg",
+                            "addedDate": "2019-08-17",
+                            "rating": "8.8"
+                        },
+                        {
+                            "title": "Against Corps Rules",
+                            "description": "In his final moments, as he perishes to ash and dust, Rui tells the story of how he came to be, his family and the family he created.",
+                            "image": "https://image.tmdb.org/t/p/original/2EX3WZVmtELyqdcDtGLf5KJjZ6.jpg",
+                            "addedDate": "2019-08-24",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "Master of the Mansion",
+                            "description": "With the battle reaching its conclusion Tanjiro and Nezuko arrive at Demon Slayer Corps headquarters where their bond is tested once again.",
+                            "image": "https://image.tmdb.org/t/p/original/2bo6M1fLHXz47b3NoW3Y5zesTKB.jpg",
+                            "addedDate": "2019-08-31",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "Hashira Meeting",
+                            "description": "Ubuyashiki, the head of the Demon Slayer Corps, finally appears before Tanjiro. While revealing that he'd like to allow Tanjiro and Nezuko to join the Corps, the Hashira are unable to accept this decision right away.",
+                            "image": "https://image.tmdb.org/t/p/original/gdlEXQbUuVtIzKxuOMWd2BhT4n8.jpg",
+                            "addedDate": "2019-09-07",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "Rehabilitation Training",
+                            "description": "The injured Tanjiro, Zenitsu, and Inosuke are sent to the home of the Insect Hashira, Shinobu Kocho, for treatment. Two weeks later, Tanjiro and Inosuke start rehabilitation training.",
+                            "image": "https://image.tmdb.org/t/p/original/hhZsnP34Tjx568RJwSTN9nkkCcX.jpg",
+                            "addedDate": "2019-09-14",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": "Tsuguko, Kanao Tsuyuri",
+                            "description": "Tanjiro, who has been going through rehabilitation training at the Butterfly Mansion, works hard to keep up his Total Concentration Breathing all day long.",
+                            "image": "https://image.tmdb.org/t/p/original/4VmgnTSJvOPbfy7k51t94T4q88e.jpg",
+                            "addedDate": "2019-09-21",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "New Mission",
+                            "description": "As Tanjiro and the others are devoted to their rehabilitation training, the absolute master of the demons, Muzan Kibutsuji, gathers the lower ranks of the Twelve Kizuki.",
+                            "image": "https://image.tmdb.org/t/p/original/ooZNrd1lFth6NVzToRd8MOKuNGK.jpg",
+                            "addedDate": "2019-09-28",
+                            "rating": "8.8"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "Flame Hashira Kyojuro Rengoku",
+                            "description": "Rengoku Kyojuro the Flame Hashira begins to solve the case of the deaths in the Mugen Train.",
+                            "image": "https://image.tmdb.org/t/p/original/s25sv0IoUYWL24MhoYbYU5idlZ5.jpg",
+                            "addedDate": "2021-10-10",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": "Deep Sleep",
+                            "description": "Tanjiro (with his sister in tow), Zenitsu, and Inosuke meet Kyojuro inside the train where they fall into a deep sleep thanks to Enmu's magic.",
+                            "image": "https://image.tmdb.org/t/p/original/3D1Ke4O5eRcKr255ddlDTnwmoa6.jpg",
+                            "addedDate": "2021-10-17",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Should Have Been",
+                            "description": "The effects of Enmu's blood demon art become clear, making the protagonists face their individual, inner struggles. Tanjiro desperately looks for a way to negate the spell.",
+                            "image": "https://image.tmdb.org/t/p/original/bsjdWN0H0t9Pe7nPYoxXTHd8KpP.jpg",
+                            "addedDate": "2021-10-24",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "Insult",
+                            "description": "Tanjiro manages to break free from the demon-art dream. He finds Enmu, and the battle begins. Enmu reveals a more holistic, sinister agenda behind his actions, placing the demon slayers into a sticky challenge.",
+                            "image": "https://image.tmdb.org/t/p/original/eECM3oquq3G8jFOGWTnxaFql3vM.jpg",
+                            "addedDate": "2021-11-07",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Move Forward!",
+                            "description": "The battle with Enmu continues as Inosuke, Zenitsu and Rengoku awaken from the spell. Tanjiro and Inosuke try to pinpoint the demon's weak spot, while the others focus on protecting the passengers in the train.",
+                            "image": "https://image.tmdb.org/t/p/original/wiyxLpsQtpG6tMO3HjaTwD98SD.jpg",
+                            "addedDate": "2021-11-14",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "Akaza",
+                            "description": "Tanjiro has finally slashed Enmu's neck with the help of Inosuke. The fighting causes the train to derail. As silence deepens, a mysterious figure approaches from behind.",
+                            "image": "https://image.tmdb.org/t/p/original/9mhvaSJfVDUF8uiInaa3KOoXMsC.jpg",
+                            "addedDate": "2021-11-21",
+                            "rating": "9.5"
+                        },
+                        {
+                            "title": "Set Your Heart Ablaze",
+                            "description": "Akaza continues to offer Rengoku the chance to become a demon to improve his skills. Rengoku refuses his offer and tries his best to keep up with him. The Flame Hashira has one goal: to protect his comrades even if it costs him his own life.",
+                            "image": "https://image.tmdb.org/t/p/original/bSKs2NzkXd8n0f2bIT8lhEuR7DH.jpg",
+                            "addedDate": "2021-11-28",
+                            "rating": "9.7"
+                        },
+                        {
+                            "title": "Sound Hashira Tengen Uzui",
+                            "description": "Following the death of Kyojurou, Tanjiro visits the Rengoku residence to deliver Kyojurou's last messages to Kyojurou's brother and father. Four months later Tanjiro, Zenitsu, and Inosuke are tasked with visiting an Entertainment District along with the Sound Hashira Tengen Uzui.",
+                            "image": "https://image.tmdb.org/t/p/original/yHvD7Yhaxcn0Mc3BSI0yAFVrYT8.jpg",
+                            "addedDate": "2021-12-05",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Infiltrating the Entertainment District",
+                            "description": "Led by Sound Hashira Tengen Uzui, Tanjiro, Inosuke and Zenitsu disguise themselves so they can get hired in the Entertainment District.",
+                            "image": "https://image.tmdb.org/t/p/original/mTtIdiS9ntOjlBFaZxGRu5qkZdF.jpg",
+                            "addedDate": "2021-12-12",
+                            "rating": "7.4"
+                        },
+                        {
+                            "title": "What Are You?",
+                            "description": "A mysterious Oiran is creating havoc in the brothels, but who is she?",
+                            "image": "https://image.tmdb.org/t/p/original/1pEUWW6ynwjeCthb7NqQlSMtxso.jpg",
+                            "addedDate": "2021-12-19",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "Tonight",
+                            "description": "Tanjiro and Inosuke further continue the investigation even after Uzui's disapproval of their participation in the mission.",
+                            "image": "https://image.tmdb.org/t/p/original/oyZd3BMT8pH83PLLG07njxhKfkO.jpg",
+                            "addedDate": "2021-12-26",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "Things Are Gonna Get Real Flashy!",
+                            "description": "Tanjiro continues to fight Daki and starts using Hinokami Kagura instead of Water Breathing. Tengen saves one of his wives who had been stuck in Daki's belt. Inosuke, Zenitsu, and Tengen's other wives fight the belt demon.",
+                            "image": "https://image.tmdb.org/t/p/original/xHobu2pJtnRePBxrvxafUHXKJNr.jpg",
+                            "addedDate": "2022-01-02",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "Layered Memories",
+                            "description": "As the fight between Tanjiro and Daki continues, Daki causes immense damage to the district resulting in Tanjiro turning berserk due to rage.",
+                            "image": "https://image.tmdb.org/t/p/original/9jSSKfsWXEPwiSz8eCMQK8St5gc.jpg",
+                            "addedDate": "2022-01-09",
+                            "rating": "9.5"
+                        },
+                        {
+                            "title": "Transformation",
+                            "description": "As Nezuko rushes to aid Tanjiro during a critical moment, her appearance begins to gradually take on a demon form as she sustains Daki's attacks.",
+                            "image": "https://image.tmdb.org/t/p/original/6IVxJBaIAOboW9HXzx0Kr0DevAZ.jpg",
+                            "addedDate": "2022-01-16",
+                            "rating": "9.4"
+                        },
+                        {
+                            "title": "Gathering",
+                            "description": "Putting Nezuko to rest, Tanjiro, along with Inosuke and Zenitsu, rushes to Uzui's aid, against his battle with the Upper Six Demons- Gyutaro and Daki.",
+                            "image": "https://image.tmdb.org/t/p/original/5UvxFzLy40MGDue1fvTDFmz2WNj.jpg",
+                            "addedDate": "2022-01-23",
+                            "rating": "9.4"
+                        },
+                        {
+                            "title": "Defeating an Upper Rank Demon",
+                            "description": "Gyutaro evades Uzui and goes after Hinatsuru. Tanjiro and Uzui rush to save her, but Daki's obi blocks their way.",
+                            "image": "https://image.tmdb.org/t/p/original/8qmQglGIAYFk3cPGONQrr3EpxQ7.jpg",
+                            "addedDate": "2022-01-30",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Never Give Up",
+                            "description": "Tanjiro wakes up to find himself surrounded by burning debris with Gyutaro laughing delightedly at his plight.",
+                            "image": "https://image.tmdb.org/t/p/original/9vq4YJdsQ53D4CqQQumRHg6gLgg.jpg",
+                            "addedDate": "2022-02-06",
+                            "rating": "9.7"
+                        },
+                        {
+                            "title": "No Matter How Many Lives",
+                            "description": "In the battle aftermath, Tanjiro and Nezuko search for the others. Suma pleads for Tengen to live, and Nezuko helps him. Tanjiro smells their scent and sees the demons arguing viciously. Gyutaro recalls his past.",
+                            "image": "https://image.tmdb.org/t/p/original/rO0yt4BIcSZRuIwPlK0QsyhjPZ3.jpg",
+                            "addedDate": "2022-02-13",
+                            "rating": "8.8"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 3,
+                    "episodes": [
+                        {
+                            "title": "Someone's Dream",
+                            "description": "All the Upper Rank Demons assemble at the Infinity Castle after Upper Six Demons' defeat. Meanwhile, Tanjiro heads to the Swordsmith Village.",
+                            "image": "https://image.tmdb.org/t/p/original/cqDCLZ050JmmumJyTA9FbuQe6a3.jpg",
+                            "addedDate": "2023-04-09",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "Yoriichi Type Zero",
+                            "description": "When Tanjiro, who heard about the existence of a secret weapon from Mitsuri, was exploring the mountains, he stumbles upon Muichiro and a boy of the village arguing over something.",
+                            "image": "https://image.tmdb.org/t/p/original/uvT1yTTx3rfAIP8AtqxtSM0ZxRB.jpg",
+                            "addedDate": "2023-04-16",
+                            "rating": "7.3"
+                        },
+                        {
+                            "title": "A Sword from Over 300 Years Ago",
+                            "description": "With Kotetsu's guidance and training, Tanjiro learns a new ability to understand Yoriichi Type Zero's next movements. During the training, the mechanical doll is broken by Tanjiro revealing a sword from more than 300 years ago.",
+                            "image": "https://image.tmdb.org/t/p/original/wquxWyBwsXG3lWrDjg7TQKSRfew.jpg",
+                            "addedDate": "2023-04-23",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Thank You, Tokito",
+                            "description": "Hantengu's head is slashed by Muichiro, and he splits into two clones. Muichiro is blown away by Karaku. Tanjiro, Nezuko, and Genya are stunned when the clones split into more clones. Muichiro rescues Kotetsu from a Goldfish Demon.",
+                            "image": "https://image.tmdb.org/t/p/original/2HLP9LAcPkkzGbLpeKm33BXj4NE.jpg",
+                            "addedDate": "2023-04-30",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": " Bright Red Sword",
+                            "description": "When a group of Goldfish Demons attacks the Swordsmith Village, Mitsuri's crow informs her about the attack. Mitsuri heads to the rescue of the village.",
+                            "image": "https://image.tmdb.org/t/p/original/vtImSrMdWDsmhXFMs681mkxdGed.jpg",
+                            "addedDate": "2023-05-07",
+                            "rating": "9.2"
+                        },
+                        {
+                            "title": "Aren't You Going to Become A Hashira?",
+                            "description": "After beheading three clones, Tanjiro stumbles upon Genya who has beheaded Aizetsu but has now changed in appearance. Genya recalls his past.",
+                            "image": "https://image.tmdb.org/t/p/original/o0HAhA3zeNsPQPtAnoigJlpCCuk.jpg",
+                            "addedDate": "2023-05-14",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "Awful Villain",
+                            "description": "Genya entrusts Tanjiro with the task of beheading Hantengu. Tanjiro swings his sword at the fleeing demon, but an unknown demonic entity emerges behind him.",
+                            "image": "https://image.tmdb.org/t/p/original/7jOdHvdpD5oKGsRgixuMCJ5P5vJ.jpg",
+                            "addedDate": "2023-05-21",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "The Mu in Muichiro",
+                            "description": "Muichiro, with the help of air blown by Kotetsu to him, escapes Gyokko's Water Prison Pot. Muichiro finally recalls his tragic past.",
+                            "image": "https://image.tmdb.org/t/p/original/sM31ISH4HuaSvC9Kf7A76f7SsOa.jpg",
+                            "addedDate": "2023-05-28",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "Mist Hashira Muichiro Tokito",
+                            "description": "Muichiro faces off against Gyokko once again with a new Nichirin sword he received from Kanamori.",
+                            "image": "https://image.tmdb.org/t/p/original/6EgVImJC0fn0jshgw12NHRf5Rzd.jpg",
+                            "addedDate": "2023-06-04",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "Love Hashira Mitsuri Kanroji",
+                            "description": "As the battle with Zohakuten intensifies, Mitsuri also develops a demon slayer mark on her neck. Just like Muichiro, the power she gains as a result is tremendous, and she's able to overpower Zohakuten for a while.",
+                            "image": "https://image.tmdb.org/t/p/original/iKD90AUxGHcLHGvbuSKfqq76rbE.jpg",
+                            "addedDate": "2023-06-11",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "A Connected Bond: Daybreak and First Light",
+                            "description": "Tanjiro, Genya, and Nezuko chase the real body of Upper Moon 4. Tanjiro soon realizes, that the difficult choices are the toughest to make, especially ones with emotion.",
+                            "image": "https://image.tmdb.org/t/p/original/kFvPNnB8215j0xudEtFXa7oJ8F6.jpg",
+                            "addedDate": "2023-06-28",
+                            "rating": "9.4"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 4,
+                    "episodes": [
+                        {
+                            "title": "To Defeat Muzan Kibutsuji",
+                            "description": "The Hashira have been summoned to the Ubuyashiki Mansion for a Hashira meeting.",
+                            "image": "https://image.tmdb.org/t/p/original/rgDvHS8LHTHuU4Xx64sSVvA39gZ.jpg",
+                            "addedDate": "2024-05-12",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "The Sorrows of the Water Hashira, Giyu Tomioka",
+                            "description": "Tamayo is invited to the Demon Slayer headquarters - even though she is a demon. Meanwhile, Tanjiro, who is recovering at the Butterfly Mansion, receives a letter from Kagaya.",
+                            "image": "https://image.tmdb.org/t/p/original/wJPkCpsVFmMS6lAgBbLW5zs8Q3f.jpg",
+                            "addedDate": "2024-05-19",
+                            "rating": "7.5"
+                        },
+                        {
+                            "title": "Fully Recovered Tanjiro Joins the Hashira Training!",
+                            "description": "After talking with Tanjiro, Giyu is able to overcome his past self and decides to join the training. Meanwhile, Tanjiro's wounds have healed enough to join the training, and he heads to his first training with the former Hashira Uzui.",
+                            "image": "https://image.tmdb.org/t/p/original/mNiT7VrfYxQXbgVqEEWtyM2EgRu.jpg",
+                            "addedDate": "2024-05-26",
+                            "rating": "7.2"
+                        },
+                        {
+                            "title": "To Bring a Smile to One's Face",
+                            "description": "Tanjiro continues his participation in the Hashira Training. Following his impressive performance in basic fitness and stamina drills under Tengen Uzui's guidance, Tanjiro advances to the next stage of training led by Muichiro Tokito.",
+                            "image": "https://image.tmdb.org/t/p/original/bQQ0uQ5AJ7sYDbirDIzB33J7FgF.jpg",
+                            "addedDate": "2024-06-02",
+                            "rating": "7.1"
+                        },
+                        {
+                            "title": " I Even Ate Demons...",
+                            "description": "Tanjiro faces grueling training under Obanai Iguro's harsh tutelage. Pushed beyond his limits, he must overcome trials set by the jealous Obanai before meeting Wind Hashira Sanemi Shinazugawa and Genya, navigating their strained dynamic.",
+                            "image": "https://image.tmdb.org/t/p/original/iiKJxsJOT69R86Y5QFtUUQmeha.jpg",
+                            "addedDate": "2024-06-09",
+                            "rating": "7.4"
+                        },
+                        {
+                            "title": " The Strongest of the Demon Slayer Corps",
+                            "description": "After completing Iguro and Sanemi's training, Tanjiro heads to Himejima's training site deep in the mountains with Zenitsu.",
+                            "image": "https://image.tmdb.org/t/p/original/jwAiNnEDDgGathvC8VDTmfXqybH.jpg",
+                            "addedDate": "2024-06-16",
+                            "rating": "7.3"
+                        },
+                        {
+                            "title": "Stone Hashira Gyomei Himejima",
+                            "description": "Tanjiro pushes the boulder with Genya's help, collapses from exhaustion, and earns Himejima's respect, leading to a personal conversation.",
+                            "image": "https://image.tmdb.org/t/p/original/1rw2hmzC7yJwtDfXuP9MIYQvJWQ.jpg",
+                            "addedDate": "2024-06-23",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "The Hashira Unite",
+                            "description": "During a silent night when the moon shines, Kagaya finally meets Muzan Kibutsuji, who appears at the Ubuyashiki mansion.",
+                            "image": "https://image.tmdb.org/t/p/original/a8QEWBNIfRzXN7g5WOdrPS3QeKy.jpg",
+                            "addedDate": "2024-06-30",
+                            "rating": "9.7"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "featured": [
@@ -4352,15 +4956,18 @@
             "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.\n\n"
         },
         {
-            "id": 13,
-            "title": "Interstellar",
-            "genre": "Adventure, Drama, Sci-Fi",
-            "year": 2014,
-            "rating": 8.7,
-            "duration": "2h 49min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-            "backdrop": "https://images.metahub.space/background/medium/tt0816692/img",
-            "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.\n\n"
+            "id": 1754622949726,
+            "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
+            "genre": "Anime, Action, Shonen",
+            "year": 2025,
+            "rating": 9,
+            "duration": "2h 30min",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
+            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+            "language": "Japanese",
+            "country": " Japan",
+            "ageRating": ""
         },
         {
             "seasons": [
