@@ -330,8 +330,13 @@
                 const card = document.createElement('div');
                 card.className = 'latest-episode-card';
                 card.onclick = () => window.location.href = `content.html?id=${ep.seriesId}&type=series`;
+                const parentSeries = dataManager.getSeriesById(ep.seriesId);
+                const imageSource = (ep.image && ep.image.trim())
+                    ? ep.image
+                    : (parentSeries && parentSeries.backdrop ? parentSeries.backdrop : 'https://via.placeholder.com/110x110?text=No+Image');
+
                 card.innerHTML = `
-                    <img src="${ep.image || 'https://via.placeholder.com/110x110?text=No+Image'}" alt="${ep.title}">
+                    <img src="${imageSource}" alt="${ep.title}">
                     <div class="latest-episode-info">
                         <div class="ep-title">${ep.title || ''}</div>
                         <div class="series-title">${ep.seriesTitle || ''}</div>

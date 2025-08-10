@@ -365,6 +365,89 @@
             cursor: not-allowed;
             opacity: 0.7;
         }
+
+        /* Episode details sheet (overlay) */
+        .episode-sheet-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 16px;
+        }
+        .episode-sheet {
+            background: #1f1f1f;
+            color: #fff;
+            border-radius: 14px;
+            width: min(720px, 92vw);
+            max-height: 84vh;
+            overflow: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .episode-sheet-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .episode-sheet-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .episode-sheet-close {
+            background: transparent;
+            color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+        .episode-sheet-body {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 16px;
+            padding: 16px;
+        }
+        .episode-sheet-body img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #2a2a2a;
+        }
+        .episode-sheet-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 6px 0 10px 0;
+        }
+        .episode-sheet-meta span {
+            background: rgba(255,255,255,0.1);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+        }
+        .episode-sheet-description {
+            margin: 8px 0 0 0;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.92);
+        }
+        @media (max-width: 520px) {
+            .episode-sheet-body {
+                grid-template-columns: 1fr;
+            }
+            .episode-sheet-body img {
+                width: 100%;
+                height: auto;
+                max-height: 280px;
+            }
+        }
     </style>
 </head>
 
@@ -504,7 +587,7 @@
                             <p id="contentDescription" class="description"></p>
 
                             <div class="action-buttons">
-                                <button class="primary-btn">
+                                <button class="primary-btn" id="watchNowBtn">
                                     <i class="fas fa-play"></i>
                                     Watch Now
                                 </button>
@@ -736,6 +819,25 @@
             // إظهار أول تبويب افتراضياً
             if (tabButtons.length > 0 && tabPanes.length > 0) {
                 tabButtons[0].click();
+            }
+
+            // Wire Watch Now to open Episodes tab for series only
+            const watchBtn = document.getElementById('watchNowBtn');
+            if (watchBtn) {
+                watchBtn.addEventListener('click', (e) => {
+                    if (type === 'series') {
+                        const episodesTabBtn = document.querySelector('.tab-btn[data-tab="episodes"]');
+                        if (episodesTabBtn) {
+                            episodesTabBtn.click();
+                            // Scroll to episodes section smoothly
+                            const episodesPane = document.getElementById('episodes');
+                            if (episodesPane) {
+                                episodesPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }
+                        e.preventDefault();
+                    }
+                });
             }
         }
 
@@ -1192,19 +1294,22 @@
                 card.className = contentType === 'movie' ? 'movie-card' : 'series-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${contentType}`;
 
+                const placeholder = 'https://cdn-icons-png.freepik.com/512/13434/13434998.png?ga=GA1.1.111088102.1753586924';
+
                 card.innerHTML = `
                     ${contentType === 'series' ? `
                         <div class="status-indicator ${item.status || 'unknown'}">
                             <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
                         </div>
                     ` : ''}
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}" loading="lazy"
+                        onerror="this.onerror=null; this.src='${placeholder}'; this.style.objectFit='contain'; this.style.background='#2a2a2a';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
                             <div class="rating">
                                 <i class="fas fa-star"></i>
-                                <span>${item.rating}</span>
+                                <span>${item.rating ?? ''}</span>
                             </div>
                             <div class="year">
                                 <span>${item.year ? item.year : ''}</span>
