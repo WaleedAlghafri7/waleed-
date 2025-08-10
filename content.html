@@ -1294,22 +1294,19 @@
                 card.className = contentType === 'movie' ? 'movie-card' : 'series-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${contentType}`;
 
-                const placeholder = 'https://cdn-icons-png.freepik.com/512/13434/13434998.png?ga=GA1.1.111088102.1753586924';
-
                 card.innerHTML = `
                     ${contentType === 'series' ? `
                         <div class="status-indicator ${item.status || 'unknown'}">
                             <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
                         </div>
                     ` : ''}
-                    <img src="${item.image}" alt="${item.title}" loading="lazy"
-                        onerror="this.onerror=null; this.src='${placeholder}'; this.style.objectFit='contain'; this.style.background='#2a2a2a';">
+                    <img src="${item.image}" alt="${item.title}">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
                             <div class="rating">
                                 <i class="fas fa-star"></i>
-                                <span>${item.rating ?? ''}</span>
+                                <span>${item.rating}</span>
                             </div>
                             <div class="year">
                                 <span>${item.year ? item.year : ''}</span>
