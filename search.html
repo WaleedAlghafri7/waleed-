@@ -271,7 +271,7 @@
                             <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
                         </div>
                     ` : ''}
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}"  onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
@@ -280,13 +280,23 @@
                                 <span>${item.rating}</span>
                             </div>
                             <div class="year">
-                                <span>${item.year ? item.year : ''}</span>
+                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
                             </div>
                         </div>
                     </div>
                 `;
 
                 resultsGrid.appendChild(card);
+
+                // Genre chip click: go to appropriate page pre-filtered
+                card.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        const targetPage = item.seasons ? 'series.html' : 'movies.html';
+                        window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
+                    });
+                });
             });
         }
 

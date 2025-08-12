@@ -441,14 +441,20 @@
                         <input type="text" id="title" required>
                     </div>
                     <div class="form-group">
-                        <label for="genre">Genre</label>
-                        <input type="text" id="genre" required>
+                        <label>Genre</label>
+                        <div id="genreOptions" style="display:flex;flex-wrap:wrap;gap:8px;overflow:auto;border:1px solid rgba(255,255,255,0.12);padding:8px;border-radius:8px;"></div>
+                        <div style="display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap;">
+                            <input type="text" id="genreCustomInput" placeholder="Add custom genre" style="flex:1;">
+                            <button type="button" id="genreAddBtn" class="action-btn" style="padding:8px 14px;">Add</button>
+                            <button type="button" id="genreClearBtn" class="action-btn delete" style="padding:8px 14px;">Clear</button>
+                        </div>
+                        <input type="hidden" id="genre">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="year">Year</label>
-                        <input type="number" id="year" required>
+                        <input type="date" id="year" required>
                     </div>
                     <div class="form-group">
                         <label for="rating">Rating</label>
@@ -483,16 +489,17 @@
                         <label for="ageRating">Age Rating</label>
                         <select id="ageRating">
                             <option value="">Select age rating</option>
-                            <option value="G">G (All Ages)</option>
-                            <option value="PG">PG (Parental Guidance)</option>
-                            <option value="PG-13">PG-13</option>
+                            <option value="G">G (General Audiences)</option>
+                            <option value="PG">PG (Parental Guidance Suggested)</option>
+                            <option value="PG-13">PG-13 (Parents Strongly Cautioned)</option>
                             <option value="R">R (Restricted)</option>
-                            <option value="NC-17">NC-17</option>
-                            <option value="18+">18+</option>
-                            <option value="16+">16+</option>
-                            <option value="12+">12+</option>
-                            <option value="PG-12">PG-12</option>
-                            <option value="PG-15">PG-15</option>
+                            <option value="NC-17">NC-17 (Adults Only)</option>
+                            <option value="TV-Y">TV-Y (All Children)</option>
+                            <option value="TV-Y7">TV-Y7 (Directed to Older Children)</option>
+                            <option value="TV-G">TV-G (General Audience)</option>
+                            <option value="TV-PG">TV-PG (Parental Guidance Suggested)</option>
+                            <option value="TV-14">TV-14 (Parents Strongly Cautioned)</option>
+                            <option value="TV-MA">TV-MA (Mature Audience Only)</option>
                         </select>
                     </div>
                 </div>
@@ -556,6 +563,7 @@
                 const res = await fetch('data.json');
                 data = await res.json();
                 renderTables();
+                populateGenreOptions();
             } catch (e) {
                 showSaveNotification(false, 'فشل في تحميل البيانات!');
             }
@@ -571,11 +579,11 @@
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td class="img-cell">
-                        <img src="${movie.image ? movie.image : 'https://via.placeholder.com/48x68?text=No+Image'}" alt="Movie Image" onerror="this.src='https://via.placeholder.com/48x68?text=No+Image';">
+                        <img src="${movie.image ? movie.image : ''}" alt="Movie Image" onerror="this.onerror=null; this.src='13434998.png';";">
                     </td>
                     <td>${movie.title}</td>
                     <td>${movie.genre}</td>
-                    <td>${movie.year}</td>
+                    <td>${movie.year ? (typeof movie.year === 'string' ? movie.year.slice(0,4) : movie.year) : ''}</td>
                     <td>${movie.rating}</td>
                     <td>${movie.duration}</td>
                     <td>
@@ -592,11 +600,11 @@
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td class="img-cell">
-                        <img src="${series.image ? series.image : 'https://via.placeholder.com/48x68?text=No+Image'}" alt="Series Image" onerror="this.src='https://via.placeholder.com/48x68?text=No+Image';">
+                        <img src="${series.image ? series.image : ''}" alt="Series Image" onerror="this.onerror=null; this.src='13434998.png';";">
                     </td>
                     <td>${series.title}</td>
                     <td>${series.genre}</td>
-                    <td>${series.year}</td>
+                    <td>${series.year ? (typeof series.year === 'string' ? series.year.slice(0,4) : series.year) : ''}</td>
                     <td>${series.status || ''}</td>
                     <td>${series.rating}</td>
                     <td>${series.duration}</td>
@@ -607,6 +615,96 @@
                 `;
                 seriesTbody.appendChild(tr);
             });
+        }
+
+        function uniqGenresFromData() {
+            const set = new Set();
+            const add = (g) => {
+                if (!g) return;
+                if (Array.isArray(g)) g.forEach(x => String(x).split(',').forEach(y => set.add(y.trim())));
+                else String(g).split(',').forEach(y => set.add(y.trim()));
+            };
+            (data.movies || []).forEach(m => add(m.genre));
+            (data.series || []).forEach(s => add(s.genre));
+            return Array.from(set).filter(x => x).sort((a,b) => a.localeCompare(b));
+        }
+
+        function populateGenreOptions() {
+            const container = document.getElementById('genreOptions');
+            if (!container) return;
+            container.innerHTML = '';
+            const genres = uniqGenresFromData();
+            genres.forEach(g => {
+                const label = document.createElement('label');
+                label.style = 'display:inline-flex;align-items:center;gap:6px;background:#2e3347;padding:6px 10px;border-radius:6px;cursor:pointer;';
+                const cb = document.createElement('input');
+                cb.type = 'checkbox';
+                cb.value = g;
+                cb.addEventListener('change', () => {
+                    const selected = Array.from(container.querySelectorAll('input[type="checkbox"]:checked')).map(x => x.value);
+                    document.getElementById('genre').value = selected.join(', ');
+                });
+                const span = document.createElement('span');
+                span.textContent = g;
+                label.appendChild(cb);
+                label.appendChild(span);
+                container.appendChild(label);
+            });
+
+            // Wire the custom add button
+            const addBtn = document.getElementById('genreAddBtn');
+            const input = document.getElementById('genreCustomInput');
+            if (addBtn && input) {
+                const addCustom = () => {
+                    const val = (input.value || '').trim();
+                    if (!val) return;
+                    // Prevent duplicates (case-insensitive)
+                    const exists = Array.from(container.querySelectorAll('input[type="checkbox"]')).some(cb => cb.value.toLowerCase() === val.toLowerCase());
+                    if (!exists) {
+                        const label = document.createElement('label');
+                        label.style = 'display:inline-flex;align-items:center;gap:6px;background:#2e3347;padding:6px 10px;border-radius:6px;cursor:pointer;';
+                        const cb = document.createElement('input');
+                        cb.type = 'checkbox';
+                        cb.value = val;
+                        cb.checked = true;
+                        cb.addEventListener('change', () => {
+                            const selected = Array.from(container.querySelectorAll('input[type="checkbox"]:checked')).map(x => x.value);
+                            document.getElementById('genre').value = selected.join(', ');
+                        });
+                        const span = document.createElement('span');
+                        span.textContent = val;
+                        label.appendChild(cb);
+                        label.appendChild(span);
+                        container.appendChild(label);
+                    } else {
+                        // If exists, just check it
+                        container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                            if (cb.value.toLowerCase() === val.toLowerCase()) cb.checked = true;
+                        });
+                    }
+                    // Update hidden field and clear input
+                    const selected = Array.from(container.querySelectorAll('input[type="checkbox"]:checked')).map(x => x.value);
+                    document.getElementById('genre').value = selected.join(', ');
+                    input.value = '';
+                    input.focus();
+                };
+                addBtn.onclick = addCustom;
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        addCustom();
+                    }
+                });
+            }
+
+            // Wire clear button
+            const clearBtn = document.getElementById('genreClearBtn');
+            if (clearBtn) {
+                clearBtn.onclick = () => {
+                    container.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                    document.getElementById('genre').value = '';
+                };
+            }
         }
 
         function closeModal(type) {
@@ -689,8 +787,32 @@
                 const item = (type === 'movie' ? data.movies : data.series).find(i => i.id === id);
                 if (item) {
                     document.getElementById('title').value = item.title;
-                    document.getElementById('genre').value = item.genre;
-                    document.getElementById('year').value = item.year;
+                    // اضبط خيارات الأنواع المحددة
+                    (function(){
+                        const container = document.getElementById('genreOptions');
+                        const selected = Array.isArray(item.genre) ? item.genre : String(item.genre || '').split(',').map(x=>x.trim()).filter(Boolean);
+                        // تأكد أن الخيارات موجودة، ثم علم المختار
+                        populateGenreOptions();
+                        container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                            cb.checked = selected.includes(cb.value);
+                        });
+                        document.getElementById('genre').value = selected.join(', ');
+                    })();
+                    // اضبط حقل التاريخ مفضلاً releaseDate إن وجد، وإلا فحوّل السنة إلى YYYY-01-01
+                    (function(){
+                        const dateInput = document.getElementById('year');
+                        if (!dateInput) return;
+                        const raw = item.releaseDate || item.year;
+                        if (!raw) { dateInput.value = ''; return; }
+                        const s = String(raw).trim();
+                        if (/^\d{4}-\d{2}-\d{2}$/.test(s)) {
+                            dateInput.value = s.slice(0,10);
+                        } else if (/^\d{4}/.test(s)) {
+                            dateInput.value = `${s.slice(0,4)}-01-01`;
+                        } else {
+                            dateInput.value = '';
+                        }
+                    })();
                     document.getElementById('rating').value = item.rating;
                     document.getElementById('duration').value = item.duration;
                     document.getElementById('image').value = item.image;
@@ -768,11 +890,17 @@
 
             const type = document.getElementById('itemType').value;
             const id = document.getElementById('itemId').value;
+            const yearInputValue = document.getElementById('year').value; // YYYY-MM-DD
+            const releaseDate = yearInputValue ? yearInputValue.slice(0, 10) : '';
+            const parsedYear = releaseDate ? parseInt(releaseDate.slice(0, 4), 10) : null;
+
             const item = {
                 id: id ? Number(id) : Date.now(),
                 title: document.getElementById('title').value,
+                // genre كسلسلة مفصولة بفواصل من الاختيارات
                 genre: document.getElementById('genre').value,
-                year: Number(document.getElementById('year').value),
+                year: parsedYear,
+                releaseDate: releaseDate,
                 rating: Number(document.getElementById('rating').value),
                 duration: document.getElementById('duration').value,
                 image: document.getElementById('image').value,
@@ -820,8 +948,8 @@
             if (idx > -1) {
                 arr.splice(idx, 1);
                 try {
-                    // إرسال حذف إلى ملف بايثون
-                    const response = await fetch('save_data.py', {
+                    // إرسال حذف إلى خادم بايثون (Flask)
+                    const response = await fetch('http://127.0.0.1:5000/save_data', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({

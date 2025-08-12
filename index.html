@@ -233,7 +233,7 @@
 
                 // Only show: image, title, rating, year
                 card.innerHTML = `
-                    <img src="${movie.image}" alt="${movie.title}">
+                    <img src="${movie.image}" alt="${movie.title}"  onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="movie-info">
                         <h3>${movie.title}</h3>
                         <div class="movie-details">
@@ -242,13 +242,22 @@
                                 <span>${movie.rating}</span>
                             </div>
                             <div class="year">
-                                <span>${movie.year ? movie.year : ''}</span>
+                                <span>${movie.year ? (typeof movie.year === 'string' ? movie.year.slice(0,4) : movie.year) : ''}</span>
                             </div>
                         </div>
                     </div>
                 `;
 
                 moviesGrid.appendChild(card);
+
+                // Genre chip click: go to movies page pre-filtered by that genre
+                card.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        window.location.href = `movies.html?genre=${encodeURIComponent(g)}`;
+                    });
+                });
             });
         }
 
@@ -264,7 +273,7 @@
                 
                 // Only show: image, title, rating, year
                 card.innerHTML = `
-                    <img src="${show.image}" alt="${show.title}">
+                    <img src="${show.image}" alt="${show.title}"  onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${show.title}</h3>
                         <div class="movie-details">
@@ -273,13 +282,22 @@
                                 <span>${show.rating}</span>
                             </div>
                             <div class="year">
-                                <span>${show.year ? show.year : ''}</span>
+                                <span>${show.year ? (typeof show.year === 'string' ? show.year.slice(0,4) : show.year) : ''}</span>
                             </div>
                         </div>
                     </div>
                 `;
 
                 seriesGrid.appendChild(card);
+
+                // Genre chip click: go to series page pre-filtered by that genre
+                card.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        window.location.href = `series.html?genre=${encodeURIComponent(g)}`;
+                    });
+                });
             });
         }
 
@@ -304,7 +322,7 @@
                 card.className = 'best-rated-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item._type}`;
                 card.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}"  onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
@@ -313,12 +331,22 @@
                                 <span>${item.rating}</span>
                             </div>
                             <div class="year">
-                                <span>${item.year ? item.year : ''}</span>
+                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
                             </div>
                         </div>
                     </div>
                 `;
                 grid.appendChild(card);
+
+                // Genre chip click: go to appropriate page pre-filtered by that genre
+                card.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        const targetPage = item._type === 'series' ? 'series.html' : 'movies.html';
+                        window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
+                    });
+                });
             });
         }
 
@@ -336,7 +364,7 @@
                     : (parentSeries && parentSeries.backdrop ? parentSeries.backdrop : 'https://via.placeholder.com/110x110?text=No+Image');
 
                 card.innerHTML = `
-                    <img src="${imageSource}" alt="${ep.title}">
+                    <img src="${imageSource}" alt="${ep.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="latest-episode-info">
                         <div class="ep-title">${ep.title || ''}</div>
                         <div class="series-title">${ep.seriesTitle || ''}</div>

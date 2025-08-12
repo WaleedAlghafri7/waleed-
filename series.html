@@ -239,6 +239,10 @@
                 const data = globalData;
                 let allContent = [...data.series];
 
+                // Apply incoming genre filter from URL if present
+                const params = new URLSearchParams(window.location.search);
+                const initialGenre = params.get('genre');
+
                 // Populate genres dropdown once
                 if (!genresPopulated) {
                     const genres = extractGenres(data);
@@ -250,6 +254,9 @@
                         genreSelect.appendChild(opt);
                     });
                     genresPopulated = true;
+                    if (initialGenre) {
+                        genreSelect.value = initialGenre;
+                    }
                 }
 
                 // تطبيق الفلتر النشط (Movies/Series)
@@ -294,7 +301,7 @@
                     case 'oldest':
                         allContent.sort((a, b) => {
                             const getDate = (item) => {
-                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.year) return new Date((typeof item.year === 'string' ? item.year.slice(0,4) : item.year), 0, 1);
                                 if (item.releaseDate) return new Date(item.releaseDate);
                                 if (item.addedDate) return new Date(item.addedDate);
                                 return new Date(0);
@@ -323,7 +330,7 @@
                     default: // latest
                         allContent.sort((a, b) => {
                             const getDate = (item) => {
-                                if (item.year) return new Date(item.year, 0, 1);
+                                if (item.year) return new Date((typeof item.year === 'string' ? item.year.slice(0,4) : item.year), 0, 1);
                                 if (item.releaseDate) return new Date(item.releaseDate);
                                 if (item.addedDate) return new Date(item.addedDate);
                                 return new Date(0);
@@ -363,7 +370,7 @@
                             <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
                         </div>
                     ` : ''}
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}"  onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
@@ -372,13 +379,26 @@
                                 <span>${item.rating}</span>
                             </div>
                             <div class="year">
-                                <span>${item.year ? item.year : ''}</span>
+                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
                             </div>
                         </div>
                     </div>
                 `;
 
                 contentGrid.appendChild(card);
+
+                // Genre chip click: pre-filter this page by the clicked genre
+                card.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        const url = new URL(window.location.href);
+                        url.searchParams.set('genre', g);
+                        history.replaceState(null, '', url.toString());
+                        document.querySelector('.genre-select').value = g;
+                        loadContent();
+                    });
+                });
             });
         }
 

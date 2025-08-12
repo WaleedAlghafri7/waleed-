@@ -196,7 +196,15 @@ function loadLatestMovies(movies) {
 
     // ترتيب الأفلام حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
     const latestMovies = [...movies]
-        .sort((a, b) => b.year - a.year)
+        .sort((a, b) => {
+            const getYear = (y) => {
+                if (y === undefined || y === null) return NaN;
+                const s = String(y);
+                const yy = parseInt(s.slice(0, 4), 10);
+                return isNaN(yy) ? NaN : yy;
+            };
+            return getYear(b.year) - getYear(a.year);
+        })
         .slice(0, config.movies.count);
 
     latestMovies.forEach(movie => {
@@ -236,7 +244,15 @@ function loadLatestSeries(series) {
 
     // ترتيب المسلسلات حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
     const latestSeries = [...series]
-        .sort((a, b) => b.year - a.year)
+        .sort((a, b) => {
+            const getYear = (y) => {
+                if (y === undefined || y === null) return NaN;
+                const s = String(y);
+                const yy = parseInt(s.slice(0, 4), 10);
+                return isNaN(yy) ? NaN : yy;
+            };
+            return getYear(b.year) - getYear(a.year);
+        })
         .slice(0, config.series.count);
 
     latestSeries.forEach(show => {

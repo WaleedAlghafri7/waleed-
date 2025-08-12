@@ -3,8 +3,9 @@
         {
             "id": 1,
             "title": "The Monkey",
-            "genre": "Horror, Comedy",
+            "genre": "Horror, Dark Comedy, Splatter Horror",
             "year": 2025,
+            "releaseDate": "2025-02-21",
             "rating": 6,
             "duration": "1h 38min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
@@ -12,41 +13,44 @@
             "description": "When twin brothers Bill and Hal find their father's old monkey toy in the attic, a series of gruesome deaths start. The siblings decide to throw the toy away and move on with their lives, growing apart over the years.\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "18+"
+            "ageRating": "R"
         },
         {
             "id": 2,
             "title": "The Gorge",
-            "genre": "Drama, Mystery, Action",
+            "genre": "Action, Adventure, Horror, Mystery, Romance, Sci-Fi, Dark Romance, Monster Horror, Survival",
             "year": 2025,
+            "releaseDate": "2025-02-14",
             "rating": 6.7,
             "duration": "2h 7min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt13654226/img",
             "description": "Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.\n\n",
-            "language": "English",
-            "country": "United States",
+            "language": " English, Lithuanian",
+            "country": "United Kingdom, United States",
             "ageRating": "PG-13"
         },
         {
             "id": 3,
             "title": "Bridget Jones: Mad About the Boy",
-            "genre": "Comedy, Drama, Romance",
+            "genre": "Comedy, Drama, Romance, Romantic Comedy",
             "year": 2025,
+            "releaseDate": "2025-02-13",
             "rating": 6.6,
             "duration": "2h 4min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/taEVBdVSqYo9YeN3ycw2SosklZL.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt32063050/img",
             "description": "After jumping back into the dating pool, single mother Bridget Jones finds herself caught between a younger man and her son's science teacher.\n\n",
             "language": "English",
-            "country": "United States",
+            "country": " United Kingdom, France, United States",
             "ageRating": "R"
         },
         {
             "id": 4,
             "title": "La Dolce Villa",
-            "genre": "Romance, Comedy, Romantic Comedy",
+            "genre": "Comedy, Romance, Romantic Comedy",
             "year": 2025,
+            "releaseDate": "2025-12-02",
             "rating": 6,
             "duration": "1h 39min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sEma5RN8aZ5Yu2Dkefyn5ULdlc1.jpg",
@@ -54,13 +58,14 @@
             "description": "A successful businessman travels to Italy to stop his daughter from spending all her money to restore an old villa, but Italy has other romantic plans.\n\n",
             "language": " English",
             "country": "United States",
-            "ageRating": "16+"
+            "ageRating": "TV-14"
         },
         {
             "id": 5,
             "title": "Sidelined: The QB and Me",
-            "genre": "Comedy, Romance",
+            "genre": "Romance",
             "year": 2024,
+            "releaseDate": "2024-11-29",
             "rating": 5.8,
             "duration": "1h 39min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mSL6truNrWP1Bn9ng1rN0SkMI4f.jpg",
@@ -73,8 +78,9 @@
         {
             "id": 6,
             "title": "Love Hurts",
-            "genre": "Action, Comedy, Romance",
+            "genre": "Action, Comedy, Romance, Romantic Comedy, Martial Arts",
             "year": 2025,
+            "releaseDate": "2025-02-07",
             "rating": 5.3,
             "duration": "1h 23min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/skPPVeHoTTVVSJlb0Ib5vrqiuA4.jpg",
@@ -377,6 +383,62 @@
             "language": "Japanese",
             "country": " Japan",
             "ageRating": ""
+        },
+        {
+            "id": 1754908663602,
+            "title": "Violet Evergarden: Recollections",
+            "genre": "Anime, Animation, Drama",
+            "year": 2021,
+            "rating": 7.5,
+            "duration": "1h 35min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yNrfz5Mc7IFszxAbivV1Kq0gZrW.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/uPrVxwuJLKkS6MPgoOLkFwaVd9c.jpg",
+            "description": "An emotionally scarred former child soldier becomes a letter writer in this condensed recap of the moving, gorgeously animated award-winning series.\n\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "16+"
+        },
+        {
+            "id": 1754910718050,
+            "title": "Violet Evergarden: The Movie",
+            "genre": "Anime, Animation, Drama",
+            "year": 2020,
+            "rating": 8.3,
+            "duration": "2h 20min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4b7uAGVtgA85Yd911yOJqIsHigx.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/wGwSWDG3LIQxchg2M8HV7bDqYKU.jpg",
+            "description": "After the aftermath of a war, a young girl who was used as a 'tool' for war learned to live. With the scars of burns, she goes back to her past to feel the true feelings of the Major's, \"I love you.\"",
+            "language": " Japanese",
+            "country": " Japan, South Korea, Czech Republic, Germany",
+            "ageRating": ""
+        },
+        {
+            "id": 1754910846817,
+            "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+            "genre": "Anime, Animation, Drama",
+            "year": 2019,
+            "rating": 7.5,
+            "duration": "1h 30min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zjaSw6Ok0MhXjrruPrA27VHyUYC.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/94YK58T5OEKV9hEgPHWHzLtdwK4.jpg",
+            "description": "Violet Evergarden, a former soldier returned from war, comes to teach at a women's academy and changes a young girl's life.",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": ""
+        },
+        {
+            "id": 1754974599132,
+            "title": "Solo Leveling: ReAwakening",
+            "genre": "Anime, Action, Adventure",
+            "year": 2024,
+            "rating": 8.8,
+            "duration": "2h 1min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uzHMp5heVLR68kbbUEXFPsmxYsM.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/hlfu6g0h0D65SjkVhQBU20zePTl.jpg",
+            "description": "Over a decade after 'gates' connecting worlds appeared, awakening 'hunters' with superpowers, weakest hunter Sung Jinwoo encounters a double dungeon and accepts a mysterious quest, becoming the only one able to level up, changing his fate.\n",
+            "language": "Japanese",
+            "country": " South Korea, Japan",
+            "ageRating": "R"
         }
     ],
     "series": [
@@ -2716,25 +2778,25 @@
                             "rating": "8.6"
                         },
                         {
-                            "title": "",
+                            "title": "Gekai",
                             "description": "After awakening as a Giver, Rudo is chased by Trash Beasts and saved by Enjin who recruits him into the Cleaners At a burger joint Enjin explains Trash Beasts and Vital Instruments. Rudo meets his mentor Zanka.",
                             "image": "https://image.tmdb.org/t/p/original/bmWMdGBlTLKOwbX7d5EQiOZBtFX.jpg",
                             "addedDate": "2025-06-27",
                             "rating": "8.1"
                         },
                         {
-                            "title": "Cleaner HQ",
+                            "title": "Soujiya Honbu",
                             "description": "After being introduced to Cleaner HQ, Rudo follows Riyo on a job to learn the business.",
                             "image": "https://image.tmdb.org/t/p/original/7Y3O7q3mOt9f4FSChUIFyAZyRGa.jpg",
                             "addedDate": "2025-08-03",
                             "rating": "8.1"
                         },
                         {
-                            "title": "",
+                            "title": "Arashi-ya",
                             "description": "",
                             "image": "https://image.tmdb.org/t/p/original/ztEDVMzddKRUQtvExgKaOVd8pHw.jpg",
                             "addedDate": "2025-08-10",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "title": "",
@@ -3182,353 +3244,67 @@
                             "description": "The battles rage on even as the crew gets treated by Granny Miya. Minimalist threatens Aoi at the store while Heisuke clashes with Apart at Tokyo Tower.",
                             "image": "https://episodes.metahub.space/tt17069148/1/14/w780.jpg",
                             "addedDate": "2025-07-28",
-                            "rating": "8.7"
+                            "rating": "8.6"
                         },
                         {
                             "title": "Round and Round the Tower",
                             "description": "As Apart reveals his past-unable to form human connections and seeking meaning through killing- Meanwhile, X is moving with a hidden agenda that could shake the assassin world to its core..",
                             "image": "https://episodes.metahub.space/tt17069148/1/15/w780.jpg",
-                            "addedDate": "2025-07-29",
-                            "rating": "8.8"
+                            "addedDate": "2025-08-04",
+                            "rating": "8.6"
                         },
                         {
                             "title": "Slice Slice Dance",
                             "description": "Sakamoto discovers the supposed threat from the death row inmates is just a distraction designed to lure the assassin group ORDER into a trap. The real objective of the antagonist X (Slur) is to destroy the Japan Assassin Association (JAA)",
                             "image": "https://image.tmdb.org/t/p/original/uBJrcmKjb1nZ4z5bQV0aiay4Aco.jpg",
-                            "addedDate": "2025-08-05",
-                            "rating": "9.7"
+                            "addedDate": "2025-08-11",
+                            "rating": "9.3"
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-08-12",
+                            "addedDate": "2025-08-18",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-08-19",
+                            "addedDate": "2025-08-25",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-08-26",
+                            "addedDate": "2025-09-01",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-09-02",
+                            "addedDate": "2025-09-08",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-09-09",
+                            "addedDate": "2025-09-15",
                             "rating": ""
                         },
                         {
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-09-16",
+                            "addedDate": "2025-09-22",
                             "rating": ""
                         }
                     ]
                 }
             ]
-        },
-        {
-            "id": 34,
-            "title": "One Piece",
-            "genre": "Animation, Action, Adventure",
-            "year": 1999,
-            "duration": "24min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
-            "backdrop": "https://image.tmdb.org/t/p/original/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
-            "description": "Monkey D. Luffy sets out on a grand adventure to find the legendary One Piece and become King of the Pirates, gathering a diverse crew and facing powerful foes along the way.",
-            "status": "ongoing",
-            "seasons": [
-                {
-                    "season_number": 1,
-                    "episodes": [
-                        {
-                            "title": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
-                            "description": "Luffy sets sail and begins his adventure to find the One Piece.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/1/w780.jpg",
-                            "addedDate": "1999-10-20",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!",
-                            "description": "Luffy seeks out Zoro to join his crew.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/2/w780.jpg",
-                            "addedDate": "1999-11-17",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Morgan vs. Luffy! Who's This Beautiful Young Girl?",
-                            "description": "Luffy faces off against Captain Morgan and meets Coby.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/3/w780.jpg",
-                            "addedDate": "1999-11-24",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "Luffy's Past! Enter Red-Haired Shanks!",
-                            "description": "A flashback reveals Luffy's inspiration to become a pirate.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/4/w780.jpg",
-                            "addedDate": "1999-12-01",
-                            "rating": 8.3
-                        },
-                        {
-                            "title": "A Terrifying Mysterious Power! Captain Buggy the Clown Pirate!",
-                            "description": "Luffy encounters Buggy the Clown, a devil fruit user.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/5/w780.jpg",
-                            "addedDate": "1999-12-08",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
-                            "description": "Luffy battles one of Buggy's top men.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/6/w780.jpg",
-                            "addedDate": "1999-12-15",
-                            "rating": 7.9
-                        },
-                        {
-                            "title": "Epic Showdown! Swordsman Zoro vs. Acrobat Cabaji!",
-                            "description": "Zoro shows his skills in a fierce sword fight.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/7/w780.jpg",
-                            "addedDate": "1999-12-22",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Who Will Win? Showdown Between the True Powers of the Devil!",
-                            "description": "Luffy faces Buggy in an intense fight.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/8/w780.jpg",
-                            "addedDate": "1999-12-29",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "The Honorable Liar? Captain Usopp",
-                            "description": "The crew meets the notorious liar, Usopp.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/9/w780.jpg",
-                            "addedDate": "2000-01-05",
-                            "rating": 7.8
-                        },
-                        {
-                            "title": "The Weirdest Guy Ever! Jango the Hypnotist",
-                            "description": "The crew faces Jango, a hypnotist with strange powers.",
-                            "image": "https://episodes.metahub.space/tt0388629/1/10/w780.jpg",
-                            "addedDate": "2000-01-12",
-                            "rating": 7.7
-                        }
-                    ]
-                },
-                {
-                    "season_number": 2,
-                    "episodes": [
-                        {
-                            "title": "The Worst Man in the Eastern Seas! Fish-Man Pirate Arlong",
-                            "description": "Luffy and crew hear tales of the powerful fish-man Arlong.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/1/w780.jpg",
-                            "addedDate": "2000-01-19",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "Luffy Submerged! Zoro vs. Hatchan the Octopus",
-                            "description": "Zoro takes on a fish-man swordsman to save Luffy.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/2/w780.jpg",
-                            "addedDate": "2000-01-26",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Proud Warriors! Sanji and Usopp's Fierce Battles",
-                            "description": "Sanji and Usopp prove their worth in battle.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/3/w780.jpg",
-                            "addedDate": "2000-02-02",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "Luffy's Anger! A Dirty Trick in a Sacred Battle",
-                            "description": "Luffy finally joins the fight against Arlong.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/4/w780.jpg",
-                            "addedDate": "2000-02-09",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "Luffy Stands Up! Ending the Evil Fish-Man!",
-                            "description": "The final showdown between Luffy and Arlong begins.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/5/w780.jpg",
-                            "addedDate": "2000-02-16",
-                            "rating": 8.3
-                        },
-                        {
-                            "title": "The First Obstacle? Giant Whale Laboon Appears",
-                            "description": "The crew encounters a giant whale on the Grand Line.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/6/w780.jpg",
-                            "addedDate": "2000-02-23",
-                            "rating": 7.9
-                        },
-                        {
-                            "title": "A Promise Between Men! Luffy and the Whale Vow to Meet Again",
-                            "description": "Luffy makes a strange promise to a whale named Laboon.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/7/w780.jpg",
-                            "addedDate": "2000-03-01",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "The Town of Beginnings and Endings - Loguetown",
-                            "description": "The crew arrives at Loguetown, where the Pirate King was executed.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/8/w780.jpg",
-                            "addedDate": "2000-03-08",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Buggy's Revenge! The Man Who Smiles at the Execution Stand!",
-                            "description": "Buggy returns for revenge as Luffy faces danger.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/9/w780.jpg",
-                            "addedDate": "2000-03-15",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "The Legend Has Begun! Head for the Grand Line",
-                            "description": "The crew officially sets sail for the Grand Line.",
-                            "image": "https://episodes.metahub.space/tt0388629/2/10/w780.jpg",
-                            "addedDate": "2000-03-22",
-                            "rating": 8.2
-                        }
-                    ]
-                },
-                {
-                    "season_number": 3,
-                    "episodes": [
-                        {
-                            "title": "Nami's Sick? Beyond the Snow Falling on the Sea!",
-                            "description": "The crew faces a new challenge as Nami falls ill.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/1/w780.jpg",
-                            "addedDate": "2000-03-29",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Adventure on Drum Island! The Island Where Snow Lives",
-                            "description": "The Straw Hats arrive at Drum Island in search of a doctor.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/2/w780.jpg",
-                            "addedDate": "2000-04-05",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "Doctor Kureha! The Witch of Drum Island",
-                            "description": "The crew meets the mysterious Dr. Kureha.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/3/w780.jpg",
-                            "addedDate": "2000-04-12",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "Tony Tony Chopper! The Cotton Candy-Loving Reindeer",
-                            "description": "A new friend joins the crew: Chopper the reindeer.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/4/w780.jpg",
-                            "addedDate": "2000-04-19",
-                            "rating": 8.3
-                        },
-                        {
-                            "title": "Wapol the Bliking! The Tin-Plate Wapol's Army",
-                            "description": "The Straw Hats face off against Wapol and his men.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/5/w780.jpg",
-                            "addedDate": "2000-04-26",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "The Island Where Snow Lives! The Climb Up Drum Rockies",
-                            "description": "Luffy braves the elements to save Nami.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/6/w780.jpg",
-                            "addedDate": "2000-05-03",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "The Blue-Nosed Reindeer! Chopper's Secret",
-                            "description": "Chopper's tragic past is revealed.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/7/w780.jpg",
-                            "addedDate": "2000-05-10",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "The Doctor Who is Called a Witch! Kureha's True Ability",
-                            "description": "Dr. Kureha shows her true skills as a doctor.",
-                            "image": "https://episodes.metahub.space/tt0388629/3/8/w780.jpg",
-                            "addedDate": "2000-05-17",
-                            "rating": 8.0
-                        }
-                    ]
-                },
-                {
-                    "season_number": 4,
-                    "episodes": [
-                        {
-                            "title": "Alabasta's Hero and a Ballerina on the Ship!",
-                            "description": "The crew sails to Alabasta and meets new faces.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/1/w780.jpg",
-                            "addedDate": "2000-05-24",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "The Adventure in Alabasta! The Desert Kingdom",
-                            "description": "The Straw Hats arrive in the desert kingdom of Alabasta.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/2/w780.jpg",
-                            "addedDate": "2000-05-31",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "The Battle Begins! Showdown at Rainbase",
-                            "description": "The crew faces Crocodile and Baroque Works.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/3/w780.jpg",
-                            "addedDate": "2000-06-07",
-                            "rating": 8.3
-                        },
-                        {
-                            "title": "Rebel Army vs. Royal Army! The Final Showdown",
-                            "description": "A civil war erupts in Alabasta.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/4/w780.jpg",
-                            "addedDate": "2000-06-14",
-                            "rating": 8.2
-                        },
-                        {
-                            "title": "The Secret of the Ancient Weapon! Pluton",
-                            "description": "The mystery of the ancient weapon Pluton is revealed.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/5/w780.jpg",
-                            "addedDate": "2000-06-21",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "Farewell to Vivi! A Grand Departure",
-                            "description": "The crew says goodbye to Princess Vivi.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/6/w780.jpg",
-                            "addedDate": "2000-06-28",
-                            "rating": 8.0
-                        },
-                        {
-                            "title": "The Pirates' Banquet and Operation Escape Alabasta!",
-                            "description": "The Straw Hats celebrate their victory.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/7/w780.jpg",
-                            "addedDate": "2000-07-05",
-                            "rating": 8.1
-                        },
-                        {
-                            "title": "The First Patient! The Untold Story of the Rumble Ball",
-                            "description": "Chopper's medical skills are put to the test.",
-                            "image": "https://episodes.metahub.space/tt0388629/4/8/w780.jpg",
-                            "addedDate": "2000-07-12",
-                            "rating": 8.0
-                        }
-                    ]
-                }
-            ],
-            "rating": 8.2
         },
         {
             "id": 35,
@@ -5138,6 +4914,328 @@
                             "image": "",
                             "addedDate": "",
                             "rating": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1754908462036,
+            "title": "Violet Evergarden",
+            "genre": "Anime, Animation, Drama",
+            "year": 2018,
+            "rating": 8.4,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/61EwFPqc0r1uJo6la49J55F8bQ8.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/nABhabOouXyRV3KoC6g5KPp58Pw.jpg",
+            "description": "In the aftermath of a great war, Violet Evergarden, a young female ex-soldier, gets a job at a writers' agency and goes on assignments to create letters that can connect people.",
+            "language": "Japanese, English",
+            "country": " Japan",
+            "ageRating": "16+",
+            "status": "completed",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": "I Love You and Auto Memory Dolls",
+                            "description": "Violet is a soldier in the Leidenschaftlich Army who served under Major Gilbert Bougainvillea, who she was utterly devoted to. However, Violet is injured after a mission which resulted in the loss of her arms, requiring them to be replaced with prosthesis. Colonel Hodgins, an old acquaintance of Gilbert, arrives to pick up Violet. He explains to Violet that the war they were fighting has ended and peace has come, though he is unwilling to tell Violet what happened to Gilbert. They leave for the capital city of Leiden, where Gilbert had already arranged for Violet to be adopted by the Evergarden family. However, Violet cannot adjust to civilian life due to her military indoctrination. Hodgins then decides to show Violet his business, the CH postal company which acts as a private mail and ghostwriting service and hires her as a postal worker. She then witnesses the Auto Memoir Dolls of the ghostwriting department writing a letter for an illiterate man who wants to proclaim his love to someone. Violet then remembers that \"I love you\" were the last words Gilbert had told her. Wanting to know the meaning of the words, Violet asks Hodgins for her to join the ghostwriting department. Impressed that Violet has finally shown signs of acting on her own free will instead of on someone else's orders, Hodgins accepts Violet's request despite her not being an Auto Memoir Doll.",
+                            "image": "https://image.tmdb.org/t/p/original/bJ6Y5GWQDgi3IiW4WuGKR4v8DJe.jpg",
+                            "addedDate": "2020-08-22",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "Never Coming Back",
+                            "description": "Violet joins the ghostwriting department and meets its members: the veteran Cattelya, and the two rookies Erica and Iris. Under Cattelya's direction, Violet begins her training as an Auto Memoir Doll, quickly learning how to use a typewriter. However, despite her technical proficiency, Violet is still incapable of understanding emotions. This comes to a head when she offers to write a romantic letter that ends up angering both the recipient and the client. Erica then confronts Violet about her motivations to become a Doll, but relents when Violet tells her about her desire to learn the meaning of the words \"I love you.\" Iris suggests to Hodgins to fire Violet, but Erica comes to her defense, partly motivated due to her own insecurities about being a proper Doll. Hodgins decides not to fire Violet and gives her a new uniform, along with the brooch Gilbert had originally given to Violet, which Hodgins managed to recover. Violet is overjoyed at the return of the brooch, and agrees to attend a Doll training course. That night, Hodgins confides in Cattleya that he used to be friends with Gilbert, and that Gilbert is \"never coming back\".",
+                            "image": "https://image.tmdb.org/t/p/original/e94x5xFBLqDm3io89CZDVsZuehF.jpg",
+                            "addedDate": "2018-01-17",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "May You Be an Exemplary Auto Memory Doll",
+                            "description": "As Cattleya advised, Violet decides to attend an Auto Memoir Doll training school. There, she meets Luculia and they start a friendship.",
+                            "image": "https://image.tmdb.org/t/p/original/e1x2juyaYIm9YE9tOguRuAhZNOT.jpg",
+                            "addedDate": "2018-01-25",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": "You Won't Be a Tool, But a Person Worthy of That Name",
+                            "description": "Violet and her work companion Iris were called to the hometown where Iris lives and discover the actual reason for her commission.",
+                            "image": "https://image.tmdb.org/t/p/original/t0uxEuL1IDoHqGVT7WhZQWY4WqH.jpg",
+                            "addedDate": "2018-02-01",
+                            "rating": "7.7"
+                        },
+                        {
+                            "title": "You Write Letters That Bring People Together?",
+                            "description": "After gaining some experience of working as Auto Memories Doll, Violet Evergarden went for her first important commission to a Princess who is having issues of her marriage.",
+                            "image": "https://image.tmdb.org/t/p/original/g6iTQbUqfknHH0CwcNoCDGJZqlz.jpg",
+                            "addedDate": "2018-02-08",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "Somewhere, Under a Starry Sky",
+                            "description": "Violet travels to the country of Astrea to work with transcribers copying damaged manuscripts. Her partner Leon has a past, not unlike hers.",
+                            "image": "https://image.tmdb.org/t/p/original/lJ9skCfDcBNtUsp8YPspPyETF1P.jpg",
+                            "addedDate": "2018-02-15",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "",
+                            "description": "A playwright with writer's block and a tragic past summons Violet to the country of Genetrix to help him finish a script. They both learn about grief.",
+                            "image": "https://image.tmdb.org/t/p/original/3hS7t2jdWOS28ywCPprA4ALUxaf.jpg",
+                            "addedDate": "2018-02-22",
+                            "rating": "9.3"
+                        },
+                        {
+                            "title": "Weapon Of War",
+                            "description": "As Violet searches for the Major in the present day, she recalls the time she first met him and became the terrifying weapon that turned the tide of the war.",
+                            "image": "https://image.tmdb.org/t/p/original/4k0wx5bfe6KzRYoSeOWLmFBqZvV.jpg",
+                            "addedDate": "2018-02-28",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "Violet Evergarden",
+                            "description": "After realizing that Violet lost Gilbert, she assume her self to be useless but in time she found her existence to be valued by others by accepting the truth of both past and present.",
+                            "image": "https://image.tmdb.org/t/p/original/qfvBqHUcVsIlLX6CQcnSNpZFZQT.jpg",
+                            "addedDate": "2018-03-08",
+                            "rating": "9.1"
+                        },
+                        {
+                            "title": "Loved Ones Will Always Watch Over You",
+                            "description": "Violet goes to assist a medically ill woman whose daughter Anne assumes that she is being ignored by her mother. It isn't until later on her life she realizes what she was really doing for her.",
+                            "image": "https://image.tmdb.org/t/p/original/46glatAkuOc0SIqMInD9cTgMfza.jpg",
+                            "addedDate": "2018-03-15",
+                            "rating": "9.8"
+                        },
+                        {
+                            "title": "I Don't Want Anybody Else to Die",
+                            "description": "Violet goes to assist a soldier named Aidan of the neighboring country Ctrigal which is in a state of Civil War.",
+                            "image": "https://image.tmdb.org/t/p/original/s47D0X69Zyz5jZheF4MDCgXGgiO.jpg",
+                            "addedDate": "2018-03-22",
+                            "rating": "8.9"
+                        },
+                        {
+                            "title": "",
+                            "description": "Violet comes to know the rebel anti-peace faction doesn't want that the peace treaty to get signed so she helps Dietfried to stop them.",
+                            "image": "https://image.tmdb.org/t/p/original/uLyOhuR8qC0wOqITzWk6zWOLZTP.jpg",
+                            "addedDate": "2018-03-28",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "Auto Memoir Doll and \"I Love You\"",
+                            "description": "After the end of the war Violet tries to write down her feelings in to a letter to Gilbert as it was suggested by her co workers for the air show which was going to held after five years due to the peace achieved between the nations.",
+                            "image": "https://image.tmdb.org/t/p/original/9iVaitlzFBUmjNIE8tUyP99udWk.jpg",
+                            "addedDate": "2018-04-05",
+                            "rating": "8.9"
+                        },
+                        {
+                            "title": "OVA: Surely, Someday You Will Understand \"Love\"",
+                            "description": "A story that takes place in the months between the fourth and fifth episode. Violet answers the request of a certain songstress.",
+                            "image": "https://image.tmdb.org/t/p/original/3arSBT7nmsdYMgMezjudjyGkz6U.jpg",
+                            "addedDate": "2018-07-04",
+                            "rating": "8.2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1754974127753,
+            "title": "Solo Leveling",
+            "genre": "Anime, Action, Adventure",
+            "year": 2024,
+            "rating": 8.6,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/xMNH87maNLt9n2bMDYeI6db5VFm.jpg",
+            "description": "Follows the adventures of Sung Jinwoo in a world that is constantly threatened by monsters and evil forces. In his battles Sung transforms himself from the weakest hunter of all mankind to one of the strongest hunters in existence.",
+            "language": "Japanese, English",
+            "country": " Japan, South Korea",
+            "ageRating": "16+",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": " I'm Used to It",
+                            "description": "Ten years ago, gates that connected our world to another dimension began to appear, leading to the rise of hunters who would traverse these gates to fight the magic beasts within. Sung Jin-woo, E-Rank hunter, is the weakest of them all.",
+                            "image": "https://image.tmdb.org/t/p/original/rm8q4ZHkVwbwUjjdbOIV9v5RW99.jpg",
+                            "addedDate": "2024-01-06",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": " If I Had One More Chance",
+                            "description": "Jin-woo and his party appear to have cleared a low-level dungeon, when a hidden path to an unfamiliar temple is revealed. There they encounter a set of commandments and a group of monsters that cause them absolute despair.",
+                            "image": "https://image.tmdb.org/t/p/original/ch5o2NnATbswomEiCugOgjX8IwY.jpg",
+                            "addedDate": "2024-01-13",
+                            "rating": "9.2"
+                        },
+                        {
+                            "title": " It's Like a Game",
+                            "description": "Jin-woo remains behind in the temple dungeon to save his few surviving party members, and with a swing from the god statue's blade, his life comes to an end, or so it seems, before he wakes up in a hospital bed.",
+                            "image": "https://image.tmdb.org/t/p/original/3h4QyKMODJiOQKqfuL4NrehcV43.jpg",
+                            "addedDate": "2024-01-20",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "I've Gotta Get Stronger",
+                            "description": "Having entered the instance dungeon located inside the subway, Jin-woo levels up time and time again by fighting waves of magic beasts. As he gradually makes his way forward, he finds a long stairway leading deeper underground.",
+                            "image": "https://image.tmdb.org/t/p/original/dlNMEUnupGrPATIaiOEmxfvUfSG.jpg",
+                            "addedDate": "2024-01-27",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": "A Pretty Good Deal",
+                            "description": "Jin-woo joins Hwang Dong-suk's party for a C-Rank dungeon. With temporary member Yoo Jin-ho, they defeat beasts. Jin-woo worries about no healer.",
+                            "image": "https://image.tmdb.org/t/p/original/vPpiI1sKgiJgWykydYzOf2XfCcR.jpg",
+                            "addedDate": "2024-02-03",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": " The Real Hunt Begins",
+                            "description": "While the C-Rank dungeon raid by Jin-woo and the others seems to be progressing well, the moment they step into an area covered in mana stones with a sleeping dungeon boss, things take a wrong turn.",
+                            "image": "https://image.tmdb.org/t/p/original/qLm1R2o54Cvzs74cz4jG4BXZS2S.jpg",
+                            "addedDate": "2024-02-10",
+                            "rating": "9.2"
+                        },
+                        {
+                            "title": "Let's See How Far I Can Go",
+                            "description": "As Jin-woo continues his training, he completes a daily quest one day by doing more than the quest requires, and a key that leads to a certain item appears in front of him.",
+                            "image": "https://image.tmdb.org/t/p/original/kWm0ksvgMnjqjI3TmPZ9ZQiry30.jpg",
+                            "addedDate": "2024-02-17",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": "This Is Frustrating",
+                            "description": "Jin-woo answers a Hunter's Association request to take part in the raid of a D-Rank dungeon, where he encounters a few familiar faces.",
+                            "image": "https://image.tmdb.org/t/p/original/mYoah2DtfKVqGMtuCBmgeZYCQoM.jpg",
+                            "addedDate": "2024-03-02",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": "You've Been Hiding Your Skills",
+                            "description": "At the D-Rank raid, Jin-woo is reunited with four of the Cartenon Temple survivors. Together, they explore the dungeon with Kang Tae-shik and his men. After splitting up, they hear a scream, and then.",
+                            "image": "https://image.tmdb.org/t/p/original/e740cGwsp7JWs19CgWTp0uBDPMp.jpg",
+                            "addedDate": "2024-03-09",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "What Is This, a Picnic?",
+                            "description": "Jin-woo survives tragedy once again, but Woo Jin-chul warns him that Hwang Dong-soo, an S-Rank hunter, may be after his life. Determined to grow stronger, he and Jin-ho raid a succession of C-Rank dungeons, but they attract attention.",
+                            "image": "https://image.tmdb.org/t/p/original/sFOZjW7SZ3cSSTx6agbALwNdSc9.jpg",
+                            "addedDate": "2024-03-16",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": " A Knight Who Defends an Empty Throne",
+                            "description": "A surprise \"job-change quest\" appears for Jin-woo. Seeking strength, he accepts and enters, confronting endless foes. The final challenge, a knight, stirs memories of the Cartenon Temple.",
+                            "image": "https://image.tmdb.org/t/p/original/xwTGcW5n6CdxW8SfipWiQzz40RO.jpg",
+                            "addedDate": "2024-03-23",
+                            "rating": "8.9"
+                        },
+                        {
+                            "title": "Arise",
+                            "description": "Drained from endless battle, Jin-woo sees a phantom of his past self. To overcome his own past as the Weakest Hunter of All Mankind, he struggles to find a way to clear the job-change quest.",
+                            "image": "https://image.tmdb.org/t/p/original/6kjROrp76VDJyfImdqUzmL7zdJM.jpg",
+                            "addedDate": "2024-03-30",
+                            "rating": "9.1"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "You Aren't E-Rank, Are You?",
+                            "description": "At Jinah's school meeting, Jinwoo is asked to speak with her classmate Han Song-yi, who has started working as a hunter. To show her the dangerous reality of the profession, he takes her to observe a White Tiger.",
+                            "image": "https://image.tmdb.org/t/p/original/sSAqp6jNxyQ80Ht8HfVFPBXg40b.jpg",
+                            "addedDate": "2025-01-05",
+                            "rating": "9.0"
+                        },
+                        {
+                            "title": "I Suppose You Aren't Aware",
+                            "description": "Trapped within a red gate, Jinwoo encounters a savage pack of ice elves who not only threaten his life but also taunt him about his humanity, forcing him into a deadly confrontation.",
+                            "image": "https://image.tmdb.org/t/p/original/kylozAI9Rf1pp7pZ8nFPK4s1s5n.jpg",
+                            "addedDate": "2025-01-11",
+                            "rating": "9.4"
+                        },
+                        {
+                            "title": " Still a Long Way to Go",
+                            "description": "Jinwoo, now more powerful after conquering 19 dungeons, returns to the treacherous S-Rank Demon's Castle. His mission to obtain rare ingredients for the Elixir of Life, a crucial step in his quest to save his ailing mother.",
+                            "image": "https://image.tmdb.org/t/p/original/ksoMkIBX9HxzvShzOxUvi4WhlFj.jpg",
+                            "addedDate": "2025-01-18",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": "I Need to Stop Faking",
+                            "description": "Jinwoo realizes that he'll need to become even stronger in order to clear the Demon's Castle and decides to have his hunter rank reassessed.",
+                            "image": "https://image.tmdb.org/t/p/original/yaaTlWhfJOJjKDbZZRTabnb6Mxm.jpg",
+                            "addedDate": "2025-01-25",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "This Is What We're Trained to Do",
+                            "description": "Before attempting to finish the Demon's Castle, Jinwoo decides to earn some money to help prepare.",
+                            "image": "https://image.tmdb.org/t/p/original/obJnDNFJCzwp5PkIfx486Ppuqtw.jpg",
+                            "addedDate": "2025-02-01",
+                            "rating": "8.8"
+                        },
+                        {
+                            "title": "Don't Look Down on My Guys",
+                            "description": "Jinwoo decides to help hunters guild strike team who is confronting the high orc Shaman Kargalgan which results in the epic fight.",
+                            "image": "https://image.tmdb.org/t/p/original/2i5MVDxqDS9pfb1MIT8mWUXuNlL.jpg",
+                            "addedDate": "2025-02-08",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "The 10th S-Rank Hunter",
+                            "description": "Jinwoo officially becomes an S-Rank hunter, allowing him to finalize his preparations for the Demon's Castle.",
+                            "image": "https://image.tmdb.org/t/p/original/zmRqLXqOMR2zVJ7bn9wwBsakOKh.jpg",
+                            "addedDate": "2025-02-15",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": "Looking Up Was Tiring Me Out",
+                            "description": "Seeking the remaining ingredient for the Elixir of Life, Jinwoo continues his conquest of the Demon's Castle.",
+                            "image": "https://image.tmdb.org/t/p/original/unMSFOjTEsQ0rNfqkvQSfE4ar6S.jpg",
+                            "addedDate": "2025-02-22",
+                            "rating": "9.3"
+                        },
+                        {
+                            "title": "It Was All Worth It",
+                            "description": "Jinwoo tries to cure his mother with the Elixir of Life while preparations for the 4th Jeju Island Raid begin.",
+                            "image": "https://image.tmdb.org/t/p/original/mYvKcjF0LXlo1H3MOb278SsGgow.jpg",
+                            "addedDate": "2025-03-01",
+                            "rating": "8.7"
+                        },
+                        {
+                            "title": "We Need a Hero",
+                            "description": "S-Rank hunters spar in preparation for the Jeju Island raid, honing their skills for the imminent battle against powerful magic beasts.",
+                            "image": "https://image.tmdb.org/t/p/original/lHAtLrxUMNs4AfyBHF22aXJ8Pc8.jpg",
+                            "addedDate": "2025-03-08",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": " It's Going to Get Even More Intense",
+                            "description": "As the S-rank hunters continue fighting, they're confronted by a new magic beast resembling a humanoid ant.",
+                            "image": "https://image.tmdb.org/t/p/original/dmABjDkzyMmj7PVHbv6lrOzVVCV.jpg",
+                            "addedDate": "2025-03-15",
+                            "rating": "9.6"
+                        },
+                        {
+                            "title": "Are You the King of Humans",
+                            "description": "Jinwoo arrives at Jeju Island to save the S-Rank hunters, but to do that he'll have to face the Ant King.",
+                            "image": "https://image.tmdb.org/t/p/original/fMVvDl1MBgk6Kx3nDzRL9mGf1Lo.jpg",
+                            "addedDate": "2025-03-22",
+                            "rating": "9.7"
+                        },
+                        {
+                            "title": "On to the Next Target",
+                            "description": "After no shortage of hardship, the 4th Jeju Island raid comes to a close. But for Jinwoo, the hunt never ends.",
+                            "image": "https://image.tmdb.org/t/p/original/dsXC84kGPEbHWkSKSWOIYodjMVv.jpg",
+                            "addedDate": "2025-03-29",
+                            "rating": "9.0"
                         }
                     ]
                 }

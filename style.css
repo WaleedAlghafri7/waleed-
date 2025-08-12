@@ -1,3 +1,23 @@
+/* Genre chips */
+.genre-list, .genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.genre-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.genre-chip:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.28);
+}
 * {
     margin: 0;
     padding: 0;
@@ -1893,7 +1913,7 @@ body {
 /* Details Grid */
 .details-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;

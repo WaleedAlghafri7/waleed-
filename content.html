@@ -566,7 +566,6 @@
                                 <div class="content-meta">
                                     <span id="contentYear"></span>
                                     <span id="contentDuration"></span>
-                                    <span id="contentGenre"></span>
                                     <div class="rating">
                                         <div class="stars">
                                             <h4 style="color: gold;">IMDb</h1>
@@ -622,7 +621,7 @@
                                     <h3>Description</h3>
                                     <p id="contentDescriptionTab"></p>
                                 </div>
-                                <div class="detail-cardTab">
+                                <div class="detail-card">
                                     <h3>Year</h3>
                                     <p id="contentYearTab"></p>
                                 </div>
@@ -630,9 +629,9 @@
                                     <h3>Duration</h3>
                                     <p id="contentDurationTab"></p>
                                 </div>
-                                <div class="detail-cardTab">
+                                <div class="detail-card">
                                     <h3>Genre</h3>
-                                    <p id="contentGenreTab"></p>
+                                    <div id="contentGenreTab" class="genre-list"></div>
                                 </div>
                                 <div class="detail-cardTab" style="background-color: rgba(255, 217, 0, 0.555); border: 2px solid rgb(255, 217, 0);">
                                     <h3 style="color: gold;">IMDb</h3>
@@ -895,12 +894,82 @@
                     contentImage.alt = currentContent.title;
                 }
                 if (contentTitle) contentTitle.textContent = currentContent.title;
-                if (contentYear) contentYear.textContent = currentContent.year || '';
-                if (contentYearTab) contentYearTab.textContent = currentContent.year || '';
+                const displayYear = currentContent.year
+                    ? (typeof currentContent.year === 'string' ? currentContent.year.slice(0, 4) : String(currentContent.year))
+                    : '';
+                // في الهيدر نعرض السنة فقط
+                if (contentYear) contentYear.textContent = displayYear;
+
+                // في تبويب التفاصيل نعرض تاريخ الإصدار الكامل بالشكل: شهر (كامل) يوم, سنة
+                let displayFullReleaseDate = '';
+                function formatFullDate(dateObj) {
+                    if (!(dateObj instanceof Date) || isNaN(dateObj)) return '';
+                    // مثال: January 5, 2024
+                    const month = dateObj.toLocaleString('en-US', { month: 'long' });
+                    const day = dateObj.getDate();
+                    const year = dateObj.getFullYear();
+                    return `${month} ${day}, ${year}`;
+                }
+
+                if (currentContent.releaseDate && String(currentContent.releaseDate).trim() !== '') {
+                    const d = new Date(currentContent.releaseDate);
+                    if (!isNaN(d)) {
+                        displayFullReleaseDate = formatFullDate(d);
+                    } else {
+                        // إذا لم يكن تاريخ صالح، اعرض كما هو
+                        displayFullReleaseDate = String(currentContent.releaseDate);
+                    }
+                } else if (currentContent.year) {
+                    if (typeof currentContent.year === 'string' && /^\d{4}-\d{2}-\d{2}/.test(currentContent.year)) {
+                        // year بصيغة yyyy-mm-dd
+                        const d = new Date(currentContent.year.slice(0, 10));
+                        if (!isNaN(d)) {
+                            displayFullReleaseDate = formatFullDate(d);
+                        } else {
+                            displayFullReleaseDate = currentContent.year.slice(0, 10);
+                        }
+                    } else {
+                        // فقط السنة متوفرة
+                        const y = typeof currentContent.year === 'string' ? parseInt(currentContent.year.slice(0, 4), 10) : currentContent.year;
+                        if (y) {
+                            // استخدم 1 يناير كسنة افتراضية
+                            const d = new Date(y, 0, 1);
+                            displayFullReleaseDate = formatFullDate(d);
+                        } else {
+                            displayFullReleaseDate = '';
+                        }
+                    }
+                }
+                if (contentYearTab) contentYearTab.textContent = displayFullReleaseDate;
                 if (contentDuration) contentDuration.textContent = currentContent.duration || '';
                 if (contentDurationTab) contentDurationTab.textContent = currentContent.duration || '';
-                if (contentGenre) contentGenre.textContent = currentContent.genre || '';
-                if (contentGenreTab) contentGenreTab.textContent = currentContent.genre || '';
+                function renderGenres(targetEl, genreField) {
+                    if (!targetEl) return;
+                    targetEl.innerHTML = '';
+                    if (!genreField) return;
+                    const genres = Array.isArray(genreField)
+                        ? genreField
+                        : String(genreField).split(',').map(g => g.trim()).filter(Boolean);
+                    genres.forEach(g => {
+                        const chip = document.createElement('span');
+                        chip.className = 'genre-chip';
+                        chip.dataset.genre = g;
+                        chip.textContent = g;
+                        targetEl.appendChild(chip);
+                    });
+                }
+                renderGenres(contentGenre, currentContent.genre);
+                renderGenres(contentGenreTab, currentContent.genre);
+
+                // Genre chip click: navigate to the appropriate listing with preselected genre
+                document.querySelectorAll('.genre-chip').forEach(chip => {
+                    chip.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const g = chip.dataset.genre;
+                        const targetPage = (type === 'series') ? 'series.html' : 'movies.html';
+                        window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
+                    });
+                });
                 if (contentRating) contentRating.textContent = currentContent.rating || '';
                 if (contentRatingTab) contentRatingTab.textContent = currentContent.rating || '';
 
@@ -1238,35 +1307,37 @@
 
                 let similarContent = [];
 
+                const getPrimaryGenre = (item) => {
+                    const g = item.genre;
+                    if (!g) return '';
+                    if (Array.isArray(g)) return String(g[0] || '').trim().toLowerCase();
+                    return String(g).split(',')[0].trim().toLowerCase();
+                };
+
                 if (contentType === 'movie') {
                     similarContent = data.movies
                         .filter(movie => movie.id !== currentContent.id)
-                        .map(movie => {
-                            let similarityScore = 0;
-
-                            if (movie.genre.toLowerCase().includes(currentContent.genre.toLowerCase())) similarityScore += 3;
-                            if (Math.abs(movie.year - currentContent.year) <= 2) similarityScore += 2;
-                            if (Math.abs(parseFloat(movie.rating) - parseFloat(currentContent.rating)) <= 0.5) similarityScore += 1;
-
-                            return { ...movie, similarityScore };
+                        .map(movie => ({ ...movie }))
+                        .sort((a, b) => {
+                            const ga = getPrimaryGenre(a);
+                            const gb = getPrimaryGenre(b);
+                            const byGenre = ga.localeCompare(gb, undefined, { sensitivity: 'base' });
+                            if (byGenre !== 0) return byGenre;
+                            return a.title.localeCompare(b.title);
                         })
-                        .sort((a, b) => b.similarityScore - a.similarityScore)
                         .slice(0, 8);
 
                 } else if (contentType === 'series') {
                     similarContent = data.series
                         .filter(series => series.id !== currentContent.id)
-                        .map(series => {
-                            let similarityScore = 0;
-
-                            if (series.genre.toLowerCase().includes(currentContent.genre.toLowerCase())) similarityScore += 3;
-                            if (Math.abs(series.year - currentContent.year) <= 2) similarityScore += 2;
-                            if (Math.abs(parseFloat(series.rating) - parseFloat(currentContent.rating)) <= 0.5) similarityScore += 1;
-                            if (series.status === currentContent.status) similarityScore += 1;
-
-                            return { ...series, similarityScore };
+                        .map(series => ({ ...series }))
+                        .sort((a, b) => {
+                            const ga = getPrimaryGenre(a);
+                            const gb = getPrimaryGenre(b);
+                            const byGenre = ga.localeCompare(gb, undefined, { sensitivity: 'base' });
+                            if (byGenre !== 0) return byGenre;
+                            return a.title.localeCompare(b.title);
                         })
-                        .sort((a, b) => b.similarityScore - a.similarityScore)
                         .slice(0, 8);
                 }
 
