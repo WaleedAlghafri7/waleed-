@@ -450,6 +450,7 @@ body {
     font-size: 1rem;
     margin-bottom: 20px;
     max-width: 600px;
+    color: rgb(221, 221, 221);
 }
 
 .watch-btn {
@@ -2994,7 +2995,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
     cursor: pointer;
     position: relative;
 }
@@ -3056,7 +3057,6 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
-    border: 1px solid #4444447c;
 }
 
 .latest-episode-card:hover {

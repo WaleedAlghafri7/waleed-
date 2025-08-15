@@ -8,12 +8,13 @@
             "releaseDate": "2025-02-21",
             "rating": 6,
             "duration": "1h 38min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt27714946/img",
             "description": "When twin brothers Bill and Hal find their father's old monkey toy in the attic, a series of gruesome deaths start. The siblings decide to throw the toy away and move on with their lives, growing apart over the years.\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 2,
@@ -23,12 +24,13 @@
             "releaseDate": "2025-02-14",
             "rating": 6.7,
             "duration": "2h 7min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt13654226/img",
             "description": "Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.\n\n",
             "language": " English, Lithuanian",
             "country": "United Kingdom, United States",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
         },
         {
             "id": 3,
@@ -38,27 +40,29 @@
             "releaseDate": "2025-02-13",
             "rating": 6.6,
             "duration": "2h 4min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/taEVBdVSqYo9YeN3ycw2SosklZL.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/taEVBdVSqYo9YeN3ycw2SosklZL.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt32063050/img",
             "description": "After jumping back into the dating pool, single mother Bridget Jones finds herself caught between a younger man and her son's science teacher.\n\n",
             "language": "English",
             "country": " United Kingdom, France, United States",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 4,
             "title": "La Dolce Villa",
             "genre": "Comedy, Romance, Romantic Comedy",
             "year": 2025,
-            "releaseDate": "2025-12-02",
+            "releaseDate": "2025-02-13",
             "rating": 6,
             "duration": "1h 39min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sEma5RN8aZ5Yu2Dkefyn5ULdlc1.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sEma5RN8aZ5Yu2Dkefyn5ULdlc1.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt31519456/img",
             "description": "A successful businessman travels to Italy to stop his daughter from spending all her money to restore an old villa, but Italy has other romantic plans.\n\n",
             "language": " English",
             "country": "United States",
-            "ageRating": "TV-14"
+            "ageRating": "TV-14",
+            "inSlides": false
         },
         {
             "id": 5,
@@ -68,12 +72,13 @@
             "releaseDate": "2024-11-29",
             "rating": 5.8,
             "duration": "1h 39min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/mSL6truNrWP1Bn9ng1rN0SkMI4f.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/mSL6truNrWP1Bn9ng1rN0SkMI4f.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt19704542/img",
             "description": "A headstrong dancer and a cocky quarterback fight against their feelings for each other as their post-grad future threatens to keep them apart.\n\n",
             "language": " English",
             "country": "United States",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 6,
@@ -83,208 +88,237 @@
             "releaseDate": "2025-02-07",
             "rating": 5.3,
             "duration": "1h 23min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/skPPVeHoTTVVSJlb0Ib5vrqiuA4.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/skPPVeHoTTVVSJlb0Ib5vrqiuA4.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt30788842/img",
             "description": "A realtor is pulled back into the life he left behind after his former partner-in-crime resurfaces with an ominous message. With his crime-lord brother also on his trail, he must confront his past and the history he never fully buried.\n",
             "language": "English, Russian",
             "country": "United States, Japan",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 7,
             "title": "Kinda Pregnant",
             "genre": "Farce, Comedy, Drama",
             "year": 2025,
+            "releaseDate": "2025-02-05",
             "rating": 4.9,
             "duration": "1h 37min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/k2Lq3rCJ7P9gk5Df9of9kqr9IJM.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/k2Lq3rCJ7P9gk5Df9of9kqr9IJM.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt30253036/img",
             "description": "When Lainy's plan to settle down and start a family falls apart, she puts on a fake baby bump, tells a lie and accidentally falls for her dream guy.\n\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 8,
             "title": "Ne Zha II",
-            "genre": "Animation, Action, Adventure",
+            "genre": "Action, Adventure, Animation, Drama, Fantasy, Martial Arts, Cumputer Animation, Fantasy Epic, Supernatural Fantasy",
             "year": 2025,
+            "releaseDate": "2025-01-29",
             "rating": 8.1,
             "duration": "2h 23min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5lUmWTGkEcYnXujixXn31o9q2T0.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/5lUmWTGkEcYnXujixXn31o9q2T0.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/c9xmB53umjnrCMS4pZz11clF3yJ.jpg",
             "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.\n\n",
             "language": " Mandarin, Chinese, English, Hindi, Spanish",
             "country": "China",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 9,
             "title": "Legends of the Condor Heroes : The Gallants",
-            "genre": "Action, Drama, History",
+            "genre": "Action, Adventure, Drama, History, Martial Arts, Romance, War, Period Drama",
             "year": 2025,
+            "releaseDate": "2025-01-29",
             "rating": 6.5,
             "duration": "2h 26min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fUCFEGFlMIFet9ja72JDAeG1he8.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fUCFEGFlMIFet9ja72JDAeG1he8.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt28131433/img",
             "description": "The Mongols, led by Genghis Khan, went west to destroy the Jin Dynasty, wanted to go south to destroy the Song Dynasty. Martial Arts Masters from several Schools in the Central Plains of China fought gathering strength to defend Xiangyang.\n",
             "language": "Mandarin, Mongolian",
             "country": "China",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 10,
             "title": "You're Cordially Invited",
-            "genre": "Romantic Comedy, Comedy, Romance",
+            "genre": "Comedy, Dark Comedy, Romance, Romantic Comedy",
             "year": 2025,
+            "releaseDate": "2025-01-30",
             "rating": 5.5,
             "duration": "1h 49min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ec50pMNyIshL0blt1q8dUEbIa2G.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ec50pMNyIshL0blt1q8dUEbIa2G.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt21227864/img",
             "description": "When two weddings are double-booked at the same venue, the father of one bride and the sister of the other bride try to preserve the wedding weekend.\n\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 11,
             "title": "Dog Man",
-            "genre": "Family, Animation, Comedy, Action",
+            "genre": "Action, Adventure, Animation, Comedy, Crime, Cumputer Animation, Family, Fantasy, Superhero, Animal Adventure",
             "year": 2025,
+            "releaseDate": "2025-01-31",
             "rating": 6.3,
             "duration": "1h 29min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/89wNiexZdvLQ41OQWIsQy4O6jAQ.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/89wNiexZdvLQ41OQWIsQy4O6jAQ.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt10954718/img",
             "description": "After a policeman and his police dog are fused together to turn into Dog Man, he must stop the villainous Petey the Cat from cloning himself and creating an evil kitten, doubling his evil abilities.\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "PG"
+            "ageRating": "PG",
+            "inSlides": false
         },
         {
             "id": 12,
             "title": "Southern Chronicles",
-            "genre": "Comedy, Drama, Romance",
-            "year": 2024,
+            "genre": "Comedy, Drama, Romance, Coming-of-Age, Quirky Comedy",
+            "year": 2025,
+            "releaseDate": "2025-01-24",
             "rating": 8.7,
             "duration": "2h",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2peyJP4L5SdvDslCWwKP4KLUiGZ.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2peyJP4L5SdvDslCWwKP4KLUiGZ.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt14064760/img",
             "description": "It follows Rimants who is more interested in playing rugby, listening to music and dealing on the black market than studying for school, but when he falls in love with Monika, his faith in love and the future is tested.\n",
             "language": " Lithuanian",
             "country": "Lithuania",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 13,
             "title": "Interstellar",
-            "genre": "Adventure, Drama, Sci-Fi",
+            "genre": "Adventure, Adventure Epic, Drama, Sci-Fi, Sci-Fi Epic, Epic, Psychological Drama, Quest, Space Sci-Fi, Time Travel",
             "year": 2014,
+            "releaseDate": "2014-11-07",
             "rating": 8.7,
             "duration": "2h 49min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt0816692/img",
             "description": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.\n\n",
             "language": "English",
             "country": " United States, United Kingdom, Canada",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
         },
         {
             "id": 14,
             "title": "The Dark Knight",
-            "genre": "Action, Crime, Drama",
+            "genre": "Action, Crime, Drama, Epic, Superhero, Thriller, Action Epic, Tragedy",
             "year": 2008,
+            "releaseDate": "2008-07-18",
             "rating": 9.1,
             "duration": "2h 32min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt0468569/img",
             "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
             "language": " English, Mandarin",
             "country": " United States, United Kingdom",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
         },
         {
             "id": 15,
             "title": "Inception",
-            "genre": "Adventure, Action, Sci-Fi",
+            "genre": "Action, Action Epic, Adventure, Adventure Epic, Epic, Sci-Fi, Sci-Fi Epic, Thriller, Psychological Thriller",
             "year": 2010,
+            "releaseDate": "2010-07-16",
             "rating": 8.8,
             "duration": "2h 28min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/gqby0RhyehP3uRrzmdyUZ0CgPPe.jpg",
             "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
             "language": " English, Japanese, French",
             "country": "United States, United Kingdom",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
         },
         {
             "id": 16,
             "title": "Superman",
-            "genre": "Action, Adventure, Sci-Fi",
+            "genre": "Action, Adventure, Sci-Fi, Adventure Epic, Globetrotting Adventure, Sci-Fi Epic, Superhero",
             "year": 2025,
+            "releaseDate": "2025-07-11",
             "rating": 7.5,
             "duration": "2h 9min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xkd2yNgaZ7b2Xxh5lxBcL8VnNX2.jpg",
-            "backdrop": "https://images.metahub.space/background/medium/tt5950044/img",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/g62G6aBcAcJv3ClCKmJgmHarHvq.jpg",
             "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n",
             "language": "English",
             "country": "United States, Canada, Australia, New Zealand",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": true
         },
         {
             "id": 1754045989408,
             "title": "How to Train Your Dragon",
-            "genre": "Action, Adventure, Comedy",
+            "genre": "Action, Adventure, Comedy, Drama, Family, Fantasy, Sword & Sorcery, Teen Adventure, Teen Fantasy",
             "year": 2025,
+            "releaseDate": "2025-06-13",
             "rating": 7.9,
             "duration": "2h 5min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/8J6UlIFcU7eZfq9iCLbgc8Auklg.jpg",
             "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.\n",
             "language": "English",
-            "country": "United States",
-            "ageRating": "PG"
+            "country": " United States, United Kingdom, Ireland, Iceland, Canada",
+            "ageRating": "PG",
+            "inSlides": true
         },
         {
             "id": 1754566567171,
             "title": "Jujutsu Kaisen 0",
-            "genre": "Animation, Action, Shonen",
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion, Shonen, Adult Animation",
             "year": 2021,
+            "releaseDate": "2021-03-18",
             "rating": 7.8,
             "duration": "1h 52min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/rcEDPOOOUTLFxLLQJggfLffbofe.jpg",
             "description": "The prequel to Jujutsu Kaisen (2020), where a high schooler gains control of an extremely powerful cursed spirit and gets enrolled in the Tokyo Prefectural Jujutsu High School by Jujutsu Sorcerers.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
         },
         {
             "id": 1754622212375,
             "title": "Demon Slayer: Kimetsu no Yaiba - Mt. Natagumo Arc",
-            "genre": "Anime, Action, Fantasy",
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion",
             "year": 2020,
+            "releaseDate": "2020-10-17",
             "rating": 8.7,
             "duration": "2h 18min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wq1UG5lPCKpOJgmgpKJszKvoMUe.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wq1UG5lPCKpOJgmgpKJszKvoMUe.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/kRlqWz54iI9K1PjI15cwvtHjnSw.jpg",
             "description": "Tanjiro teams up with Zenitsu and Inosuke to investigate missing person cases on the mountain Natagumo. They slowly begin to realize the entire mountain is being controlled by a family of Demon spider creatures.\n",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754622327721,
             "title": "Demon Slayer: Kimetsu No Yaiba - To the Hashira Training",
-            "genre": "Anime, Action, Shonen",
+            "genre": "Action, Adventure, Animation, Anime, Dark Fantasy, Fantasy, Hand-Drawn Animtion, Shonen, Supernatural Fantasy, Thriller",
             "year": 2024,
+            "releaseDate": "2024-02-23",
             "rating": 7.2,
             "duration": "1h 44min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3daOEMQCOGU2n9EbUC0PICnUCek.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3daOEMQCOGU2n9EbUC0PICnUCek.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/byFQpmElaxa4sPwS0d9qQMTtygw.jpg",
             "description": "Tanjiro undergoes rigorous training with the Stone Hashira, Himejima, in his quest to become a Hashira. Meanwhile, Muzan continues to search for Nezuko and Ubuyashiki.",
             "language": "Japanese",
             "country": "Japan",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 1754622421306,
@@ -298,7 +332,8 @@
             "description": "Tanjiro finds his family massacred and the only survivor, his sister Nezuko Kamado, turned into a demon. However, to his surprise, Nezuko still shows signs of human emotions and thoughts.",
             "language": " Japanese",
             "country": " Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754622545134,
@@ -312,7 +347,8 @@
             "description": "Tanjiro ventures to the south-southeast where he encounters a cowardly young man named Zenitsu Agatsuma. He is a fellow survivor from Final Selection and his sparrow asks Tanjiro to help keep him in line.",
             "language": "Japanese",
             "country": "Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754622631424,
@@ -326,7 +362,8 @@
             "description": "Tanjiro needs to bring a definitive end to Upper Rank Six. After the dust settles, he goes with his sister Nezuko to the Swordsmith Village in search of a new sword.\n",
             "language": " Japanese",
             "country": " Japan",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         },
         {
             "id": 1754622695746,
@@ -340,7 +377,8 @@
             "description": "Tanjiro ventures to Asakusa, Tokyo for his second mission with the Demon Slayer Corps.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754622768945,
@@ -354,7 +392,8 @@
             "description": "After his family was brutally murdered and his sister turned into a demon, Tanjiro Kamado's journey as a demon slayer began. Tanjiro and his comrades embark on a new mission aboard the Mugen Train, on track to despair.\n",
             "language": " Japanese",
             "country": " Japan",
-            "ageRating": "18+"
+            "ageRating": "18+",
+            "inSlides": false
         },
         {
             "id": 1754622870862,
@@ -368,7 +407,8 @@
             "description": "Tanjiro and Nezuko have been apprehended by the Demon Slayer Hashira, a group of extremely skilled swordfighters. Tanjiro undergoes trial for violating the Demon Slayer code, specifically smuggling Nezuko, a Demon, onto Mt. Natagumo.",
             "language": "Japanese",
             "country": "Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754622949726,
@@ -382,7 +422,8 @@
             "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
             "language": "Japanese",
             "country": " Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": true
         },
         {
             "id": 1754908663602,
@@ -396,7 +437,8 @@
             "description": "An emotionally scarred former child soldier becomes a letter writer in this condensed recap of the moving, gorgeously animated award-winning series.\n\n",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "16+"
+            "ageRating": "16+",
+            "inSlides": false
         },
         {
             "id": 1754910718050,
@@ -410,7 +452,8 @@
             "description": "After the aftermath of a war, a young girl who was used as a 'tool' for war learned to live. With the scars of burns, she goes back to her past to feel the true feelings of the Major's, \"I love you.\"",
             "language": " Japanese",
             "country": " Japan, South Korea, Czech Republic, Germany",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754910846817,
@@ -424,7 +467,8 @@
             "description": "Violet Evergarden, a former soldier returned from war, comes to teach at a women's academy and changes a young girl's life.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": ""
+            "ageRating": "",
+            "inSlides": false
         },
         {
             "id": 1754974599132,
@@ -438,7 +482,8 @@
             "description": "Over a decade after 'gates' connecting worlds appeared, awakening 'hunters' with superpowers, weakest hunter Sung Jinwoo encounters a double dungeon and accepts a mysterious quest, becoming the only one able to level up, changing his fate.\n",
             "language": "Japanese",
             "country": " South Korea, Japan",
-            "ageRating": "R"
+            "ageRating": "R",
+            "inSlides": false
         }
     ],
     "series": [
@@ -916,7 +961,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": true
         },
         {
             "id": 18,
@@ -1484,7 +1530,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 19,
@@ -1527,7 +1574,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 20,
@@ -1570,7 +1618,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 21,
@@ -1648,7 +1697,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 22,
@@ -1712,7 +1762,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 23,
@@ -1769,7 +1820,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 24,
@@ -1833,7 +1885,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 25,
@@ -1937,7 +1990,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 26,
@@ -2041,7 +2095,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 27,
@@ -2131,7 +2186,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 28,
@@ -2221,7 +2277,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 29,
@@ -2407,7 +2464,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 30,
@@ -2743,21 +2801,23 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": true
         },
         {
             "id": 31,
             "title": "Gachiakuta",
-            "genre": "Animation, Action, Adventure",
+            "genre": "Action, Adventure, Animation, Anime, Drama, Fantasy, Shonen, Survival, Dark Fantasy, Hand-Drawn Animtion",
             "year": 2025,
-            "rating": 8.3,
+            "releaseDate": "2025-07-06",
+            "rating": 8.2,
             "duration": "24min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oU2SBv5VQCdOHfw3Aw8B0UeAsim.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oU2SBv5VQCdOHfw3Aw8B0UeAsim.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/mrapJp0qb6Fvo3IW9IrjCK9IgSo.jpg",
             "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "PG-13",
+            "ageRating": "",
             "status": "ongoing",
             "seasons": [
                 {
@@ -2933,13 +2993,15 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": true
         },
         {
             "id": 32,
             "title": "Dandadan",
             "genre": "Animation, Action, Adventure",
             "year": 2024,
+            "releaseDate": "2024-01-01",
             "rating": 8.3,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
@@ -2947,7 +3009,7 @@
             "description": "When Momo and Okarun's beliefs clash, they're thrown into a world of ghosts, aliens and awakened powers.",
             "language": "Japanese, English",
             "country": " Japan",
-            "ageRating": "18+",
+            "ageRating": "",
             "status": "ongoing",
             "seasons": [
                 {
@@ -3079,15 +3141,15 @@
                         },
                         {
                             "title": "Kazoku ni narimashita",
-                            "description": "",
+                            "description": "Jiji's Evil Eye possession grows stronger. The group attempts exorcism through Hayashi music. When they nearly succeed in forcing Evil Eye out, Jiji begs them to spare Evil Eye's life.",
                             "image": "https://image.tmdb.org/t/p/original/b4ibErAXQ7JrEt1DyJGYHz7TtgP.jpg",
                             "addedDate": "2025-08-07",
-                            "rating": ""
+                            "rating": "8.6"
                         },
                         {
-                            "title": "",
+                            "title": "Nanka moyamoya suru jan yo",
                             "description": "",
-                            "image": "",
+                            "image": "https://image.tmdb.org/t/p/original/w9xn1UT4iFeZjxypSxUoS6rEeND.jpg",
                             "addedDate": "2025-08-14",
                             "rating": ""
                         },
@@ -3304,7 +3366,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 35,
@@ -3417,7 +3480,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 36,
@@ -3671,7 +3735,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 37,
@@ -3859,7 +3924,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754566250630,
@@ -4227,7 +4293,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754620258505,
@@ -4705,7 +4772,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754789811170,
@@ -4917,7 +4985,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754908462036,
@@ -5037,7 +5106,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754974127753,
@@ -5239,99 +5309,61 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         }
     ],
     "featured": [
         {
+            "type": "movie",
             "id": 16,
             "title": "Superman",
-            "genre": "Action, Adventure, Sci-Fi",
-            "year": 2025,
-            "rating": 7.6,
-            "duration": "2h 9min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xkd2yNgaZ7b2Xxh5lxBcL8VnNX2.jpg",
-            "backdrop": "https://images.metahub.space/background/medium/tt5950044/img",
+            "backdrop": "https://image.tmdb.org/t/p/original/g62G6aBcAcJv3ClCKmJgmHarHvq.jpg",
             "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n"
         },
         {
-            "id": 8,
-            "title": "Ne Zha II",
-            "genre": "Animation, Fantasy, Adventure",
-            "year": 2025,
-            "rating": 8.1,
-            "duration": "2h 23min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5lUmWTGkEcYnXujixXn31o9q2T0.jpg",
-            "backdrop": "https://image.tmdb.org/t/p/original/c9xmB53umjnrCMS4pZz11clF3yJ.jpg",
-            "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.\n\n"
+            "type": "movie",
+            "id": 1754045989408,
+            "title": "How to Train Your Dragon",
+            "backdrop": "https://image.tmdb.org/t/p/original/8J6UlIFcU7eZfq9iCLbgc8Auklg.jpg",
+            "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.\n"
         },
         {
+            "type": "movie",
             "id": 1754622949726,
             "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
-            "genre": "Anime, Action, Shonen",
-            "year": 2025,
-            "rating": 9,
-            "duration": "2h 30min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
-            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
-            "language": "Japanese",
-            "country": " Japan",
-            "ageRating": ""
+            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins."
         },
         {
+            "type": "series",
             "seasons": [
                 1
             ],
             "id": 17,
             "title": "Breaking Bad",
-            "genre": "Crime, Drama, Thriller",
-            "year": 2008,
-            "rating": 9.5,
-            "duration": "45min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ineLOBPG8AZsluYwnkMpHRyu7L.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt0903747/img",
-            "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
-            "language": "English",
-            "country": "USA",
-            "ageRating": "18+",
-            "status": "completed"
+            "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future."
         },
         {
-            "seasons": [
-                1
-            ],
-            "id": 29,
-            "title": "Squid Game",
-            "genre": "Action, Drama, Mystery",
-            "year": 2021,
-            "rating": 0,
-            "duration": "1h",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1QdXdRYfktUSONkl1oD5gc6Be0s.jpg",
-            "backdrop": "https://image.tmdb.org/t/p/original/2meX1nMdScFOoV4370rqHWKmXhY.jpg",
-            "description": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. A tempting prize awaits, but with deadly high stakes.",
-            "language": "",
-            "country": "",
-            "ageRating": "",
-            "status": "completed"
-        },
-        {
+            "type": "series",
             "seasons": [
                 1
             ],
             "id": 30,
             "title": "Stranger Things",
-            "genre": "Horror, Drama, Fantasy",
-            "year": 2016,
-            "rating": 8.6,
-            "duration": "1h",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt4574334/img",
-            "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
-            "language": "English",
-            "country": "United States",
-            "ageRating": "16+",
-            "status": "completed"
+            "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1
+            ],
+            "id": 31,
+            "title": "Gachiakuta",
+            "backdrop": "https://image.tmdb.org/t/p/original/mrapJp0qb6Fvo3IW9IrjCK9IgSo.jpg",
+            "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge."
         }
     ]
 }

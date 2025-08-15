@@ -376,6 +376,13 @@
                 font-size: 1rem !important;
             }
         }
+        /* Slides counter style */
+        #slidesCounter {
+            color: #ffd700;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-left: 12px;
+        }
     </style>
 
 </head>
@@ -388,6 +395,7 @@
         <div class="tabs">
             <button class="tab-btn active" data-tab="movies">Movies</button>
             <button class="tab-btn" data-tab="series">Series</button>
+            <button class="tab-btn" data-tab="slides">Slides</button>
         </div>
         <div id="movies" class="section active">
             <button class="add-btn" onclick="openModal('movie')"><i class="fas fa-plus"></i> Add Movie</button>
@@ -419,6 +427,28 @@
                         <th>Rating</th>
                         <th>Duration</th>
                         <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="slides" class="section">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                    <h3 style="margin:0;color:#ffd700;">Slides</h3>
+                    <span id="slidesCounter"></span>
+                </div>
+                <button type="button" id="slidesSaveBtn" class="add-btn">Save changes</button>
+            </div>
+            <table class="data-table" id="slidesAllTable">
+                <thead>
+                    <tr>
+                        <th class="img-cell">Image</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                        <th>In Slides</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -615,7 +645,103 @@
                 `;
                 seriesTbody.appendChild(tr);
             });
+
+            // Slides editor (all items)
+            const slidesAllTbody = document.querySelector('#slidesAllTable tbody');
+            if (slidesAllTbody) {
+                slidesAllTbody.innerHTML = '';
+                const rows = [];
+                (data.movies || []).forEach(m => rows.push({ ...m, _type: 'movie' }));
+                (data.series || []).forEach(s => rows.push({ ...s, _type: 'series' }));
+                const featuredSet = new Set((data.featured || []).map(f => `${f.type}:${f.id}`));
+                rows.forEach(item => {
+                    const checked = featuredSet.has(`${item._type}:${item.id}`) || !!item.inSlides;
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td class="img-cell">
+                            <img src="${item.image ? item.image : ''}" alt="Image" onerror="this.onerror=null; this.src='13434998.png';">
+                        </td>
+                        <td>${item.title}</td>
+                        <td>${item._type}</td>
+                        <td>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</td>
+                        <td>${item.rating}</td>
+                        <td>
+                            <input type="checkbox" class="slides-bulk" data-type="${item._type}" data-id="${item.id}" ${checked ? 'checked' : ''} style="width:28px; height:28px; accent-color:#ffd700;">
+                        </td>
+                    `;
+                    slidesAllTbody.appendChild(tr);
+                });
+                // Update slides counter after rendering
+                updateSlidesCounter();
+                // Enforce max 6 checked
+                enforceSlidesCheckboxLimit();
+            }
         }
+
+        // Slides counter and limit logic
+        function updateSlidesCounter() {
+            const checkboxes = Array.from(document.querySelectorAll('.slides-bulk'));
+            const checkedCount = checkboxes.filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const counter = document.getElementById('slidesCounter');
+            if (counter) {
+                counter.textContent = `${checkedCount} Of origin 6`;
+            }
+        }
+
+        function enforceSlidesCheckboxLimit() {
+            const checkboxes = Array.from(document.querySelectorAll('.slides-bulk'));
+            function update() {
+                const checked = checkboxes.filter(cb => cb.checked);
+                if (checked.length >= 6) {
+                    checkboxes.forEach(cb => {
+                        if (!cb.checked) cb.disabled = true;
+                    });
+                } else {
+                    checkboxes.forEach(cb => cb.disabled = false);
+                }
+                updateSlidesCounter();
+            }
+            checkboxes.forEach(cb => {
+                cb.removeEventListener('change', cb._slidesLimitHandler || (()=>{}));
+                cb._slidesLimitHandler = update;
+                cb.addEventListener('change', update);
+            });
+            // Initial state
+            update();
+        }
+
+        // Slides bulk save
+        document.addEventListener('click', async (e) => {
+            if (e.target && e.target.id === 'slidesSaveBtn') {
+                const toggles = Array.from(document.querySelectorAll('.slides-bulk'));
+                const updates = toggles.map(cb => ({
+                    type: cb.getAttribute('data-type'),
+                    id: Number(cb.getAttribute('data-id')),
+                    inSlides: !!cb.checked
+                }));
+                // Only allow up to 6 checked
+                const checkedCount = toggles.filter(cb => cb.checked).length;
+                if (checkedCount > 6) {
+                    showSaveNotification(false, 'مسموح فقط 6 عناصر في السلايدر');
+                    return;
+                }
+                // Send sequentially to ensure backend consistency
+                try {
+                    for (const u of updates) {
+                        await fetch('http://127.0.0.1:5000/save_data', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ action: 'feature', ...u })
+                        });
+                    }
+                    await fetchData();
+                    showSaveNotification(true, 'تم حفظ تغييرات السلايدر');
+                } catch (err) {
+                    showSaveNotification(false, 'تعذر حفظ تغييرات السلايدر');
+                }
+            }
+        });
 
         function uniqGenresFromData() {
             const set = new Set();

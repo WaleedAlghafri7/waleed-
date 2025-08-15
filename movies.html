@@ -300,13 +300,29 @@
                         break;
                     case 'oldest':
                         allContent.sort((a, b) => {
-                            const getDate = (item) => {
-                                if (item.year) return new Date((typeof item.year === 'string' ? item.year.slice(0,4) : item.year), 0, 1);
-                                if (item.releaseDate) return new Date(item.releaseDate);
-                                if (item.addedDate) return new Date(item.addedDate);
+                            const getFullDate = (item) => {
+                                // أولوية للتاريخ الكامل (releaseDate)
+                                if (item.releaseDate) {
+                                    const date = new Date(item.releaseDate);
+                                    if (!isNaN(date.getTime())) return date;
+                                }
+                                
+                                // إذا لم يكن هناك تاريخ كامل، استخدم السنة
+                                if (item.year) {
+                                    const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
+                                    if (!isNaN(year)) return new Date(year, 0, 1);
+                                }
+                                
+                                // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
+                                if (item.addedDate) {
+                                    const date = new Date(item.addedDate);
+                                    if (!isNaN(date.getTime())) return date;
+                                }
+                                
+                                // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
                                 return new Date(0);
                             };
-                            return getDate(a) - getDate(b);
+                            return getFullDate(a) - getFullDate(b);
                         });
                         break;
                     case 'az':
@@ -329,13 +345,29 @@
                         break;
                     default: // latest
                         allContent.sort((a, b) => {
-                            const getDate = (item) => {
-                                if (item.year) return new Date((typeof item.year === 'string' ? item.year.slice(0,4) : item.year), 0, 1);
-                                if (item.releaseDate) return new Date(item.releaseDate);
-                                if (item.addedDate) return new Date(item.addedDate);
+                            const getFullDate = (item) => {
+                                // أولوية للتاريخ الكامل (releaseDate)
+                                if (item.releaseDate) {
+                                    const date = new Date(item.releaseDate);
+                                    if (!isNaN(date.getTime())) return date;
+                                }
+                                
+                                // إذا لم يكن هناك تاريخ كامل، استخدم السنة
+                                if (item.year) {
+                                    const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
+                                    if (!isNaN(year)) return new Date(year, 0, 1);
+                                }
+                                
+                                // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
+                                if (item.addedDate) {
+                                    const date = new Date(item.addedDate);
+                                    if (!isNaN(date.getTime())) return date;
+                                }
+                                
+                                // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
                                 return new Date(0);
                             };
-                            return getDate(b) - getDate(a);
+                            return getFullDate(b) - getFullDate(a);
                         });
                 }
 

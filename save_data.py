@@ -12,9 +12,23 @@ DATA_FILE = 'data.json'
 
 def load_data():
     if not os.path.exists(DATA_FILE):
-        return {'movies': [], 'series': []}
+        return {'movies': [], 'series': [], 'featured': []}
     with open(DATA_FILE, 'r', encoding='utf-8') as f:
-        return json.load(f)
+        data = json.load(f)
+        if not isinstance(data, dict):
+            data = {'movies': [], 'series': [], 'featured': []}
+        data.setdefault('movies', [])
+        data.setdefault('series', [])
+        data.setdefault('featured', [])
+        return data
+
+def parse_bool(value):
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    s = str(value).strip().lower()
+    return s in ['1', 'true', 'yes', 'y']
 
 def save_data(data):
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
@@ -35,7 +49,6 @@ def save_item():
 
         arr = data['movies'] if item_type == 'movie' else data['series']
 
-        # Helper to compare IDs safely across potential type differences (str/int)
         def ids_equal(a, b):
             try:
                 return int(a) == int(b)
@@ -46,14 +59,12 @@ def save_item():
             item = req.get('item')
             if not item:
                 return jsonify({'error': 'Missing item data'}), 400
-            # Normalize date fields: year (numeric 4-digits) and releaseDate (YYYY-MM-DD)
+
             def normalize_year_and_release(item_dict):
-                # Normalize releaseDate to YYYY-MM-DD when possible
                 rd = item_dict.get('releaseDate')
                 normalized_release = None
                 if rd is not None and str(rd).strip() != '':
                     rd_str = str(rd).strip()
-                    # Keep first 10 if already ISO date
                     m_iso = re.match(r'^(\d{4})-(\d{2})-(\d{2})', rd_str)
                     m_slash = re.match(r'^(\d{4})/(\d{1,2})/(\d{1,2})', rd_str)
                     m_year = re.match(r'^(\d{4})', rd_str)
@@ -71,7 +82,6 @@ def save_item():
                         elif m_year:
                             y = m_year.group(1)
                             normalized_release = f"{y}-01-01"
-                        # Validate date if we built one
                         if normalized_release:
                             try:
                                 datetime.strptime(normalized_release, '%Y-%m-%d')
@@ -83,17 +93,14 @@ def save_item():
                 if normalized_release:
                     item_dict['releaseDate'] = normalized_release
 
-                # Normalize year to 4-digit integer when possible
                 try:
                     if 'year' in item_dict and item_dict['year'] is not None:
                         year_str = str(item_dict['year'])
                         if len(year_str) >= 4 and year_str[:4].isdigit():
                             item_dict['year'] = int(year_str[:4])
                     elif normalized_release:
-                        # Derive year from releaseDate if year missing
                         item_dict['year'] = int(normalized_release[:4])
                 except Exception:
-                    # If normalization fails, drop invalid year
                     try:
                         item_dict['year'] = int(str(item_dict.get('year'))[:4])
                     except Exception:
@@ -115,6 +122,56 @@ def save_item():
                 data['movies'] = arr
             else:
                 data['series'] = arr
+            data['featured'] = [f for f in data.get('featured', []) if not (f.get('type') == item_type and ids_equal(f.get('id'), item_id))]
+
+        elif action == 'feature':
+            item_id = req.get('id')
+            in_slides = parse_bool(req.get('inSlides'))
+
+            if item_id is None:
+                return jsonify({'error': 'Missing id for feature action'}), 400
+
+            data.setdefault('featured', [])
+            src_item = next((x for x in arr if ids_equal(x.get('id'), item_id)), None)
+            if not src_item:
+                return jsonify({'error': 'Item not found'}), 404
+
+            for i, x in enumerate(arr):
+                if ids_equal(x.get('id'), item_id):
+                    x['inSlides'] = in_slides
+                    arr[i] = x
+                    break
+
+            if item_type == "movie":
+                entry = {
+                    "type": "movie",
+                    "id": src_item.get("id"),
+                    "title": src_item.get("title"),
+                    "backdrop": src_item.get("backdrop"),
+                    "description": src_item.get("description")
+                }
+            elif item_type == "series":
+                entry = {
+                    "type": "series",
+                    "seasons": [1],
+                    "id": src_item.get("id"),
+                    "title": src_item.get("title"),
+                    "backdrop": src_item.get("backdrop"),
+                    "description": src_item.get("description")
+                }
+            else:
+                return jsonify({'error': 'Invalid item type'}), 400
+
+            idx = next((i for i, f in enumerate(data['featured']) if f.get('type') == item_type and ids_equal(f.get('id'), item_id)), -1)
+            if in_slides:
+                if idx > -1:
+                    data['featured'][idx] = entry
+                else:
+                    data['featured'].append(entry)
+            else:
+                if idx > -1:
+                    del data['featured'][idx]
+
         else:
             return jsonify({'error': 'Invalid action'}), 400
 

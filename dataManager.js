@@ -35,12 +35,29 @@ export default class DataManager {
 
     // ترتيب الأفلام
     sortMovies(movies, sortValue) {
-        const getYear = (y) => {
-            if (y === undefined || y === null) return NaN;
-            const s = String(y);
-            const yy = parseInt(s.slice(0, 4), 10);
-            return isNaN(yy) ? NaN : yy;
+        const getFullDate = (item) => {
+            // أولوية للتاريخ الكامل (releaseDate)
+            if (item.releaseDate) {
+                const date = new Date(item.releaseDate);
+                if (!isNaN(date.getTime())) return date;
+            }
+            
+            // إذا لم يكن هناك تاريخ كامل، استخدم السنة
+            if (item.year) {
+                const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
+                if (!isNaN(year)) return new Date(year, 0, 1);
+            }
+            
+            // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
+            if (item.addedDate) {
+                const date = new Date(item.addedDate);
+                if (!isNaN(date.getTime())) return date;
+            }
+            
+            // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
+            return new Date(0);
         };
+        
         return [...movies].sort((a, b) => {
             switch (sortValue) {
                 case 'id-desc':
@@ -52,9 +69,9 @@ export default class DataManager {
                 case 'rating-asc':
                     return (a.rating === '--' ? 0 : parseFloat(a.rating)) - (b.rating === '--' ? 0 : parseFloat(b.rating));
                 case 'year-desc':
-                    return getYear(b.year) - getYear(a.year);
+                    return getFullDate(b) - getFullDate(a);
                 case 'year-asc':
-                    return getYear(a.year) - getYear(b.year);
+                    return getFullDate(a) - getFullDate(b);
                 case 'title-asc':
                     return a.title.localeCompare(b.title);
                 case 'title-desc':
@@ -67,12 +84,29 @@ export default class DataManager {
 
     // ترتيب المسلسلات
     sortSeries(series, sortValue) {
-        const getYear = (y) => {
-            if (y === undefined || y === null) return NaN;
-            const s = String(y);
-            const yy = parseInt(s.slice(0, 4), 10);
-            return isNaN(yy) ? NaN : yy;
+        const getFullDate = (item) => {
+            // أولوية للتاريخ الكامل (releaseDate)
+            if (item.releaseDate) {
+                const date = new Date(item.releaseDate);
+                if (!isNaN(date.getTime())) return date;
+            }
+            
+            // إذا لم يكن هناك تاريخ كامل، استخدم السنة
+            if (item.year) {
+                const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
+                if (!isNaN(year)) return new Date(year, 0, 1);
+            }
+            
+            // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
+            if (item.addedDate) {
+                const date = new Date(item.addedDate);
+                if (!isNaN(date.getTime())) return date;
+            }
+            
+            // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
+            return new Date(0);
         };
+        
         return [...series].sort((a, b) => {
             switch (sortValue) {
                 case 'id-desc':
@@ -84,9 +118,9 @@ export default class DataManager {
                 case 'rating-asc':
                     return (a.rating === '--' ? 0 : parseFloat(a.rating)) - (b.rating === '--' ? 0 : parseFloat(b.rating));
                 case 'year-desc':
-                    return getYear(b.year) - getYear(a.year);
+                    return getFullDate(b) - getFullDate(a);
                 case 'year-asc':
-                    return getYear(a.year) - getYear(b.year);
+                    return getFullDate(a) - getFullDate(b);
                 case 'title-asc':
                     return a.title.localeCompare(b.title);
                 case 'title-desc':

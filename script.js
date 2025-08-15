@@ -149,7 +149,6 @@ function loadFeaturedItems(featured) {
             <img src="${item.backdrop}" alt="${item.title}" loading="lazy">
             <div class="slide-content">
                 <h2>${item.title}</h2>
-                <p class="genre">${item.genre}</p>
                 <p class="description">${item.description}</p>
                 <button class="watch-btn" aria-label="شاهد ${item.title}" onclick="event.stopPropagation(); window.location.href='content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}'">
                     <i class="fas fa-play"></i>
