@@ -448,6 +448,41 @@
                 max-height: 280px;
             }
         }
+        /* Episode Rating Modal */
+        .rating-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 16px;
+        }
+        .rating-modal-overlay.active { display: flex; }
+        .rating-modal {
+            background: #1f1f1f;
+            color: #fff;
+            border-radius: 14px;
+            width: min(420px, 92vw);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 18px;
+        }
+        .rating-modal-header { display: flex; align-items: center; justify-content: space-between; }
+        .rating-modal-title { font-size: 1.05rem; font-weight: 700; margin: 0; }
+        .rating-modal-close {
+            background: transparent; color: #fff; border: none; font-size: 1.2rem; cursor: pointer; padding: 6px 10px; border-radius: 8px;
+        }
+        .rating-modal-body { padding: 14px 0 4px 0; display: flex; flex-direction: column; gap: 14px; }
+        .rating-stars { display: flex; gap: 8px; justify-content: center; }
+        .rating-star { font-size: 28px; color: #555; cursor: pointer; transition: transform 0.15s ease, color 0.15s ease; }
+        .rating-star.active { color: #ffd93d; text-shadow: 0 0 8px rgba(255,217,61,0.45); }
+        .rating-star:hover { transform: scale(1.1); }
+        .rating-modal-actions { display: flex; gap: 10px; justify-content: flex-end; padding-top: 8px; }
+        .rating-btn { padding: 10px 16px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; }
+        .rating-btn.cancel { background: #e74c3c; color: #fff; }
+        .rating-btn.submit { background: #27ae60; color: #fff; }
     </style>
 </head>
 
@@ -1219,6 +1254,19 @@
                         <i class="fas fa-download"></i>
                         Download
                     </button>
+                    <button class="episode-viewed-btn"
+                        style="
+                               display: flex; align-items: center; justify-content: center; width: 100%;">
+                        <i class="fas fa-eye"></i>
+                        Viewed
+                    </button>
+                    <button class="episode-rate-btn"
+                        onclick="event.stopPropagation(); showEpisodeRatingModal(${idx})"
+                        style="
+                               display: flex; align-items: center; justify-content: center; width: 100%;">
+                        <i class="fas fa-star"></i>
+                        Rate
+                    </button>
                 `;
                     } else if (daysDiff <= 14) {
                         // أقل من أسبوعين
@@ -1293,6 +1341,25 @@
         `;
 
                 episodesGrid.appendChild(episodeCard);
+
+                // Wire up Viewed toggle and initialize state
+                const viewedBtn = episodeCard.querySelector('.episode-viewed-btn');
+                if (viewedBtn) {
+                    const episodeKey = getEpisodeStorageKey(currentContent?.id, currentSeasonIdx, idx);
+                    const isViewed = localStorage.getItem(episodeKey) === '1';
+                    applyViewedState(viewedBtn, isViewed);
+                    viewedBtn.addEventListener('click', (ev) => {
+                        ev.stopPropagation();
+                        if (!isAuthenticated()) {
+                            showToast('Please login to mark episodes as viewed');
+                            return;
+                        }
+                        const current = localStorage.getItem(episodeKey) === '1';
+                        const next = !current;
+                        localStorage.setItem(episodeKey, next ? '1' : '0');
+                        applyViewedState(viewedBtn, next);
+                    });
+                }
             });
         }
 
@@ -1408,8 +1475,253 @@
             });
         }
 
+        // Add CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
         // Load content when page loads
-        document.addEventListener('DOMContentLoaded', loadContent);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadContent();
+            updateAuthUI();
+        });
+
+        // Helpers: Viewed toggle
+        function getEpisodeStorageKey(seriesId, seasonIdx, episodeIdx) {
+            return `viewed:${seriesId}:${seasonIdx}:${episodeIdx}`;
+        }
+        function applyViewedState(buttonEl, isViewed) {
+            if (!buttonEl) return;
+            if (isViewed) {
+                buttonEl.innerHTML = '<i class="fas fa-check"></i> Viewed';
+                buttonEl.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+                buttonEl.style.color = '#fff';
+                buttonEl.classList.add('is-viewed');
+            } else {
+                buttonEl.innerHTML = '<i class="fas fa-eye"></i> Viewed';
+                buttonEl.style.background = '';
+                buttonEl.style.color = 'rgba(0, 183, 255, 0.8)';
+                buttonEl.classList.remove('is-viewed');
+            }
+        }
+
+        // Auth helpers
+        function isAuthenticated() {
+            try {
+                const token = localStorage.getItem('auth_token');
+                const user = localStorage.getItem('auth_user');
+                return Boolean(token && user);
+            } catch (_) { return false; }
+        }
+
+        // Get current user data
+        function getCurrentUser() {
+            try {
+                const userData = localStorage.getItem('auth_user');
+                return userData ? JSON.parse(userData) : null;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        // Show toast notification for errors only
+        function showToast(message, type = 'error') {
+            // Only show error messages, ignore success messages
+            if (type !== 'error') return;
+            
+            let container = document.getElementById('toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'toast-container';
+                container.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 10000;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                `;
+                document.body.appendChild(container);
+            }
+
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                background: #e74c3c;
+                color: white;
+                padding: 12px 16px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                min-width: 250px;
+                max-width: 400px;
+                animation: slideIn 0.3s ease;
+            `;
+
+            toast.innerHTML = `
+                <span style="font-size: 16px;">⚠️</span>
+                <span>${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Update UI based on authentication status
+        function updateAuthUI() {
+            const isLoggedIn = isAuthenticated();
+            const user = getCurrentUser();
+            
+            // Update user info in header
+            const userNameEl = document.getElementById('user-name');
+            const userEmailEl = document.getElementById('user-email');
+            const authButtons = document.querySelector('.auth-buttons');
+            const logoutBtn = document.querySelector('.logout-btn');
+            const userMenu = document.querySelector('.user-menu');
+            
+            if (isLoggedIn && user) {
+                // Show user info
+                if (userNameEl) userNameEl.textContent = user.fullName || 'User';
+                if (userEmailEl) userEmailEl.textContent = user.email || '';
+                
+                // Hide login/register buttons, show logout
+                if (authButtons) authButtons.style.display = 'none';
+                if (logoutBtn) logoutBtn.style.display = 'block';
+                
+                // Show all menu options for logged in users
+                if (userMenu) {
+                    const menuItems = userMenu.querySelectorAll('button');
+                    menuItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                }
+            } else {
+                // Show default info
+                if (userNameEl) userNameEl.textContent = 'User Name';
+                if (userEmailEl) userEmailEl.textContent = 'user@email.com';
+                
+                // Show only login button, hide register and all other options
+                if (authButtons) {
+                    const loginBtn = authButtons.querySelector('.btn-login');
+                    const registerBtn = authButtons.querySelector('.btn-register');
+                    if (loginBtn) loginBtn.style.display = 'block';
+                    if (registerBtn) registerBtn.style.display = 'none';
+                    authButtons.style.display = 'flex';
+                }
+                if (logoutBtn) logoutBtn.style.display = 'none';
+                
+                // Hide all menu options except login
+                if (userMenu) {
+                    const menuItems = userMenu.querySelectorAll('button');
+                    menuItems.forEach(item => {
+                        item.style.display = 'none';
+                    });
+                }
+            }
+            
+            // Add logout functionality
+            if (logoutBtn) {
+                logoutBtn.onclick = function() {
+                    localStorage.removeItem('auth_token');
+                    localStorage.removeItem('auth_user');
+                    updateAuthUI();
+                    window.location.href = 'index.html';
+                };
+            }
+        }
+
+        // Rating Modal
+        function ensureRatingModal() {
+            let overlay = document.getElementById('episodeRatingModal');
+            if (overlay) return overlay;
+            overlay = document.createElement('div');
+            overlay.id = 'episodeRatingModal';
+            overlay.className = 'rating-modal-overlay';
+            overlay.innerHTML = `
+                <div class="rating-modal" role="dialog" aria-modal="true" aria-labelledby="ratingModalTitle">
+                    <div class="rating-modal-header">
+                        <h3 id="ratingModalTitle" class="rating-modal-title">Rate Episode</h3>
+                        <button class="rating-modal-close" aria-label="Close" onclick="document.getElementById('episodeRatingModal').classList.remove('active')">×</button>
+                    </div>
+                    <div class="rating-modal-body">
+                        <div class="rating-stars" id="ratingStars"></div>
+                    </div>
+                    <div class="rating-modal-actions">
+                        <button class="rating-btn cancel" onclick="document.getElementById('episodeRatingModal').classList.remove('active')">Cancel</button>
+                        <button class="rating-btn submit" id="ratingSubmitBtn">Submit</button>
+                    </div>
+                </div>`;
+            document.body.appendChild(overlay);
+            return overlay;
+        }
+
+        window.showEpisodeRatingModal = function(epIndex) {
+            if (!isAuthenticated()) {
+                showToast('Please login to rate episodes');
+                return;
+            }
+            const overlay = ensureRatingModal();
+            const starsContainer = overlay.querySelector('#ratingStars');
+            const submitBtn = overlay.querySelector('#ratingSubmitBtn');
+            starsContainer.innerHTML = '';
+            const ratingKey = `rating:${currentContent?.id}:${currentSeasonIdx}:${epIndex}`;
+            let selected = parseInt(localStorage.getItem(ratingKey) || '0', 10);
+            const renderStars = () => {
+                starsContainer.innerHTML = '';
+                for (let s = 1; s <= 10; s++) {
+                    const star = document.createElement('span');
+                    star.className = 'rating-star' + (s <= selected ? ' active' : '');
+                    star.innerHTML = '<i class="fas fa-star"></i>';
+                    star.addEventListener('click', (e) => { e.stopPropagation(); selected = s; renderStars(); });
+                    starsContainer.appendChild(star);
+                }
+            };
+            renderStars();
+            submitBtn.onclick = (e) => {
+                e.stopPropagation();
+                if (selected > 0) {
+                    localStorage.setItem(ratingKey, String(selected));
+                    // Update card rating display if exists
+                    const episodesGrid = document.getElementById('episodesGrid');
+                    const card = episodesGrid?.children?.[epIndex];
+                    if (card) {
+                        let ratingEl = card.querySelector('.episode-rating');
+                        if (!ratingEl) {
+                            ratingEl = document.createElement('div');
+                            ratingEl.className = 'episode-rating';
+                            ratingEl.style.margin = '6px 0 0 0';
+                            ratingEl.style.color = '#ffd93d';
+                            ratingEl.style.fontWeight = 'bold';
+                            ratingEl.style.fontSize = '1.05em';
+                            const content = card.querySelector('.episode-content');
+                            if (content) content.insertBefore(ratingEl, content.querySelector('.episode-actions'));
+                        }
+                        ratingEl.innerHTML = '<i class="fas fa-star" style="color:#ffd93d;margin-inline-end:4px;"></i>' + selected;
+                    }
+                }
+                overlay.classList.remove('active');
+            };
+            overlay.classList.add('active');
+        };
     </script>
 </body>
 

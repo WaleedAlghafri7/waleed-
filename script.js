@@ -3,7 +3,6 @@ let currentSlide = 0;
 let slideInterval;
 const slideDuration = 5000; // مدة كل سلايد بالمللي ثانية
 const transitionDuration = 500; // مدة الانتقال بين السلايدات
-const totalSlides = 6; // عدد السلايدات الثابت
 
 // عدد العناصر لكل قسم
 const config = {
@@ -20,24 +19,32 @@ const config = {
     }
 };
 
-// جلب الهيدر والفوتر
-fetch('header.html')
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-    });
+// جلب الهيدر والفوتر في أي صفحة HTML إذا وُجدت الحاويات
+function loadHeaderFooter() {
+    const headerContainer = document.getElementById('header-container');
+    if (headerContainer) {
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                headerContainer.innerHTML = data;
+            });
+    }
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                footerContainer.innerHTML = data;
+            });
+    }
+}
 
-fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-    });
-
-// تهيئة البحث
+// تهيئة البحث إذا وُجدت عناصر البحث
 function initializeSearch() {
     const searchIcon = document.querySelector('.search-icon');
     const searchInput = document.querySelector('.search input');
     const searchContainer = document.querySelector('.search-input-container');
+    if (!searchIcon || !searchInput || !searchContainer) return;
 
     // Toggle search input
     searchIcon.addEventListener('click', () => {
@@ -67,12 +74,13 @@ function initializeSearch() {
     });
 }
 
-// تهيئة قائمة المستخدم
+// تهيئة قائمة المستخدم إذا وُجدت عناصر القائمة
 function initializeUserMenu() {
     const userIcon = document.querySelector('.user-icon');
     const userDropdown = document.querySelector('.user-dropdown');
     const menuButton = document.querySelector('.list-siting-button');
     const menuItems = document.querySelector('.list-siting-item');
+    if (!userIcon || !userDropdown || !menuButton || !menuItems) return;
 
     userIcon.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -111,27 +119,33 @@ function initializeUserMenu() {
     });
 }
 
-// تحميل وعرض البيانات
+// تحميل وعرض البيانات إذا وُجدت الحاويات المناسبة
 async function loadData() {
     try {
         const response = await fetch('data.json');
         const data = await response.json();
-        
+
         // ترتيب البيانات حسب الـ id تنازلياً
         const sortedData = {
-            featured: [...data.featured].sort((a, b) => b.id - a.id),
-            movies: [...data.movies].sort((a, b) => b.id - a.id),
-            series: [...data.series].sort((a, b) => b.id - a.id)
+            featured: Array.isArray(data.featured) ? [...data.featured].sort((a, b) => b.id - a.id) : [],
+            movies: Array.isArray(data.movies) ? [...data.movies].sort((a, b) => b.id - a.id) : [],
+            series: Array.isArray(data.series) ? [...data.series].sort((a, b) => b.id - a.id) : []
         };
-        
-        // تحميل العناصر المميزة
-        loadFeaturedItems(sortedData.featured.slice(0, config.featured.count));
-        
-        // تحميل أحدث الأفلام
-        loadLatestMovies(sortedData.movies);
-        
-        // تحميل أحدث المسلسلات
-        loadLatestSeries(sortedData.series);
+
+        // تحميل العناصر المميزة إذا وُجد السلايدر
+        if (document.querySelector('.slider')) {
+            loadFeaturedItems(sortedData.featured.slice(0, config.featured.count));
+        }
+
+        // تحميل أحدث الأفلام إذا وُجدت شبكة الأفلام
+        if (document.querySelector('.movies-grid')) {
+            loadLatestMovies(sortedData.movies);
+        }
+
+        // تحميل أحدث المسلسلات إذا وُجدت شبكة المسلسلات
+        if (document.querySelector('.series-grid')) {
+            loadLatestSeries(sortedData.series);
+        }
     } catch (error) {
         console.error('Error loading data:', error);
     }
@@ -140,6 +154,7 @@ async function loadData() {
 // تحميل وعرض العناصر المميزة
 function loadFeaturedItems(featured) {
     const slider = document.querySelector('.slider');
+    if (!slider) return;
     slider.innerHTML = '';
 
     featured.forEach(item => {
@@ -159,22 +174,17 @@ function loadFeaturedItems(featured) {
         slider.appendChild(slide);
     });
 
-    // إصلاح مشكلة السلايد الأول يكون غامق
-    // يجب استدعاء updateSlider() بعد إنشاء السلايدات مباشرةً
     updateSlider();
-
-    // إنشاء نقاط التنقل
     createDots(featured.length);
-
-    // بدء التحديث التلقائي
     startAutoSlide();
 }
 
-// إنشاء نقاط التنقل
+// إنشاء نقاط التنقل إذا وُجدت الحاوية
 function createDots(count) {
     const dotsContainer = document.querySelector('.slider-dots');
+    if (!dotsContainer) return;
     dotsContainer.innerHTML = '';
-    
+
     for (let i = 0; i < count; i++) {
         const dot = document.createElement('div');
         dot.className = `dot ${i === 0 ? 'active' : ''}`;
@@ -190,7 +200,7 @@ function createDots(count) {
 function loadLatestMovies(movies) {
     const moviesGrid = document.querySelector('.movies-grid');
     if (!moviesGrid) return;
-    
+
     moviesGrid.innerHTML = '';
 
     // ترتيب الأفلام حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
@@ -238,7 +248,7 @@ function loadLatestMovies(movies) {
 function loadLatestSeries(series) {
     const seriesGrid = document.querySelector('.series-grid');
     if (!seriesGrid) return;
-    
+
     seriesGrid.innerHTML = '';
 
     // ترتيب المسلسلات حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
@@ -291,18 +301,16 @@ function loadLatestSeries(series) {
 function updateSlider() {
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
-    
-    // تحديث موقع السلايدر
+    if (!slider || slides.length === 0) return;
+
     slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // تحديث الشفافية
+
     slides.forEach((slide, index) => {
         slide.style.transition = `opacity ${transitionDuration}ms ease-in-out`;
         slide.style.opacity = index === currentSlide ? '1' : '0.5';
     });
-    
-    // تحديث النقاط
+
     updateDots();
 }
 
@@ -321,19 +329,21 @@ function goToSlide(n) {
 
 function nextSlide() {
     const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
     currentSlide = (currentSlide + 1) % slides.length;
     updateSlider();
 }
 
 function prevSlide() {
     const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateSlider();
 }
 
 // بدء التحديث التلقائي
 function startAutoSlide() {
-    stopAutoSlide(); // إيقاف أي تحديث سابق
+    stopAutoSlide();
     slideInterval = setInterval(nextSlide, slideDuration);
 }
 
@@ -344,17 +354,19 @@ function stopAutoSlide() {
     }
 }
 
-// تحديث تهيئة الصفحة
+// تحديث تهيئة الصفحة في أي صفحة HTML
 document.addEventListener('DOMContentLoaded', () => {
+    loadHeaderFooter();
     initializeSearch();
     initializeUserMenu();
     loadData();
 
-    // Add click handlers for "View All" buttons
+    // Add click handlers for "View All" buttons إذا وُجدت
     document.querySelectorAll('.view-all').forEach(button => {
         button.addEventListener('click', () => {
             const section = button.closest('.content-section');
-            const title = section.querySelector('h2').textContent;
+            if (!section) return;
+            const title = section.querySelector('h2') ? section.querySelector('h2').textContent : '';
             if (title.includes('Movies')) {
                 window.location.href = 'movies.html';
             } else if (title.includes('Series')) {
@@ -363,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add slider controls
+    // Add slider controls إذا وُجدت
     const sliderContainer = document.querySelector('.slider-container');
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
@@ -412,9 +424,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add click event listeners to all content cards
-    const contentCards = document.querySelectorAll('.movie-card, .series-card');
-    contentCards.forEach(card => {
+    // Add click event listeners to all content cards إذا وُجدت
+    document.querySelectorAll('.movie-card, .series-card').forEach(card => {
         card.addEventListener('click', function(e) {
             if (!e.target.closest('.play-btn')) {
                 const contentId = this.getAttribute('data-id');
@@ -424,9 +435,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add click event listeners to all play buttons
-    const playButtons = document.querySelectorAll('.play-btn');
-    playButtons.forEach(button => {
+    // Add click event listeners to all play buttons إذا وُجدت
+    document.querySelectorAll('.play-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
             const contentId = this.getAttribute('data-id');
@@ -436,10 +446,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// تحميل جميع الأفلام إذا وُجدت شبكة الأفلام
 function loadAllMovies(movies) {
     const moviesGrid = document.querySelector('.movies-grid');
     if (!moviesGrid) return;
-    
+
     moviesGrid.innerHTML = '';
 
     // ترتيب الأفلام حسب الـ id تنازلياً
@@ -475,10 +486,11 @@ function loadAllMovies(movies) {
     });
 }
 
+// تحميل جميع المسلسلات إذا وُجدت شبكة المسلسلات
 function loadAllSeries(series) {
     const seriesGrid = document.querySelector('.series-grid');
     if (!seriesGrid) return;
-    
+
     seriesGrid.innerHTML = '';
 
     // ترتيب المسلسلات حسب الـ id تنازلياً

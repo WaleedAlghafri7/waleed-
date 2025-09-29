@@ -26,7 +26,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="search-input-container">
-                    <input type="text" placeholder="Search for movies or series...">
+                    <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
             <div class="name-wab">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <!-- Auth Buttons -->
-                
+
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -179,141 +179,154 @@
     <script src="script.js"></script>
     <script src="slider.js"></script>
     <script type="module">
+        // ----- إدارة تسجيل الدخول -----
+        function getCurrentUser() {
+            try {
+                const userStr = localStorage.getItem('auth_user');
+                if (!userStr) return null;
+                return JSON.parse(userStr);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function isAuthenticated() {
+            return !!localStorage.getItem('auth_token');
+        }
+    
+        function updateAuthUI() {
+            const isLoggedIn = isAuthenticated();
+            const user = getCurrentUser();
+    
+            const userNameEl = document.getElementById('user-name');
+            const userEmailEl = document.getElementById('user-email');
+            const authButtons = document.querySelector('.auth-buttons');
+            const logoutBtn = document.querySelector('.logout-btn');
+            const userMenu = document.querySelector('.user-menu');
+    
+            if (isLoggedIn && user) {
+                if (userNameEl) userNameEl.textContent = user.fullName || 'User';
+                if (userEmailEl) userEmailEl.textContent = user.email || '';
+                if (authButtons) authButtons.style.display = 'none';
+                if (logoutBtn) logoutBtn.style.display = 'block';
+                if (userMenu) {
+                    userMenu.querySelectorAll('button').forEach(item => item.style.display = 'block');
+                }
+            } else {
+                if (userNameEl) userNameEl.textContent = 'User Name';
+                if (userEmailEl) userEmailEl.textContent = 'user@email.com';
+                if (authButtons) {
+                    const loginBtn = authButtons.querySelector('.btn-login');
+                    const registerBtn = authButtons.querySelector('.btn-register');
+                    if (loginBtn) loginBtn.style.display = 'block';
+                    if (registerBtn) registerBtn.style.display = 'none';
+                    authButtons.style.display = 'flex';
+                }
+                if (logoutBtn) logoutBtn.style.display = 'none';
+                if (userMenu) {
+                    userMenu.querySelectorAll('button').forEach(item => item.style.display = 'none');
+                }
+            }
+    
+            if (logoutBtn) {
+                logoutBtn.onclick = function() {
+                    localStorage.removeItem('auth_token');
+                    localStorage.removeItem('auth_user');
+                    updateAuthUI();
+                    window.location.href = 'index.html';
+                };
+            }
+        }
+    
+        // تحميل الهيدر أولًا ثم تحديث واجهة المستخدم
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                updateAuthUI();
+            });
+    
+        document.addEventListener('DOMContentLoaded', updateAuthUI);
+    
+        // ----- إدارة المحتوى -----
         import DataManager from './dataManager.js';
         import Slider from './slider.js';
-
+    
         const dataManager = new DataManager();
         let slider;
-
-        // Load and display data
+    
         async function loadContent() {
             try {
                 await dataManager.loadData();
-
-                // Top Rated Section (mixed)
-                const bestRatedMixed = getTopRatedMixed(8);
-                displayBestRatedMixed(bestRatedMixed);
-
-                // Display latest movies (sorted by ID descending)
-                const latestMovies = dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 8);
-                displayMovies(latestMovies, '.movies-grid');
-
-                // Display most popular movies (sorted by rating descending)
-                const popularMovies = dataManager.sortMovies(dataManager.movies, 'rating-desc').slice(0, 8);
-                displayMovies(popularMovies, '.popular-movies-grid');
-
-                // Display latest series (sorted by ID descending)
-                const latestSeries = dataManager.sortSeries(dataManager.series, 'year-desc').slice(0, 8);
-                displaySeries(latestSeries, '.series-grid');
-
-                // Display most popular series (sorted by rating descending)
-                const popularSeries = dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 8);
-                displaySeries(popularSeries, '.popular-series-grid');
-
-                // Latest Episodes Section
-                const latestEpisodes = dataManager.getLatestEpisodes(10);
-                displayLatestEpisodes(latestEpisodes);
-
-                // Initialize slider
+    
+                // أفضل 3 عناصر مختلطة
+                displayBestRatedMixed(getTopRatedMixed(8));
+    
+                // آخر وأشهر الأفلام
+                displayMovies(dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 8), '.movies-grid');
+                displayMovies(dataManager.sortMovies(dataManager.movies, 'rating-desc').slice(0, 8), '.popular-movies-grid');
+    
+                // آخر وأشهر المسلسلات
+                displaySeries(dataManager.sortSeries(dataManager.series, 'year-desc').slice(0, 8), '.series-grid');
+                displaySeries(dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 8), '.popular-series-grid');
+    
+                // أحدث الحلقات
+                displayLatestEpisodes(dataManager.getLatestEpisodes(10));
+    
                 initializeSlider();
             } catch (error) {
                 console.error('Error loading content:', error);
             }
         }
-
-        // Display movies
+    
+        // ----- دوال عرض المحتوى -----
         function displayMovies(movies, containerSelector) {
             const moviesGrid = document.querySelector(containerSelector);
             moviesGrid.innerHTML = '';
-
             movies.forEach(movie => {
                 const card = document.createElement('div');
                 card.className = 'movie-card';
                 card.onclick = () => window.location.href = `content.html?id=${movie.id}&type=movie`;
-
-                // Only show: image, title, rating, year
                 card.innerHTML = `
-                    <img src="${movie.image}" alt="${movie.title}"  onerror="this.onerror=null; this.src='13434998.png';">
+                    <img src="${movie.image}" alt="${movie.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="movie-info">
                         <h3>${movie.title}</h3>
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${movie.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${movie.year ? (typeof movie.year === 'string' ? movie.year.slice(0,4) : movie.year) : ''}</span>
-                            </div>
+                            <div class="rating"><i class="fas fa-star"></i><span>${movie.rating}</span></div>
+                            <div class="year"><span>${movie.year ? (typeof movie.year==='string'?movie.year.slice(0,4):movie.year) : ''}</span></div>
                         </div>
                     </div>
                 `;
-
                 moviesGrid.appendChild(card);
-
-                // Genre chip click: go to movies page pre-filtered by that genre
-                card.querySelectorAll('.genre-chip').forEach(chip => {
-                    chip.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const g = chip.dataset.genre;
-                        window.location.href = `movies.html?genre=${encodeURIComponent(g)}`;
-                    });
-                });
             });
         }
-
-        // Display series
+    
         function displaySeries(series, containerSelector) {
             const seriesGrid = document.querySelector(containerSelector);
             seriesGrid.innerHTML = '';
-
             series.forEach(show => {
                 const card = document.createElement('div');
                 card.className = 'series-card';
                 card.onclick = () => window.location.href = `content.html?id=${show.id}&type=series`;
-                
-                // Only show: image, title, rating, year
                 card.innerHTML = `
-                    <img src="${show.image}" alt="${show.title}"  onerror="this.onerror=null; this.src='13434998.png';">
+                    <img src="${show.image}" alt="${show.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${show.title}</h3>
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${show.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${show.year ? (typeof show.year === 'string' ? show.year.slice(0,4) : show.year) : ''}</span>
-                            </div>
+                            <div class="rating"><i class="fas fa-star"></i><span>${show.rating}</span></div>
+                            <div class="year"><span>${show.year ? (typeof show.year==='string'?show.year.slice(0,4):show.year) : ''}</span></div>
                         </div>
                     </div>
                 `;
-
                 seriesGrid.appendChild(card);
-
-                // Genre chip click: go to series page pre-filtered by that genre
-                card.querySelectorAll('.genre-chip').forEach(chip => {
-                    chip.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const g = chip.dataset.genre;
-                        window.location.href = `series.html?genre=${encodeURIComponent(g)}`;
-                    });
-                });
             });
         }
-
-        // جلب أفضل 3 عناصر مختلطة (أفلام ومسلسلات)
-        function getTopRatedMixed(count = 3) {
-            const all = [
-                ...dataManager.movies.map(m => ({...m, _type: 'movie'})),
-                ...dataManager.series.map(s => ({...s, _type: 'series'}))
-            ];
-            return all
-                .filter(item => item.rating && item.rating !== '--')
-                .sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
-                .slice(0, count);
+    
+        function getTopRatedMixed(count=3) {
+            const all = [...dataManager.movies.map(m => ({...m,_type:'movie'})), ...dataManager.series.map(s => ({...s,_type:'series'}))];
+            return all.filter(item => item.rating && item.rating!=='--').sort((a,b)=>parseFloat(b.rating)-parseFloat(a.rating)).slice(0,count);
         }
-
-        // عرض أفضل 3 عناصر مختلطة
+    
         function displayBestRatedMixed(items) {
             const grid = document.querySelector('.best-rated-grid');
             grid.innerHTML = '';
@@ -322,35 +335,19 @@
                 card.className = 'best-rated-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item._type}`;
                 card.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}"  onerror="this.onerror=null; this.src='13434998.png';">
+                    <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${item.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
-                            </div>
+                            <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year==='string'?item.year.slice(0,4):item.year) : ''}</span></div>
                         </div>
                     </div>
                 `;
                 grid.appendChild(card);
-
-                // Genre chip click: go to appropriate page pre-filtered by that genre
-                card.querySelectorAll('.genre-chip').forEach(chip => {
-                    chip.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const g = chip.dataset.genre;
-                        const targetPage = item._type === 'series' ? 'series.html' : 'movies.html';
-                        window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
-                    });
-                });
             });
         }
-
-        // عرض آخر الحلقات المضافة
+    
         function displayLatestEpisodes(episodes) {
             const grid = document.querySelector('.latest-episodes-grid');
             grid.innerHTML = '';
@@ -359,10 +356,7 @@
                 card.className = 'latest-episode-card';
                 card.onclick = () => window.location.href = `content.html?id=${ep.seriesId}&type=series`;
                 const parentSeries = dataManager.getSeriesById(ep.seriesId);
-                const imageSource = (ep.image && ep.image.trim())
-                    ? ep.image
-                    : (parentSeries && parentSeries.backdrop ? parentSeries.backdrop : 'https://via.placeholder.com/110x110?text=No+Image');
-
+                const imageSource = (ep.image && ep.image.trim()) ? ep.image : (parentSeries && parentSeries.backdrop ? parentSeries.backdrop : 'https://via.placeholder.com/110x110?text=No+Image');
                 card.innerHTML = `
                     <img src="${imageSource}" alt="${ep.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="latest-episode-info">
@@ -373,49 +367,22 @@
                 grid.appendChild(card);
             });
         }
-
-        // Initialize slider
+    
         function initializeSlider() {
             const sliderContainer = document.querySelector('.slider-container');
-            const slides = [...dataManager.movies, ...dataManager.series]
-                .sort((a, b) => b.id - a.id)
-                .slice(0, 6); // Show only 6 slides
-
-            // Create new slider instance
-            slider = new Slider(sliderContainer, {
-                autoplay: true,
-                autoplaySpeed: 5000, // 5 seconds per slide
-                transitionSpeed: 800, // Transition speed between slides
-                showDots: true,
-                showArrows: true,
-                loop: true, // Enable continuous loop
-                onSlideClick: (slide) => {
-                    // Navigate to content page when slide is clicked
-                    const contentType = slide.seasons ? 'series' : 'movie';
-                    window.location.href = `content.html?id=${slide.id}&type=${contentType}`;
-                }
-            });
-
-            // Update slider with items
+            const slides = [...dataManager.movies, ...dataManager.series].sort((a,b)=>b.id-a.id).slice(0,6);
+            slider = new Slider(sliderContainer, { autoplay:true, autoplaySpeed:5000, transitionSpeed:800, showDots:true, showArrows:true, loop:true });
             slider.updateSlides(slides);
         }
-
-        // Load header and footer
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-
-        // Load content when page loads
+    
+        // تحميل الفوتر
+        fetch('footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        });
+    
         document.addEventListener('DOMContentLoaded', loadContent);
     </script>
+    
 </body>
 
 </html>

@@ -24,7 +24,8 @@ export default class DataManager {
             this.series = [];
         }
     }
-
+    
+    
     getMovieById(id) {
         return this.movies.find(movie => movie.id === id);
     }

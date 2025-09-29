@@ -174,5 +174,54 @@
     <script src="script.js"></script>
     <script src="auth.js"></script>
     <script src="notifications.js"></script>
+    <script>
+        // ==== إدارة تسجيل الدخول ====
+        function getCurrentUser() {
+            try {
+                const userStr = localStorage.getItem('auth_user');
+                if (!userStr) return null;
+                return JSON.parse(userStr);
+            } catch (e) {
+                return null;
+            }
+        }
+    
+        function isAuthenticated() {
+            return !!localStorage.getItem('auth_token');
+        }
+    
+        function updateAuthUI() {
+            const user = getCurrentUser();
+            const isLoggedIn = isAuthenticated();
+    
+            const userNameEl = document.getElementById('user-name');
+            const userEmailEl = document.getElementById('user-email');
+            const authButtons = document.querySelector('.auth-buttons');
+            const logoutBtn = document.querySelector('.logout-btn');
+    
+            if (isLoggedIn && user) {
+                if (userNameEl) userNameEl.textContent = user.fullName || 'User';
+                if (userEmailEl) userEmailEl.textContent = user.email || '';
+                if (authButtons) authButtons.style.display = 'none';
+                if (logoutBtn) logoutBtn.style.display = 'block';
+            } else {
+                if (userNameEl) userNameEl.textContent = 'User Name';
+                if (userEmailEl) userEmailEl.textContent = 'user@email.com';
+                if (authButtons) authButtons.style.display = 'flex';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+    
+            if (logoutBtn) {
+                logoutBtn.onclick = function() {
+                    localStorage.removeItem('auth_token');
+                    localStorage.removeItem('auth_user');
+                    updateAuthUI();
+                    window.location.href = 'index.html';
+                };
+            }
+        }
+    
+        document.addEventListener('DOMContentLoaded', updateAuthUI);
+    </script>
 </body>
 </html> 

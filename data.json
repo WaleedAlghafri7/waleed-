@@ -126,7 +126,7 @@
             "language": " Mandarin, Chinese, English, Hindi, Spanish",
             "country": "China",
             "ageRating": "",
-            "inSlides": false
+            "inSlides": true
         },
         {
             "id": 9,
@@ -254,7 +254,7 @@
             "language": "English",
             "country": "United States, Canada, Australia, New Zealand",
             "ageRating": "PG-13",
-            "inSlides": true
+            "inSlides": false
         },
         {
             "id": 1754045989408,
@@ -484,6 +484,21 @@
             "country": " South Korea, Japan",
             "ageRating": "R",
             "inSlides": false
+        },
+        {
+            "id": 1758837083741,
+            "title": "Spy x Family Code: White",
+            "genre": "Action, Adult Animation, Animation, Anime, Comedy, Hand-Drawn Animtion, Spy, Thriller",
+            "year": 2024,
+            "releaseDate": "2024-04-19",
+            "rating": 7.3,
+            "duration": "1h 50min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xlIQf4y9eB14iYzNN142tROIWON.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/zVDJ4cRgSpHlILSm7kGiklHQ6O7.jpg",
+            "description": "After receiving an order to be replaced in Operation Strix, Loid decides to help Anya win a cooking competition at Eden Academy, by making the director's favorite meal in order to prevent his replacement.",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "PG-13"
         }
     ],
     "series": [
@@ -962,7 +977,7 @@
                     ]
                 }
             ],
-            "inSlides": true
+            "inSlides": false
         },
         {
             "id": 18,
@@ -2472,6 +2487,7 @@
             "title": "Stranger Things",
             "genre": "Horror, Drama, Fantasy",
             "year": 2016,
+            "releaseDate": "2016-01-01",
             "rating": 8.6,
             "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg",
@@ -2479,7 +2495,7 @@
             "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
             "language": "English",
             "country": "United States",
-            "ageRating": "16+",
+            "ageRating": "",
             "status": "completed",
             "seasons": [
                 {
@@ -2788,7 +2804,7 @@
                         {
                             "title": "Chapter Seven: The Bridge",
                             "description": "",
-                            "image": "https://episodes.metahub.space/tt4574334/5/7/w780.jpg",
+                            "image": "https://walter-r2.trakt.tv/images/episodes/012/291/597/screenshots/thumb/98804e04d2.jpg.webp",
                             "addedDate": "2025-12-25",
                             "rating": ""
                         },
@@ -2801,8 +2817,7 @@
                         }
                     ]
                 }
-            ],
-            "inSlides": true
+            ]
         },
         {
             "id": 31,
@@ -2853,52 +2868,52 @@
                         },
                         {
                             "title": "Arashi-ya",
-                            "description": "",
+                            "description": "The Cleaners go on a job to save another Sphereite who survived the fall. Rudo tags along to learn more.",
                             "image": "https://image.tmdb.org/t/p/original/ztEDVMzddKRUQtvExgKaOVd8pHw.jpg",
                             "addedDate": "2025-08-10",
                             "rating": "8.1"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Chanto Shita Ichigeki!!",
+                            "description": "With the job having gone terribly wrong, Rudo finds himself face to face with a merciless Raider named Jabber.",
+                            "image": "https://image.tmdb.org/t/p/original/eWgtva5EavsnGIf3fRZD6Lxj7ge.jpg",
                             "addedDate": "2025-08-17",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Ketcchaku",
+                            "description": "Jabber employs a new strategy to get through Rudo's defenses, and another ally joins the fray.",
+                            "image": "https://image.tmdb.org/t/p/original/vXsxNZ9kPKH27DLWVkYYImrkPOT.jpg",
                             "addedDate": "2025-08-24",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Zenshin",
+                            "description": "Rudo deals with the emotional aftermath of the Jabber fight and gets a new lead about returning to the Sphere.",
+                            "image": "https://image.tmdb.org/t/p/original/3caLcoFAgTPEA4QDMxJWUFIFR6g.jpg",
                             "addedDate": "2025-08-31",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Rakugaki no Machi",
+                            "description": "To get a \"spell\" for their next mission, the Cleaners head to Canvas Town, where they make a tragic discovery.",
+                            "image": "https://image.tmdb.org/t/p/original/qJ4aOklpW9t9HLltLo8y3HthOZL.jpg",
                             "addedDate": "2025-09-07",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
                             "title": "",
-                            "description": "",
-                            "image": "",
+                            "description": "Remlin casts a protective spell on the Keepers before they journey into the desert to find a mysterious woman.",
+                            "image": "https://image.tmdb.org/t/p/original/e2iniIW4GZOfpzsYm3Gs9V3rrTa.jpg",
                             "addedDate": "2025-09-14",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
                             "title": "",
-                            "description": "",
-                            "image": "",
+                            "description": "A mysterious woman living in the No Man's Land challenges the crew from an unexpected angle.",
+                            "image": "https://image.tmdb.org/t/p/original/a8FkL2y74TlH8T7FroXRVPn2O9a.jpg",
                             "addedDate": "2025-09-21",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "title": "",
@@ -2993,8 +3008,7 @@
                         }
                     ]
                 }
-            ],
-            "inSlides": true
+            ]
         },
         {
             "id": 32,
@@ -3109,7 +3123,7 @@
                             "description": "As Momo fends off an attack in the outdoor hot spring, Okarun and Jiji panic over how to handle the mysterious room. Just then, the doorbell rings.",
                             "image": "https://image.tmdb.org/t/p/original/n2ritMv4rP5KAdzRZzVJnX0IJqY.jpg",
                             "addedDate": "2025-07-03",
-                            "rating": "7.8"
+                            "rating": "7.7"
                         },
                         {
                             "title": "Jashi",
@@ -3130,63 +3144,63 @@
                             "description": "Momo surfaces the Mongolian Death Worm, triggering a volcano. She uses the worm as a fire hose against the lava, but the Kito family interferes. Evil Eye-possessed Jiji appears, worsening the situation.",
                             "image": "https://image.tmdb.org/t/p/original/sdDcdca4snnU72pr0bTm1YFTStU.jpg",
                             "addedDate": "2025-07-24",
-                            "rating": "9.0"
+                            "rating": "8.9"
                         },
                         {
                             "title": "Minna de otomari jan yo",
                             "description": "Momo rescues Okarun and they make it home safely, while Jiji remains under Evil Eye's possession.",
-                            "image": "https://image.tmdb.org/t/p/original/pkENUMWDpL5hT8Rln4poJHrpM7V.jpg",
+                            "image": "https://image.tmdb.org/t/p/original/hJ8BJIvIfptYH4TRF58I8UmRxlr.jpg",
                             "addedDate": "2025-07-31",
-                            "rating": "8.2"
+                            "rating": "8.1"
                         },
                         {
                             "title": "Kazoku ni narimashita",
                             "description": "Jiji's Evil Eye possession grows stronger. The group attempts exorcism through Hayashi music. When they nearly succeed in forcing Evil Eye out, Jiji begs them to spare Evil Eye's life.",
-                            "image": "https://image.tmdb.org/t/p/original/b4ibErAXQ7JrEt1DyJGYHz7TtgP.jpg",
+                            "image": "https://image.tmdb.org/t/p/original/n3safOFFAQ8JDJWokPrTcrxx31P.jpg",
                             "addedDate": "2025-08-07",
                             "rating": "8.6"
                         },
                         {
                             "title": "Nanka moyamoya suru jan yo",
-                            "description": "",
-                            "image": "https://image.tmdb.org/t/p/original/w9xn1UT4iFeZjxypSxUoS6rEeND.jpg",
+                            "description": "While Seiko trains Jiji to control the Evil Eye, it loses control and attacks Momo. She manages to get through the situation, and Okarun sets out to become stronger in order to defeat the Evil Eye.",
+                            "image": "https://image.tmdb.org/t/p/original/nn8lmbfjTtc8I16smdmbO7L9071.jpg",
                             "addedDate": "2025-08-14",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Ganbare Okarun",
+                            "description": "Okarun and Aira end up fighting against classical composers. Aira gradually gets the hang of it, but Okarun is unable to dodge the composers' flying musical note bomb attacks. Turbo Granny gives Okarun some advice.",
+                            "image": "https://image.tmdb.org/t/p/original/dYipxvDZoSwMtvWkoOr6chIa8lI.jpg",
                             "addedDate": "2025-08-21",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": " Ie o tatenaoshitai",
+                            "description": "The battle between Okarun and Evil Eye-fied Jiji has begun. Showing the results of his training, Okarun fights toe-to-toe against Evil Eye, going \"full throttle.\".",
+                            "image": "https://image.tmdb.org/t/p/original/hC4YDLfbW7B5KpRJczOdPP3Mflp.jpg",
                             "addedDate": "2025-08-28",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Moteru hiketsu wa nanda",
+                            "description": "In a flashback, Kinta recalls observing Okarun around school, during which he sees Okarun and Momo's accidental kiss. In the present, Kinta approaches Okarun to ask how he managed to befriend Momo and Aira despite his appearance.",
+                            "image": "https://image.tmdb.org/t/p/original/oY03i1C8oM3DEZq9owduy9K3LdV.jpg",
                             "addedDate": "2025-09-04",
-                            "rating": ""
+                            "rating": "7.8"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Kaijû jan yo",
+                            "description": "Kinta's quick thinking let's Momo and Okarun defeat the invisible \"something\" that has a golden ball. Its optical camouflage wears off, and out comes a space kaiju. The trio is then attacked by the now-gigantic space kaiju.",
+                            "image": "https://image.tmdb.org/t/p/original/c9Qol8BmTUtzj1VZ2f9rB7aTXw8.jpg",
                             "addedDate": "2025-09-11",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Clash! Space Kaiju vs. Giant Robot!",
+                            "description": "Using nanoskin from Momo's house, they build a Buddha robot piloted by Kinta. With Momo's psychic powers and Aira's hair abilities, they fight the space kaiju. Okarun and Jiji get ejected and land in a rice paddy.",
+                            "image": "https://image.tmdb.org/t/p/original/yaqtsUbjqWOlDzoclXVYAzWjxuQ.jpg",
                             "addedDate": "2025-09-18",
-                            "rating": ""
+                            "rating": "8.6"
                         }
                     ]
                 }
@@ -3197,14 +3211,15 @@
             "title": "Sakamoto Days",
             "genre": "Animation, Action, Adventure",
             "year": 2025,
+            "releaseDate": "2025-01-01",
             "rating": 7.4,
             "duration": "24min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wRpCqsJFyKNuh5FMegNPrhzp2NF.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zyBsJxH9wd41L4o8wByoXnxR9bB.jpg",
             "backdrop": "https://images.metahub.space/background/medium/tt17069148/img",
             "description": "Once the world's most feared hitman, Taro Sakamoto falls in love with Store Clerk Aoi. Leaving his violent past, he retires to live a peaceful life. But old enemies threaten to pull him back into the life he thought he'd left for good.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "18+",
+            "ageRating": "",
             "status": "ongoing",
             "seasons": [
                 {
@@ -3323,57 +3338,57 @@
                             "rating": "9.3"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Have a Nice Flight",
+                            "description": "Sakamoto decides to infiltrate his alma mater to get more intel on X. But first, he must conquer the sky-high requirements of the JCC entrance exam.",
+                            "image": "https://image.tmdb.org/t/p/original/u8Eyg9NQwjZrflGjlSQly0VMLZi.jpg",
                             "addedDate": "2025-08-18",
-                            "rating": ""
+                            "rating": "8.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Kanaguri",
+                            "description": "It's every assassin for themselves as the exam takes to the skies. While Sakamoto impresses fellow candidate Akira, Shin takes on the germaphobe Mafuyu.",
+                            "image": "https://image.tmdb.org/t/p/original/2FWVrjCWw05ARJ0jOTI6q3fa5aO.jpg",
                             "addedDate": "2025-08-25",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Exam, Stage Three",
+                            "description": "Stage Three of the JCC exams begins as a trio of special applicants joins the fray. Toramaru, a devoted Sakamoto fan, immediately clashes with Shin.",
+                            "image": "https://image.tmdb.org/t/p/original/wcBx4ns1zKjdJ96pQwOb3ZYuQcG.jpg",
                             "addedDate": "2025-09-01",
-                            "rating": ""
+                            "rating": "8.0"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Mutual Fans",
+                            "description": "Sakamoto discovers Akira's ties to an old friend. While Shin and Toramaru vie over their favorite assassin, X's secret plans throw the exam into chaos.",
+                            "image": "https://image.tmdb.org/t/p/original/zeEWDRvS6R3BsbAPMwkOdlKT3LW.jpg",
                             "addedDate": "2025-09-08",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Hard Mode",
+                            "description": "Shin teams up with Mafuyu, Toramaru and Kaji to take down a berserk Shinaya. Can these ragtag new allies work together to defeat their rampaging foe?",
+                            "image": "https://image.tmdb.org/t/p/original/rMv3PDhN389xoxVae3nGxnzY9cw.jpg",
                             "addedDate": "2025-09-15",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Each One's Mission",
+                            "description": "With the entrance exam behind them, Sakamoto and Shin can now continue with their original objective: infiltrating the JCC and obtaining clues on X.",
+                            "image": "https://image.tmdb.org/t/p/original/lObWm7m19F19diTdJuzZB19Hcy5.jpg",
                             "addedDate": "2025-09-22",
-                            "rating": ""
+                            "rating": "8.0"
                         }
                     ]
                 }
-            ],
-            "inSlides": false
+            ]
         },
         {
             "id": 35,
             "title": "The Fragrant Flower Blooms with Dignity",
             "genre": "Animation, Comedy, Drama",
             "year": 2025,
+            "releaseDate": "2025-01-01",
             "rating": 8.8,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fcAKLwLJf6G8QaoGdJyxrVCHBnY.jpg",
@@ -3427,49 +3442,49 @@
                             "description": "It's an important night of confessions, apologies and cherished memories when Subaru and Kaoruko catch up at the park where they used to play as kids.",
                             "image": "https://image.tmdb.org/t/p/original/cgZ7lmFvThuWsugfVRm0Y1h3f41.jpg",
                             "addedDate": "2025-08-09",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Kakkoii Otoko",
+                            "description": "Noticing Rintaro's strange behavior, Shohei, Saku and Ayato follow him after school and try to eavesdrop on his meeting with Kaoruko and Subaru.",
+                            "image": "https://image.tmdb.org/t/p/original/ywbxPaeBLYJmatNTTd9yPTxFKXB.jpg",
                             "addedDate": "2025-08-16",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Kanjou no Shoutai",
+                            "description": "Despite the awkwardness, Rintaro manages to introduce his friends to the girls. Later, Kaoruko makes a bold suggestion on how Rintaro could repay her.",
+                            "image": "https://image.tmdb.org/t/p/original/ySLYVSDHDdGq8jo4SSTZoYWAvJg.jpg",
                             "addedDate": "2025-08-23",
-                            "rating": ""
+                            "rating": "8.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Kinpatsu to Piasu",
+                            "description": "While Rintaro struggles with his tangled emotions about Kaoruko, he invites his friends over to his home - but two unexpected visitors shake things up.",
+                            "image": "https://image.tmdb.org/t/p/original/y8TqA2W1MnlnOHZJf1tsCYWisTr.jpg",
                             "addedDate": "2025-08-30",
-                            "rating": ""
+                            "rating": "9.3"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Aoi Arashi",
+                            "description": "To prepare for their finals, the six Chidori and Kikyo students hold a joint study session. Later, Shohei makes a sharp observation about Rintaro.",
+                            "image": "https://image.tmdb.org/t/p/original/wKP3eypkEkJyAXkc8WJWJNkMWIz.jpg",
                             "addedDate": "2025-09-06",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
-                            "addedDate": "2025-09-16",
-                            "rating": ""
+                            "title": "Nukumori no Hitokuchi",
+                            "description": "Kaoruko's birthday is in two weeks, and Rintaro is unsure of a gift until his mother gives valuable advice. Can he bake the perfect cake for her?",
+                            "image": "https://image.tmdb.org/t/p/original/mYGVQAF5yRBQ2EFEXEt9kH3uds.jpg",
+                            "addedDate": "2025-09-13",
+                            "rating": "8.8"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
-                            "addedDate": "2025-09-20",
-                            "rating": ""
+                            "title": "Umibe no Madoi",
+                            "description": "While everyone else is having fun at the beach, Subaru seems down. When prodded, she reveals her worries and makes a request to the four Chidori boys.",
+                            "image": "https://image.tmdb.org/t/p/original/7Du0SRnco3bPWduFINeGEn1ZOkt.jpg",
+                            "addedDate": "2025-09-21",
+                            "rating": "8.9"
                         },
                         {
                             "title": "",
@@ -3480,8 +3495,7 @@
                         }
                     ]
                 }
-            ],
-            "inSlides": false
+            ]
         },
         {
             "id": 36,
@@ -3743,6 +3757,7 @@
             "title": "Kaiju No. 8",
             "genre": "Animation, Action, Adventure",
             "year": 2024,
+            "releaseDate": "2024-01-01",
             "rating": 8.3,
             "duration": "24min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/83yDUQVpdhv8ePy3nbTRzFaKYuQ.jpg",
@@ -3750,7 +3765,7 @@
             "description": "A man working a job far removed from his childhood dreams gets wrapped up in an unexpected situation - becoming a monster, he aims once again to fulfill his lifelong dream.\n\n",
             "language": "Japanese",
             "country": " Japan",
-            "ageRating": "18+",
+            "ageRating": "TV-MA",
             "status": "ongoing",
             "seasons": [
                 {
@@ -3850,82 +3865,81 @@
                             "description": "Kafka goes on a mission with his new squad and faces Kaiju No. 9 once again.",
                             "image": "https://episodes.metahub.space/tt21975436/2/1/w780.jpg",
                             "addedDate": "2025-07-19",
-                            "rating": "7.7"
+                            "rating": "7.6"
                         },
                         {
                             "title": "The Next Generation's Trial",
                             "description": "A challenge begins for the next generation of the Defense Force.",
                             "image": "https://image.tmdb.org/t/p/original/5ZXhULMqvQHp7kVAH2tL6Oni6pM.jpg",
                             "addedDate": "2025-07-26",
-                            "rating": "8.0"
+                            "rating": "7.9"
                         },
                         {
                             "title": "The Strongest Division",
                             "description": "Kaiju No. 9 appears for the third time, splitting in two and overwhelming the Defense Force.",
                             "image": "https://image.tmdb.org/t/p/original/C5mc4rl8nkcU8cOYkpAgc8hKTy.jpg",
                             "addedDate": "2025-08-02",
-                            "rating": "8.7"
+                            "rating": "8.6"
                         },
                         {
                             "title": "The Man Called Isao Shinomiya",
-                            "description": "",
+                            "description": "After achieving his transformation, Kafka faces his greatest challenge yet in the battle against the powerful Kaiju No. 9.",
                             "image": "https://image.tmdb.org/t/p/original/tl5IqC62k7VsW878Si2nZctDCe4.jpg",
                             "addedDate": "2025-08-09",
-                            "rating": "9.1"
+                            "rating": "9.3"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "I Want to Be Strong",
+                            "description": "Narumi and Kikoru's resolve is renewed. Kafka is forced to face the price that comes with his power.",
+                            "image": "https://image.tmdb.org/t/p/original/ftbkHVunIr0FnwCdW8qbw3CBM4B.jpg",
                             "addedDate": "2025-08-16",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Compatible User",
+                            "description": "Reno Ichikawa has been chosen to wield the power of Numbers Weapon 6, the most powerful of them all.",
+                            "image": "https://image.tmdb.org/t/p/original/kMUolUiIbRzW7g4GmDtacdCE5Oe.jpg",
                             "addedDate": "2025-08-23",
-                            "rating": ""
+                            "rating": "7.7"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Wall",
+                            "description": "Iharu and Reno's trust in each other becomes a powerful weapon that leads them in battle.",
+                            "image": "https://image.tmdb.org/t/p/original/dHpWGagaNfnUEtJ9QCNMmGZUf4m.jpg",
                             "addedDate": "2025-08-30",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Destiny",
+                            "description": "Kafka learns to fight without having to rely on Kaiju No. 8's power.",
+                            "image": "https://image.tmdb.org/t/p/original/sLFazZdwaBm3qJdgXyvVbfXXpl8.jpg",
                             "addedDate": "2025-09-06",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Omen",
+                            "description": "A horde of Kaiju appear all over Tokyo at the same time.",
+                            "image": "https://image.tmdb.org/t/p/original/2mOFhR5uYAdS6RG0EZPKMXN6qpR.jpg",
                             "addedDate": "2025-09-13",
-                            "rating": ""
+                            "rating": "7.6"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Cataclysms",
+                            "description": "The fight against No. 9's Kaiju kicks off in full force.",
+                            "image": "https://image.tmdb.org/t/p/original/6EQverjf8op1zbbeTLPBgT3P02R.jpg",
                             "addedDate": "2025-09-20",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Second Wave",
+                            "description": "The Defense Forces suffer severe damage from a fortitude 9.0 Kaiju that appear at the capital.",
+                            "image": "https://image.tmdb.org/t/p/original/tHoeKeFW5jnnK5AzTIsZVetT28E.jpg",
                             "addedDate": "2025-09-27",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "inSlides": false
+            ]
         },
         {
             "id": 1754566250630,
@@ -5311,16 +5325,308 @@
                 }
             ],
             "inSlides": false
+        },
+        {
+            "id": 1758836826952,
+            "title": "Spy x Family",
+            "genre": "Adult Animation, Animation, Anime, Comedy, Hand-Drawn Animtion, Shonen, Thriller, Slice of Life, Spy",
+            "year": 2022,
+            "releaseDate": "2022-04-09",
+            "rating": 8.2,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3r4LYFuXrg3G8fepysr4xSLWnQL.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/lysUnU6V0VfcthDbviuVlIqgHOR.jpg",
+            "description": "A spy on an undercover mission gets married and adopts a child as part of his cover. His wife and daughter have secrets of their own, and all three must strive to keep together.\n\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "TV-14",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": "Operation Strix",
+                            "description": "A spy with the new identity of Loid Forger must find and adopt a child for his next mission.",
+                            "image": "https://image.tmdb.org/t/p/original/3EwkiSokUJRkAwB3b3bFG3J8IoA.jpg",
+                            "addedDate": "2022-04-09",
+                            "rating": "8.5"
+                        },
+                        {
+                            "title": " Secure a Wife",
+                            "description": "In need of a wife for the school interview, Twilight crosses with a woman who might be the right cover-up for his mission. She has secrets of her own, though.",
+                            "image": "https://image.tmdb.org/t/p/original/doSXhn8nksQiEMadwjPboPpqMih.jpg",
+                            "addedDate": "2022-04-16",
+                            "rating": "8.9"
+                        },
+                        {
+                            "title": "Prepare for the Interview",
+                            "description": "To prepare for the interview, Loid, Yor and Anya set out for a day in the town, visiting various locations to prepare to sell the image of being a normal upscale family.",
+                            "image": "https://image.tmdb.org/t/p/original/fnU8bxU1WFGD8PBmpK5g9pVqvnO.jpg",
+                            "addedDate": "2022-04-23",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "The Prestigious School's Interview",
+                            "description": "The Forger family goes to Eden School for the interview, where different challenges spice things up, along with the interview itself.",
+                            "image": "https://image.tmdb.org/t/p/original/6P3Gi8Vd4hKivG6eObP9xkkmp3U.jpg",
+                            "addedDate": "2022-04-30",
+                            "rating": "8.8"
+                        },
+                        {
+                            "title": "Will They Pass or Fail?",
+                            "description": "Anya gets excited about passing the entrance exam but wants some motivation to study, so the family and Franky go on a role play in a castle upon Anya's request.",
+                            "image": "https://image.tmdb.org/t/p/original/aVjoPi2alpgUxufxijnIyjz6rUu.jpg",
+                            "addedDate": "2022-05-07",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "The Friendship Scheme",
+                            "description": "Anya and Yor pick up Anya's school uniform. Later, Anya has her orientation day at Eden Academy, where Loid's Plan B to get close to Donovan via having her befriend his second son, Damien, is off on a disastrous start.",
+                            "image": "https://image.tmdb.org/t/p/original/Bz7DUuidlzte62jEGxj77Tbo9F.jpg",
+                            "addedDate": "2022-05-14",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "The Target's Second Son",
+                            "description": "On Anya's first day of school, Loid attempts to get her to apologize to Damien in hopes of salvaging the plan for the two to become friends. Unfortunately, Damien's conflicting feelings for Anya may get in the way of this.",
+                            "image": "https://image.tmdb.org/t/p/original/leOi8od9ICYohkmOdkXQaxpzwxi.jpg",
+                            "addedDate": "2022-05-21",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "The Counter-Secret Police Cover Operation",
+                            "description": "Yor's younger brother Yuri is a member of the Ostanian Secret Police, hunting spies while keeping it a secret. But when he shows up at the Forgers' residence, their secrets come face to face.",
+                            "image": "https://image.tmdb.org/t/p/original/79Oi1DWCFR04ElOAPalB3n6QSge.jpg",
+                            "addedDate": "2022-05-28",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": " Show Off How In Love You Are",
+                            "description": "After Yuri's visit, Loid begins to suspect Yor may not be who she claims. While Loid investigates, Yor struggles with questions of her own.",
+                            "image": "https://image.tmdb.org/t/p/original/oaxsr3MypOg74LPuksryVsG2PVO.jpg",
+                            "addedDate": "2022-06-20",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "The Great Dodgeball Plan",
+                            "description": "A rumor spreads among the first graders that if they do well in PE, they will be rewarded with Stella Stars. Anya is determined to get one, so she trains with Yor. Thus begins the dodgeball match between Cecile Hall and Wald Hall.",
+                            "image": "https://image.tmdb.org/t/p/original/deSqORCVDxymHfwYrGSKxyskk35.jpg",
+                            "addedDate": "2022-06-11",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Stella",
+                            "description": "In order for parents to attend one of the social gatherings at Eden College, their children must be Imperial Scholars. Anya hates studying, so Loid comes up with a plan for her to get Stella Stars by doing community service.",
+                            "image": "https://image.tmdb.org/t/p/original/mzfXcUlUHLvUaE5N8kxQpzX0VjZ.jpg",
+                            "addedDate": "2022-06-18",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": " Penguin Park",
+                            "description": "A trip to the local aquarium results in mayhem for the entire Forger family as Loid is assigned a mission that is, fortuitously, located in the same place.",
+                            "image": "https://image.tmdb.org/t/p/original/v7oChF0yYRelCxtrJByqrIuV3Vm.jpg",
+                            "addedDate": "2022-06-25",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Project Apple",
+                            "description": "The thin veneer of peace between Ostania and Westalis threatens to break when terrorists plot an assassination attempt. The Forger family is thrown into the mayhem when searching a for a dog to adopt.",
+                            "image": "https://image.tmdb.org/t/p/original/5GGBZlkqqKEYZ1D1AY5ApFABXVD.jpg",
+                            "addedDate": "2022-10-10",
+                            "rating": "8.2"
+                        },
+                        {
+                            "title": "Disarm the Time Bomb",
+                            "description": "Anya is saved by Yor from the terrorists she doesn't know. The intelligent dog sees future which makes the disarming of bomb very important for Anya.",
+                            "image": "https://image.tmdb.org/t/p/original/pdmklh7sIcv4ZSowI8KdtmfaLjl.jpg",
+                            "addedDate": "2022-10-08",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "A New Family Member",
+                            "description": "After being rescued by Anya and a terrorist trained dog, Loid welcomes a new member to the family, Bond, their new pet.",
+                            "image": "https://image.tmdb.org/t/p/original/7EO66F2z4kJ8RwxA0fTSw7iC8Ct.jpg",
+                            "addedDate": "2022-10-15",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": "Yor's Kitchen/The Informant's Great Romance Plan",
+                            "description": "Believing Loid may start to see her as useless, Yor asks her coworkers to teach her to cook. Franky goes to Loid to help him ask his crush on a date.",
+                            "image": "https://image.tmdb.org/t/p/original/k0PCMHYufqUyvPYGPOoEYiHCnwA.jpg",
+                            "addedDate": "2022-10-22",
+                            "rating": "7.5"
+                        },
+                        {
+                            "title": "Carry Out the Griffin Plan/Fullmetal Lady/Omelet Rice",
+                            "description": "Anya attempts to continue the Friendship Plan by helping Damian in arts and crafts, but disastrous results ensue. Sylvia meets with Loid. Yuri toughens up to survive Yor's cooking.",
+                            "image": "https://image.tmdb.org/t/p/original/pHGke693S5Yy2n24NdNoB5hJgfL.jpg",
+                            "addedDate": "2022-10-29",
+                            "rating": "7.3"
+                        },
+                        {
+                            "title": "Uncle the Private Tutor/Daybreak",
+                            "description": "Yuri helps Anya study for her midterm exams. Afterwards, Loid breaks into Eden Academy's vaults to change her test answers but comes across an amateur spy calling himself Daybreak.",
+                            "image": "https://image.tmdb.org/t/p/original/t3YFlND2D7dWGYmhExvB7GWzEv9.jpg",
+                            "addedDate": "2022-11-05",
+                            "rating": "7.5"
+                        },
+                        {
+                            "title": "A Revenge Plot Against Desmond/Mama Becomes The Wind",
+                            "description": "George, a boy in Anya's class who believes he will be forced to leave Eden, is treated to a luxurious final day of class. Yor dashes to Eden to deliver Anya her gym clothes while Loid tails her.",
+                            "image": "https://image.tmdb.org/t/p/original/ecXSomcwWxWC9DQWUt09dnECV7u.jpg",
+                            "addedDate": "2022-11-12",
+                            "rating": "7.2"
+                        },
+                        {
+                            "title": "Investigate the General Hospital/Decipher the Perplexing Code",
+                            "description": "Loid takes Anya to the hospital he works at for a school project. Anya spreads a hidden code to her neighbors and classmates. Franky believes a woman may finally be interested in him.",
+                            "image": "https://image.tmdb.org/t/p/original/vJfXc0ZMs3oFX0Fv2CzRq9wa3vP.jpg",
+                            "addedDate": "2022-11-19",
+                            "rating": "7.2"
+                        },
+                        {
+                            "title": "Nightfall/First Fit of Jealousy",
+                            "description": "A new spy named Nightfall joins the peacemaking team between East and West. She thinks she can play a better role as Twilight's wife and enters into a mental battle with Yor.",
+                            "image": "https://image.tmdb.org/t/p/original/3UFgoPLwqrzrHKEDI7gYyfu2boj.jpg",
+                            "addedDate": "2022-11-26",
+                            "rating": "7.8"
+                        },
+                        {
+                            "title": "The Underground Tennis Tournament: The Campbelldon",
+                            "description": "Twilight and Nightfall enter an underground tennis tournament for a mission as two players and there are no rules in this match and it's a tough match.",
+                            "image": "https://image.tmdb.org/t/p/original/60qfep8Wg7ir8Uo2eneTlXXOjXU.jpg",
+                            "addedDate": "2022-12-24",
+                            "rating": "7.7"
+                        },
+                        {
+                            "title": "The Unwavering Path",
+                            "description": "Nightfall and Twilight, who went to a tennis match to get a coded painting, finished their match. After this, Nightfall challenges Yor to a tennis match so that she can take the role of Twilight's wife from her",
+                            "image": "https://image.tmdb.org/t/p/original/shW5hWBz1sgrefmRBZfwqWhgbYH.jpg",
+                            "addedDate": "2022-12-10",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "The Role of a Mother and Wife/Shopping with Friends",
+                            "description": "Yor, who thinks that she has been bested by Nightfall is upset and sad. Sensing that his mission is in jeopardy, Twilight invites Yor to a bar to talk about it. Suddenly, something happens to Twilight that hasn't happened in years.",
+                            "image": "https://image.tmdb.org/t/p/original/bGW5Bn1sIRttSxAHNc3ac180CCU.jpg",
+                            "addedDate": "2022-12-17",
+                            "rating": "8.1"
+                        },
+                        {
+                            "title": "First Contact",
+                            "description": "With his clever plan, Twilight manages to meet Desmond briefly.",
+                            "image": "https://image.tmdb.org/t/p/original/welQIaa7p2C6Ub7mGhvkHeLO9cT.jpg",
+                            "addedDate": "2023-01-19",
+                            "rating": "8.1"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "title": "Let's Follow Mama and Papa",
+                            "description": "Yor is shot in the butt while on a mission and looks miserable when she gets home. Loid mistakes her very apparent miserable mood as her being unhappy with their marriage of convenience and offers to take her out on a date.",
+                            "image": "https://image.tmdb.org/t/p/original/mpVApVSbI1zxcjFoVDq9CmLGZz2.jpg",
+                            "addedDate": "2023-10-07",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": "Bond's Strategy to Stay Alive/Damian's Field Research Trip",
+                            "description": "Bond has a vision where he dies after eating food made by Yor. Worried that Damian is studying too hard during the holiday break, Emile and Ewen stay behind with Damian after the former got punished.",
+                            "image": "https://image.tmdb.org/t/p/original/A3adJEeYjKyTjt2mgBQV6EdehQ2.jpg",
+                            "addedDate": "2023-10-14",
+                            "rating": "7.1"
+                        },
+                        {
+                            "title": "Mission and Family/The Elegant Bondman/The Heart of a Child/Waking Up",
+                            "description": "Yuri is doing great at his job with the Secret Police. His assignment is to investigate a former newspaper reporter suspected of selling articles slandering Ostania to Westalis.",
+                            "image": "https://image.tmdb.org/t/p/original/dhTVyMbXdVn9YD5zkp0B0s3uoSK.jpg",
+                            "addedDate": "2023-10-21",
+                            "rating": "6.6"
+                        },
+                        {
+                            "title": "The Pastry of Knowledge/The Informant's Great Romance Plan II",
+                            "description": "Eden's legendary dessert finally appears. In order to obtain the macrons that supposedly can make you into an Imperial Scholar if eaten, Anya and her friends race to get to them first.",
+                            "image": "https://image.tmdb.org/t/p/original/vJC35ConrAu5Fc0HenUOt6NPf9v.jpg",
+                            "addedDate": "2023-10-28",
+                            "rating": "7.3"
+                        },
+                        {
+                            "title": " Plan to Cross the Border",
+                            "description": "Yor is tasked with protecting the only survivors of the Gretcher family, Olka and her son, and helping them escape to a different country by traveling on a cruise ship.",
+                            "image": "https://image.tmdb.org/t/p/original/gBxxsugfJ5Gcz5vkUSmn5UyEgzT.jpg",
+                            "addedDate": "2023-11-04",
+                            "rating": "7.7"
+                        },
+                        {
+                            "title": "The Fearsome Luxury Cruise Ship",
+                            "description": "After boarding the cruise ship, Yor began her duty as bodyguard to Olka and her son. Meanwhile, Yor's superior, Matthew, finds an assassin who is after Olka and her son.",
+                            "image": "https://image.tmdb.org/t/p/original/2LQGL9Dy9Vu0YN6Xz0rZ5toKL5z.jpg",
+                            "addedDate": "2023-11-11",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": " Who Is This Mission For?",
+                            "description": "Loid tries to impress Anya and picks outfits to make him look like a fun dad. Meanwhile, Yor, on guard duty, is confronted by one of the assassins, Barnaby. As the attack by the assassins intensifies, Yor questions her own identity.",
+                            "image": "https://image.tmdb.org/t/p/original/w6zyGIE6Re1R3rbGznRYZoyRt9b.jpg",
+                            "addedDate": "2023-11-18",
+                            "rating": "8.0"
+                        },
+                        {
+                            "title": " The Symphony Upon The Ship/Sister's Herbal Tea",
+                            "description": "Anya and Loid are enjoying the fireworks. Meanwhile, Yor's mission has reached its climax.",
+                            "image": "https://image.tmdb.org/t/p/original/10IDii3X575FA0D4L70ZTg7akG7.jpg",
+                            "addedDate": "2023-11-25",
+                            "rating": "8.9"
+                        },
+                        {
+                            "title": "The Hand That Connects to the Future",
+                            "description": "Loid leaves Anya at the daycare in a hurry and then disguises himself as a State Security Service member to take care of a bomb on the ship.",
+                            "image": "https://image.tmdb.org/t/p/original/eMaaFAg0sEptNGHArVFcx05jqw5.jpg",
+                            "addedDate": "2023-12-02",
+                            "rating": "8.6"
+                        },
+                        {
+                            "title": " Enjoy the Resort to the Fullest/Bragging About Vacation",
+                            "description": "The cruise ship arrives at the resort island, allowing the Forgers to finally enjoy a family vacation together.",
+                            "image": "https://image.tmdb.org/t/p/original/i36UD416f4Poox4TNAwfyP9D2GS.jpg",
+                            "addedDate": "2023-12-09",
+                            "rating": "7.7"
+                        },
+                        {
+                            "title": "Berlint in Love/Nightfall's Daily Life",
+                            "description": "Becky is very excited about a romantic drama on TV, so she heads over to the Forgers' place to see Loid, who she fell in love with instantly after seeing his picture. Becky aggressively pursues Loid.",
+                            "image": "https://image.tmdb.org/t/p/original/z3b8l9AXiDWsiuaVAPXua7WEaGw.jpg",
+                            "addedDate": "2023-12-16",
+                            "rating": "7.3"
+                        },
+                        {
+                            "title": "Part of the Family",
+                            "description": "As Bond is on a walk with Loid, he has a premonition of an accident, so he tries to stop it, but is scolded by Loid. He then sees a vision of a building going up in flames and a sobbing girl standing in front of it.",
+                            "image": "https://image.tmdb.org/t/p/original/zyxHtmFR7Bv79grEDnuhhGdtvgm.jpg",
+                            "addedDate": "2023-12-23",
+                            "rating": "7.6"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 3,
+                    "episodes": [
+                        {
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-04",
+                            "rating": ""
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "featured": [
-        {
-            "type": "movie",
-            "id": 16,
-            "title": "Superman",
-            "backdrop": "https://image.tmdb.org/t/p/original/g62G6aBcAcJv3ClCKmJgmHarHvq.jpg",
-            "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n"
-        },
         {
             "type": "movie",
             "id": 1754045989408,
@@ -5334,16 +5640,6 @@
             "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
             "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
             "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins."
-        },
-        {
-            "type": "series",
-            "seasons": [
-                1
-            ],
-            "id": 17,
-            "title": "Breaking Bad",
-            "backdrop": "https://images.metahub.space/background/medium/tt0903747/img",
-            "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future."
         },
         {
             "type": "series",
@@ -5364,6 +5660,23 @@
             "title": "Gachiakuta",
             "backdrop": "https://image.tmdb.org/t/p/original/mrapJp0qb6Fvo3IW9IrjCK9IgSo.jpg",
             "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge."
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1
+            ],
+            "id": 32,
+            "title": "Dandadan",
+            "backdrop": "https://images.metahub.space/background/medium/tt30217403/img",
+            "description": "When Momo and Okarun's beliefs clash, they're thrown into a world of ghosts, aliens and awakened powers."
+        },
+        {
+            "type": "movie",
+            "id": 8,
+            "title": "Ne Zha II",
+            "backdrop": "https://image.tmdb.org/t/p/original/c9xmB53umjnrCMS4pZz11clF3yJ.jpg",
+            "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.\n\n"
         }
     ]
 }
