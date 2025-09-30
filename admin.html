@@ -881,19 +881,47 @@
             const epDiv = document.createElement('div');
             epDiv.className = 'episode-block';
             epDiv.style = 'background:#2e3347;padding:12px 12px;margin-bottom:10px;border-radius:10px;';
-            // Add the episode number at the top of the episode block
             epDiv.innerHTML = `
-                <div style="font-weight:bold;margin-bottom:8px;">${epIdx}</div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                    <label style="font-weight:bold;">Episode #</label>
+                    <input type="number" class="episode-number" value="${epIdx}" min="1" style="width:90px;padding:8px 10px;border-radius:8px;border:1px solid #ffd700;background:#23283a;color:#fff;">
+                </div>
                 <input type="text" placeholder="Episode Title" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
                 <input type="text" placeholder="Description" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
                 <input type="url" placeholder="Image URL" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
-                <input type="date" placeholder="Added Date" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
+                <input type="date" placeholder="Added Date" class="episode-added-date" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
                 <div class="episode-rating-group">
                     <label>Rating</label>
                     <input type="number" placeholder="Rating" min="0" max="10" step="0.1" style="margin-right:10px;">
                 </div>
                 <button type="button" onclick="this.parentElement.remove()" style="background:#e74c3c;color:#fff;border:none;border-radius:4px;padding:6px 16px;font-size:1.1rem;">Delete</button>
             `;
+            // Auto-fill added date based on previous episode (+7 days) or today
+            const prev = episodesList.lastElementChild;
+            const dateInput = epDiv.querySelector('.episode-added-date');
+            let nextDateStr = '';
+            if (prev) {
+                const prevDateInput = prev.querySelector('.episode-added-date');
+                const prevVal = prevDateInput && prevDateInput.value ? prevDateInput.value : '';
+                if (/^\d{4}-\d{2}-\d{2}$/.test(prevVal)) {
+                    const d = new Date(prevVal + 'T00:00:00Z');
+                    if (!isNaN(d.getTime())) {
+                        d.setUTCDate(d.getUTCDate() + 7);
+                        const y = d.getUTCFullYear();
+                        const m = String(d.getUTCMonth() + 1).padStart(2, '0');
+                        const day = String(d.getUTCDate()).padStart(2, '0');
+                        nextDateStr = `${y}-${m}-${day}`;
+                    }
+                }
+            }
+            if (!nextDateStr) {
+                const now = new Date();
+                const y = now.getFullYear();
+                const m = String(now.getMonth() + 1).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                nextDateStr = `${y}-${m}-${day}`;
+            }
+            if (dateInput) dateInput.value = nextDateStr;
             episodesList.appendChild(epDiv);
         }
 
@@ -1040,23 +1068,22 @@
             if (type === 'series') {
                 item.status = document.getElementById('status').value;
                 item.seasons = [];
-                document.querySelectorAll('#seasonsList .season-block').forEach((seasonDiv, sIdx) => {
-                    const season = { season_number: sIdx + 1, episodes: [] };
-                    seasonDiv.querySelectorAll('.episodes-list .episode-block').forEach((epDiv, epIdx) => {
-                        // Ensure episode number is updated in the block (in case of reordering in the future)
-                        if (epDiv.firstElementChild && epDiv.firstElementChild.tagName === "DIV") {
-                            epDiv.firstElementChild.textContent = (epIdx + 1);
-                        }
-                        season.episodes.push({
-                            title: epDiv.querySelector('input[placeholder="Episode Title"]').value,
-                            description: epDiv.querySelector('input[placeholder="Description"]').value,
-                            image: epDiv.querySelector('input[placeholder="Image URL"]').value,
-                            addedDate: epDiv.querySelector('input[placeholder="Added Date"]')?.value,
-                            rating: epDiv.querySelector('.episode-rating-group input[placeholder="Rating"]')?.value
+                    document.querySelectorAll('#seasonsList .season-block').forEach((seasonDiv, sIdx) => {
+                        const season = { season_number: sIdx + 1, episodes: [] };
+                        seasonDiv.querySelectorAll('.episodes-list .episode-block').forEach((epDiv, epIdx) => {
+                            const epNumInput = epDiv.querySelector('input.episode-number');
+                            const episodeNumber = epNumInput && epNumInput.value ? parseInt(epNumInput.value, 10) : (epIdx + 1);
+                            season.episodes.push({
+                                number: episodeNumber,
+                                title: epDiv.querySelector('input[placeholder="Episode Title"]').value,
+                                description: epDiv.querySelector('input[placeholder="Description"]').value,
+                                image: epDiv.querySelector('input[placeholder="Image URL"]').value,
+                                addedDate: epDiv.querySelector('input[placeholder="Added Date"]')?.value,
+                                rating: epDiv.querySelector('.episode-rating-group input[placeholder="Rating"]')?.value
+                            });
                         });
+                        item.seasons.push(season);
                     });
-                    item.seasons.push(season);
-                });
             }
 
             await saveItem(type, item, id ? 'update' : 'create');

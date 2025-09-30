@@ -189,3 +189,68 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
 }); 
+
+// === Global Toast Notifications (top-right) ===
+;(function(){
+    if (window.showToast) return;
+    window.showToast = function(message, type) {
+        try {
+            const kind = (type || 'info').toLowerCase();
+            let container = document.getElementById('toast-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.id = 'toast-container';
+                container.style.cssText = [
+                    'position:fixed',
+                    'top:16px',
+                    'right:16px',
+                    'z-index:10000',
+                    'display:flex',
+                    'flex-direction:column',
+                    'gap:10px',
+                    'pointer-events:none'
+                ].join(';');
+                document.body.appendChild(container);
+            }
+            const colors = {
+                info: { bg: '#2d7ff9', fg: '#fff', icon: 'ℹ️' },
+                success: { bg: '#27ae60', fg: '#fff', icon: '✔️' },
+                error: { bg: '#e74c3c', fg: '#fff', icon: '⚠️' },
+                warning: { bg: '#f39c12', fg: '#1b1b1b', icon: '⚠️' }
+            };
+            const theme = colors[kind] || colors.info;
+            const toast = document.createElement('div');
+            toast.style.cssText = [
+                `background:${theme.bg}`,
+                `color:${theme.fg}`,
+                'padding:12px 14px',
+                'border-radius:10px',
+                'box-shadow:0 6px 18px rgba(0,0,0,0.25)',
+                'display:flex',
+                'align-items:center',
+                'gap:10px',
+                'min-width:260px',
+                'max-width:360px',
+                'font-weight:600',
+                'pointer-events:auto',
+                'opacity:0',
+                'transform:translateY(-8px)',
+                'transition:opacity .2s ease, transform .2s ease'
+            ].join(';');
+            toast.innerHTML = `<span style="font-size:16px;line-height:1">${theme.icon}</span><span style="line-height:1.2">${message}</span>`;
+            container.appendChild(toast);
+            requestAnimationFrame(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateY(0)';
+            });
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(-8px)';
+                setTimeout(() => { toast.remove(); }, 220);
+            }, 2800);
+        } catch (_) {
+            // fallback
+            try { alert(message); } catch(_) {}
+        }
+    }
+})();

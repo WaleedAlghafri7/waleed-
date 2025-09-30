@@ -49,7 +49,7 @@
         .profile-content {
             padding: 2rem;
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
@@ -292,10 +292,6 @@
                                 <input type="text" id="fullname" name="fullname" value="User Name">
                             </div>
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" id="username" name="username" placeholder="yourname">
-                            </div>
-                            <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" value="user@email.com">
                             </div>
@@ -310,22 +306,6 @@
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                            </div>
-                            <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" id="location" name="location" placeholder="City, Country">
-                            </div>
-                            <div class="form-group">
-                                <label for="occupation">Occupation</label>
-                                <input type="text" id="occupation" name="occupation" placeholder="Your job title">
-                            </div>
-                            <div class="form-group">
-                                <label for="language">Preferred Language</label>
-                                <input type="text" id="language" name="language" placeholder="e.g. English, Arabic">
-                            </div>
-                            <div class="form-group">
-                                <label for="website">Website</label>
-                                <input type="url" id="website" name="website" placeholder="https://example.com">
                             </div>
                             <div class="form-group">
                                 <label for="bio">Bio</label>
@@ -382,9 +362,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem 2rem 2rem;">
-            <button id="deleteAccountBtn" class="save-btn" style="background:#8b0000;">Delete Account</button>
         </div>
     </div>
     <button class="back-arrow" onclick="history.back()" aria-label="رجوع">

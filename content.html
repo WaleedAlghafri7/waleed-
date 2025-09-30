@@ -333,6 +333,7 @@
                 opacity: 0.6;
             }
         }
+
         /* Custom styles for season navigation buttons */
         .season-nav-buttons {
             display: flex;
@@ -340,10 +341,12 @@
             gap: 16px;
             margin: 24px 0 0 0;
         }
+
         .season-nav-btn {
             background-color: rgba(104, 104, 104, 0.171);
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.1); /* أضف حد أزرق */
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            /* أضف حد أزرق */
             padding: 12px 20px;
             border-radius: 8px;
             cursor: pointer;
@@ -358,6 +361,7 @@
             overflow: hidden;
             width: 100%;
         }
+
         .season-nav-btn:disabled {
             display: none;
             background: #888;
@@ -377,6 +381,7 @@
             z-index: 9999;
             padding: 16px;
         }
+
         .episode-sheet {
             background: #1f1f1f;
             color: #fff;
@@ -384,21 +389,24 @@
             width: min(720px, 92vw);
             max-height: 84vh;
             overflow: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .episode-sheet-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 14px 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .episode-sheet-title {
             font-size: 1.1rem;
             font-weight: 700;
             margin: 0;
         }
+
         .episode-sheet-close {
             background: transparent;
             color: #fff;
@@ -408,12 +416,14 @@
             padding: 6px 10px;
             border-radius: 8px;
         }
+
         .episode-sheet-body {
             display: grid;
             grid-template-columns: 140px 1fr;
             gap: 16px;
             padding: 16px;
         }
+
         .episode-sheet-body img {
             width: 140px;
             height: 140px;
@@ -421,73 +431,148 @@
             border-radius: 10px;
             background: #2a2a2a;
         }
+
         .episode-sheet-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin: 6px 0 10px 0;
         }
+
         .episode-sheet-meta span {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 6px 10px;
             border-radius: 999px;
             font-size: 0.9rem;
         }
+
         .episode-sheet-description {
             margin: 8px 0 0 0;
             line-height: 1.6;
-            color: rgba(255,255,255,0.92);
+            color: rgba(255, 255, 255, 0.92);
         }
+
         @media (max-width: 520px) {
             .episode-sheet-body {
                 grid-template-columns: 1fr;
             }
+
             .episode-sheet-body img {
                 width: 100%;
                 height: auto;
                 max-height: 280px;
             }
         }
+
         /* Episode Rating Modal */
         .rating-modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             display: none;
             align-items: center;
             justify-content: center;
             z-index: 10000;
             padding: 16px;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
-        .rating-modal-overlay.active { display: flex; }
+
+        .rating-modal-overlay.active {
+            display: flex;
+        }
+
         .rating-modal {
             background: #1f1f1f;
             color: #fff;
             border-radius: 14px;
             width: min(420px, 92vw);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 18px;
         }
-        .rating-modal-header { display: flex; align-items: center; justify-content: space-between; }
-        .rating-modal-title { font-size: 1.05rem; font-weight: 700; margin: 0; }
-        .rating-modal-close {
-            background: transparent; color: #fff; border: none; font-size: 1.2rem; cursor: pointer; padding: 6px 10px; border-radius: 8px;
+
+        .rating-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .rating-modal-body { padding: 14px 0 4px 0; display: flex; flex-direction: column; gap: 14px; }
-        .rating-stars { display: flex; gap: 8px; justify-content: center; }
-        .rating-star { font-size: 28px; color: #555; cursor: pointer; transition: transform 0.15s ease, color 0.15s ease; }
-        .rating-star.active { color: #ffd93d; text-shadow: 0 0 8px rgba(255,217,61,0.45); }
-        .rating-star:hover { transform: scale(1.1); }
-        .rating-modal-actions { display: flex; gap: 10px; justify-content: flex-end; padding-top: 8px; }
-        .rating-btn { padding: 10px 16px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; }
-        .rating-btn.cancel { background: #e74c3c; color: #fff; }
-        .rating-btn.submit { background: #27ae60; color: #fff; }
+
+        .rating-modal-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .rating-modal-close {
+            background: transparent;
+            color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-radius: 8px;
+        }
+
+        .rating-modal-body {
+            padding: 14px 0 4px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .rating-star {
+            font-size: 28px;
+            color: #555;
+            cursor: pointer;
+            transition: transform 0.15s ease, color 0.15s ease;
+        }
+
+        .rating-star.active {
+            color: #ffd93d;
+            text-shadow: 0 0 8px rgba(255, 217, 61, 0.45);
+        }
+
+        .rating-star:hover {
+            transform: scale(1.1);
+        }
+
+        .rating-modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding-top: 8px;
+        }
+
+        .rating-btn {
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .rating-btn.cancel {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+        .rating-btn.submit {
+            background: #27ae60;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
-      
+
     <div class="container">
         <!-- Header -->
         <div class="header">
@@ -532,7 +617,8 @@
 
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
-                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+                    <img id="user-avatar-img" alt="Avatar"
+                        style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
@@ -599,7 +685,8 @@
                                         <div class="stars">
                                             <h4 style="color: gold;">IMDb</h1>
                                         </div>
-                                        <span id="contentRating" class="rating-value" style="color: rgb(255, 217, 0);"></span>
+                                        <span id="contentRating" class="rating-value"
+                                            style="color: rgb(255, 217, 0);"></span>
                                     </div>
                                 </div>
                             </div>
@@ -662,7 +749,8 @@
                                     <h3>Genre</h3>
                                     <div id="contentGenreTab" class="genre-list"></div>
                                 </div>
-                                <div class="detail-cardTab" style="background-color: rgba(255, 217, 0, 0.555); border: 2px solid rgb(255, 217, 0);">
+                                <div class="detail-cardTab"
+                                    style="background-color: rgba(255, 217, 0, 0.555); border: 2px solid rgb(255, 217, 0);">
                                     <h3 style="color: gold;">IMDb</h3>
                                     <p>
                                         <span id="contentRatingTab"></span>
@@ -762,14 +850,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
         <div id="footer-container"></div>
         <button class="back-arrow" onclick="history.back()" aria-label="رجوع">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
     </div>
@@ -1533,19 +1622,25 @@
         function showToast(message, type = 'error') {
             // Only show error messages, ignore success messages
             if (type !== 'error') return;
-            
+
             let container = document.getElementById('toast-container');
             if (!container) {
                 container = document.createElement('div');
                 container.id = 'toast-container';
                 container.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
+                    position: sticky;
                     z-index: 10000;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    position: sticky;
+                    bottom: 85%;
+                    cursor: pointer;
+                    pointer-events: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
                 `;
                 document.body.appendChild(container);
             }
@@ -1586,7 +1681,7 @@
         function updateAuthUI() {
             const isLoggedIn = isAuthenticated();
             const user = getCurrentUser();
-            
+
             // Update user info in header
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
@@ -1596,7 +1691,7 @@
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
             const userMenu = document.querySelector('.user-menu');
-            
+
             if (isLoggedIn && user) {
                 // Show user info
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
@@ -1616,7 +1711,7 @@
                 // Hide login/register buttons, show logout
                 if (authButtons) authButtons.style.display = 'none';
                 if (logoutBtn) logoutBtn.style.display = 'block';
-                
+
                 // Show all menu options for logged in users
                 if (userMenu) {
                     const menuItems = userMenu.querySelectorAll('button');
@@ -1628,7 +1723,7 @@
                 // Show default info
                 if (userNameEl) userNameEl.textContent = 'User Name';
                 if (userEmailEl) userEmailEl.textContent = 'user@email.com';
-                
+
                 // Show only login button, hide register and all other options
                 if (authButtons) {
                     const loginBtn = authButtons.querySelector('.btn-login');
@@ -1638,7 +1733,7 @@
                     authButtons.style.display = 'flex';
                 }
                 if (logoutBtn) logoutBtn.style.display = 'none';
-                
+
                 // Hide all menu options except login
                 if (userMenu) {
                     const menuItems = userMenu.querySelectorAll('button');
@@ -1647,10 +1742,10 @@
                     });
                 }
             }
-            
+
             // Add logout functionality
             if (logoutBtn) {
-                logoutBtn.onclick = function() {
+                logoutBtn.onclick = function () {
                     localStorage.removeItem('auth_token');
                     localStorage.removeItem('auth_user');
                     updateAuthUI();
@@ -1684,7 +1779,7 @@
             return overlay;
         }
 
-        window.showEpisodeRatingModal = function(epIndex) {
+        window.showEpisodeRatingModal = function (epIndex) {
             if (!isAuthenticated()) {
                 showToast('Please login to rate episodes');
                 return;

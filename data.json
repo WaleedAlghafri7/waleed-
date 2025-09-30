@@ -507,6 +507,7 @@
             "title": "Breaking Bad",
             "genre": "Crime, Drama, Thriller",
             "year": 2008,
+            "releaseDate": "2008-01-01",
             "rating": 9.5,
             "duration": "45min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ineLOBPG8AZsluYwnkMpHRyu7L.jpg",
@@ -514,7 +515,7 @@
             "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
             "language": "English",
             "country": "USA",
-            "ageRating": "18+",
+            "ageRating": "",
             "status": "completed",
             "seasons": [
                 {
@@ -976,8 +977,7 @@
                         }
                     ]
                 }
-            ],
-            "inSlides": false
+            ]
         },
         {
             "id": 18,
@@ -2839,6 +2839,7 @@
                     "season_number": 1,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Tenkai",
                             "description": "Bullied outcast Rudo finds respite in repurposing trash, until a terrible tragedy changes his life forever.",
                             "image": "https://episodes.metahub.space/tt32612521/1/1/w780.jpg",
@@ -2846,6 +2847,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 2,
                             "title": "Yadori-mono",
                             "description": "Cast into the Pit, Rudo is saved by the mysterious Enjin who may not have his best interests at heart.",
                             "image": "https://episodes.metahub.space/tt32612521/1/2/w780.jpg",
@@ -2853,6 +2855,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 3,
                             "title": "Gekai",
                             "description": "After awakening as a Giver, Rudo is chased by Trash Beasts and saved by Enjin who recruits him into the Cleaners At a burger joint Enjin explains Trash Beasts and Vital Instruments. Rudo meets his mentor Zanka.",
                             "image": "https://image.tmdb.org/t/p/original/bmWMdGBlTLKOwbX7d5EQiOZBtFX.jpg",
@@ -2860,6 +2863,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 4,
                             "title": "Soujiya Honbu",
                             "description": "After being introduced to Cleaner HQ, Rudo follows Riyo on a job to learn the business.",
                             "image": "https://image.tmdb.org/t/p/original/7Y3O7q3mOt9f4FSChUIFyAZyRGa.jpg",
@@ -2867,6 +2871,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 5,
                             "title": "Arashi-ya",
                             "description": "The Cleaners go on a job to save another Sphereite who survived the fall. Rudo tags along to learn more.",
                             "image": "https://image.tmdb.org/t/p/original/ztEDVMzddKRUQtvExgKaOVd8pHw.jpg",
@@ -2874,6 +2879,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 6,
                             "title": "Chanto Shita Ichigeki!!",
                             "description": "With the job having gone terribly wrong, Rudo finds himself face to face with a merciless Raider named Jabber.",
                             "image": "https://image.tmdb.org/t/p/original/eWgtva5EavsnGIf3fRZD6Lxj7ge.jpg",
@@ -2881,6 +2887,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 7,
                             "title": "Ketcchaku",
                             "description": "Jabber employs a new strategy to get through Rudo's defenses, and another ally joins the fray.",
                             "image": "https://image.tmdb.org/t/p/original/vXsxNZ9kPKH27DLWVkYYImrkPOT.jpg",
@@ -2888,6 +2895,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 8,
                             "title": "Zenshin",
                             "description": "Rudo deals with the emotional aftermath of the Jabber fight and gets a new lead about returning to the Sphere.",
                             "image": "https://image.tmdb.org/t/p/original/3caLcoFAgTPEA4QDMxJWUFIFR6g.jpg",
@@ -2895,6 +2903,7 @@
                             "rating": "7.6"
                         },
                         {
+                            "number": 9,
                             "title": "Rakugaki no Machi",
                             "description": "To get a \"spell\" for their next mission, the Cleaners head to Canvas Town, where they make a tragic discovery.",
                             "image": "https://image.tmdb.org/t/p/original/qJ4aOklpW9t9HLltLo8y3HthOZL.jpg",
@@ -2902,27 +2911,31 @@
                             "rating": "7.6"
                         },
                         {
-                            "title": "",
+                            "number": 10,
+                            "title": "Sabaku no Kiniki \"Penta\"",
                             "description": "Remlin casts a protective spell on the Keepers before they journey into the desert to find a mysterious woman.",
                             "image": "https://image.tmdb.org/t/p/original/e2iniIW4GZOfpzsYm3Gs9V3rrTa.jpg",
                             "addedDate": "2025-09-14",
                             "rating": "8.0"
                         },
                         {
-                            "title": "",
+                            "number": 11,
+                            "title": "Amo no Motenashi",
                             "description": "A mysterious woman living in the No Man's Land challenges the crew from an unexpected angle.",
                             "image": "https://image.tmdb.org/t/p/original/a8FkL2y74TlH8T7FroXRVPn2O9a.jpg",
                             "addedDate": "2025-09-21",
                             "rating": "8.2"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "number": 12,
+                            "title": "Noroi no You na Mono Kashira",
+                            "description": "Tamsy and Zanka fight to save their captive allies. In the aftermath, Rudo has an unexpected reaction.",
+                            "image": "https://image.tmdb.org/t/p/original/iM9y3lJYQXifyvu9NPZIXW1qKGk.jpg",
                             "addedDate": "2025-09-28",
-                            "rating": ""
+                            "rating": "8.8"
                         },
                         {
+                            "number": 13,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2930,6 +2943,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 14,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2937,6 +2951,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 15,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2944,6 +2959,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 16,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2951,6 +2967,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 17,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2958,6 +2975,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 18,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2965,6 +2983,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 19,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2972,6 +2991,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 20,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2979,6 +2999,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 21,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2986,6 +3007,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 22,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -2993,6 +3015,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 23,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -3000,6 +3023,7 @@
                             "rating": ""
                         },
                         {
+                            "number": 24,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -3403,6 +3427,7 @@
                     "season_number": 1,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Rintaro and Kaoruko",
                             "description": "While helping at his family's patisserie, Rintaro meets Kaoruko. He fears his appearance has scared her off - but she returns the next day to see him.",
                             "image": "https://episodes.metahub.space/tt36592690/1/1/w780.jpg",
@@ -3410,6 +3435,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 2,
                             "title": "Chidori and Kikyo",
                             "description": "Tensions between the two schools escalate during a commotion at Chidori's gates. Later, Rintaro finds a surprise visitor waiting at the patisserie.",
                             "image": "https://episodes.metahub.space/tt36592690/1/2/w780.jpg",
@@ -3417,6 +3443,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 3,
                             "title": "Yasashii Hito",
                             "description": "Desperate to improve their grades, Rintaro and Shohei cram in the library. There, Rintaro runs into Kaoruko, but their tender moment gets interrupted.",
                             "image": "https://episodes.metahub.space/tt36592690/1/3/w780.jpg",
@@ -3424,6 +3451,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 4,
                             "title": "Kokoro no Ondo",
                             "description": "Though Rintaro becomes more comfortable with Kaoruko during their study session, he faces unexpectedly strong opposition to their growing bond.",
                             "image": "https://episodes.metahub.space/tt36592690/1/4/w780.jpg",
@@ -3431,6 +3459,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 5,
                             "title": " Premonition of a New Beginning",
                             "description": "While celebrating passing the mid-term exams, Shohei, Ayato and Saku nearly discover Rintaro's secret. Will he finally tell them the truth ?",
                             "image": "https://episodes.metahub.space/tt36592690/1/5/w780.jpg",
@@ -3438,6 +3467,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 6,
                             "title": "Self-Loathing / I Love You!",
                             "description": "It's an important night of confessions, apologies and cherished memories when Subaru and Kaoruko catch up at the park where they used to play as kids.",
                             "image": "https://image.tmdb.org/t/p/original/cgZ7lmFvThuWsugfVRm0Y1h3f41.jpg",
@@ -3445,6 +3475,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 7,
                             "title": "Kakkoii Otoko",
                             "description": "Noticing Rintaro's strange behavior, Shohei, Saku and Ayato follow him after school and try to eavesdrop on his meeting with Kaoruko and Subaru.",
                             "image": "https://image.tmdb.org/t/p/original/ywbxPaeBLYJmatNTTd9yPTxFKXB.jpg",
@@ -3452,6 +3483,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 8,
                             "title": "Kanjou no Shoutai",
                             "description": "Despite the awkwardness, Rintaro manages to introduce his friends to the girls. Later, Kaoruko makes a bold suggestion on how Rintaro could repay her.",
                             "image": "https://image.tmdb.org/t/p/original/ySLYVSDHDdGq8jo4SSTZoYWAvJg.jpg",
@@ -3459,6 +3491,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 9,
                             "title": "Kinpatsu to Piasu",
                             "description": "While Rintaro struggles with his tangled emotions about Kaoruko, he invites his friends over to his home - but two unexpected visitors shake things up.",
                             "image": "https://image.tmdb.org/t/p/original/y8TqA2W1MnlnOHZJf1tsCYWisTr.jpg",
@@ -3466,6 +3499,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 10,
                             "title": "Aoi Arashi",
                             "description": "To prepare for their finals, the six Chidori and Kikyo students hold a joint study session. Later, Shohei makes a sharp observation about Rintaro.",
                             "image": "https://image.tmdb.org/t/p/original/wKP3eypkEkJyAXkc8WJWJNkMWIz.jpg",
@@ -3473,6 +3507,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 11,
                             "title": "Nukumori no Hitokuchi",
                             "description": "Kaoruko's birthday is in two weeks, and Rintaro is unsure of a gift until his mother gives valuable advice. Can he bake the perfect cake for her?",
                             "image": "https://image.tmdb.org/t/p/original/mYGVQAF5yRBQ2EFEXEt9kH3uds.jpg",
@@ -3480,6 +3515,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 12,
                             "title": "Umibe no Madoi",
                             "description": "While everyone else is having fun at the beach, Subaru seems down. When prodded, she reveals her worries and makes a request to the four Chidori boys.",
                             "image": "https://image.tmdb.org/t/p/original/7Du0SRnco3bPWduFINeGEn1ZOkt.jpg",
@@ -3487,11 +3523,12 @@
                             "rating": "8.9"
                         },
                         {
-                            "title": "",
-                            "description": "",
-                            "image": "",
-                            "addedDate": "2025-09-27",
-                            "rating": ""
+                            "number": 13,
+                            "title": "Kaoruko to Rintaro",
+                            "description": "With things still left unspoken between them, Rintaro arranges to meet Kaoruko and express his true feelings. Kaoruko has her own thoughts to share.",
+                            "image": "https://image.tmdb.org/t/p/original/nYxoMY6vj85vbVIGuPRVFslC0Qj.jpg",
+                            "addedDate": "2025-09-28",
+                            "rating": "9.5"
                         }
                     ]
                 }
@@ -3502,6 +3539,7 @@
             "title": "From",
             "genre": "Drama, Horror, Mystery",
             "year": 2022,
+            "releaseDate": "2022-02-20",
             "rating": 7.8,
             "duration": "52min",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cjXLrg4R7FRPFafvuQ3SSznQOd9.jpg",
@@ -3509,7 +3547,7 @@
             "description": "Unravel the mystery of a city in middle U.S.A. that imprisons everyone who enters. As the residents struggle to maintain a sense of normality and seek a way out, they must also survive the threats of the surrounding forest.",
             "language": " English",
             "country": "United States",
-            "ageRating": "18+",
+            "ageRating": "",
             "status": "ongoing",
             "seasons": [
                 {
@@ -3743,14 +3781,13 @@
                         {
                             "title": "",
                             "description": "",
-                            "image": "https://episodes.metahub.space/tt9813792/4/1/w780.jpg",
+                            "image": "",
                             "addedDate": "",
                             "rating": ""
                         }
                     ]
                 }
-            ],
-            "inSlides": false
+            ]
         },
         {
             "id": 37,
@@ -5619,6 +5656,164 @@
                             "description": "",
                             "image": "",
                             "addedDate": "2025-10-04",
+                            "rating": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "One Piece",
+            "genre": "Action Epic, Adventure Epic, Anime, Fantasy Epic, Globetrotting Adventure, Hand-Drawn Animtion, Martial Arts, Quest, Shonen, Sea Adventure",
+            "year": 1999,
+            "releaseDate": "1999-10-20",
+            "rating": 9,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+            "description": "Rubber-bodied dreamer Monkey D. Luffy gathers an eclectic pirate crew and braves the perilous Grand Line, battling tyrants and monsters to claim the legendary \"One Piece\" and become King of the Pirates.",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": "TV-14",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "title": "I'm Luffy! The Man Who Will Become the Pirate King!",
+                            "description": "Rubber-bodied rookie Monkey D. Luffy drifts out of Foosha Village in a barrel, clobbers iron-mace Alvida, liberates timid deckhand Koby, and vows to claim the legendary One Piece and crown himself Pirate King.",
+                            "image": "https://image.tmdb.org/t/p/original/jQFsHzYKQDxvIpX42PqszYUmpn5.jpg",
+                            "addedDate": "1999-10-20",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro",
+                            "description": "In Shells Town, Luffy frees feared bounty hunter Roronoa Zoro from corrupt Marine Captain Morgan's clutches, gaining a swordsman crewmate and drawing Navy fire.",
+                            "image": "https://image.tmdb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
+                            "addedDate": "1999-10-27",
+                            "rating": "8.4"
+                        },
+                        {
+                            "title": "Morgan vs. Luffy! Who's This Beautiful Young Girl?",
+                            "description": "Luffy and Zoro battle axe-armed Captain Morgan and cowardly son Helmeppo to save Coby and a captive girl, toppling the tyrant and earning a Marine bounty on Luffy's head.",
+                            "image": "https://image.tmdb.org/t/p/original/x1sa7mhf3J7514uGnnGczYydCL0.jpg",
+                            "addedDate": "1999-11-24",
+                            "rating": "7.9"
+                        },
+                        {
+                            "title": " Luffy's Past! The Red-haired Shanks Appears!",
+                            "description": "On their first voyage together, Luffy recalls how red-haired pirate Shanks inspired his dream--and sacrificed an arm to save him--while Coby stays behind to join the Marines.",
+                            "image": "https://image.tmdb.org/t/p/original/8gqdS3yFEL1OvMXbeyftGGphUSz.jpg",
+                            "addedDate": "1999-12-08",
+                            "rating": "8.3"
+                        },
+                        {
+                            "title": "Fear, Mysterious Power! Pirate Clown Captain Buggy!",
+                            "description": "Luffy and Zoro arrive in Orange Town, reluctantly ally with thief Nami, and clash with body-splitting clown captain Buggy, whose devastating Buggy Balls threaten to level the city along with their Grand Line dreams.",
+                            "image": "https://image.tmdb.org/t/p/original/1N8bpV584Hi4tv1oOLCEmVuaQBx.jpg",
+                            "addedDate": "1999-12-15",
+                            "rating": "7.4"
+                        },
+                        {
+                            "title": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
+                            "description": "To save Orange Town, Luffy faces beast-tamer Mohji and his giant lion Richie, while Nami slips off with Buggy's loot and an injured Zoro shields the townsfolk.",
+                            "image": "https://image.tmdb.org/t/p/original/qTE8AafunxIsQv9m4sK8VB7zGJa.jpg",
+                            "addedDate": "1999-12-29",
+                            "rating": "7.6"
+                        },
+                        {
+                            "title": " Souzetsu Kettou! Kengou Zoro vs Kyokugei no Cabaji!",
+                            "description": "Bleeding but unbowed, Zoro duels acrobat Cabaji atop Buggy's circus ruins; Luffy reassembles and launches the clown captain skyward, liberating Orange Town.",
+                            "image": "https://image.tmdb.org/t/p/original/bisy5k84xvYCquPx94Bz6MiO2jh.jpg",
+                            "addedDate": "1999-12-29",
+                            "rating": "7.5"
+                        },
+                        {
+                            "title": "Shousha wa Dotchi? Akuma no Mi no Nouryoku Taiketsu!",
+                            "description": "Buggy reunites his body, fires a colossal Buggy Ball, but Luffy ricochets it back, wrecking the pirate's ship; Nami steals the Grand Line map and joins the voyage.",
+                            "image": "https://image.tmdb.org/t/p/original/7tQnl9cLghQfRqgtx5i7oc1vZJZ.jpg",
+                            "addedDate": "1999-12-29",
+                            "rating": "7.7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1759258577665,
+            "title": "Task",
+            "genre": "Crime, Drama",
+            "year": 2025,
+            "releaseDate": "2025-09-07",
+            "rating": 7.7,
+            "duration": "1h",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/hEE8TV5jLQZQnpPN4QmYZ1lCJNq.jpg",
+            "description": "In the working-class suburbs of Philadelphia, an FBI agent heads a task force to put an end to a string of violent robberies led by an unsuspected family man.\n\n",
+            "language": "English",
+            "country": "United States",
+            "ageRating": "TV-MA",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Crossings",
+                            "description": "Agent Brandis leads a new team investigating robberies while coping with personal loss. Robbie Prendergrast steals from drug dealers to support his family after his brother's death, until a tip goes wrong.",
+                            "image": "https://image.tmdb.org/t/p/original/yyOAoNHDBnAJrtlq6RVC8citDeb.jpg",
+                            "addedDate": "2025-09-07",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Family Statements",
+                            "description": "As Tom's family braces for an emotional court date, Robbie faces a dilemma, and Maeve makes a critical choice.",
+                            "image": "https://image.tmdb.org/t/p/original/v08yvIVLrGoddvx9UFQL4HjKvxw.jpg",
+                            "addedDate": "2025-09-14",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Nobody's Stronger Than Forgiveness",
+                            "description": "As Robbie and Cliff try to find a potential buyer, Tom and Grasso level with the Dark Hearts, and Aleah and Lizzie question Peaches' former coworkers. Later, a raid leads Tom to a shocking revelation.",
+                            "image": "https://image.tmdb.org/t/p/original/wl9bj8k9PkmrverZ4kq58qCz5hG.jpg",
+                            "addedDate": "2025-09-21",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 4,
+                            "title": "All Roads",
+                            "description": "Tom doubts his Task Force's loyalty during operation prep. Robbie and Cliff plan their park meeting. Perry investigates the gang, finding startling info. Maeve questions Robbie's escape strategy.",
+                            "image": "https://image.tmdb.org/t/p/original/2yZh9qf39Z1BcsxX6ucKJMQCIRt.jpg",
+                            "addedDate": "2025-09-28",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Vagrants",
+                            "description": "With help from an eyewitness, Tom and his team inch closer to breaking the case. Perry pays Maeve a visit, while Robbie puts his plan in motion. Later, Tom follows a lead that takes him down a dangerous path.",
+                            "image": "",
+                            "addedDate": "2025-10-05",
+                            "rating": ""
+                        },
+                        {
+                            "number": 6,
+                            "title": "Out Beyond Ideas of Wrongdoing and Rightdoing, There Is a River.",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-12",
+                            "rating": ""
+                        },
+                        {
+                            "number": 7,
+                            "title": "A Still Small Voice",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-19",
                             "rating": ""
                         }
                     ]

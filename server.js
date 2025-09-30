@@ -152,7 +152,7 @@ app.post('/api/login', async (req, res) => {
 
 app.post('/api/profile/update', async (req, res) => {
     try {
-        const { id, fullName, email, phone, bio, gender, birthdate, newPassword, username, location, occupation, language, website } = req.body;
+        const { id, fullName, email, phone, bio, gender, birthdate, newPassword } = req.body;
         
         if (!id) {
             return res.status(400).json({ error: 'User ID is required' });
@@ -174,11 +174,6 @@ app.post('/api/profile/update', async (req, res) => {
             bio: bio || users[userIndex].bio,
             gender: gender || users[userIndex].gender,
             birthdate: birthdate || users[userIndex].birthdate,
-            username: username || users[userIndex].username,
-            location: location || users[userIndex].location,
-            occupation: occupation || users[userIndex].occupation,
-            language: language || users[userIndex].language,
-            website: website || users[userIndex].website,
             updatedAt: new Date().toISOString()
         };
 
@@ -194,7 +189,6 @@ app.post('/api/profile/update', async (req, res) => {
         const userWithoutPassword = sanitizeUser(users[userIndex]);
         
         res.json({
-            message: 'Profile updated successfully',
             user: userWithoutPassword
         });
     } catch (error) {
@@ -233,32 +227,11 @@ app.post('/api/profile/avatar', upload.single('avatar'), (req, res) => {
         const userWithoutPassword = sanitizeUser(users[userIndex]);
         
         res.json({
-            message: 'Avatar updated successfully',
             user: userWithoutPassword,
             avatarUrl
         });
     } catch (error) {
         console.error('Avatar upload error:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
-
-app.post('/api/profile/delete', (req, res) => {
-    try {
-        const { id } = req.body;
-        if (!id) {
-            return res.status(400).json({ error: 'User ID is required' });
-        }
-        const users = readUsers();
-        const userIndex = users.findIndex(u => u.id === id);
-        if (userIndex === -1) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-        const [deleted] = users.splice(userIndex, 1);
-        writeUsers(users);
-        res.json({ message: 'Account deleted successfully' });
-    } catch (error) {
-        console.error('Delete account error:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
