@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="search-input-container">
-                    <input type="text" placeholder="Search for movies or series...">
+                    <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
             <div class="name-wab">
@@ -51,15 +51,13 @@
                     </div>
                 </div>
                 <!-- Auth Buttons -->
-                
+
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
+                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
-                        <div class="user-avatar">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
                         <div class="user-details">
                             <h4 id="user-name">User Name</h4>
                             <p id="user-email">user@email.com</p>
@@ -70,10 +68,6 @@
                             <a href="login.html" class="btn btn-login">
                                 <i class="fas fa-sign-in-alt"></i>
                                 Login
-                            </a>
-                            <a href="register.html" class="btn btn-register">
-                                <i class="fas fa-user-plus"></i>
-                                Register
                             </a>
                         </div>
                         <button onclick="window.location.href='profile.html'">
@@ -196,12 +190,27 @@
     
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
+            const userAvatarImg = document.getElementById('user-avatar-img');
+            const userAvatarIcon = document.querySelector('.user-avatar i');
+            const userTopIcon = document.querySelector('.user-icon i');
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
     
             if (isLoggedIn && user) {
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
+                if (userAvatarImg) {
+                    if (user.avatarUrl) {
+                        userAvatarImg.src = user.avatarUrl;
+                        userAvatarImg.style.display = 'block';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'none';
+                        if (userTopIcon) userTopIcon.style.display = 'none';
+                    } else {
+                        userAvatarImg.style.display = 'none';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'inline-block';
+                        if (userTopIcon) userTopIcon.style.display = 'inline-block';
+                    }
+                }
                 if (authButtons) authButtons.style.display = 'none';
                 if (logoutBtn) logoutBtn.style.display = 'block';
             } else {

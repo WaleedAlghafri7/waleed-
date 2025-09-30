@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const registerForm = document.getElementById('register-form');
     const loginForm = document.getElementById('login-form');
+    const redirectIfLoggedIn = () => {
+        const hasToken = localStorage.getItem('auth_token');
+        const hasUser = localStorage.getItem('auth_user');
+        if (hasToken && hasUser && window.location.pathname.endsWith('login.html')) {
+            window.location.href = 'index.html';
+        }
+    };
 
     async function postJSON(url, data) {
         const res = await fetch(url, {
@@ -44,11 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await postJSON('/api/login', { email, password });
                 localStorage.setItem('auth_token', data.token);
                 localStorage.setItem('auth_user', JSON.stringify(data.user));
+                try {
+                    const headerAvatar = document.getElementById('user-avatar-img');
+                    if (headerAvatar && data.user && data.user.avatarUrl) {
+                        headerAvatar.src = data.user.avatarUrl;
+                        headerAvatar.style.display = 'block';
+                    }
+                } catch (_) {}
                 window.location.href = 'index.html';
             } catch (err) {
                 alert(err.message);
             }
         });
     }
+
+    redirectIfLoggedIn();
 });
 

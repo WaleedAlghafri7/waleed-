@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="search-input-container">
-                    <input type="text" placeholder="Search for movies or series...">
+                    <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
             <div class="name-wab">
@@ -51,9 +51,10 @@
                     </div>
                 </div>
                 <!-- Auth Buttons -->
-                
-                <div class="user-icon">
+
+                <div class="user-icon" style="display: none;">
                     <i class="fa-solid fa-user"></i>
+                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
@@ -70,10 +71,6 @@
                             <a href="login.html" class="btn btn-login">
                                 <i class="fas fa-sign-in-alt"></i>
                                 Login
-                            </a>
-                            <a href="register.html" class="btn btn-register">
-                                <i class="fas fa-user-plus"></i>
-                                Register
                             </a>
                         </div>
                         <button onclick="window.location.href='profile.html'">

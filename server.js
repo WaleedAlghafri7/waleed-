@@ -42,6 +42,10 @@ const upload = multer({ storage, fileFilter: imageFileFilter });
 app.use('/uploads', express.static('uploads'));
 
 // Helper functions
+function sanitizeUser(user) {
+    const { password, passwordHash, ...safe } = user;
+    return safe;
+}
 function readUsers() {
     try {
         const data = require('fs').readFileSync('users.json', 'utf8');
@@ -74,12 +78,12 @@ app.post('/api/register', async (req, res) => {
         // Hash password
         const hashedPassword = await bcrypt.hash(password, 10);
         
-        // Create new user
+        // Create new user (store as passwordHash for consistency)
         const newUser = {
             id: nanoid(),
             fullName,
             email,
-            password: hashedPassword,
+            passwordHash: hashedPassword,
             createdAt: new Date().toISOString(),
             avatarUrl: null
         };
@@ -90,8 +94,8 @@ app.post('/api/register', async (req, res) => {
         // Generate token
         const token = nanoid();
         
-        // Return user data (without password)
-        const { password: _, ...userWithoutPassword } = newUser;
+        // Return user data (without password fields)
+        const userWithoutPassword = sanitizeUser(newUser);
         
         res.json({
             message: 'User registered successfully',
@@ -119,7 +123,11 @@ app.post('/api/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid credentials' });
         }
 
-        const isValidPassword = await bcrypt.compare(password, user.password);
+        const storedHash = user.password || user.passwordHash;
+        if (!storedHash) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+        const isValidPassword = await bcrypt.compare(password, storedHash);
         
         if (!isValidPassword) {
             return res.status(401).json({ error: 'Invalid credentials' });
@@ -128,8 +136,8 @@ app.post('/api/login', async (req, res) => {
         // Generate token
         const token = nanoid();
         
-        // Return user data (without password)
-        const { password: _, ...userWithoutPassword } = user;
+        // Return user data (without password fields)
+        const userWithoutPassword = sanitizeUser(user);
         
         res.json({
             message: 'Login successful',
@@ -142,9 +150,9 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-app.post('/api/profile/update', (req, res) => {
+app.post('/api/profile/update', async (req, res) => {
     try {
-        const { id, fullName, email, phone, bio } = req.body;
+        const { id, fullName, email, phone, bio, gender, birthdate, newPassword, username, location, occupation, language, website } = req.body;
         
         if (!id) {
             return res.status(400).json({ error: 'User ID is required' });
@@ -164,13 +172,26 @@ app.post('/api/profile/update', (req, res) => {
             email: email || users[userIndex].email,
             phone: phone || users[userIndex].phone,
             bio: bio || users[userIndex].bio,
+            gender: gender || users[userIndex].gender,
+            birthdate: birthdate || users[userIndex].birthdate,
+            username: username || users[userIndex].username,
+            location: location || users[userIndex].location,
+            occupation: occupation || users[userIndex].occupation,
+            language: language || users[userIndex].language,
+            website: website || users[userIndex].website,
             updatedAt: new Date().toISOString()
         };
 
+        // Handle password change if requested
+        if (newPassword && typeof newPassword === 'string' && newPassword.length >= 6) {
+            const hashed = await bcrypt.hash(newPassword, 10);
+            users[userIndex].passwordHash = hashed;
+        }
+
         writeUsers(users);
 
-        // Return updated user data (without password)
-        const { password: _, ...userWithoutPassword } = users[userIndex];
+        // Return updated user data (without password fields)
+        const userWithoutPassword = sanitizeUser(users[userIndex]);
         
         res.json({
             message: 'Profile updated successfully',
@@ -208,8 +229,8 @@ app.post('/api/profile/avatar', upload.single('avatar'), (req, res) => {
 
         writeUsers(users);
 
-        // Return updated user data (without password)
-        const { password: _, ...userWithoutPassword } = users[userIndex];
+        // Return updated user data (without password fields)
+        const userWithoutPassword = sanitizeUser(users[userIndex]);
         
         res.json({
             message: 'Avatar updated successfully',
@@ -218,6 +239,26 @@ app.post('/api/profile/avatar', upload.single('avatar'), (req, res) => {
         });
     } catch (error) {
         console.error('Avatar upload error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+app.post('/api/profile/delete', (req, res) => {
+    try {
+        const { id } = req.body;
+        if (!id) {
+            return res.status(400).json({ error: 'User ID is required' });
+        }
+        const users = readUsers();
+        const userIndex = users.findIndex(u => u.id === id);
+        if (userIndex === -1) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        const [deleted] = users.splice(userIndex, 1);
+        writeUsers(users);
+        res.json({ message: 'Account deleted successfully' });
+    } catch (error) {
+        console.error('Delete account error:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 });

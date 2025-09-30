@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="search-input-container">
-                    <input type="text" placeholder="Search for movies or series...">
+                    <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
             <div class="name-wab">
@@ -51,21 +51,25 @@
                     </div>
                 </div>
                 <!-- Auth Buttons -->
-                
+
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
+                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
-                        <div class="user-avatar">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
                         <div class="user-details">
                             <h4 id="user-name">User Name</h4>
                             <p id="user-email">user@email.com</p>
                         </div>
                     </div>
                     <div class="user-menu">
+                        <div class="auth-buttons">
+                            <a href="login.html" class="btn btn-login">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Login
+                            </a>
+                        </div>
                         <button onclick="window.location.href='profile.html'">
                             <i class="fa-solid fa-user-gear"></i>
                             Profile Settings
@@ -93,9 +97,9 @@
                 <div class="section-header">
                     <h2>All Content</h2>
                     <div class="filter-options">
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="movies">Movies</button>
-                        <button class="filter-btn" data-filter="series">Series</button>
+                        <button class="filter-btn active" data-filter="all" style="display:none;">All</button>
+                        <button class="filter-btn" data-filter="movies" style="display:none;">Movies</button>
+                        <button class="filter-btn" data-filter="series" style="display:none;">Series</button>
                         <select class="genre-select">
                             <option value="all">All Genres</option>
                         </select>
@@ -121,7 +125,7 @@
             </svg>
         </button>
     </div>
-    <script>
+    <script type="module">
         // ==== إدارة تسجيل الدخول ====
         function getCurrentUser() {
             try {
@@ -138,24 +142,54 @@
         }
     
         function updateAuthUI() {
-            const user = getCurrentUser();
             const isLoggedIn = isAuthenticated();
+            const user = getCurrentUser();
     
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
+            const userAvatarImg = document.getElementById('user-avatar-img');
+            const userAvatarIcon = document.querySelector('.user-avatar i');
+            const userTopIcon = document.querySelector('.user-icon i');
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
+            const userMenu = document.querySelector('.user-menu');
     
             if (isLoggedIn && user) {
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
+                if (userAvatarImg) {
+                    if (user.avatarUrl) {
+                        userAvatarImg.src = user.avatarUrl;
+                        userAvatarImg.style.display = 'block';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'none';
+                        if (userTopIcon) userTopIcon.style.display = 'none';
+                    } else {
+                        userAvatarImg.style.display = 'none';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'inline-block';
+                        if (userTopIcon) userTopIcon.style.display = 'inline-block';
+                    }
+                }
                 if (authButtons) authButtons.style.display = 'none';
                 if (logoutBtn) logoutBtn.style.display = 'block';
+                if (userMenu) {
+                    const menuItems = userMenu.querySelectorAll('button');
+                    menuItems.forEach(item => item.style.display = 'block');
+                }
             } else {
                 if (userNameEl) userNameEl.textContent = 'User Name';
                 if (userEmailEl) userEmailEl.textContent = 'user@email.com';
-                if (authButtons) authButtons.style.display = 'flex';
+                if (authButtons) {
+                    const loginBtn = authButtons.querySelector('.btn-login');
+                    const registerBtn = authButtons.querySelector('.btn-register');
+                    if (loginBtn) loginBtn.style.display = 'block';
+                    if (registerBtn) registerBtn.style.display = 'none';
+                    authButtons.style.display = 'flex';
+                }
                 if (logoutBtn) logoutBtn.style.display = 'none';
+                if (userMenu) {
+                    const menuItems = userMenu.querySelectorAll('button');
+                    menuItems.forEach(item => item.style.display = 'none');
+                }
             }
     
             if (logoutBtn) {
@@ -168,30 +202,34 @@
             }
         }
     
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                updateAuthUI();
+            });
+    
         document.addEventListener('DOMContentLoaded', updateAuthUI);
-        // تهيئة البحث
+    
+        // ==== البحث وقائمة المستخدم ====
         function initializeSearch() {
             const searchIcon = document.querySelector('.search-icon');
             const searchInput = document.querySelector('.search input');
             const searchContainer = document.querySelector('.search-input-container');
-
+    
             searchIcon.addEventListener('click', () => {
                 searchIcon.classList.toggle('active');
                 searchInput.classList.toggle('active');
-                if (searchInput.classList.contains('active')) {
-                    searchInput.focus();
-                }
+                if (searchInput.classList.contains('active')) searchInput.focus();
             });
-
+    
             searchInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     const searchQuery = searchInput.value.trim();
-                    if (searchQuery) {
-                        window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
-                    }
+                    if (searchQuery) window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
                 }
             });
-
+    
             document.addEventListener('click', (e) => {
                 if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
                     searchIcon.classList.remove('active');
@@ -199,42 +237,36 @@
                 }
             });
         }
-
-        // تهيئة قائمة المستخدم
+    
         function initializeUserMenu() {
             const userIcon = document.querySelector('.user-icon');
             const userDropdown = document.querySelector('.user-dropdown');
             const menuButton = document.querySelector('.list-siting-button');
             const menuItems = document.querySelector('.list-siting-item');
-
+    
             userIcon.addEventListener('click', (e) => {
                 e.stopPropagation();
                 userDropdown.classList.toggle('active');
                 menuItems.classList.remove('active');
                 menuButton.classList.remove('active');
             });
-
+    
             menuButton.addEventListener('click', (e) => {
                 e.stopPropagation();
                 menuItems.classList.toggle('active');
                 menuButton.classList.toggle('active');
                 userDropdown.classList.remove('active');
             });
-
-            userDropdown.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-
-            menuItems.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-
+    
+            userDropdown.addEventListener('click', (e) => e.stopPropagation());
+            menuItems.addEventListener('click', (e) => e.stopPropagation());
+    
             document.addEventListener('click', () => {
                 userDropdown.classList.remove('active');
                 menuItems.classList.remove('active');
                 menuButton.classList.remove('active');
             });
-
+    
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     userDropdown.classList.remove('active');
@@ -243,18 +275,18 @@
                 }
             });
         }
-
-        // استخراج جميع الأنواع من البيانات
+    
+        // ==== عرض المحتوى وإدارة الفلاتر ====
+        let globalData = null;
+        let genresPopulated = false;
+    
         function extractGenres(data) {
             const genresSet = new Set();
             const addGenres = (arr) => {
                 arr.forEach(item => {
                     if (item.genre) {
-                        if (Array.isArray(item.genre)) {
-                            item.genre.forEach(g => genresSet.add(g.trim()));
-                        } else if (typeof item.genre === 'string') {
-                            item.genre.split(',').forEach(g => genresSet.add(g.trim()));
-                        }
+                        if (Array.isArray(item.genre)) item.genre.forEach(g => genresSet.add(g.trim()));
+                        else if (typeof item.genre === 'string') item.genre.split(',').forEach(g => genresSet.add(g.trim()));
                     }
                 });
             };
@@ -262,11 +294,7 @@
             addGenres(data.series || []);
             return Array.from(genresSet).filter(g => g && g.toLowerCase() !== 'unknown').sort();
         }
-
-        // تحميل وعرض المحتوى
-        let globalData = null;
-        let genresPopulated = false;
-
+    
         async function loadContent() {
             try {
                 if (!globalData) {
@@ -274,13 +302,11 @@
                     globalData = await response.json();
                 }
                 const data = globalData;
-                let allContent = [...data.movies, ...data.series];
-
-                // Apply incoming genre filter from URL if present
+                let allContent = [...data.series, ...data.movies];
+    
                 const params = new URLSearchParams(window.location.search);
                 const initialGenre = params.get('genre');
-
-                // Populate genres dropdown once
+    
                 if (!genresPopulated) {
                     const genres = extractGenres(data);
                     const genreSelect = document.querySelector('.genre-select');
@@ -291,20 +317,16 @@
                         genreSelect.appendChild(opt);
                     });
                     genresPopulated = true;
-                    if (initialGenre) {
-                        genreSelect.value = initialGenre;
-                    }
+                    if (initialGenre) genreSelect.value = initialGenre;
                 }
-
-                // تطبيق الفلتر النشط (Movies/Series)
+    
                 const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
                 if (activeFilter !== 'all') {
                     allContent = allContent.filter(item => 
-                        activeFilter === 'movies' ? !item.seasons : item.seasons
+                        activeFilter === 'series' || activeFilter === 'movies' ? !item.seasons : item.seasons
                     );
                 }
-
-                // فلترة حسب النوع
+    
                 const genreValue = document.querySelector('.genre-select').value;
                 if (genreValue && genreValue !== 'all') {
                     allContent = allContent.filter(item => {
@@ -317,107 +339,36 @@
                         return false;
                     });
                 }
-
-                // تطبيق الترتيب (تم التعديل هنا)
+    
                 const sortValue = document.querySelector('.sort-select').value;
-                switch (sortValue) {
-                    case 'rating':
-                        allContent.sort((a, b) => {
-                            const ra = typeof a.rating === 'number' ? a.rating : parseFloat(a.rating) || 0;
-                            const rb = typeof b.rating === 'number' ? b.rating : parseFloat(b.rating) || 0;
-                            return rb - ra;
-                        });
-                        break;
-                    case 'popularity':
-                        allContent.sort((a, b) => {
-                            const pa = typeof a.popularity === 'number' ? a.popularity : parseFloat(a.popularity) || 0;
-                            const pb = typeof b.popularity === 'number' ? b.popularity : parseFloat(b.popularity) || 0;
-                            return pb - pa;
-                        });
-                        break;
-                    case 'oldest':
-                        allContent.sort((a, b) => {
-                            const getFullDate = (item) => {
-                                // أولوية للتاريخ الكامل (releaseDate)
-                                if (item.releaseDate) {
-                                    const date = new Date(item.releaseDate);
-                                    if (!isNaN(date.getTime())) return date;
-                                }
-                                
-                                // إذا لم يكن هناك تاريخ كامل، استخدم السنة
-                                if (item.year) {
-                                    const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
-                                    if (!isNaN(year)) return new Date(year, 0, 1);
-                                }
-                                
-                                // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
-                                if (item.addedDate) {
-                                    const date = new Date(item.addedDate);
-                                    if (!isNaN(date.getTime())) return date;
-                                }
-                                
-                                // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
-                                return new Date(0);
-                            };
-                            return getFullDate(a) - getFullDate(b);
-                        });
-                        break;
-                    case 'az':
-                        allContent.sort((a, b) => {
-                            const ta = (a.title || '').toLowerCase();
-                            const tb = (b.title || '').toLowerCase();
-                            if (ta < tb) return -1;
-                            if (ta > tb) return 1;
-                            return 0;
-                        });
-                        break;
-                    case 'za':
-                        allContent.sort((a, b) => {
-                            const ta = (a.title || '').toLowerCase();
-                            const tb = (b.title || '').toLowerCase();
-                            if (ta > tb) return -1;
-                            if (ta < tb) return 1;
-                            return 0;
-                        });
-                        break;
-                    default: // latest
-                        allContent.sort((a, b) => {
-                            const getFullDate = (item) => {
-                                // أولوية للتاريخ الكامل (releaseDate)
-                                if (item.releaseDate) {
-                                    const date = new Date(item.releaseDate);
-                                    if (!isNaN(date.getTime())) return date;
-                                }
-                                
-                                // إذا لم يكن هناك تاريخ كامل، استخدم السنة
-                                if (item.year) {
-                                    const year = typeof item.year === 'string' ? parseInt(item.year.slice(0, 4), 10) : item.year;
-                                    if (!isNaN(year)) return new Date(year, 0, 1);
-                                }
-                                
-                                // إذا لم يكن هناك تاريخ، استخدم تاريخ الإضافة
-                                if (item.addedDate) {
-                                    const date = new Date(item.addedDate);
-                                    if (!isNaN(date.getTime())) return date;
-                                }
-                                
-                                // إذا لم يكن هناك أي تاريخ، استخدم تاريخ قديم جداً
-                                return new Date(0);
-                            };
-                            return getFullDate(b) - getFullDate(a);
-                        });
-                }
-
+                // ترتيب حسب النوع (rating, popularity, oldest, az, za, latest)
+                allContent.sort((a, b) => {
+                    switch (sortValue) {
+                        case 'rating':
+                            return (parseFloat(b.rating) || 0) - (parseFloat(a.rating) || 0);
+                        case 'popularity':
+                            return (parseFloat(b.popularity) || 0) - (parseFloat(a.popularity) || 0);
+                        case 'oldest':
+                            return new Date(a.releaseDate || a.addedDate || `${a.year}-01-01`) - new Date(b.releaseDate || b.addedDate || `${b.year}-01-01`);
+                        case 'az':
+                            return (a.title || '').localeCompare(b.title || '');
+                        case 'za':
+                            return (b.title || '').localeCompare(a.title || '');
+                        default: // latest
+                            return new Date(b.releaseDate || b.addedDate || `${b.year}-01-01`) - new Date(a.releaseDate || a.addedDate || `${a.year}-01-01`);
+                    }
+                });
+    
                 displayContent(allContent);
             } catch (error) {
                 console.error('Error loading content:', error);
             }
         }
-
+    
         function displayContent(content) {
             const contentGrid = document.querySelector('.content-grid');
             contentGrid.innerHTML = '';
-
+    
             if (content.length === 0) {
                 contentGrid.innerHTML = `
                     <div class="no-results">
@@ -427,84 +378,60 @@
                     </div>`;
                 return;
             }
-
+    
             content.forEach(item => {
                 const card = document.createElement('div');
                 card.className = item.seasons ? 'series-card' : 'movie-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}`;
                 
                 card.innerHTML = `
-                    ${item.seasons ? `
-                        <div class="status-indicator ${item.status}">
-                            <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
-                        </div>
-                    ` : ''}
+                    ${item.seasons ? `<div class="status-indicator ${item.status}"><i class="fas ${item.status==='ongoing'?'fa-play-circle':'fa-check-circle'}"></i></div>` : ''}
                     <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="series-info">
                         <h3>${item.title}</h3>
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${item.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
-                            </div>
+                            <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year==='string'?item.year.slice(0,4):item.year) : ''}</span></div>
                         </div>
                     </div>
                 `;
-
+    
                 contentGrid.appendChild(card);
-
-                // Genre chip click: navigate to appropriate page with preselected genre
+    
                 card.querySelectorAll('.genre-chip').forEach(chip => {
                     chip.addEventListener('click', (e) => {
                         e.stopPropagation();
                         const g = chip.dataset.genre;
-                        const targetPage = item.seasons ? 'series.html' : 'movies.html';
-                        window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
+                        const url = new URL(window.location.href);
+                        url.searchParams.set('genre', g);
+                        history.replaceState(null, '', url.toString());
+                        document.querySelector('.genre-select').value = g;
+                        loadContent();
                     });
                 });
             });
         }
-
-        // تهيئة الصفحة
+    
         document.addEventListener('DOMContentLoaded', () => {
             initializeSearch();
             initializeUserMenu();
             loadContent();
-
-            // إضافة مستمعي الأحداث للفلترة والترتيب
+    
             const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    loadContent();
-                });
-            });
-
-            const sortSelect = document.querySelector('.sort-select');
-            sortSelect.addEventListener('change', loadContent);
-
-            const genreSelect = document.querySelector('.genre-select');
-            genreSelect.addEventListener('change', loadContent);
-            // Load header and footer
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-
-        // Load content when page loads
-        document.addEventListener('DOMContentLoaded', loadContent);
+            filterButtons.forEach(button => button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                loadContent();
+            }));
+    
+            document.querySelector('.sort-select').addEventListener('change', loadContent);
+            document.querySelector('.genre-select').addEventListener('change', loadContent);
         });
+    
+        // Load header and footer (fallback)
+        fetch('header.html').then(res => res.text()).then(data => document.getElementById('header-container').innerHTML = data);
+        fetch('footer.html').then(res => res.text()).then(data => document.getElementById('footer-container').innerHTML = data);
     </script>
+    
 </body>
 </html> 

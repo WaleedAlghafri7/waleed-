@@ -49,7 +49,7 @@
         .profile-content {
             padding: 2rem;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 2fr 1fr;
             gap: 2rem;
         }
 
@@ -201,7 +201,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <div class="search-input-container">
-                    <input type="text" placeholder="Search for movies or series...">
+                    <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
             <div class="name-wab">
@@ -233,15 +233,13 @@
                     </div>
                 </div>
                 <!-- Auth Buttons -->
-                
+
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
+                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
-                        <div class="user-avatar">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
                         <div class="user-details">
                             <h4 id="user-name">User Name</h4>
                             <p id="user-email">user@email.com</p>
@@ -252,10 +250,6 @@
                             <a href="login.html" class="btn btn-login">
                                 <i class="fas fa-sign-in-alt"></i>
                                 Login
-                            </a>
-                            <a href="register.html" class="btn btn-register">
-                                <i class="fas fa-user-plus"></i>
-                                Register
                             </a>
                         </div>
                         <button onclick="window.location.href='profile.html'">
@@ -289,16 +283,53 @@
                         <h2>Personal Information</h2>
                         <form class="profile-form">
                             <div class="form-group">
+                                <label for="avatar">Avatar</label>
+                                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                                <button id="uploadAvatarBtn" class="save-btn" style="margin-top: 0.75rem;">Upload Avatar</button>
+                            </div>
+                            <div class="form-group">
                                 <label for="fullname">Full Name</label>
                                 <input type="text" id="fullname" name="fullname" value="User Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" placeholder="yourname">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" value="user@email.com">
                             </div>
                             <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <input type="text" id="gender" name="gender" placeholder="Male / Female">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Birthdate</label>
+                                <input type="date" id="birthdate" name="birthdate">
+                            </div>
+                            <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" name="location" placeholder="City, Country">
+                            </div>
+                            <div class="form-group">
+                                <label for="occupation">Occupation</label>
+                                <input type="text" id="occupation" name="occupation" placeholder="Your job title">
+                            </div>
+                            <div class="form-group">
+                                <label for="language">Preferred Language</label>
+                                <input type="text" id="language" name="language" placeholder="e.g. English, Arabic">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website</label>
+                                <input type="url" id="website" name="website" placeholder="https://example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <input type="text" id="bio" name="bio" placeholder="Tell us about yourself">
                             </div>
                             <button type="submit" class="save-btn">Save Changes</button>
                         </form>
@@ -352,6 +383,9 @@
                 </div>
             </div>
         </div>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem 2rem 2rem;">
+            <button id="deleteAccountBtn" class="save-btn" style="background:#8b0000;">Delete Account</button>
+        </div>
     </div>
     <button class="back-arrow" onclick="history.back()" aria-label="رجوع">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -383,12 +417,27 @@
     
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
+            const userAvatarImg = document.getElementById('user-avatar-img');
+            const userAvatarIcon = document.querySelector('.user-avatar i');
+            const userTopIcon = document.querySelector('.user-icon i');
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
     
             if (isLoggedIn && user) {
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
+                if (userAvatarImg) {
+                    if (user.avatarUrl) {
+                        userAvatarImg.src = user.avatarUrl;
+                        userAvatarImg.style.display = 'block';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'none';
+                        if (userTopIcon) userTopIcon.style.display = 'none';
+                    } else {
+                        userAvatarImg.style.display = 'none';
+                        if (userAvatarIcon) userAvatarIcon.style.display = 'inline-block';
+                        if (userTopIcon) userTopIcon.style.display = 'inline-block';
+                    }
+                }
                 if (authButtons) authButtons.style.display = 'none';
                 if (logoutBtn) logoutBtn.style.display = 'block';
             } else {
