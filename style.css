@@ -268,6 +268,7 @@ body {
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    border: 21px solid #555;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -512,17 +513,29 @@ body {
 .dot {
     width: 10px;
     height: 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(122, 122, 122, 0.678);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .dot.active {
-    background: #ffd700;
     width: 30px;
     border-radius: 5px;
     transform: scale(1.2);
+}
+
+/* Progress fill inside each dot */
+.dot .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: #dfdfdf;
+    border-radius: inherit;
 }
 
 /* Content Section Styles */
@@ -3204,5 +3217,228 @@ body {
     transform: scale(1.08) translateY(-4px);
     box-shadow: 0 8px 24px rgba(34, 40, 49, 0.35);
 }
-  
-  
+/* تنسيق مربع باقة الاشتراك في قائمة المستخدم */
+.user-subscription-plan {
+    margin-top: 8px;
+    padding: 4px 10px;
+    color: #ffd700; /* نص ذهبي للتمييز */
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #555;
+    white-space: nowrap; /* لمنع الكسر */
+}
+  /* ---------------------------------- */
+/* أنماط باقات الاشتراك (Pricing Section) */
+/* ---------------------------------- */
+
+.pricing-section {
+    padding: 80px 20px;
+    background-color: #121212;
+    border-radius: 10px;
+    border: 1px solid #5e5e5e;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.pricing-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+.pricing-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.pricing-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.plan-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* نمط الباقة العادية (الرمادية) */
+.standard-plan {
+    border: 3px solid #6c757d; /* رمادي */
+    box-shadow: 0 15px 40px rgba(108, 117, 125, 0.2);
+}
+.standard-plan h3 {
+    color: #6c757d;
+}
+
+/* نمط الباقة الممتازة (الصفراء) */
+.premium-plan {
+    border: 3px solid #ffc107; /* أصفر */
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.2);
+}
+.premium-plan h3 {
+    color: #ffc107;
+}
+.plan-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background-color: #ffc107;
+    color: #1a1a1a;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* نمط الباقة الخاصة (الأسود المذهب) */
+.exclusive-plan {
+    background: linear-gradient(145deg, #101010, #1f1f1f);
+    border: 3px solid #8707ff; /* الإطار الذهبي */
+    box-shadow: 0 10px 40px rgba(135, 7, 255, 0.3);
+}
+.exclusive-plan h3 {
+    color: #8707ff;
+}
+.standard-plan .price {
+    color: #6c757d;
+}
+.premium-plan .price {
+    color: #ffc107;
+}
+.exclusive-plan .price {
+    color: #8707ff;
+}
+
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    padding: 10px 0;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.features-list li .fa-check {
+    color: #18d45e; /* أخضر للإشارة للميزة المتاحة */
+}
+
+.features-list li.disabled {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.features-list li .fa-times {
+    color: #dc3545; /* أحمر للإشارة للميزة غير المتاحة */
+}
+
+/* أنماط الأزرار */
+.select-plan-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s;
+    margin-top: auto;
+    cursor: pointer; 
+    /* زر يكون اسفل اخر شي */
+}
+
+.select-plan-btn:hover {
+    opacity: 0.9;
+}
+
+/* زر الباقة العادية */
+.standard-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* زر الباقة الممتازة */
+.premium-btn {
+    background-color: #ffc107;
+    color: #121212;
+}
+
+/* زر الباقة الخاصة */
+.exclusive-btn {
+    background-color: #8707ff; /* ذهبي */
+    color: #121212;
+}
+
+/* Media Query للتصميم المتجاوب */
+@media (max-width: 1050px) {
+    .pricing-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing-card {
+        width: 90%;
+        max-width: 400px;
+        transform: none !important; 
+    }
+}
+/* تنسيق الخطة المدفوعة */
+#subscriptionBtn.premium-plan {
+    /* لون الخلفية للخطة المدفوعة */
+    background-color: #ffd700; 
+    /* لون النص للخطة المدفوعة */
+    color: #12161f; 
+    font-weight: 700;
+    /* إضافة انتقال سلس لتغير اللون */
+    transition: all 0.3s ease;
+}
+
+/* تأكد من أن أيقونة التاج تأخذ لون النص على الخطة المدفوعة */
+#subscriptionBtn.premium-plan i {
+    color: #12161f;
+}
+
+/* تخصيص بسيط لأيقونة التاج على الخطة المجانية */
+#subscriptionBtn i {
+    color: #aaa; /* لون رمادي فاتح */
+    transition: color 0.3s ease;
+}

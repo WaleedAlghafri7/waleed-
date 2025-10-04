@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await res.json();
                 if (!res.ok) throw new Error(data && data.error ? data.error : 'Failed to update profile');
                 localStorage.setItem('auth_user', JSON.stringify(data.user));
-                alert('Profile updated successfully');
                 location.reload();
             } catch (err) {
                 alert(err.message);
@@ -117,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await res.json();
                 if (!res.ok) throw new Error(data && data.error ? data.error : 'Upload failed');
                 localStorage.setItem('auth_user', JSON.stringify(data.user));
-                alert('Avatar updated successfully');
             } catch (err) {
                 alert(err.message);
             }

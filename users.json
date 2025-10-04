@@ -3,22 +3,22 @@
     "id": "1B1VIBX5-pVGvDWpw5TKr",
     "fullName": "waleed",
     "email": "waleedkh209@gmail.com",
-    "passwordHash": "$2a$10$pxAtu1Rpi2A5FiyDW4V9qeWvkv/yyxZ2NV3EAErJ2p0.cWZLwwni2",
+    "passwordHash": "$2a$10$Rlu63606TVH0UzFbf.viS.04HYhjE6lXbqN.JtenCOVu7NUJpfWfW",
     "createdAt": "2025-09-29T21:29:19.094Z",
-    "updatedAt": "2025-09-30T18:31:57.137Z",
+    "updatedAt": "2025-10-03T13:20:03.038Z",
     "phone": "91955635",
     "bio": "hi",
     "gender": "male",
     "birthdate": "2009-08-09",
-    "avatarUrl": "/uploads/1759257117130_eTX2fbabHZxa4Zy9dGepw.jpg"
+    "avatarUrl": "/uploads/1759442244824_TgbjGK0mMnXwebOiBe184.jpg"
   },
   {
-    "id": "3VFiutjJNw1c1sxbMdIZv",
-    "fullName": "waleed khalid",
-    "email": "waleedkh2090@gmail.com",
-    "passwordHash": "$2a$10$CgViv0eSQo93Qe2RMCmhie3.7JuDNRWBlA3uTOs2xO6KPORyL9q4e",
-    "createdAt": "2025-09-30T11:28:04.796Z",
-    "avatarUrl": "/uploads/1759233874897_ZMSR5jdqCKpoa6ZvBm0XZ.jpg",
-    "updatedAt": "2025-09-30T12:04:34.901Z"
+    "id": "YE7iNgxs4uvRih6oMH46A",
+    "fullName": "Waleed Khalid",
+    "email": "alwaleedkh209@gmail.com",
+    "passwordHash": "$2a$10$1fISSjgXvq6jzxACeheS1.7TxkBjSzkFgEun8HjF/5.KST.GvtSiy",
+    "createdAt": "2025-10-02T22:46:21.862Z",
+    "avatarUrl": "/uploads/1759445423086_NDPK356yQybnUcBCaQfQI.jpg",
+    "updatedAt": "2025-10-02T22:50:23.091Z"
   }
 ]

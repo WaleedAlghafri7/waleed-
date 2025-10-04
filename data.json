@@ -3,9 +3,9 @@
         {
             "id": 1,
             "title": "The Monkey",
-            "genre": "Horror, Dark Comedy, Splatter Horror",
+            "genre": "Action, Action Epic, Dark Comedy, Horror, Splatter Horror",
             "year": 2025,
-            "releaseDate": "2025-02-21",
+            "releaseDate": "2025-01-01",
             "rating": 6,
             "duration": "1h 38min",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg",
@@ -14,7 +14,7 @@
             "language": "English",
             "country": "United States",
             "ageRating": "R",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 2,
@@ -254,7 +254,7 @@
             "language": "English",
             "country": "United States, Canada, Australia, New Zealand",
             "ageRating": "PG-13",
-            "inSlides": false
+            "inSlides": true
         },
         {
             "id": 1754045989408,
@@ -270,7 +270,7 @@
             "language": "English",
             "country": " United States, United Kingdom, Ireland, Iceland, Canada",
             "ageRating": "PG",
-            "inSlides": true
+            "inSlides": false
         },
         {
             "id": 1754566567171,
@@ -498,14 +498,79 @@
             "description": "After receiving an order to be replaced in Operation Strix, Loid decides to help Anya win a cooking competition at Eden Academy, by making the director's favorite meal in order to prevent his replacement.",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "PG-13"
+            "ageRating": "PG-13",
+            "inSlides": false
+        },
+        {
+            "id": 1759503945909,
+            "title": "My Hero Academia: Two Heroes",
+            "genre": "Action, Adventure, Anime, Hand-Drawn Animtion, Sci-Fi, Superhero",
+            "year": 2018,
+            "releaseDate": "2018-09-25",
+            "rating": 7.3,
+            "duration": "1h 36min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hC4nTxdhXqFWzgqynGvvXVMiMNp.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/b9qGMCOrMbxUjD6xDAYPoIPnYcC.jpg",
+            "description": "All Might and Deku accept an invitation to visit an artificial floating island called I-Island, where they fight a villain who takes the city hostage.\n\n",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": "PG-13",
+            "type": "movie"
+        },
+        {
+            "id": 1759504085235,
+            "title": "My Hero Academia: You're Next",
+            "genre": "Action, Adventure, Animation, Anime, Hand-Drawn Animtion, Sci-Fi, Superhero",
+            "year": 2024,
+            "releaseDate": "2024-10-11",
+            "rating": 6.9,
+            "duration": "1h 50min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/tTrI6PwqzxkgO3dvQ7BEKXM7SYR.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/tUbwMOYP4cuGL1sQ0edz5943rBY.jpg",
+            "description": "Deku, Bakugo, Todoroki and the rest of U.A. High Class 1-A must face off against Dark Might and the obscure crime organisation under his control, the Gollini Family.\n\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "PG-13",
+            "type": "movie"
+        },
+        {
+            "id": 1759504275030,
+            "title": "My Hero Academia: Heroes Rising",
+            "genre": "Action, Adventure, Anime, Hand-Drawn Animtion, Sci-Fi, Superhero",
+            "year": 2020,
+            "releaseDate": "2020-02-26",
+            "rating": 7.7,
+            "duration": "1h 44min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/kpWsIkfXrnQ1pmR79qAHHq7DPxc.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/9guoVF7zayiiUq5ulKQpt375VIy.jpg",
+            "description": "A group of youths aspiring to become professional superheroes, fight in a world full of people with abilities, also known as quirks. Deku and his fellow classmates from Hero Academy face Nine, the strongest villain yet.\n",
+            "language": "Japanese",
+            "country": " Japan",
+            "ageRating": "PG-13",
+            "type": "movie"
+        },
+        {
+            "id": 1759504402696,
+            "title": "My Hero Academia: World Heroes' Mission",
+            "genre": "Action, Adventure, Animation, Hand-Drawn Animtion, Sci-Fi, Superhero",
+            "year": 2021,
+            "releaseDate": "2021-10-29",
+            "rating": 7,
+            "duration": "1h 41min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AsTlA7dj2ySGY1pzGSD0MoHFhEF.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/g3pIN5kRvmtcdtzjsJomZ1sw2QO.jpg",
+            "description": "When a cult of terrorists ruins a city by releasing a toxin that causes people's abilities to spiral out of control, Japan's greatest heroes spread around the world in an attempt to track down the mastermind and put him to justice.\n",
+            "language": " Japanese",
+            "country": "Japan",
+            "ageRating": "PG-13",
+            "type": "movie"
         }
     ],
     "series": [
         {
             "id": 17,
             "title": "Breaking Bad",
-            "genre": "Crime, Drama, Thriller",
+            "genre": "Action, Crime, Drama, Thriller",
             "year": 2008,
             "releaseDate": "2008-01-01",
             "rating": 9.5,
@@ -522,6 +587,7 @@
                     "season_number": 1,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Pilot",
                             "description": "Diagnosed with lung cancer, high-school chemistry teacher Walter White teams with ex-student Jesse to cook meth in an RV, using science--and sudden violence--to secure their first batch and escape two lethal dealers.",
                             "image": "https://episodes.metahub.space/tt0903747/1/1/w780.jpg",
@@ -529,6 +595,7 @@
                             "rating": "9"
                         },
                         {
+                            "number": 2,
                             "title": "Cat's in the Bag...",
                             "description": "One body dissolves in acid while another dealer lies captive. Walt and Jesse scramble to erase evidence, and Walt faces whether he can kill to keep the fledgling operation--and Jesse--safe.",
                             "image": "https://episodes.metahub.space/tt0903747/1/2/w780.jpg",
@@ -536,6 +603,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 3,
                             "title": "...And the Bag's in the River",
                             "description": "Chemo looming, Walt chains wounded Krazy-8 in Jesse's basement, weighing murder against morality. A smashed dinner plate decides his darkest step yet.",
                             "image": "https://episodes.metahub.space/tt0903747/1/3/w780.jpg",
@@ -543,6 +611,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 4,
                             "title": "Cancer Man",
                             "description": "Walt's diagnosis rocks the family while flashbacks reveal how Gray Matter upended his career. Resentment nudges him further into crime as Hank's DEA war stories fascinate Walt Jr.",
                             "image": "https://episodes.metahub.space/tt0903747/1/4/w780.jpg",
@@ -550,6 +619,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 5,
                             "title": "Gray Matter",
                             "description": "Ex-partners Elliott and Gretchen offer to fund treatment, but pride makes Walt refuse. Cash-strapped, he reignites the meth venture while Skyler digs into Jesse's drug past.",
                             "image": "https://episodes.metahub.space/tt0903747/1/5/w780.jpg",
@@ -557,6 +627,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 6,
                             "title": "Crazy Handful of Nothin'",
                             "description": "Shaved and reborn as Heisenberg, Walt crashes Tuco's lair with explosive mercury fulminate, swapping chemistry for intimidation. The violent payoff bankrolls chemo but draws Hank's attention.",
                             "image": "https://episodes.metahub.space/tt0903747/1/6/w780.jpg",
@@ -564,6 +635,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 7,
                             "title": "A No-Rough-Stuff-Type Deal",
                             "description": "Walter takes a bold step in expanding his operation, forcing Jesse to secure crucial supplies in a risky heist. Meanwhile, Skyler's suspicions continue to grow.",
                             "image": "https://episodes.metahub.space/tt0903747/1/7/w780.jpg",
@@ -576,6 +648,7 @@
                     "season_number": 2,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Seven Thirty-Seven",
                             "description": "After a violent encounter with Tuco, Walter and Jesse realize the dangers of their business and plot their next move. Meanwhile, Skyler grows more suspicious of Walter's behavior.",
                             "image": "https://episodes.metahub.space/tt0903747/2/1/w780.jpg",
@@ -583,6 +656,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 2,
                             "title": "Grilled",
                             "description": "Walter and Jesse find themselves trapped in a deadly standoff with Tuco, fighting to survive. Meanwhile, Hank's search for the missing duo leads him closer to the truth.",
                             "image": "https://episodes.metahub.space/tt0903747/2/2/w780.jpg",
@@ -590,6 +664,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 3,
                             "title": "Bit by a Dead Bee",
                             "description": "Walter and Jesse scramble to cover their tracks after their ordeal with Tuco, each taking drastic measures to avoid suspicion. Meanwhile, Hank grows increasingly determined to uncover the truth.",
                             "image": "https://episodes.metahub.space/tt0903747/2/3/w780.jpg",
@@ -597,6 +672,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 4,
                             "title": "Down",
                             "description": "As Jesse faces the consequences of his actions, Walter struggles to keep his double life from falling apart. Meanwhile, Skyler's growing distrust pushes their marriage to the breaking point.",
                             "image": "https://episodes.metahub.space/tt0903747/2/4/w780.jpg",
@@ -604,6 +680,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 5,
                             "title": "Breakage",
                             "description": "As Walter expands his operation, Jesse takes on more responsibility--but struggles to maintain control. Meanwhile, Hank grapples with PTSD from his recent encounter, and Skyler makes a bold decision.",
                             "image": "https://episodes.metahub.space/tt0903747/2/5/w780.jpg",
@@ -611,6 +688,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 6,
                             "title": "Peekaboo",
                             "description": "Jesse tracks down a drug thief, leading to a harrowing encounter. Meanwhile, Walter manipulates his way out of a problem at home as his double life puts further strain on his marriage.",
                             "image": "https://episodes.metahub.space/tt0903747/2/6/w780.jpg",
@@ -618,6 +696,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 7,
                             "title": "Negro y Azul",
                             "description": "As Walter's growing reputation in the drug trade sparks dangerous attention, Jesse tries to prove himself as a leader. Meanwhile, Skyler makes an unexpected connection at work, and Hank struggles to adjust to his new assignment.",
                             "image": "https://episodes.metahub.space/tt0903747/2/7/w780.jpg",
@@ -625,6 +704,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 8,
                             "title": "Better Call Saul",
                             "description": "After running into legal trouble, Walter and Jesse turn to a flamboyant criminal lawyer, Saul Goodman, for help. Meanwhile, Hank's investigation brings him closer to their operation.",
                             "image": "https://episodes.metahub.space/tt0903747/2/8/w780.jpg",
@@ -632,6 +712,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 9,
                             "title": "4 Days Out",
                             "description": "Walter takes Jesse on an extended cook in the desert, hoping to secure his family's future--but an unexpected crisis puts their survival at risk.",
                             "image": "https://episodes.metahub.space/tt0903747/2/9/w780.jpg",
@@ -639,6 +720,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 10,
                             "title": "Over",
                             "description": "As Walter celebrates a turning point in his illness, his growing pride threatens to pull him deeper into the drug trade. Meanwhile, Jesse finds a new connection that offers a glimpse of a different life.",
                             "image": "https://episodes.metahub.space/tt0903747/2/10/w780.jpg",
@@ -646,6 +728,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 11,
                             "title": "Mandala",
                             "description": "A shocking event forces Walter and Jesse to rethink their business, leading them to a high-stakes meeting with a mysterious new player. Meanwhile, Skyler faces an unexpected dilemma at work.",
                             "image": "https://episodes.metahub.space/tt0903747/2/11/w780.jpg",
@@ -653,6 +736,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 12,
                             "title": "Phoenix",
                             "description": "Walter struggles to balance his growing empire with his responsibilities at home. Meanwhile, Jesse's relationship takes a turn that threatens to derail everything.",
                             "image": "https://episodes.metahub.space/tt0903747/2/12/w780.jpg",
@@ -660,6 +744,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 13,
                             "title": "ABQ",
                             "description": "As Walter faces the fallout of his choices, Jesse spirals deeper into despair. Meanwhile, an unforeseen tragedy sends shockwaves through Albuquerque.",
                             "image": "https://episodes.metahub.space/tt0903747/2/13/w780.jpg",
@@ -672,6 +757,7 @@
                     "season_number": 3,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "No Más",
                             "description": "As Walter deals with the fallout of a devastating tragedy, he is faced with a difficult choice about his future. Meanwhile, Skyler takes a stand, and Jesse struggles to come to terms with his actions.",
                             "image": "https://episodes.metahub.space/tt0903747/3/1/w780.jpg",
@@ -679,6 +765,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 2,
                             "title": "Caballo sin Nombre",
                             "description": "Walter tries to repair his fractured home life, but his actions only push Skyler further away. Meanwhile, Jesse makes a fresh start, and a new threat quietly looms over Albuquerque.",
                             "image": "https://episodes.metahub.space/tt0903747/3/2/w780.jpg",
@@ -686,6 +773,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 3,
                             "title": "I.F.T.",
                             "description": "Walter refuses to leave the house, escalating tensions with Skyler as she makes a bold decision. Meanwhile, Jesse struggles with loneliness, and a dangerous presence lurks in the shadows.",
                             "image": "https://episodes.metahub.space/tt0903747/3/3/w780.jpg",
@@ -693,6 +781,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 4,
                             "title": "Green Light",
                             "description": "Walter spirals out of control as Skyler's actions push him to his breaking point. Meanwhile, Jesse seizes an opportunity, and tensions rise within the drug trade.",
                             "image": "https://episodes.metahub.space/tt0903747/3/4/w780.jpg",
@@ -700,6 +789,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 5,
                             "title": "Más",
                             "description": "Walter is presented with a new opportunity that could change everything, but his pride threatens to get in the way. Meanwhile, Jesse reenters the drug trade, and tensions within the cartel continue to build.",
                             "image": "https://episodes.metahub.space/tt0903747/3/5/w780.jpg",
@@ -707,6 +797,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 6,
                             "title": "Sunset",
                             "description": "Walter settles into his new role, but an unexpected threat forces him to act quickly. Meanwhile, Hank closes in on Heisenberg, and Jesse finds himself caught in the middle.",
                             "image": "https://episodes.metahub.space/tt0903747/3/6/w780.jpg",
@@ -714,6 +805,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 7,
                             "title": "One Minute",
                             "description": "As Hank deals with the fallout of his investigation, he faces an unexpected reckoning. Meanwhile, Walter and Jesse's partnership is pushed to its limits, and a deadly threat looms closer.",
                             "image": "https://episodes.metahub.space/tt0903747/3/7/w780.jpg",
@@ -721,6 +813,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 8,
                             "title": "I See You",
                             "description": "As the aftermath of a brutal attack shakes everyone, Walter finds himself in a tense standoff. Meanwhile, Jesse takes on a larger role in the operation, and Hank faces a critical moment.",
                             "image": "https://episodes.metahub.space/tt0903747/3/8/w780.jpg",
@@ -728,6 +821,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 9,
                             "title": "Kafkaesque",
                             "description": "Skyler hatches a plan as Hank's hospital bills stack up. Meanwhile, Walt and Gus come to a better understanding as Jesse, looking for more independence, pursues a new opportunity.",
                             "image": "https://episodes.metahub.space/tt0903747/3/9/w780.jpg",
@@ -735,6 +829,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 10,
                             "title": "Fly",
                             "description": "Trapped in his own paranoia, Walter fixates on a seemingly insignificant problem, leading to an unexpected confrontation with Jesse.",
                             "image": "https://episodes.metahub.space/tt0903747/3/10/w780.jpg",
@@ -742,6 +837,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 11,
                             "title": "Abiquiu",
                             "description": "As Skyler becomes more involved in Walter's operation, she takes a calculated risk. Meanwhile, Jesse finds himself drawn back into a dangerous world, and tensions within the cartel escalate.",
                             "image": "https://episodes.metahub.space/tt0903747/3/11/w780.jpg",
@@ -749,6 +845,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 12,
                             "title": "Half Measures",
                             "description": "Walter is forced to take a stand as Jesse's reckless actions put them both at risk. Meanwhile, Skyler pushes for greater control, and a dangerous ultimatum changes everything.",
                             "image": "https://episodes.metahub.space/tt0903747/3/12/w780.jpg",
@@ -756,6 +853,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 13,
                             "title": "Full Measure",
                             "description": "Walter makes a desperate move to protect himself, setting off a chain of events that will change everything. Meanwhile, Jesse is forced to make an impossible choice.",
                             "image": "https://episodes.metahub.space/tt0903747/3/13/w780.jpg",
@@ -768,6 +866,7 @@
                     "season_number": 4,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Box Cutter",
                             "description": "Walter and Jesse face the terrifying consequences of their actions as Gus makes a decisive move. Meanwhile, Skyler takes steps to uncover Walter's secrets.",
                             "image": "https://episodes.metahub.space/tt0903747/4/1/w780.jpg",
@@ -775,6 +874,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 2,
                             "title": "Thirty-Eight Snub",
                             "description": "As Walter prepares for the worst, tensions between him and Jesse reach a breaking point. Meanwhile, Skyler takes bold steps to expand her influence, and Hank struggles to move forward.",
                             "image": "https://episodes.metahub.space/tt0903747/4/2/w780.jpg",
@@ -782,6 +882,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 3,
                             "title": "Open House",
                             "description": "As Skyler pushes forward with her plan, Walter grows increasingly reckless. Meanwhile, Jesse seeks distractions to cope with his guilt, and Marie's struggles take an unexpected turn.",
                             "image": "https://episodes.metahub.space/tt0903747/4/3/w780.jpg",
@@ -789,6 +890,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 4,
                             "title": "Bullet Points",
                             "description": "Walter and Skyler put their plan into motion, but unexpected complications arise. Meanwhile, Jesse's reckless behavior catches unwanted attention, and Hank stumbles upon a critical lead.",
                             "image": "https://episodes.metahub.space/tt0903747/4/4/w780.jpg",
@@ -796,6 +898,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 5,
                             "title": "Shotgun",
                             "description": "Jesse is thrust into an unexpected role, forcing Walter to take drastic action. Meanwhile, Skyler pushes forward with her plan, and Hank's investigation takes an intriguing turn.",
                             "image": "https://episodes.metahub.space/tt0903747/4/5/w780.jpg",
@@ -803,6 +906,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 6,
                             "title": "Cornered",
                             "description": "Walter's growing ambition puts him at odds with Skyler, while Jesse finds himself drawn deeper into Gus's operation. Meanwhile, a cryptic warning forces Walter to confront his own vulnerability.",
                             "image": "https://episodes.metahub.space/tt0903747/4/6/w780.jpg",
@@ -810,6 +914,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 7,
                             "title": "Problem Dog",
                             "description": "Jesse struggles with guilt as Walter pressures him to make a critical move. Meanwhile, Skyler takes greater control of the car wash, and Hank's suspicions lead him to a new breakthrough.",
                             "image": "https://episodes.metahub.space/tt0903747/4/7/w780.jpg",
@@ -817,6 +922,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 8,
                             "title": "Hermanos",
                             "description": "As Hank digs deeper into Gus's past, shocking revelations come to light. Meanwhile, Walter grows increasingly reckless, and Jesse struggles to navigate his shifting loyalties.",
                             "image": "https://episodes.metahub.space/tt0903747/4/8/w780.jpg",
@@ -824,6 +930,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 9,
                             "title": "Bug",
                             "description": "Walter and Jesse's partnership reaches a breaking point as tensions between them explode. Meanwhile, Skyler faces a new challenge at the car wash, and Gus moves forward with a risky plan.",
                             "image": "https://episodes.metahub.space/tt0903747/4/9/w780.jpg",
@@ -831,6 +938,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 10,
                             "title": "Salud",
                             "description": "Jesse is sent on a high-stakes mission with Gus and Mike, while Walter deals with the fallout of his latest actions. Meanwhile, Skyler takes a bold step to protect her family.",
                             "image": "https://episodes.metahub.space/tt0903747/4/10/w780.jpg",
@@ -838,6 +946,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 11,
                             "title": "Crawl Space",
                             "description": "Walter scrambles to secure his safety as pressure mounts from all sides. Meanwhile, Skyler faces a devastating setback, and Jesse finds himself caught between loyalty and survival.",
                             "image": "https://episodes.metahub.space/tt0903747/4/11/w780.jpg",
@@ -845,6 +954,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 12,
                             "title": "End Times",
                             "description": "Walter is forced into hiding as Gus tightens his grip. Meanwhile, Jesse faces an agonizing decision, and Hank pushes forward with his investigation, unaware of how close he is to the truth.",
                             "image": "https://episodes.metahub.space/tt0903747/4/12/w780.jpg",
@@ -852,6 +962,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 13,
                             "title": "Face Off",
                             "description": "Walter executes a daring plan to eliminate his greatest threat. Meanwhile, Jesse fights to break free from Gus's grip as the battle for survival reaches its climax.",
                             "image": "https://episodes.metahub.space/tt0903747/4/13/w780.jpg",
@@ -864,6 +975,7 @@
                     "season_number": 5,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Live Free or Die",
                             "description": "Walter moves quickly to cover his tracks in the aftermath of his bold plan. Meanwhile, Jesse and Mike struggle to adapt to the new reality, and the DEA closes in on the operation.",
                             "image": "https://episodes.metahub.space/tt0903747/5/1/w780.jpg",
@@ -871,6 +983,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 2,
                             "title": "Madrigal",
                             "description": "Walter looks to expand his empire as he forges a new partnership. Meanwhile, Mike faces pressure from all sides, and the DEA intensifies its investigation.",
                             "image": "https://episodes.metahub.space/tt0903747/5/2/w780.jpg",
@@ -878,6 +991,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 3,
                             "title": "Hazard Pay",
                             "description": "Walter and Jesse set up a new operation, but tensions with Mike threaten their partnership. Meanwhile, Skyler struggles under the weight of Walter's actions.",
                             "image": "https://episodes.metahub.space/tt0903747/5/3/w780.jpg",
@@ -885,6 +999,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 4,
                             "title": "Fifty-One",
                             "description": "As Walter embraces his growing power, tensions at home reach a breaking point. Meanwhile, Skyler takes drastic action, and the DEA's investigation gains momentum.",
                             "image": "https://episodes.metahub.space/tt0903747/5/4/w780.jpg",
@@ -892,6 +1007,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 5,
                             "title": "Dead Freight",
                             "description": "Walter, Jesse, and Mike plot a risky heist to secure a crucial supply. Meanwhile, tensions rise within the group as unexpected complications threaten their plan.",
                             "image": "https://episodes.metahub.space/tt0903747/5/5/w780.jpg",
@@ -899,6 +1015,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 6,
                             "title": "Buyout",
                             "description": "Walter faces backlash after the heist, forcing him to make a bold move. Meanwhile, Jesse struggles with the fallout, and Mike looks for a way out.",
                             "image": "https://episodes.metahub.space/tt0903747/5/6/w780.jpg",
@@ -906,6 +1023,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 7,
                             "title": "Say My Name",
                             "description": "Walter asserts his dominance as tensions within the group reach a breaking point. Meanwhile, Jesse makes a difficult choice, and Mike takes drastic action to secure his future.",
                             "image": "https://episodes.metahub.space/tt0903747/5/7/w780.jpg",
@@ -913,6 +1031,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 8,
                             "title": "Gliding Over All",
                             "description": "Walter moves to consolidate his power, but unexpected challenges threaten his empire. Meanwhile, Hank stumbles upon a revelation that changes everything.",
                             "image": "https://episodes.metahub.space/tt0903747/5/8/w780.jpg",
@@ -920,6 +1039,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 9,
                             "title": "Blood Money",
                             "description": "Hank grapples with a shocking discovery, forcing Walter to act quickly. Meanwhile, Jesse struggles with his conscience, leading him down a dangerous path.",
                             "image": "https://episodes.metahub.space/tt0903747/5/9/w780.jpg",
@@ -927,6 +1047,7 @@
                             "rating": "9.4"
                         },
                         {
+                            "number": 10,
                             "title": "Buried",
                             "description": "Walter scrambles to protect his secrets as Hank intensifies his pursuit. Meanwhile, Skyler is caught between loyalty and survival, and Jesse's downward spiral takes a dramatic turn.",
                             "image": "https://episodes.metahub.space/tt0903747/5/10/w780.jpg",
@@ -934,6 +1055,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 11,
                             "title": "Confessions",
                             "description": "Walter takes drastic measures to protect himself as Hank closes in. Meanwhile, Jesse struggles with a painful realization that could change everything.",
                             "image": "https://episodes.metahub.space/tt0903747/5/11/w780.jpg",
@@ -941,6 +1063,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 12,
                             "title": "Rabid Dog",
                             "description": "Walter scrambles to contain a volatile situation as Jesse reaches a breaking point. Meanwhile, Skyler is forced to make a difficult choice.",
                             "image": "https://episodes.metahub.space/tt0903747/5/12/w780.jpg",
@@ -948,6 +1071,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 13,
                             "title": "To'hajiilee",
                             "description": "Walter makes a desperate move to stay ahead, but his past choices come back to haunt him. Meanwhile, Jesse sets a trap that could change everything.",
                             "image": "https://episodes.metahub.space/tt0903747/5/13/w780.jpg",
@@ -955,6 +1079,7 @@
                             "rating": "9.8"
                         },
                         {
+                            "number": 14,
                             "title": "Ozymandias",
                             "description": "Walter faces the devastating consequences of his actions as his world unravels. Meanwhile, Jesse's fate takes a dark turn, and the fallout threatens everyone he cares about.",
                             "image": "https://episodes.metahub.space/tt0903747/5/14/w780.jpg",
@@ -962,6 +1087,7 @@
                             "rating": "10"
                         },
                         {
+                            "number": 15,
                             "title": "Granite State",
                             "description": "Walter goes into hiding as his empire crumbles, forcing him to confront his isolation. Meanwhile, Jesse faces a grim reality, and those left behind struggle to pick up the pieces.",
                             "image": "https://episodes.metahub.space/tt0903747/5/15/w780.jpg",
@@ -969,6 +1095,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 16,
                             "title": "Felina",
                             "description": "Walter returns to Albuquerque to tie up loose ends, setting the stage for a final confrontation. Meanwhile, Jesse fights for his freedom as everything comes to a dramatic conclusion.",
                             "image": "https://episodes.metahub.space/tt0903747/5/16/w780.jpg",
@@ -977,7 +1104,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "series"
         },
         {
             "id": 18,
@@ -1546,7 +1674,7 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "inSlides": true
         },
         {
             "id": 19,
@@ -2293,7 +2421,7 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "inSlides": true
         },
         {
             "id": 29,
@@ -2817,7 +2945,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 31,
@@ -3032,7 +3161,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": true
         },
         {
             "id": 32,
@@ -3228,7 +3358,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": true
         },
         {
             "id": 33,
@@ -3405,7 +3536,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 35,
@@ -3532,7 +3664,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 36,
@@ -3787,7 +3920,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 37,
@@ -3976,7 +4110,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1754566250630,
@@ -5383,6 +5518,7 @@
                     "season_number": 1,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Operation Strix",
                             "description": "A spy with the new identity of Loid Forger must find and adopt a child for his next mission.",
                             "image": "https://image.tmdb.org/t/p/original/3EwkiSokUJRkAwB3b3bFG3J8IoA.jpg",
@@ -5390,6 +5526,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 2,
                             "title": " Secure a Wife",
                             "description": "In need of a wife for the school interview, Twilight crosses with a woman who might be the right cover-up for his mission. She has secrets of her own, though.",
                             "image": "https://image.tmdb.org/t/p/original/doSXhn8nksQiEMadwjPboPpqMih.jpg",
@@ -5397,6 +5534,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 3,
                             "title": "Prepare for the Interview",
                             "description": "To prepare for the interview, Loid, Yor and Anya set out for a day in the town, visiting various locations to prepare to sell the image of being a normal upscale family.",
                             "image": "https://image.tmdb.org/t/p/original/fnU8bxU1WFGD8PBmpK5g9pVqvnO.jpg",
@@ -5404,6 +5542,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 4,
                             "title": "The Prestigious School's Interview",
                             "description": "The Forger family goes to Eden School for the interview, where different challenges spice things up, along with the interview itself.",
                             "image": "https://image.tmdb.org/t/p/original/6P3Gi8Vd4hKivG6eObP9xkkmp3U.jpg",
@@ -5411,6 +5550,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 5,
                             "title": "Will They Pass or Fail?",
                             "description": "Anya gets excited about passing the entrance exam but wants some motivation to study, so the family and Franky go on a role play in a castle upon Anya's request.",
                             "image": "https://image.tmdb.org/t/p/original/aVjoPi2alpgUxufxijnIyjz6rUu.jpg",
@@ -5418,6 +5558,7 @@
                             "rating": "7.8"
                         },
                         {
+                            "number": 6,
                             "title": "The Friendship Scheme",
                             "description": "Anya and Yor pick up Anya's school uniform. Later, Anya has her orientation day at Eden Academy, where Loid's Plan B to get close to Donovan via having her befriend his second son, Damien, is off on a disastrous start.",
                             "image": "https://image.tmdb.org/t/p/original/Bz7DUuidlzte62jEGxj77Tbo9F.jpg",
@@ -5425,6 +5566,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 7,
                             "title": "The Target's Second Son",
                             "description": "On Anya's first day of school, Loid attempts to get her to apologize to Damien in hopes of salvaging the plan for the two to become friends. Unfortunately, Damien's conflicting feelings for Anya may get in the way of this.",
                             "image": "https://image.tmdb.org/t/p/original/leOi8od9ICYohkmOdkXQaxpzwxi.jpg",
@@ -5432,6 +5574,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 8,
                             "title": "The Counter-Secret Police Cover Operation",
                             "description": "Yor's younger brother Yuri is a member of the Ostanian Secret Police, hunting spies while keeping it a secret. But when he shows up at the Forgers' residence, their secrets come face to face.",
                             "image": "https://image.tmdb.org/t/p/original/79Oi1DWCFR04ElOAPalB3n6QSge.jpg",
@@ -5439,6 +5582,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 9,
                             "title": " Show Off How In Love You Are",
                             "description": "After Yuri's visit, Loid begins to suspect Yor may not be who she claims. While Loid investigates, Yor struggles with questions of her own.",
                             "image": "https://image.tmdb.org/t/p/original/oaxsr3MypOg74LPuksryVsG2PVO.jpg",
@@ -5446,6 +5590,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 10,
                             "title": "The Great Dodgeball Plan",
                             "description": "A rumor spreads among the first graders that if they do well in PE, they will be rewarded with Stella Stars. Anya is determined to get one, so she trains with Yor. Thus begins the dodgeball match between Cecile Hall and Wald Hall.",
                             "image": "https://image.tmdb.org/t/p/original/deSqORCVDxymHfwYrGSKxyskk35.jpg",
@@ -5453,6 +5598,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 11,
                             "title": "Stella",
                             "description": "In order for parents to attend one of the social gatherings at Eden College, their children must be Imperial Scholars. Anya hates studying, so Loid comes up with a plan for her to get Stella Stars by doing community service.",
                             "image": "https://image.tmdb.org/t/p/original/mzfXcUlUHLvUaE5N8kxQpzX0VjZ.jpg",
@@ -5460,6 +5606,7 @@
                             "rating": "7.8"
                         },
                         {
+                            "number": 12,
                             "title": " Penguin Park",
                             "description": "A trip to the local aquarium results in mayhem for the entire Forger family as Loid is assigned a mission that is, fortuitously, located in the same place.",
                             "image": "https://image.tmdb.org/t/p/original/v7oChF0yYRelCxtrJByqrIuV3Vm.jpg",
@@ -5467,6 +5614,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 13,
                             "title": "Project Apple",
                             "description": "The thin veneer of peace between Ostania and Westalis threatens to break when terrorists plot an assassination attempt. The Forger family is thrown into the mayhem when searching a for a dog to adopt.",
                             "image": "https://image.tmdb.org/t/p/original/5GGBZlkqqKEYZ1D1AY5ApFABXVD.jpg",
@@ -5474,6 +5622,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 14,
                             "title": "Disarm the Time Bomb",
                             "description": "Anya is saved by Yor from the terrorists she doesn't know. The intelligent dog sees future which makes the disarming of bomb very important for Anya.",
                             "image": "https://image.tmdb.org/t/p/original/pdmklh7sIcv4ZSowI8KdtmfaLjl.jpg",
@@ -5481,6 +5630,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 15,
                             "title": "A New Family Member",
                             "description": "After being rescued by Anya and a terrorist trained dog, Loid welcomes a new member to the family, Bond, their new pet.",
                             "image": "https://image.tmdb.org/t/p/original/7EO66F2z4kJ8RwxA0fTSw7iC8Ct.jpg",
@@ -5488,6 +5638,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 16,
                             "title": "Yor's Kitchen/The Informant's Great Romance Plan",
                             "description": "Believing Loid may start to see her as useless, Yor asks her coworkers to teach her to cook. Franky goes to Loid to help him ask his crush on a date.",
                             "image": "https://image.tmdb.org/t/p/original/k0PCMHYufqUyvPYGPOoEYiHCnwA.jpg",
@@ -5495,6 +5646,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 17,
                             "title": "Carry Out the Griffin Plan/Fullmetal Lady/Omelet Rice",
                             "description": "Anya attempts to continue the Friendship Plan by helping Damian in arts and crafts, but disastrous results ensue. Sylvia meets with Loid. Yuri toughens up to survive Yor's cooking.",
                             "image": "https://image.tmdb.org/t/p/original/pHGke693S5Yy2n24NdNoB5hJgfL.jpg",
@@ -5502,6 +5654,7 @@
                             "rating": "7.3"
                         },
                         {
+                            "number": 18,
                             "title": "Uncle the Private Tutor/Daybreak",
                             "description": "Yuri helps Anya study for her midterm exams. Afterwards, Loid breaks into Eden Academy's vaults to change her test answers but comes across an amateur spy calling himself Daybreak.",
                             "image": "https://image.tmdb.org/t/p/original/t3YFlND2D7dWGYmhExvB7GWzEv9.jpg",
@@ -5509,6 +5662,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 19,
                             "title": "A Revenge Plot Against Desmond/Mama Becomes The Wind",
                             "description": "George, a boy in Anya's class who believes he will be forced to leave Eden, is treated to a luxurious final day of class. Yor dashes to Eden to deliver Anya her gym clothes while Loid tails her.",
                             "image": "https://image.tmdb.org/t/p/original/ecXSomcwWxWC9DQWUt09dnECV7u.jpg",
@@ -5516,6 +5670,7 @@
                             "rating": "7.2"
                         },
                         {
+                            "number": 20,
                             "title": "Investigate the General Hospital/Decipher the Perplexing Code",
                             "description": "Loid takes Anya to the hospital he works at for a school project. Anya spreads a hidden code to her neighbors and classmates. Franky believes a woman may finally be interested in him.",
                             "image": "https://image.tmdb.org/t/p/original/vJfXc0ZMs3oFX0Fv2CzRq9wa3vP.jpg",
@@ -5523,6 +5678,7 @@
                             "rating": "7.2"
                         },
                         {
+                            "number": 21,
                             "title": "Nightfall/First Fit of Jealousy",
                             "description": "A new spy named Nightfall joins the peacemaking team between East and West. She thinks she can play a better role as Twilight's wife and enters into a mental battle with Yor.",
                             "image": "https://image.tmdb.org/t/p/original/3UFgoPLwqrzrHKEDI7gYyfu2boj.jpg",
@@ -5530,6 +5686,7 @@
                             "rating": "7.8"
                         },
                         {
+                            "number": 22,
                             "title": "The Underground Tennis Tournament: The Campbelldon",
                             "description": "Twilight and Nightfall enter an underground tennis tournament for a mission as two players and there are no rules in this match and it's a tough match.",
                             "image": "https://image.tmdb.org/t/p/original/60qfep8Wg7ir8Uo2eneTlXXOjXU.jpg",
@@ -5537,6 +5694,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 23,
                             "title": "The Unwavering Path",
                             "description": "Nightfall and Twilight, who went to a tennis match to get a coded painting, finished their match. After this, Nightfall challenges Yor to a tennis match so that she can take the role of Twilight's wife from her",
                             "image": "https://image.tmdb.org/t/p/original/shW5hWBz1sgrefmRBZfwqWhgbYH.jpg",
@@ -5544,6 +5702,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 24,
                             "title": "The Role of a Mother and Wife/Shopping with Friends",
                             "description": "Yor, who thinks that she has been bested by Nightfall is upset and sad. Sensing that his mission is in jeopardy, Twilight invites Yor to a bar to talk about it. Suddenly, something happens to Twilight that hasn't happened in years.",
                             "image": "https://image.tmdb.org/t/p/original/bGW5Bn1sIRttSxAHNc3ac180CCU.jpg",
@@ -5551,6 +5710,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 25,
                             "title": "First Contact",
                             "description": "With his clever plan, Twilight manages to meet Desmond briefly.",
                             "image": "https://image.tmdb.org/t/p/original/welQIaa7p2C6Ub7mGhvkHeLO9cT.jpg",
@@ -5563,6 +5723,7 @@
                     "season_number": 2,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Let's Follow Mama and Papa",
                             "description": "Yor is shot in the butt while on a mission and looks miserable when she gets home. Loid mistakes her very apparent miserable mood as her being unhappy with their marriage of convenience and offers to take her out on a date.",
                             "image": "https://image.tmdb.org/t/p/original/mpVApVSbI1zxcjFoVDq9CmLGZz2.jpg",
@@ -5570,6 +5731,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 2,
                             "title": "Bond's Strategy to Stay Alive/Damian's Field Research Trip",
                             "description": "Bond has a vision where he dies after eating food made by Yor. Worried that Damian is studying too hard during the holiday break, Emile and Ewen stay behind with Damian after the former got punished.",
                             "image": "https://image.tmdb.org/t/p/original/A3adJEeYjKyTjt2mgBQV6EdehQ2.jpg",
@@ -5577,6 +5739,7 @@
                             "rating": "7.1"
                         },
                         {
+                            "number": 3,
                             "title": "Mission and Family/The Elegant Bondman/The Heart of a Child/Waking Up",
                             "description": "Yuri is doing great at his job with the Secret Police. His assignment is to investigate a former newspaper reporter suspected of selling articles slandering Ostania to Westalis.",
                             "image": "https://image.tmdb.org/t/p/original/dhTVyMbXdVn9YD5zkp0B0s3uoSK.jpg",
@@ -5584,6 +5747,7 @@
                             "rating": "6.6"
                         },
                         {
+                            "number": 4,
                             "title": "The Pastry of Knowledge/The Informant's Great Romance Plan II",
                             "description": "Eden's legendary dessert finally appears. In order to obtain the macrons that supposedly can make you into an Imperial Scholar if eaten, Anya and her friends race to get to them first.",
                             "image": "https://image.tmdb.org/t/p/original/vJC35ConrAu5Fc0HenUOt6NPf9v.jpg",
@@ -5591,6 +5755,7 @@
                             "rating": "7.3"
                         },
                         {
+                            "number": 5,
                             "title": " Plan to Cross the Border",
                             "description": "Yor is tasked with protecting the only survivors of the Gretcher family, Olka and her son, and helping them escape to a different country by traveling on a cruise ship.",
                             "image": "https://image.tmdb.org/t/p/original/gBxxsugfJ5Gcz5vkUSmn5UyEgzT.jpg",
@@ -5598,6 +5763,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 6,
                             "title": "The Fearsome Luxury Cruise Ship",
                             "description": "After boarding the cruise ship, Yor began her duty as bodyguard to Olka and her son. Meanwhile, Yor's superior, Matthew, finds an assassin who is after Olka and her son.",
                             "image": "https://image.tmdb.org/t/p/original/2LQGL9Dy9Vu0YN6Xz0rZ5toKL5z.jpg",
@@ -5605,6 +5771,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 7,
                             "title": " Who Is This Mission For?",
                             "description": "Loid tries to impress Anya and picks outfits to make him look like a fun dad. Meanwhile, Yor, on guard duty, is confronted by one of the assassins, Barnaby. As the attack by the assassins intensifies, Yor questions her own identity.",
                             "image": "https://image.tmdb.org/t/p/original/w6zyGIE6Re1R3rbGznRYZoyRt9b.jpg",
@@ -5612,6 +5779,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 8,
                             "title": " The Symphony Upon The Ship/Sister's Herbal Tea",
                             "description": "Anya and Loid are enjoying the fireworks. Meanwhile, Yor's mission has reached its climax.",
                             "image": "https://image.tmdb.org/t/p/original/10IDii3X575FA0D4L70ZTg7akG7.jpg",
@@ -5619,6 +5787,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 9,
                             "title": "The Hand That Connects to the Future",
                             "description": "Loid leaves Anya at the daycare in a hurry and then disguises himself as a State Security Service member to take care of a bomb on the ship.",
                             "image": "https://image.tmdb.org/t/p/original/eMaaFAg0sEptNGHArVFcx05jqw5.jpg",
@@ -5626,6 +5795,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 10,
                             "title": " Enjoy the Resort to the Fullest/Bragging About Vacation",
                             "description": "The cruise ship arrives at the resort island, allowing the Forgers to finally enjoy a family vacation together.",
                             "image": "https://image.tmdb.org/t/p/original/i36UD416f4Poox4TNAwfyP9D2GS.jpg",
@@ -5633,6 +5803,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 11,
                             "title": "Berlint in Love/Nightfall's Daily Life",
                             "description": "Becky is very excited about a romantic drama on TV, so she heads over to the Forgers' place to see Loid, who she fell in love with instantly after seeing his picture. Becky aggressively pursues Loid.",
                             "image": "https://image.tmdb.org/t/p/original/z3b8l9AXiDWsiuaVAPXua7WEaGw.jpg",
@@ -5640,6 +5811,7 @@
                             "rating": "7.3"
                         },
                         {
+                            "number": 12,
                             "title": "Part of the Family",
                             "description": "As Bond is on a walk with Loid, he has a premonition of an accident, so he tries to stop it, but is scolded by Loid. He then sees a vision of a building going up in flames and a sobbing girl standing in front of it.",
                             "image": "https://image.tmdb.org/t/p/original/zyxHtmFR7Bv79grEDnuhhGdtvgm.jpg",
@@ -5652,15 +5824,113 @@
                     "season_number": 3,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "",
                             "description": "",
                             "image": "",
                             "addedDate": "2025-10-04",
                             "rating": ""
+                        },
+                        {
+                            "number": 2,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-11",
+                            "rating": ""
+                        },
+                        {
+                            "number": 3,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-18",
+                            "rating": ""
+                        },
+                        {
+                            "number": 4,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-25",
+                            "rating": ""
+                        },
+                        {
+                            "number": 5,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-01",
+                            "rating": ""
+                        },
+                        {
+                            "number": 6,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-08",
+                            "rating": ""
+                        },
+                        {
+                            "number": 7,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-15",
+                            "rating": ""
+                        },
+                        {
+                            "number": 8,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-22",
+                            "rating": ""
+                        },
+                        {
+                            "number": 9,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-29",
+                            "rating": ""
+                        },
+                        {
+                            "number": 10,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-06",
+                            "rating": ""
+                        },
+                        {
+                            "number": 11,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-13",
+                            "rating": ""
+                        },
+                        {
+                            "number": 12,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-20",
+                            "rating": ""
+                        },
+                        {
+                            "number": 13,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-27",
+                            "rating": ""
                         }
                     ]
                 }
-            ]
+            ],
+            "type": "series"
         },
         {
             "id": 1,
@@ -5739,7 +6009,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
         },
         {
             "id": 1759258577665,
@@ -5818,33 +6089,1484 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "inSlides": false
+        },
+        {
+            "id": 1759342771682,
+            "title": "Takopi's Original Sin",
+            "genre": "Adult Animation, Animation, Anime, Drama, Hand-Drawn Animtion, Psychological Drama, Sci-Fi",
+            "year": 2025,
+            "releaseDate": "2025-06-27",
+            "rating": 8.8,
+            "duration": "30min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xPXDVhVKt0XM34ihoUVMHtLYTw8.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/6omimfVty4JD3LXzI5LHEGhXjwn.jpg",
+            "description": "Takopi travels from his home of Happy Planet to spread happiness on Earth, but meets the unsmiling Shizuka. Her school friends and home life are causing her somber expression and pure hearted Takopi is determined to change things.\n",
+            "language": "Japanese",
+            "country": "Japan",
+            "ageRating": "G",
+            "status": "completed",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "2016-nen no kimi e",
+                            "description": "Shizuka lives a painful life until things start to take a sudden turn when she meets an alien named Takopi.",
+                            "image": "https://image.tmdb.org/t/p/original/1i66FtBBCFJoS1GhV31aZIPQ8vY.jpg",
+                            "addedDate": "2025-06-27",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Takopî no kyûsai",
+                            "description": "Takopi makes various attempts to help Shizuka, but things don't seem to work in his favor.",
+                            "image": "https://image.tmdb.org/t/p/original/Ah5DprWqyYWrkkVCl6ZGzN19J89.jpg",
+                            "addedDate": "2025-07-04",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Takopî no kokkai",
+                            "description": "Takopi realizes something important while covering up the crime with Shizuka and Naoki.",
+                            "image": "https://image.tmdb.org/t/p/original/zzPPYmbMg0tk13pzU9FWujMOT1C.jpg",
+                            "addedDate": "2025-07-11",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Azuma-kun no kyuusai",
+                            "description": "After a shocking incident, Azuma struggles with guilt and loyalty, while Shizuka calmly plans her next move. As tensions rise, cracks begin to show in their fragile relationship",
+                            "image": "https://image.tmdb.org/t/p/original/fZVPecySubD9wrZT38KrXBo4cNS.jpg",
+                            "addedDate": "2025-07-18",
+                            "rating": "9.4"
+                        },
+                        {
+                            "number": 5,
+                            "title": " 2022-nen no kimi e",
+                            "description": "Shizuka goes to Tokyo, and Takopi remembers something important.",
+                            "image": "https://image.tmdb.org/t/p/original/d0iR13bdivQvsmrf7zgVNGakxQu.jpg",
+                            "addedDate": "2025-07-25",
+                            "rating": "9.6"
+                        },
+                        {
+                            "number": 6,
+                            "title": "2016-nen no kimitachi e",
+                            "description": "Takopi makes an important decision that will save not only Shizuka but also Marina and Naoki.",
+                            "image": "https://image.tmdb.org/t/p/original/f9xPQqwHKgklIA166cUlcSscPcf.jpg",
+                            "addedDate": "2025-08-01",
+                            "rating": "9.3"
+                        }
+                    ]
+                }
+            ],
+            "inSlides": false
+        },
+        {
+            "id": 1759434000966,
+            "title": "My Hero Academia",
+            "genre": "Action, Adventure, Animation, Anime, Fantasy, Hand-Drawn Animtion, Sci-Fi, Shonen, Superhero, Urban Adventure",
+            "year": 2018,
+            "releaseDate": "2018-05-05",
+            "rating": 8.2,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/cH39aJg9VlEaYo6yY37Iah8RAaz.jpg",
+            "description": "A superhero-admiring boy enrolls in a prestigious hero academy and learns what it really means to be a hero, after the strongest superhero grants him his own powers.\n\n",
+            "language": " Japanese, English",
+            "country": "Japan",
+            "ageRating": "TV-14",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Izuku Midoriya: Origin",
+                            "description": "Izuku Midoriya desperately wants to be a hero, but he is one of the few in his generation born without a Quirk. Will meeting the number one hero, All Might, change his fate?",
+                            "image": "https://image.tmdb.org/t/p/original/v8LeJjeJeyiZPqElnDG0FZQpABf.jpg",
+                            "addedDate": "2018-05-05",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 2,
+                            "title": "What It Takes to Be a Hero",
+                            "description": "Izuku accidentally learns of All Might's secret, but there's trouble in town again before Izuku has time to process it. Will All Might be able to save the day again?",
+                            "image": "https://image.tmdb.org/t/p/original/s2bBEPKbGykqwdJnRs1ZY1uGy5u.jpg",
+                            "addedDate": "2018-05-12",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Roaring Muscles",
+                            "description": "All Might tells Izuku that he can become a hero, but does he really have what it takes to become one?",
+                            "image": "https://image.tmdb.org/t/p/original/rWdHaedFskiytE895zijxZp2z6h.jpg",
+                            "addedDate": "2018-05-19",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Start Line",
+                            "description": "At the entrance exam, Izuku falls behind as the other students defeat faux villains left and right. Will he be able to get enough points to pass?",
+                            "image": "https://image.tmdb.org/t/p/original/fUq0PFzkFH0cTmsw9sBpTE2vgw9.jpg",
+                            "addedDate": "2018-06-02",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 5,
+                            "title": "What I Can Do for Now",
+                            "description": "It's Izuku's first day of high school, and he still can't control his new Quirk. Will he make it to the second day of school with his eccentric new teacher?",
+                            "image": "https://image.tmdb.org/t/p/original/tS9tG40AQOJCmOR9unfO8NJBQIH.jpg",
+                            "addedDate": "2018-06-09",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Rage, You Damn Nerd",
+                            "description": "Izuku somehow gets through his first day of school and falls into a regular schedule of classes and training at U.A. In their first class with All Might...",
+                            "image": "https://image.tmdb.org/t/p/original/2v6EDBUlFZ89bBZsHtiVfmKXOUb.jpg",
+                            "addedDate": "2018-06-16",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Deku vs. Kacchan",
+                            "description": "Izuku is up against Katsuki in their first class with All Might! Can he and Uraraka beat the villain team of Katsuki and Tenya before time runs out?",
+                            "image": "https://image.tmdb.org/t/p/original/vZn3Ri5a7LRDYq4qde8KAlUADqA.jpg",
+                            "addedDate": "2018-06-23",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Bakugo's Start Line",
+                            "description": "After the combat training lesson, the students and All Might reflect on their matches as they think about their next steps.",
+                            "image": "https://image.tmdb.org/t/p/original/sjHC0vaEDAiMFhRHNGP0NvpVj9E.jpg",
+                            "addedDate": "2018-06-30",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Yeah, Just Do Your Best, Iida!",
+                            "description": "Class 1-A has to elect a class representative, and everyone wants the job! How will they choose? And what lies in wait for them at the next class?",
+                            "image": "https://image.tmdb.org/t/p/original/vRnBvpSgj9Jl7s2tCtS3Xqq0yuf.jpg",
+                            "addedDate": "2018-07-07",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Encounter with the Unknown",
+                            "description": "Villains have attacked USJ, and it's up to Class 1-A to stop them. What are the villains after? Will All Might be able to save the day again?",
+                            "image": "https://image.tmdb.org/t/p/original/i3u5sYPEWBBNnXdtUScVXtJX0QF.jpg",
+                            "addedDate": "2018-07-14",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Game Over",
+                            "description": "The students of Class 1-A are up against the League of Villains. Will they survive long enough for help to arrive?",
+                            "image": "https://image.tmdb.org/t/p/original/5fqO2bpH9MwUCwU5fqFscx0Yzm5.jpg",
+                            "addedDate": "2018-07-21",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 12,
+                            "title": "All Might",
+                            "description": "All Might has finally shown up, but will he be able to defeat Nomu and save the day?!",
+                            "image": "https://image.tmdb.org/t/p/original/qJRML65qJ7mbzuTdMK8Nyxt40s3.jpg",
+                            "addedDate": "2018-07-28",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Upon Each of Their Hearts",
+                            "description": "As the battle at USJ winds down, Izuku and All Might think about its repercussions. Meanwhile, the villains slink home to plan their next move.",
+                            "image": "https://image.tmdb.org/t/p/original/tcGyMcpJZhibydDqP2E1M6Ezd1G.jpg",
+                            "addedDate": "2018-08-04",
+                            "rating": "8.5"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 2,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "That's the Idea, Ochaco",
+                            "description": "As the students and teachers recover from the attack on USJ, Izuku learns why Ochaco wants to become a hero.",
+                            "image": "https://image.tmdb.org/t/p/original/990nN2loj7j1NzqWVf5JbxNIQZD.jpg",
+                            "addedDate": "2018-08-11",
+                            "rating": "7.1"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Roaring Sports Festival",
+                            "description": "The U.A. sports festival begins and all eyes are on the first years as they start their qualifying round-the obstacle course race.",
+                            "image": "https://image.tmdb.org/t/p/original/jSUUHX8mJmi9jYkTYjHoir3luKx.jpg",
+                            "addedDate": "2018-08-18",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 3,
+                            "title": "In Their Own Quirky Ways",
+                            "description": "The first years try to stand out as they struggle to finish the obstacle course and qualify for a spot in the next round.",
+                            "image": "https://image.tmdb.org/t/p/original/2zQEdjE2pxlTgDmGHTbq48M66Z5.jpg",
+                            "addedDate": "2018-08-25",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Strategy, Strategy, Strategy",
+                            "description": "Izuku's having trouble finding a team for the cavalry battle in the next round of the U.A. sports festival. Luckily, he has a plan.",
+                            "image": "https://image.tmdb.org/t/p/original/pbCRVejJJF5tOd2c7DdxbqmCf5p.jpg",
+                            "addedDate": "2018-09-08",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Cavalry Battle Finale",
+                            "description": "Fighting it out in the second half of the cavalry battle, does Team Midoriya have what it takes to stay in the top four?",
+                            "image": "https://image.tmdb.org/t/p/original/dQGJ9LmiQrMtdSsh7wA5W3aCWJt.jpg",
+                            "addedDate": "2018-09-15",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 6,
+                            "title": "The Boy Born with Everything",
+                            "description": "Izuku learns more about Todoroki's past as the first-years head into the final round of the sports festival.",
+                            "image": "https://image.tmdb.org/t/p/original/pacgtKLJvhOBdoNjzXgTbJwYrlE.jpg",
+                            "addedDate": "2018-09-22",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Victory or Defeat",
+                            "description": "Izuku is up against Shinso in the first match of the finals, but can he overcome Shinso's Quirk to advance to the next round?",
+                            "image": "https://image.tmdb.org/t/p/original/c7QUEodtTFbEuwRWhWruZBQg9tc.jpg",
+                            "addedDate": "2018-09-29",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Battle On, Challengers!",
+                            "description": "It's one match after another in the first round of the finals tournament. Who will advance to the second round?",
+                            "image": "https://image.tmdb.org/t/p/original/jv23cLR0QKb8TJ6rjdZ2qSCZH9T.jpg",
+                            "addedDate": "2018-10-06",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Bakugo vs. Uraraka",
+                            "description": "Bakugo seems almost villainous when he's up against Uraraka, but she has a plan to keep it from being a one-sided match.",
+                            "image": "https://image.tmdb.org/t/p/original/oCE0YzSXLTMR0fNAtL1pxHKoWrN.jpg",
+                            "addedDate": "2018-10-13",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Shoto Todoroki: Origin",
+                            "description": "Izuku forces Todoroki to face his past and himself as they square off in the first match of the second round of the finals.",
+                            "image": "https://image.tmdb.org/t/p/original/xrrFPcAVY9FCYKGeKdTjlYPWEPk.jpg",
+                            "addedDate": "2018-10-20",
+                            "rating": "9.6"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Fight On, Iida",
+                            "description": "It's time to see who will make it to the final showdown. Will Iida's Reciproburst be enough to beat Todoroki?",
+                            "image": "https://image.tmdb.org/t/p/original/vAggBaCiabSYZT9TPkOwmATz4WA.jpg",
+                            "addedDate": "2018-10-27",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Todoroki vs. Bakugo",
+                            "description": "Todoroki and Bakugo, the two finalists, begin their fight with one another.",
+                            "image": "https://image.tmdb.org/t/p/original/iEAHq4YEwvW4KPEBCXPtYkUEbp3.jpg",
+                            "addedDate": "2018-11-03",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Time to Pick Some Names",
+                            "description": "Following their epic debut at the sports festival, it's time for the first-years to pick the most important part of their identities-their hero name!",
+                            "image": "https://image.tmdb.org/t/p/original/pryUQihr9rDyhbi5GCh8YkO8dIE.jpg",
+                            "addedDate": "2018-11-10",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Bizarre! Gran Torino Appears",
+                            "description": "The internships begin! While everyone adjusts to their new tasks, Izuku starts training with Gran Torino, the same man who once taught All Might.",
+                            "image": "https://image.tmdb.org/t/p/original/wli0QbsPQXM5rqGEjm2otWAMKhR.jpg",
+                            "addedDate": "2018-11-24",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Midoriya and Shigaraki",
+                            "description": "The U.A. students are finally starting to get the hang of their internships, but Izuku has much more to learn about One For All.",
+                            "image": "https://image.tmdb.org/t/p/original/3FyZC4zIEwn8XyNwrbaIDwo6tlE.jpg",
+                            "addedDate": "2018-12-01",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Hero Killer: Stain vs U.A. Students",
+                            "description": "Stain strikes again, and this time some U.A. students are around when it happens. Will they be able to hold him off until the pros come?",
+                            "image": "https://image.tmdb.org/t/p/original/sy4x22W7mzpSzdcENPXsztmbXnJ.jpg",
+                            "addedDate": "2018-12-08",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 17,
+                            "title": " Climax",
+                            "description": "It all comes to a head as Izuku, Iida, and Todoroki face off against Stain while the pro heroes in Hosu City fight against the Nomus.",
+                            "image": "https://image.tmdb.org/t/p/original/jFDSZqlC8sfKgOO6vuiQjDidfkS.jpg",
+                            "addedDate": "2018-12-15",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 18,
+                            "title": " The Aftermath of Hero Killer: Stain",
+                            "description": "Stain is finally captured, but now the hero community must deal with the consequences of their actions.",
+                            "image": "https://image.tmdb.org/t/p/original/vKXtSJpnvBBiBdnKz90nlhiWcoI.jpg",
+                            "addedDate": "2019-01-06",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Everyone's Internships",
+                            "description": "As Izuku, Iida, and Todoroki recover from their fight with Stain, the other members of Class 1-A work hard at their own internships.",
+                            "image": "https://image.tmdb.org/t/p/original/fPMY8vANaLtYEokGTEWlB1951X6.jpg",
+                            "addedDate": "2019-01-13",
+                            "rating": "6.6"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Listen Up!! A Tale from the Past",
+                            "description": "The students return to their daily lives while All Might has a special history lesson for Izuku. It's time to learn about One For All!",
+                            "image": "https://image.tmdb.org/t/p/original/g7QnQCNfBQOmjo8HMr0oQkyQbdL.jpg",
+                            "addedDate": "2019-01-20",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Gear Up for Final Exams",
+                            "description": "Finals are coming up, and Class 1-A is going to need more than a cram session. This year, the teachers are changing the practical exams.",
+                            "image": "https://image.tmdb.org/t/p/original/h0QFP8dKtq6I0dOsljPh5uMjUET.jpg",
+                            "addedDate": "2019-01-27",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 22,
+                            "title": "Yaoyorozu: Rising",
+                            "description": "The exams are turning out to be much more challenging than the students expected. Can any of the teams hold their own against a teacher?",
+                            "image": "https://image.tmdb.org/t/p/original/m0FDTSFuajTTXsQsdmE6gsrh0uF.jpg",
+                            "addedDate": "2019-02-03",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Stripping the Varnish",
+                            "description": "As the students of Class 1-A fight in their practical exams, their resolve to become heroes is put to the test.",
+                            "image": "https://image.tmdb.org/t/p/original/edmDKyqrYDtp53b5uCylfS5gFY9.jpg",
+                            "addedDate": "2019-02-10",
+                            "rating": ".5"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Katsuki Bakugo: Origin",
+                            "description": "Midoriya and Bakugo begin their match with All Might but the two of them have different plans.",
+                            "image": "https://image.tmdb.org/t/p/original/cV732cWvT6IzBKc3pNaCtVxCOS6.jpg",
+                            "addedDate": "2019-02-17",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 25,
+                            "title": "Encounter",
+                            "description": "The league of villains has two people wanting to join them. UA students go to the mall. When they're at the mall everyone goes off on their own leaving Midoriya by himself where he encounters Tomura Shigaraki.",
+                            "image": "https://image.tmdb.org/t/p/original/tRaD9tu1Qjq9kcdgN4UHYgKzlqa.jpg",
+                            "addedDate": "2019-02-24",
+                            "rating": "8.1"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 3,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Game Start",
+                            "description": "A recap episode highlighting the first 2 seasons as Class-1A and Class-1B prepare to start summer camp.",
+                            "image": "https://image.tmdb.org/t/p/original/pjnVvLF7dkrUf5A7FScFQxKZQ1t.jpg",
+                            "addedDate": "2019-03-03",
+                            "rating": "6.5"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Wild, Wild Pussycats",
+                            "description": "The kids arrive at camp, where they will be subjected to hard work like they've never experienced before.",
+                            "image": "https://image.tmdb.org/t/p/original/2JiTX9BNFKxdy6nCCzYDJRj55uX.jpg",
+                            "addedDate": "2019-03-10",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Kota",
+                            "description": "Midoriya finds out more about Kota and why he feels so strongly about heroes as a small but competent group of villains threaten to endanger the lives of everyone in the camp.",
+                            "image": "https://image.tmdb.org/t/p/original/dgx805gcFvcd1TQi2PdwuEaDQGq.jpg",
+                            "addedDate": "2019-03-17",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 4,
+                            "title": "My Hero",
+                            "description": "The villains launch their attack, and only Izuku knows where Kota is. Can he get to him in time?",
+                            "image": "https://image.tmdb.org/t/p/original/jLw4raD9cTeimO3Yim38U1IKk5C.jpg",
+                            "addedDate": "2019-03-24",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Drive It Home, Iron Fist!!!",
+                            "description": "As the students and teachers retaliate against the villains, two students take it into their own hands to handle the unknown gas swirling across the forest.",
+                            "image": "https://image.tmdb.org/t/p/original/7aPjqgFERzYc6UmzHEodlSb7yUH.jpg",
+                            "addedDate": "2019-03-31",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Roaring Upheaval",
+                            "description": "The students and teachers of U.A. are still fighting in the woods, but has the Vanguard Action Squad accomplished its mission already...?.",
+                            "image": "https://image.tmdb.org/t/p/original/oBdYOm84SzJRMr3NFXm8bETAdjI.jpg",
+                            "addedDate": "2019-04-07",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 7,
+                            "title": "What a Twist!",
+                            "description": "Todoroki, Kirishima, and Midoriya want to go after Bakugo, but the class rep is standing in their way. Meanwhile, Shigaraki makes Bakugo an offer...",
+                            "image": "https://image.tmdb.org/t/p/original/fggqtGhkVwV19qFQrOMziHcjLOT.jpg",
+                            "addedDate": "2019-04-13",
+                            "rating": "8.1"
+                        },
+                        {
+                            "number": 8,
+                            "title": "From Iida to Midoriya",
+                            "description": "Todoroki, Kirishima, and Midoriya want to go after Bakugo, but the class rep is standing in their way. Meanwhile, Shigaraki makes Bakugo an offer...",
+                            "image": "https://image.tmdb.org/t/p/original/glltUgXwP24uFcBmPhfrKaesI08.jpg",
+                            "addedDate": "2019-04-20",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 9,
+                            "title": "All For One",
+                            "description": "The heroes and U.A. students close in on the League of Villains' hideouts, but the League still has an ace up its sleeve.",
+                            "image": "https://image.tmdb.org/t/p/original/cRaSrEOmmUiwn42z309BxnpGIXz.jpg",
+                            "addedDate": "2019-04-27",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Symbol of Peace",
+                            "description": "As the fight against the League of Villains escalates, can the U.A. students get Bakugo out in time for All Might to make a big comeback?",
+                            "image": "https://image.tmdb.org/t/p/original/a4UxNAXo60wYkr3ZuHHnTLhQz5P.jpg",
+                            "addedDate": "2019-05-04",
+                            "rating": "9.4"
+                        },
+                        {
+                            "number": 11,
+                            "title": "One For All",
+                            "description": "All Might's time is running out as he faces his ultimate nemesis head on. Will he finally be able to defeat All For One once and for all?",
+                            "image": "https://image.tmdb.org/t/p/original/7kJcLTZsF1Kvxd2ElNz4ybO8UGb.jpg",
+                            "addedDate": "2019-05-11",
+                            "rating": "9.8"
+                        },
+                        {
+                            "number": 12,
+                            "title": "End of the Beginning, Beginning of the End",
+                            "description": "Students and faculty react to the fallout of All Might and All for One's confrontation.",
+                            "image": "https://image.tmdb.org/t/p/original/yleKjvyD5DXUnRKjbvOxJCPAhWG.jpg",
+                            "addedDate": "2019-05-18",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Moving into Dorms",
+                            "description": "The students of Class 1-A move into the dorms and have a competition to determine who has the best room as they settle in.",
+                            "image": "https://image.tmdb.org/t/p/original/mUxkrWky8pUr3rdcV8OgO3JKFiA.jpg",
+                            "addedDate": "2019-05-25",
+                            "rating": "7.2"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Create Those Ultimate Moves",
+                            "description": "Class 1-A works on developing their Quirks and creating ultimate moves in order to get ready for the provisional hero licensing exam.",
+                            "image": "https://image.tmdb.org/t/p/original/xi44czDy0Tm28tk8HVIdoB6fyzo.jpg",
+                            "addedDate": "2019-06-01",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 15,
+                            "title": "The Test",
+                            "description": "Izuku and his classmates make some final adjustments to their ultimate moves and then head off to the provisional licensing exam.",
+                            "image": "https://image.tmdb.org/t/p/original/gpARjoAURqHvSxscBaTeTI2wouS.jpg",
+                            "addedDate": "2019-06-08",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Shiketsu High Lurking",
+                            "description": "The provisional licensing exam has begun, and everyone's after Class 1-A. Can they last long enough to pass this first test?",
+                            "image": "https://image.tmdb.org/t/p/original/sxzyWQ0M6Rkz86Q2SzGjpZqnJyX.jpg",
+                            "addedDate": "2019-06-15",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 17,
+                            "title": "Class 1-A",
+                            "description": "Todoroki's on his own against Seijin High, and Yaoyorozu's group is pitted against Seiai Academy as they and the rest of Class 1-A fight to pass the first test.",
+                            "image": "https://image.tmdb.org/t/p/original/oJvs5SmB3tsNDDCmAzySGH6zAku.jpg",
+                            "addedDate": "2019-06-22",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 18,
+                            "title": "RUSH!",
+                            "description": "It's down to the final minutes of the first test of the provisional licensing exam and almost half of Class A is still left.",
+                            "image": "https://image.tmdb.org/t/p/original/ywZN4HBRmxZIPFySBHWonCfM2lk.jpg",
+                            "addedDate": "2019-06-29",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Rescue Exercises",
+                            "description": "The second test of the provisional licensing exam has begun, and the hero candidates are suddenly thrust into a rescue operation.",
+                            "image": "https://image.tmdb.org/t/p/original/fD2yK1bua0rWWnAcHMlT72D2Xfp.jpg",
+                            "addedDate": "2019-07-07",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Special Episode - Save the World with Love!",
+                            "description": "We take a break from the provisional licensing exam to visit a class held before the summer training camp.",
+                            "image": "https://image.tmdb.org/t/p/original/7DrBKSt7wy2977wQBbtIaCpDwgE.jpg",
+                            "addedDate": "2019-07-14",
+                            "rating": "6.3"
+                        },
+                        {
+                            "number": 21,
+                            "title": "What's the Big Idea?",
+                            "description": "The exam nears its end, but Izuku and the other hero candidates must fend off Gang Orca to finish the rescue mission.",
+                            "image": "https://image.tmdb.org/t/p/original/6MSrGMZMZ6zILXEMqGgHrD9JttC.jpg",
+                            "addedDate": "2019-07-21",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 22,
+                            "title": "A Talk about Your Quirk",
+                            "description": "While the U.A. students finish up the provisional licensing exam and get their results, All Might has a talk with All For One.",
+                            "image": "https://image.tmdb.org/t/p/original/38B31AYuygAu6u6mrBOcKVQQ0FA.jpg",
+                            "addedDate": "2019-07-28",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Deku vs. Kacchan, Part 2",
+                            "description": "Following the provisional licensing exam, Izuku tries out his Shoot Style on Bakugo as they have a heart-to-heart through their fight.",
+                            "image": "https://image.tmdb.org/t/p/original/9aWqAYr03K5LG5oa3bOrX6qOmP7.jpg",
+                            "addedDate": "2019-08-04",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 24,
+                            "title": " A Season for Encounters",
+                            "description": "The world has changed for villains and heroes alike in the weeks after All Might's fight with All For One, and the U.A. students start their second semester.",
+                            "image": "https://image.tmdb.org/t/p/original/lTqwkYaOSyFHMMdFhOFcdJXsoXd.jpg",
+                            "addedDate": "2019-08-11",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 25,
+                            "title": "Unrivaled",
+                            "description": "The students of Class 1-A learn about work studies from the Big Three. Meanwhile, the villains also prepare their next steps.",
+                            "image": "https://image.tmdb.org/t/p/original/qp7TmTcLDv6N1Erjr3OJSvGFj4z.jpg",
+                            "addedDate": "2019-08-18",
+                            "rating": "8.0"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 4,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "The Scoop on U.A. Class 1-A",
+                            "description": "After All Might announces his retirement, freelance reporter Taneo Tokuda goes to the dorms to investigate U.A. Class 1-A.",
+                            "image": "https://image.tmdb.org/t/p/original/dES7TRDGli7bNR1lT68STX9cf4m.jpg",
+                            "addedDate": "2019-11-09",
+                            "rating": "7.0"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Overhaul",
+                            "description": "Overhaul pays a visit to the League of Villains, and Midoriya tries to find a place to do his work study.",
+                            "image": "https://image.tmdb.org/t/p/original/4IlqzIKFGY0lD8GZybHbS13ozYB.jpg",
+                            "addedDate": "2019-11-16",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Boy Meets...",
+                            "description": "Izuku battles Sir Nighteye so he can do his work study at Nighteye's agency, but Nighteye has someone else in mind to be All Might's successor.",
+                            "image": "https://image.tmdb.org/t/p/original/u4IWgBmdGMqqeUG9DwJ8FDvVyn9.jpg",
+                            "addedDate": "2019-11-23",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Fighting Fate",
+                            "description": "Izuku's mind is swirling with feelings from his work study, so he goes and talks to All Might about it and learns about All Might's fate.",
+                            "image": "https://image.tmdb.org/t/p/original/uQEUdJIxePxCys89awT5JrEYvRW.jpg",
+                            "addedDate": "2019-11-30",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Let's Go, Gutsy Red Riot",
+                            "description": "Kirishima begins his work study with Fat Gum and Amajiki and runs into a criminal situation. Meanwhile, Shigaraki and Overhaul meet up in order to discuss an alliance.",
+                            "image": "https://image.tmdb.org/t/p/original/6xSlj42kvFobud9Jj1Utj38X5ho.jpg",
+                            "addedDate": "2019-12-07",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 6,
+                            "title": "An Unpleasant Talk",
+                            "description": "The work study students from U.A. attend a meeting of heroes gathered by Sir Nighteye and leave with new resolve.",
+                            "image": "https://image.tmdb.org/t/p/original/omt64UmtdSE9HhuTDclfLiRRw4l.jpg",
+                            "addedDate": "2019-12-14",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Go!!",
+                            "description": "The work study students wait until the pro heroes find Eri and it's time to start the operation to save her.",
+                            "image": "https://image.tmdb.org/t/p/original/lHye1zOrBxgBHIESLDJcSgGcHUb.jpg",
+                            "addedDate": "2020-01-04",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Suneater of the Big Three",
+                            "description": "The Shie Hassaikai is going all out to stop the heroes, and Suneater volunteers to take out the first batch of Eight Bullets members in their way.",
+                            "image": "https://image.tmdb.org/t/p/original/wWWdXsRozPFLt4VCDWPtAR4C6qD.jpg",
+                            "addedDate": "2020-01-11",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Red Riot",
+                            "description": "As the fight with the Shie Hassaikai continues, Kirishima has to face his past when he and Fat Gum get separated from the others.",
+                            "image": "https://image.tmdb.org/t/p/original/ri65KrslHFXAe1Ewb1tTWzqfMKK.jpg",
+                            "addedDate": "2020-01-18",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Temp Squad",
+                            "description": "The Hassaikai gets some help from the League of Villains as the heroes continue to make their way to Overhaul to rescue Eri.",
+                            "image": "https://image.tmdb.org/t/p/original/yozV28EeXAjh4SEJoiTt2BTE7F3.jpg",
+                            "addedDate": "2020-01-25",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Lemillion",
+                            "description": "The League of Villains stay true to their name in their fight. Meanwhile, Togata catches up to Overhaul and Eri first.",
+                            "image": "https://image.tmdb.org/t/p/original/dSDTXH4pwn415tm1daIQ7kKT6pR.jpg",
+                            "addedDate": "2020-02-01",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Unforeseen Hope",
+                            "description": "Izuku, Eraser Head, and Sir Nighteye finally reach the area where Overhaul and the others are and find Togata past his limit.",
+                            "image": "https://image.tmdb.org/t/p/original/22rgsCKe7ZTkBUckpJAqWaSUoHB.jpg",
+                            "addedDate": "2020-02-08",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Infinite 100%",
+                            "description": "As the fight with the Shie Hassaikai reaches its climax, Overhaul looks back on how it all started, and Izuku uses All For One at 100%.",
+                            "image": "https://image.tmdb.org/t/p/original/r9Dxr15uS6rXcPJPS6jMOnGCUHq.jpg",
+                            "addedDate": "2020-02-15",
+                            "rating": "9.7"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Bright Future",
+                            "description": "As the heroes deal with the aftermath of the fight with the Shie Hassaikai, the vehicle transporting Overhaul has an encounter with the League of Villains.",
+                            "image": "https://image.tmdb.org/t/p/original/wsDTycOk4KfbCqfvEwT3CQPs4cB.jpg",
+                            "addedDate": "2020-02-29",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Smoldering Flames",
+                            "description": "After the fight with the Shie Hassaikai, a new villain emerges, and the students who participated reflect on their own roles as future heroes.",
+                            "image": "https://image.tmdb.org/t/p/original/qS2s0q8eHOdcYBuxp5dJfy33yZh.jpg",
+                            "addedDate": "2020-03-07",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Win Those Kids' Hearts",
+                            "description": "Camie joins the provisional license training course and is added to the team working with the kids from Masegaki. Meanwhile, Endeavor has a serious talk with All Might.",
+                            "image": "https://image.tmdb.org/t/p/original/1EPTmLd1q4cj2vcMmjUdsiMEXLg.jpg",
+                            "addedDate": "2020-03-14",
+                            "rating": "6.6"
+                        },
+                        {
+                            "number": 17,
+                            "title": "Relief for License Trainees",
+                            "description": "The trainees bond with the precocious Masegaki kids and life at U.A. goes back to normal as autumn approaches, but Aoyama has been acting strangely.",
+                            "image": "https://image.tmdb.org/t/p/original/hqU4H7qf8xw0Qnhxf7B8LbegqBC.jpg",
+                            "addedDate": "2020-03-21",
+                            "rating": "7.0"
+                        },
+                        {
+                            "number": 18,
+                            "title": "School Festival",
+                            "description": "As the students of U.A prepare for their school festival, Deku and Togata visit Eri in the hospital. Meanwhile, a new villain named Gentle Criminal begins his reign of crime.",
+                            "image": "https://image.tmdb.org/t/p/original/4mIxBqSSbvbdCReV2dD180xC0i3.jpg",
+                            "addedDate": "2020-03-28",
+                            "rating": "6.7"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Prepping for the School Festival is the Funnest Part",
+                            "description": "As the date of the school festival draws nearer, Deku and the rest of Class 1-A decide who is going to do what in order to put on the greatest school festival ever.",
+                            "image": "https://image.tmdb.org/t/p/original/as5OXLabaDUwLFKRyO32S4Ee1VC.jpg",
+                            "addedDate": "2020-04-04",
+                            "rating": "6.8"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Golden Tips Imperial",
+                            "description": "The day of the festival is at hand and Class 1-A is ready. As they relax on the night before, Gentle Criminal hatches his plan to infiltrate the festival, starting with a very special tea.",
+                            "image": "https://image.tmdb.org/t/p/original/csmr4g86fPLJtoCUsfvRLRdKCdT.jpg",
+                            "addedDate": "2020-04-19",
+                            "rating": "6.4"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Deku vs. Gentle Criminal",
+                            "description": "While getting something for the festival, Deku runs into Gentle Criminal. Learning that he plans to infiltrate the festival, Deku begins to fight the mysterious villain and his partner La Brava.",
+                            "image": "https://image.tmdb.org/t/p/original/hGZtCiBp6yMKQqnz1XdoilhgVUQ.jpg",
+                            "addedDate": "2020-04-26",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 22,
+                            "title": "School Festival Start!",
+                            "description": "Deku scrambles to stop Gentle Criminal from infiltrating U.A's school festival using his Shoot Style technique. As La Brava uses her Quirk to power up Gentle, his resolve hardens as he fights against Deku.",
+                            "image": "https://image.tmdb.org/t/p/original/a61IwJeorvJsj18lGwAvO6coYSD.jpg",
+                            "addedDate": "2020-05-03",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Let it Flow! School Festival!",
+                            "description": "Izuku rushes back to the school festival after his encounter with Gentle Criminal and La Brava, but will he make it in time for his performance?",
+                            "image": "https://image.tmdb.org/t/p/original/dSpX2czk3KmymDDr2Ltwy2J0Pnk.jpg",
+                            "addedDate": "2020-05-17",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Japanese Hero Billboard Chart",
+                            "description": "It's time for the next Japanese Hero Billboard Chart rankings to be announced, and this time, all the top ten heroes make an appearance.",
+                            "image": "https://image.tmdb.org/t/p/original/j1KX3vFTFpI7g71548rWFIERsez.jpg",
+                            "addedDate": "2020-05-21",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 25,
+                            "title": " His Start",
+                            "description": "Endeavor and Hawks continue to battle the mysterious Nomu enemy that attacked them. As they scramble to stop the villain and save the people, the whole world watches what the new \"Symbol of Peace\" is capable of.",
+                            "image": "https://image.tmdb.org/t/p/original/ezx0e3qH5eLVjwkDANLBsQwyOPA.jpg",
+                            "addedDate": "2020-05-28",
+                            "rating": "9.7"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 5,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "All Hands on Deck! Class 1-A",
+                            "description": "The day after Endeavor's climatic battle, Izuku and his classmate take part in a combat training exercise.",
+                            "image": "https://image.tmdb.org/t/p/original/c3CUkVMNAGZpZ4h32LyaLyuvPel.jpg",
+                            "addedDate": "2021-05-09",
+                            "rating": "6.5"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Vestiges",
+                            "description": "Hawks reveals where his morals lie and Endeavour begins his journey to mend his relationship with his family.",
+                            "image": "https://image.tmdb.org/t/p/original/6Pl8NUbrBFkSG7C51nvFF8zNd9H.jpg",
+                            "addedDate": "2021-05-16",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Clash! Class A vs. Class B!",
+                            "description": "Class A and Class B are joined by a special guest as they battle it out during their joint combat training.",
+                            "image": "https://image.tmdb.org/t/p/original/3aeg9Kq0w1AiHnmUFNFkqW3vbrs.jpg",
+                            "addedDate": "2021-05-23",
+                            "rating": "7.1"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Make It Happen, Shinso!",
+                            "description": "The Class A team tries to put Shinso and his new equipment to good use in the first match against Class B.",
+                            "image": "https://image.tmdb.org/t/p/original/5DzgsrKFVB7SpLUtTT2NG2oamhI.jpg",
+                            "addedDate": "2021-05-30",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Operation New Improv Moves",
+                            "description": "It's darkness versus darkness as Tokoyami and Kuroiro face off in the second match of the class battles.",
+                            "image": "https://image.tmdb.org/t/p/original/tcX2TCexx8Tea1PljP47q6hIVTp.jpg",
+                            "addedDate": "2021-06-06",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Foresight",
+                            "description": "Separated from her team, Yaoyorozu's leadership skills are put to the test in the second match of the class battles.",
+                            "image": "https://image.tmdb.org/t/p/original/k22QqjvgUapBOQ4nkuYoqmk6rwR.jpg",
+                            "addedDate": "2021-06-13",
+                            "rating": "6.9"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Match 3",
+                            "description": "In the third match of the class battles, Honenuki leads the Class B team against a well-balanced Class A team.",
+                            "image": "https://image.tmdb.org/t/p/original/noEVg9zK1I8eQyzIJWXczfNeUAZ.jpg",
+                            "addedDate": "2021-06-20",
+                            "rating": "7.1"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Match 3 Conclusion",
+                            "description": "It's still anybody's game as the third match continues with an endurance battle between Todoroki and Tetsutetsu.",
+                            "image": "https://image.tmdb.org/t/p/original/q55LqMeHDhh8UZXTaYmnQVcoVF2.jpg",
+                            "addedDate": "2021-06-27",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Early Bird!",
+                            "description": "Bakugo shows a different side of himself in the fourth team match as the class battles continue.",
+                            "image": "https://image.tmdb.org/t/p/original/5LxEDDIuC9s0rxQTTO7Vc7GxREm.jpg",
+                            "addedDate": "2021-07-04",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 10,
+                            "title": "That Which Is Inherited",
+                            "description": "Midoriya and Shinso face off for the first time since the sports festival in the last fight of the class battles.",
+                            "image": "https://image.tmdb.org/t/p/original/2xSykS8b8NMq9Zf0HphEUDuI3sx.jpg",
+                            "addedDate": "2021-07-11",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Our Brawl",
+                            "description": "It's an all-out brawl as the last two teams from Class A and Class B fight it out to the finish.",
+                            "image": "https://image.tmdb.org/t/p/original/rU6v9S0CcGUznxoTdL5HH5a0Iwd.jpg",
+                            "addedDate": "2021-07-18",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 12,
+                            "title": "The New Power and All For One",
+                            "description": "As the class battles conclude, Midoriya works with All Might and Bakugo on learning more about his new power.",
+                            "image": "https://image.tmdb.org/t/p/original/u8UkMggEPOagPSdvLxrHmjXYESo.jpg",
+                            "addedDate": "2021-07-25",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Have a Merry Christmas!",
+                            "description": "It's Christmas at U.A. and the Class 1-A students celebrate with a Christmas party.",
+                            "image": "https://image.tmdb.org/t/p/original/42pXXMhcruAW45XMIR3FdlWa2pw.jpg",
+                            "addedDate": "2021-08-01",
+                            "rating": "6.8"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Off to Endeavor's Agency!",
+                            "description": "Hawks acts strange when he meets Endeavor and his work study students on their way to Endeavor Agency.",
+                            "image": "https://image.tmdb.org/t/p/original/y26vP3GNxr0GKp8FpDAqFVaf0T2.jpg",
+                            "addedDate": "2021-08-01",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 15,
+                            "title": " One Thing at a Time",
+                            "description": "As the villains continue to move behind the scenes, Endeavor helps his work-study students with the next steps in their training.",
+                            "image": "https://image.tmdb.org/t/p/original/dqrqlkOP52nyrr7xR1zbTlBKtnk.jpg",
+                            "addedDate": "2021-08-15",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Long Time No See, Selkie",
+                            "description": "Ryukyu brings her work study students with her when Selkie asks her to team up with him.",
+                            "image": "https://image.tmdb.org/t/p/original/jHJ1K3bLwyWUpWQdMmQTgbsArgD.jpg",
+                            "addedDate": "2021-08-22",
+                            "rating": "5.5"
+                        },
+                        {
+                            "number": 17,
+                            "title": "The Hellish Todoroki Family",
+                            "description": "Endeavor brings his work study students over for dinner at Fuyumi's request but faces awkward conversations at home.",
+                            "image": "https://image.tmdb.org/t/p/original/p9CcOJ3Mafg92MfDMvRVNUg9RIE.jpg",
+                            "addedDate": "2021-08-29",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 18,
+                            "title": "The Unforgiven",
+                            "description": "One of Endeavor's biggest fans shows up to settle some unfinished business, and he expects far more than an autograph.",
+                            "image": "https://image.tmdb.org/t/p/original/7NcH9EcEi8DquaoPZLJHZINdPTc.jpg",
+                            "addedDate": "2021-09-05",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 19,
+                            "title": "More of a Hero Than Anyone",
+                            "description": "When an unsettling discovery is made regarding Kurogiri, Aizawa and Present Mic are summoned to interrogate him.",
+                            "image": "https://image.tmdb.org/t/p/original/5lBbsRUszVntO85I2C1KEQa6VNh.jpg",
+                            "addedDate": "2021-09-12",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 20,
+                            "title": "My Villain Academia",
+                            "description": "A series of surprise encounters helps give Shigaraki a new sense of direction for the League of Villains.",
+                            "image": "https://image.tmdb.org/t/p/original/cxrJ6Xogi0QPAQQLhG0hdUqs9xc.jpg",
+                            "addedDate": "2021-09-19",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Revival Party",
+                            "description": "The League of Villains waits for Gigantomachia to wake up as they clash with the Meta Liberation Army.",
+                            "image": "https://image.tmdb.org/t/p/original/zfmfiPLMoWHy3ImGJUHK7Yqnw3F.jpg",
+                            "addedDate": "2021-09-26",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 22,
+                            "title": "Sad Man's Parade",
+                            "description": "As Twice tries to save Toga, he thinks back on his past and makes a realization that helps him overcome it.",
+                            "image": "https://image.tmdb.org/t/p/original/rsJj0bxKYstcagygfaMVrTYspUo.jpg",
+                            "addedDate": "2021-10-03",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Tenko Shimura: Origin",
+                            "description": "As the battle between Shigaraki and Re-Destro rages on, Shigaraki begins to remember his past.",
+                            "image": "https://image.tmdb.org/t/p/original/fSnuPIqjZD3sWRFIRf6o3gJWZiH.jpg",
+                            "addedDate": "2021-10-10",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Tomura Shigaraki: Origin",
+                            "description": "Shigaraki remembers his first encounter with All For One during the climax of his battle with Re-Destro.",
+                            "image": "https://image.tmdb.org/t/p/original/bPu0UxA1PiTWb3bHU4uBkk7XrrO.jpg",
+                            "addedDate": "2021-11-07",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 25,
+                            "title": "The High, Deep Blue Sky",
+                            "description": "Both sides prepare for the confrontation between the heroes and the Paranormal Liberation Front as Class 1-A finishes their first year of high school.",
+                            "image": "https://image.tmdb.org/t/p/original/uVzigBe3X9v1r8oJSHHCQig3YHq.jpg",
+                            "addedDate": "2021-11-07",
+                            "rating": "7.5"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 6,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": " A Quiet Beginning",
+                            "description": "Using the information Hawks gathered, the heroes and their work study students get ready for an attack on the Paranormal Liberation Front led by Shigaraki.",
+                            "image": "https://image.tmdb.org/t/p/original/ezH8zW6UB11eCXBR4rDI1SuQ5gs.jpg",
+                            "addedDate": "2022-10-01",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Mirko, the No. 5 Hero",
+                            "description": "Mirko chases after Garaki while the rest of Team Endeavor deals with Nomus at Jaku Hospital. Meanwhile, Team Edge Shot charges in for a surprise attack at Gunga Villa.",
+                            "image": "https://image.tmdb.org/t/p/original/7iCmJKtbHHprGjc9Li5o6inRj1o.jpg",
+                            "addedDate": "2022-10-08",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 3,
+                            "title": "One's Justice",
+                            "description": "Inside Gunga Villa, the Paranormal Liberation Front realizes that they are under attack, and Twice confronts Hawks about his betrayal.",
+                            "image": "https://image.tmdb.org/t/p/original/aXmXFwXn6NByM8jvBBfCOzgeA1i.jpg",
+                            "addedDate": "2022-10-15",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 4,
+                            "title": " Inheritance",
+                            "description": "Hawk's confrontation with Dabi leads him to think back in his past. Meanwhile, at the hospital, Mirko fights her way through multiple High Ends to get to Garaki and Shigaraki.",
+                            "image": "https://image.tmdb.org/t/p/original/blB13XgeDs8bFaA80uX2xM9jO9j.jpg",
+                            "addedDate": "2022-10-22",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 5,
+                            "title": " The Thrill of Destruction",
+                            "description": "After reinforcements finally arrive, the tide is just starting to turn in the heroes' favor when Shigaraki wakes up.",
+                            "image": "https://image.tmdb.org/t/p/original/gcBkJSig5SqqPhUViz21jFrZGYO.jpg",
+                            "addedDate": "2022-10-29",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Encounter, Part 2",
+                            "description": "As Endeavor tells his team that he's fighting Shigaraki, Midoriya realizes that Shigaraki is after One For All and uses himself as bait to try to lure Shigaraki away from the civilians.",
+                            "image": "https://image.tmdb.org/t/p/original/4waajYqQmwZQS2toXumWpiDBA8p.jpg",
+                            "addedDate": "2022-11-05",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Disaster Walker",
+                            "description": "Team Endeavor is up against Shigaraki while Gigantomachia breaks through the heroes surrounding Gunga Villa and is headed toward Team Edge Shot's rear guard.",
+                            "image": "https://image.tmdb.org/t/p/original/6mnUhO9gWWqhx864Ilg46lPBVrX.jpg",
+                            "addedDate": "2022-11-12",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 8,
+                            "title": "League of Villains Vs. U.A. Students",
+                            "description": "Led by Yaoyoruzu, the U.A. Class 1-A and 1-B work study students take on Gigantomachia as he heads their way with the League of Villains on his back.",
+                            "image": "https://image.tmdb.org/t/p/original/szj1iO0Zpwljx9eF9d4dQ5WPM7h.jpg",
+                            "addedDate": "2022-11-19",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Katsuki Bakugo: Rising",
+                            "description": "As Midoriya goes up against Shigaraki, Bakugo remembers a conversation he had with All Might when he was helping Midoriya train.",
+                            "image": "https://image.tmdb.org/t/p/original/6AkMU8GuKKGJhDNe5YPkJiOlo8h.jpg",
+                            "addedDate": "2022-11-26",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 10,
+                            "title": "The Ones Within Us",
+                            "description": "Midoriya and Shigaraki enter the world of One For All as Gigantomachia continues north and Toga makes a detour.",
+                            "image": "https://image.tmdb.org/t/p/original/3HHHSGbSXdY2hLF5aerh8p5gWZc.jpg",
+                            "addedDate": "2022-12-03",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 11,
+                            "title": " Dabi's Dance",
+                            "description": "As Ochako and Toga exchange words and blows, Gigantomachia reaches Shigaraki and the heroes, and Dabi reveals the secret of his past.",
+                            "image": "https://image.tmdb.org/t/p/original/4mceUKrI8Jk11Z9vxN238IJdM5Q.jpg",
+                            "addedDate": "2022-12-10",
+                            "rating": "9.5"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Threads of Hope",
+                            "description": "Best Jeanist appears and spins together the hopes of all the heroes in this fight as the climax of the all-out war draws near.",
+                            "image": "https://image.tmdb.org/t/p/original/y7PY9Xt86AYaBSC1eNateMgWKcE.jpg",
+                            "addedDate": "2022-12-17",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Final Performance",
+                            "description": "Thinking of his great-great-grandfather, Mr. Compress performs his greatest trick in order to save the League of Villains.",
+                            "image": "https://image.tmdb.org/t/p/original/xM0yAQk6A8nFTJx0CD327PtanvG.jpg",
+                            "addedDate": "2022-12-24",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Hellish Hell",
+                            "description": "The heroes wrestle with changing public opinion as they deal with the aftermath of the fierce battle and mourn those they lost in the fight.",
+                            "image": "https://image.tmdb.org/t/p/original/a6y9e7wCPbWxrzA3Uhj3F1bnYwW.jpg",
+                            "addedDate": "2022-01-07",
+                            "rating": "6.9"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Tartarus",
+                            "description": "Under All For One's control, Shigaraki attacks Tartarus with the Nomus to free All For One's body, freeing many other prisoners in the process.",
+                            "image": "https://image.tmdb.org/t/p/original/faKL4xUY6UvROUMJYsWjYOPj9Jw.jpg",
+                            "addedDate": "2022-01-14",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 16,
+                            "title": "The Hellish Todoroki Family, Part 2",
+                            "description": "As heroes deal with criticism from the public, Hawks thinks back on his past with his family, and Endeavor's family visits him in the hospital.",
+                            "image": "https://image.tmdb.org/t/p/original/yeWoqC48XOOrwMLJt8jkgrJyN1r.jpg",
+                            "addedDate": "2022-01-21",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 17,
+                            "title": "The Wrong Way to Put Out a Fire",
+                            "description": "Endeavor and his family reflect on Toya's past and the events that led to his death, and Hawks and Best Jeanist bring them a proposition.",
+                            "image": "https://image.tmdb.org/t/p/original/aLzD6lxekNUnpHF22dpMB6PmEd9.jpg",
+                            "addedDate": "2022-01-28",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 18,
+                            "title": "Izuku Midoriya and Tomura Shigaraki",
+                            "description": "Inside One For All, Izuku talks with the past wielders as the top three heroes deal with public sentiment after Dabi's revelation.",
+                            "image": "https://image.tmdb.org/t/p/original/rFN8Abn3ZChkhJ2UXZ7yiZPmvYt.jpg",
+                            "addedDate": "2022-02-04",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Full Power!!",
+                            "description": "After Izuku decides not to go back to U.A., he finds himself facing Muscular, who was broken out of jail, again and uses the Quirks of the past wielders against him.",
+                            "image": "https://image.tmdb.org/t/p/original/qsuiAqpcq21c04060f1WDCNpX19.jpg",
+                            "addedDate": "2022-02-11",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Hired Gun",
+                            "description": "The top three heroes continue to face criticism as they deal with jailbreakers and look for hints about All For One and Shigaraki's whereabouts, and Izuku comes across a villain from Tartarus.",
+                            "image": "https://image.tmdb.org/t/p/original/qS6YnhRhc6YeKIEZZtETXH60fwU.jpg",
+                            "addedDate": "2022-02-18",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 21,
+                            "title": "The Lovely Lady Nagant",
+                            "description": "During Izuku's fight with Lady Nagant, she tells him secrets about hero society that further solidify his resolve to help those who need his help.",
+                            "image": "https://image.tmdb.org/t/p/original/lDWHItqpBBNqDB4P7HGCQru0eFe.jpg",
+                            "addedDate": "2022-02-25",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 22,
+                            "title": "Friend",
+                            "description": "As Izuku goes off alone in his quest for justice, his classmates realize something is wrong and try to find a way to help him.",
+                            "image": "https://image.tmdb.org/t/p/original/2FUih57geusmQxr65PIIV5L3nF7.jpg",
+                            "addedDate": "2022-03-04",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Deku vs. Class A",
+                            "description": "As Deku tries to run away, Class A draws him back by recounting their memories with him and reminding him of his own words.",
+                            "image": "https://image.tmdb.org/t/p/original/5iwVOV442xICdQxlirhYkSE0rq8.jpg",
+                            "addedDate": "2022-03-11",
+                            "rating": "9.4"
+                        },
+                        {
+                            "number": 24,
+                            "title": "A Young Woman's Declaration",
+                            "description": "As the evacuees at U.A. voice their dissent, Ochaco speaks up to try and sway them. Onlookers with ties to Izuku try to figure out if it's time for them to speak out, too.",
+                            "image": "https://image.tmdb.org/t/p/original/tappKU5KIjiCAMVb7jlGksFD8Hx.jpg",
+                            "addedDate": "2022-03-18",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 25,
+                            "title": "No Man Is an Island",
+                            "description": "As Izuku tries to rest and recover back at U.A. with his classmates, All Might has an encounter with Stain that leads to new information about Shigaraki and All For One.",
+                            "image": "https://image.tmdb.org/t/p/original/4xERRuWvV59p6wssrakxi4kLynO.jpg",
+                            "addedDate": "2022-03-25",
+                            "rating": "7.9"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 7,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "In the Nick of Time! A Big-Time Maverick from the West!",
+                            "description": "As jailbreakers run rampant in Japan, Star and Stripe flies from the U.S. to Japan to help and finds Shigaraki waiting for her in the middle of her flight path.",
+                            "image": "https://image.tmdb.org/t/p/original/e4KFHKkM6UuTltWInVVO7TP3OqH.jpg",
+                            "addedDate": "2024-05-04",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Specter",
+                            "description": "The fight between Star and Stripe and Shigaraki is coming to an end, but Star has one more trick up her sleeve with New Order.",
+                            "image": "https://image.tmdb.org/t/p/original/8nVGPXo8qXiuIqlBdwqxONt9X8N.jpg",
+                            "addedDate": "2024-05-11",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Villain",
+                            "description": "After failing to steal Star's Quirk, New Order, and losing many other Quirks, Shigaraki and All For One prepare for their next move. Who is the traitor at U.A.?",
+                            "image": "https://image.tmdb.org/t/p/original/5GDVlA5ijDHgX8U1BbrTfbIC12u.jpg",
+                            "addedDate": "2024-05-18",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 4,
+                            "title": "The Story of How We All Became Heroes",
+                            "description": "Due to his relationship with All For One, Yuuga Aoyama calls himself a villain, but Deku tells him that he can still be a hero and reaches a hand out to him.",
+                            "image": "https://image.tmdb.org/t/p/original/c5sGqyVQGzXfM9TSXgAPlx8bVKY.jpg",
+                            "addedDate": "2024-05-25",
+                            "rating": "7.1"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Let You Down",
+                            "description": "As heroes and villains get ready for the coming battle, Deku and the others leave U.A., and Deku is called out by Aoyama, who is supposed to be in a police cell. What does Aoyama want?",
+                            "image": "https://image.tmdb.org/t/p/original/4ayj3HgbgrSR4AGvb4pUWWuEgLO.jpg",
+                            "addedDate": "2024-06-01",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Division",
+                            "description": "It's finally time for the decisive battle between heroes and villains. The plan by All Might, Aizawa, and the others has them start their fights in various places around Japan.",
+                            "image": "https://image.tmdb.org/t/p/original/dzZdEp8vkQBh2hCTFpcprMXcQOR.jpg",
+                            "addedDate": "2024-06-08",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Inflation",
+                            "description": "Even though Shigaraki's Quirks are sealed, he attacks Bakugou and the others with a strange new appearance and power. Meanwhile, Deku is pulled to where Toga was warped and Todoroki and Dabi face off.",
+                            "image": "https://image.tmdb.org/t/p/original/36Pyo4H9dt7u2TRKRoJ8dLm0Nmj.jpg",
+                            "addedDate": "2024-06-15",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Two Flashfires",
+                            "description": "Eleven years ago, Toya Todoroki was burned by his own flames and became Dabi. Todoroki faces Dabi's blue flames with a new move of his own. Will he be able to stop his brother...?",
+                            "image": "https://image.tmdb.org/t/p/original/y9geYHqEFuXr5L2Ec0AtPu2vpeH.jpg",
+                            "addedDate": "2024-06-22",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Extras",
+                            "description": "Shouto Todoroki stopped Dabi with his Great Glacial Aegir, and reports of that bolstered the spirits of the heroes fighting in other locations. And Shouto and Dabi's father, Endeavor, is facing the greatest evil, All For One, with Hawks.",
+                            "image": "https://image.tmdb.org/t/p/original/egS8k0UGGI4nFQxdqdfMf9X4EJe.jpg",
+                            "addedDate": "2024-06-29",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Wounded Hero, Burning Bright and True!!",
+                            "description": "Before the threat of All For One, Endeavor falls, and Hawks, Jiro, and Tokoyami are also cornered. Even so, Jiro acts like a hero. Endeavor is also encouraged after looking back at his own life.",
+                            "image": "https://image.tmdb.org/t/p/original/gjL2Gripg0TrBPTYnDvc8yEd7F2.jpg",
+                            "addedDate": "2024-07-13",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Light Fades to Rain",
+                            "description": "Bakugou's Howitzer Impact didn't work against Shigaraki/All For One, either, and Bakugou is pushed into a corner by Shigaraki's power and words. In order to get him out of that predicament, U.A.'s Big Three take a stand.",
+                            "image": "https://image.tmdb.org/t/p/original/e156Rz4wVpC2YFYDgGDg9hpVJzm.jpg",
+                            "addedDate": "2024-07-20",
+                            "rating": "9.6"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Those Who Defend, Those Who Violate",
+                            "description": "Bakugou surprised Shigaraki/All For One with Cluster but was then cruelly pierced through. The heroes in all the different locations are getting pushed back - But even so, they will not give up.",
+                            "image": "https://image.tmdb.org/t/p/original/lwXZah2oQiABUnvBx4Ojf0c7K2p.jpg",
+                            "addedDate": "2024-08-03",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 13,
+                            "title": "A Chain of Events, Across the Ages",
+                            "description": "Deku finally arrives at the Coffin in the Sky. Seeing Bakugou and the others defeated by Shigaraki/All For One, Deku shakes with anger. Can he control his feelings and win against Shigaraki? It's finally time for a showdown.",
+                            "image": "https://image.tmdb.org/t/p/original/lAVIjJV5yVjjNA4zMWsEKSQQIZc.jpg",
+                            "addedDate": "2024-08-17",
+                            "rating": "9.4"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Together with Shoji",
+                            "description": "Spinner takes heteromorphs who are exploding with resentment from being persecuted to Central Hospital to get Kurogiri back. Shoji, whose Quirk also makes him a heteromorph, shouts his feelings to them.",
+                            "image": "https://image.tmdb.org/t/p/original/1Qg0SqyCfJXfd6Hx8Sz9VHNDa2.jpg",
+                            "addedDate": "2024-08-24",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Butterfly Effect",
+                            "description": "Spinner and Present Mic both yell their hearts out. Will the one waking up to their voices be Kurogiri, or Shirakumo? Meanwhile, fighting Ochako and the others on Okuto Island, Toga is finally going to use her secret weapon.",
+                            "image": "https://image.tmdb.org/t/p/original/h5PYapJXByNk5H4KmTFGm5FYpfm.jpg",
+                            "addedDate": "2024-08-31",
+                            "rating": "8.1"
+                        },
+                        {
+                            "number": 16,
+                            "title": "The Chain Thus Far",
+                            "description": "Toga consumed Twice's blood, and with Kurogiri's Warp, infinite doubles of Twice appear. Shigaraki's Decay is also released, and the heroes seem to be in a state of despair. But then, help comes from an unexpected quarter.",
+                            "image": "https://image.tmdb.org/t/p/original/feNuAmfP049pcPGTVXs8Hlzbt9b.jpg",
+                            "addedDate": "2024-09-07",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 17,
+                            "title": "Hopes",
+                            "description": "With the addition of Gentle, La Brava, and Lady Nagant, Deku is able to restrain Shigaraki's hands and confront him on the ground. Meanwhile, at the Gunga Villa site, the rewound All For One shows off his awful power.",
+                            "image": "https://image.tmdb.org/t/p/original/o7ae0yUpYu2z2UxuStpKedaulr5.jpg",
+                            "addedDate": "2024-09-14",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 18,
+                            "title": "It's a Small World",
+                            "description": "Shishikura and the other members of Shiketsu High join the fight at the Gunga Villa site, and it's do-or-die as the heroes unite to fight back. But as All For One gets younger, he gets stronger. That's when unexpected backup arrives...",
+                            "image": "https://image.tmdb.org/t/p/original/A8YFRm8sxLE2E07CmICTa83jQS7.jpg",
+                            "addedDate": "2024-09-21",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 19,
+                            "title": "I Am Here",
+                            "description": "Trampling the heroes, All For One flies to become one with Shigaraki, and Dabi is about to explode with the heat he's been storing up in his body. Will the Symbol of Peace be able to change this hopeless situation?",
+                            "image": "https://image.tmdb.org/t/p/original/jkEttBH1bZ9IJeNv64kZhxqKLI4.jpg",
+                            "addedDate": "2024-09-28",
+                            "rating": "9.7"
+                        },
+                        {
+                            "number": 20,
+                            "title": "A Girl's Ego",
+                            "description": "Toga transforms into Twice and backs the heroes into a corner with Infinite Doubles. In the midst of that, Ochako does her best to get close to Toga to talk to her. How does Toga respond...?",
+                            "image": "https://image.tmdb.org/t/p/original/nte5TamPfFScgL4avOu7Viz35ar.jpg",
+                            "addedDate": "2024-10-05",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Battle Without a Quirk",
+                            "description": "Toga returns the smile of Ochako, who tried to be friends with her. What does Toga do to the seriously-injured Ochako? Meanwhile, All Might uses \"power\" developed by a friend to face All For One.",
+                            "image": "https://image.tmdb.org/t/p/original/78FUZGgSL0HPzySATH44Tof3ori.jpg",
+                            "addedDate": "2024-10-12",
+                            "rating": "9.3"
+                        }
+                    ]
+                },
+                {
+                    "season_number": 8,
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": " Toshinori Yagi: Rising Origin",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-04",
+                            "rating": ""
+                        },
+                        {
+                            "number": 2,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-11",
+                            "rating": ""
+                        }
+                    ]
+                }
+            ],
+            "type": "series"
         }
     ],
     "featured": [
         {
-            "type": "movie",
-            "id": 1754045989408,
-            "title": "How to Train Your Dragon",
-            "backdrop": "https://image.tmdb.org/t/p/original/8J6UlIFcU7eZfq9iCLbgc8Auklg.jpg",
-            "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.\n"
+            "type": "series",
+            "seasons": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "id": 1759434000966,
+            "title": "My Hero Academia",
+            "backdrop": "https://image.tmdb.org/t/p/original/cH39aJg9VlEaYo6yY37Iah8RAaz.jpg",
+            "description": "A superhero-admiring boy enrolls in a prestigious hero academy and learns what it really means to be a hero, after the strongest superhero grants him his own powers.\n\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg"
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1,
+                2,
+                3
+            ],
+            "id": 1758836826952,
+            "title": "Spy x Family",
+            "backdrop": "https://image.tmdb.org/t/p/original/lysUnU6V0VfcthDbviuVlIqgHOR.jpg",
+            "description": "A spy on an undercover mission gets married and adopts a child as part of his cover. His wife and daughter have secrets of their own, and all three must strive to keep together.\n\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3r4LYFuXrg3G8fepysr4xSLWnQL.jpg"
         },
         {
             "type": "movie",
             "id": 1754622949726,
             "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
             "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
-            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins."
+            "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg"
         },
         {
-            "type": "series",
-            "seasons": [
-                1
-            ],
-            "id": 30,
-            "title": "Stranger Things",
-            "backdrop": "https://images.metahub.space/background/medium/tt4574334/img",
-            "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries."
+            "type": "movie",
+            "id": 1754045989408,
+            "title": "How to Train Your Dragon",
+            "backdrop": "https://image.tmdb.org/t/p/original/8J6UlIFcU7eZfq9iCLbgc8Auklg.jpg",
+            "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg"
+        },
+        {
+            "type": "movie",
+            "id": 16,
+            "title": "Superman",
+            "backdrop": "https://image.tmdb.org/t/p/original/g62G6aBcAcJv3ClCKmJgmHarHvq.jpg",
+            "description": "Superman must reconcile his alien Kryptonian heritage with his human upbringing as reporter Clark Kent. As the embodiment of truth, justice and the human way he soon finds himself in a world that views these as old-fashioned.\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg"
         },
         {
             "type": "series",
@@ -5854,24 +7576,8 @@
             "id": 31,
             "title": "Gachiakuta",
             "backdrop": "https://image.tmdb.org/t/p/original/mrapJp0qb6Fvo3IW9IrjCK9IgSo.jpg",
-            "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge."
-        },
-        {
-            "type": "series",
-            "seasons": [
-                1
-            ],
-            "id": 32,
-            "title": "Dandadan",
-            "backdrop": "https://images.metahub.space/background/medium/tt30217403/img",
-            "description": "When Momo and Okarun's beliefs clash, they're thrown into a world of ghosts, aliens and awakened powers."
-        },
-        {
-            "type": "movie",
-            "id": 8,
-            "title": "Ne Zha II",
-            "backdrop": "https://image.tmdb.org/t/p/original/c9xmB53umjnrCMS4pZz11clF3yJ.jpg",
-            "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.\n\n"
+            "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge.",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oU2SBv5VQCdOHfw3Aw8B0UeAsim.jpg"
         }
     ]
 }

@@ -118,6 +118,92 @@
                     <!-- سيتم تعبئة أفضل 3 أفلام وأفضل 3 مسلسلات ديناميكياً -->
                 </div>
             </div>
+            <section class="pricing-section">
+                <h2>Choose Your Subscription Plan</h2>
+                <p class="pricing-subtitle">Enjoy an unmatched viewing experience with our diverse plans.</p>
+            
+                <div class="pricing-cards-container">
+                    
+                    <div class="pricing-card standard-plan">
+                        <div class="plan-content">
+                            <div class="plan-details">
+                                <div class="plan-header">
+                                    <h3>Standard Plan</h3>
+                                    <p class="price">$10/Month</p>
+                                </div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
+                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
+                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
+                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> 4K UHD Quality</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> 2 Concurrent Streams</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> Download for Offline Viewing</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> Premium & Exclusive Content</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> 4 Concurrent Streams</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> Dedicated 24/7 Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-action">
+                            <div onclick="checkAuthAndSubscribe('Standard')" class="select-plan-btn standard-btn">Subscribe Now</div>
+                        </div>
+                    </div>
+            
+                    <div class="pricing-card premium-plan">
+                        <div class="plan-content">
+                             <div class="plan-details">
+                                <div class="plan-header">
+                                    <h3>Premium Plan</h3>
+                                    <p class="price">$20/Month</p>
+                                </div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
+                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
+                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
+                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
+                                    <li><i class="fas fa-check"></i> 4K UHD Quality</li>
+                                    <li><i class="fas fa-check"></i> 2 Concurrent Streams</li>
+                                    <li><i class="fas fa-check"></i> Download for Offline Viewing</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> Premium & Exclusive Content</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> 4 Concurrent Streams</li>
+                                    <li class="disabled"><i class="fas fa-times"></i> Dedicated 24/7 Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-action">
+                            <div onclick="checkAuthAndSubscribe('Premium')" class="select-plan-btn premium-btn">Subscribe Now</div>
+                        </div>
+                    </div>
+            
+                    <div class="pricing-card exclusive-plan">
+                        <div class="plan-content">
+                            <div class="plan-details">
+                                <div class="plan-header">
+                                    <h3>Exclusive Plan</h3>
+                                    <p class="price">$40/Month</p>
+                                </div>
+                                <ul class="features-list">
+                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
+                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
+                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
+                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
+                                    <li><i class="fas fa-check"></i> 4K UHD Quality</li>
+                                    <li><i class="fas fa-check"></i> 2 Concurrent Streams</li>
+                                    <li><i class="fas fa-check"></i> Download for Offline Viewing</li>
+                                    <li><i class="fas fa-check"></i> Premium & Exclusive Content</li>
+                                    <li><i class="fas fa-check"></i> 4 Concurrent Streams</li>
+                                    <li><i class="fas fa-check"></i> Dedicated 24/7 Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-action">
+                            <div onclick="checkAuthAndSubscribe('Exclusive')" class="select-plan-btn exclusive-btn">Subscribe Now</div>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
 
             <div class="content-section">
                 <div class="section-header">
@@ -189,21 +275,44 @@
         }
     
         function updateAuthUI() {
+            // ...
             const isLoggedIn = isAuthenticated();
             const user = getCurrentUser();
-    
-            const userNameEl = document.getElementById('user-name');
-            const userEmailEl = document.getElementById('user-email');
+
+            // استخدم معرفات جديدة كما في التعليمات
+            const userNameEl = document.getElementById('userNameEl') || document.getElementById('user-name');
+            const userEmailEl = document.getElementById('userEmailEl') || document.getElementById('user-email');
             const userAvatarImg = document.getElementById('user-avatar-img');
             const userAvatarIcon = document.querySelector('.user-avatar i');
             const userTopIcon = document.querySelector('.user-icon i');
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
             const userMenu = document.querySelector('.user-menu');
-    
+            // جلب العنصر الجديد
+            const userSubscriptionPlan = document.getElementById('userSubscriptionPlan');
+            
+            // ...
+
             if (isLoggedIn && user) {
+                // ... (تحديث الاسم والبريد الإلكتروني)
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
+
+                // **الخاصية الجديدة للتحقق من الباقة**
+                const planName = user.subscriptionPlan || 'Free Plan';
+                if (userSubscriptionPlan) {
+                    userSubscriptionPlan.textContent = planName;
+
+                    // يمكنك إضافة تنسيق خاص للباقات المختلفة هنا (مثل لون مختلف)
+                    if (planName.includes('Premium') || planName.includes('Exclusive')) {
+                        userSubscriptionPlan.style.backgroundColor = '#a87932'; // لون مختلف للباقات المدفوعة
+                        userSubscriptionPlan.style.color = '#fff';
+                    } else {
+                        userSubscriptionPlan.style.backgroundColor = '#3b3b3b';
+                        userSubscriptionPlan.style.color = '#ffd700';
+                    }
+                }
+
                 if (userAvatarImg) {
                     if (user.avatarUrl) {
                         userAvatarImg.src = user.avatarUrl;
@@ -222,6 +331,7 @@
                     userMenu.querySelectorAll('button').forEach(item => item.style.display = 'block');
                 }
             } else {
+                // ... (في حالة عدم تسجيل الدخول)
                 if (userNameEl) userNameEl.textContent = 'User Name';
                 if (userEmailEl) userEmailEl.textContent = 'user@email.com';
                 if (userAvatarImg) userAvatarImg.style.display = 'none';
@@ -238,8 +348,13 @@
                 if (userMenu) {
                     userMenu.querySelectorAll('button').forEach(item => item.style.display = 'none');
                 }
+                if (userSubscriptionPlan) {
+                    userSubscriptionPlan.textContent = 'Free Plan';
+                    userSubscriptionPlan.style.backgroundColor = '#3b3b3b';
+                    userSubscriptionPlan.style.color = '#ffd700';
+                }
             }
-    
+
             if (logoutBtn) {
                 logoutBtn.onclick = function() {
                     localStorage.removeItem('auth_token');
@@ -333,12 +448,11 @@
                 seriesGrid.appendChild(card);
             });
         }
-    
         function getTopRatedMixed(count=3) {
             const all = [...dataManager.movies.map(m => ({...m,_type:'movie'})), ...dataManager.series.map(s => ({...s,_type:'series'}))];
             return all.filter(item => item.rating && item.rating!=='--').sort((a,b)=>parseFloat(b.rating)-parseFloat(a.rating)).slice(0,count);
         }
-    
+
         function displayBestRatedMixed(items) {
             const grid = document.querySelector('.best-rated-grid');
             grid.innerHTML = '';
@@ -382,9 +496,25 @@
     
         function initializeSlider() {
             const sliderContainer = document.querySelector('.slider-container');
-            const slides = [...dataManager.movies, ...dataManager.series].sort((a,b)=>b.id-a.id).slice(0,6);
+            // هنا يجب أن تستخدم dataManager.featured إذا كانت محملة
+            const slides = dataManager.featured; 
             slider = new Slider(sliderContainer, { autoplay:true, autoplaySpeed:5000, transitionSpeed:800, showDots:true, showArrows:true, loop:true });
             slider.updateSlides(slides);
+
+            // 🏆 هذا هو الكود الذي يحل مشكلة الرابط:
+            sliderContainer.addEventListener('click', (e) => {
+                const slide = e.target.closest('.slide'); 
+                if (!slide) return;
+
+                // يفترض هذا الكود أن مكتبة Slider تضيف data-id و data-type للعناصر
+                const contentId = slide.dataset.id;
+                const contentType = slide.dataset.type; 
+
+                if (contentId && contentType) {
+                    window.location.href = `content.html?id=${contentId}&type=${contentType}`;
+                }
+            });
+            // ----------------------------------------------------
         }
     
         // تحميل الفوتر
@@ -393,6 +523,24 @@
         });
     
         document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
+    <script>
+        /**
+         * التحقق من تسجيل الدخول قبل توجيه المستخدم لصفحة الاشتراك.
+         * إذا كان المستخدم مسجلاً، يتم توجيهه إلى صفحة الاشتراك/الدفع (الديمو).
+         * إذا لم يكن مسجلاً، يتم توجيهه إلى صفحة تسجيل الدخول.
+         */
+        function checkAuthAndSubscribe(plan) {
+            // التحقق من وجود رمز (Token) للدلالة على تسجيل الدخول
+            const authToken = localStorage.getItem('auth_token');
+    
+            if (authToken) {
+    
+            } else {
+                // المستخدم غير مسجل دخول
+                window.location.href = 'login.html';
+            }
+        }
     </script>
     
 </body>

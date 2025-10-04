@@ -189,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();
 }); 
-
 // === Global Toast Notifications (top-right) ===
 ;(function(){
     if (window.showToast) return;

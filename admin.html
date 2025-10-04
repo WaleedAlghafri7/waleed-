@@ -1,5 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1421;
+            --panel: #151b2b;
+            --muted: #2a324a;
+            --text: #e8ecf1;
+            --brand: #ffd54a;
+            --accent: #35d07f;
+            --danger: #ff5c5c;
+        }
+        body { background:linear-gradient(180deg, #0b1020, #131a2e); color:var(--text); font-family: Inter, system-ui, Arial, sans-serif; margin:0; }
+        .admin-container { max-width:1200px; margin:32px auto; background:rgba(21,27,43,0.8); backdrop-filter: blur(8px); border:1px solid rgba(255,255,255,0.06); border-radius:18px; box-shadow:0 20px 50px rgba(0,0,0,0.45); padding:28px; }
+        .admin-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; }
+        .admin-header h1 { margin:0; font-size:28px; letter-spacing:0.5px; color:var(--brand); text-shadow:0 0 20px rgba(255,213,74,0.2); }
+        .tabs { display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; }
+        .tab-btn { padding:10px 16px; border:1px solid rgba(255,255,255,0.08); border-radius:12px; background:linear-gradient(180deg, #1a2238, #151b2b); color:#f2f2f2; cursor:pointer; transition:.2s; }
+        .tab-btn:hover { transform: translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,0.25); }
+        .tab-btn.active { background:linear-gradient(180deg, #ffd54a, #f7b733); color:#111; border-color:rgba(0,0,0,0.12); }
+        .section { display:none; animation: fadeIn .2s ease; }
+        .section.active { display:block; }
+        .add-btn { background:linear-gradient(180deg, #35d07f, #1fb36a); color:#0a121f; border:none; border-radius:12px; padding:10px 16px; cursor:pointer; margin-bottom:12px; font-weight:700; letter-spacing:0.3px; box-shadow: 0 8px 20px rgba(53,208,127,0.25); }
+        .data-table { width:100%; border-collapse:separate; border-spacing:0 8px; }
+        .data-table th { background:transparent; color:#9fb3c8; font-weight:700; font-size:13px; text-transform: uppercase; letter-spacing:0.8px; padding:6px 10px; }
+        .data-table td { background:linear-gradient(180deg, #161d30, #131a2a); border:1px solid rgba(255,255,255,0.04); padding:12px 10px; }
+        .data-table tr td:first-child { border-top-left-radius:12px; border-bottom-left-radius:12px; }
+        .data-table tr td:last-child { border-top-right-radius:12px; border-bottom-right-radius:12px; }
+        .data-table .img-cell { width:110px; }
+        .data-table .img-cell img { width:100px; height:100px; object-fit:cover; border-radius:0; background:#0f1524; border:1px solid rgba(255,255,255,0.06); box-shadow:0 6px 18px rgba(0,0,0,0.35); }
+        .action-btn { background:linear-gradient(180deg, #ffd54a, #f7b733); color:#111; border:none; border-radius:10px; padding:8px 12px; margin-right:6px; cursor:pointer; font-weight:700; letter-spacing:0.3px; box-shadow:0 6px 18px rgba(247,183,51,0.25); }
+        .action-btn.delete { background:linear-gradient(180deg, #ff6b6b, #e05252); color:#fff; box-shadow:0 6px 18px rgba(255,107,107,0.25); }
+        #saveNotification { display:none; position:fixed; top:20px; left:50%; transform:translateX(-50%); z-index:2000; padding:12px 18px; background:#1a2238; color:#fff; border:1px solid rgba(255,255,255,0.08); border-radius:12px; font-weight:700; font-size:14px; transition:opacity .25s; opacity:0; box-shadow:0 10px 30px rgba(0,0,0,0.35); }
+        #slidesCounter { color:var(--brand); font-weight:700; font-size:14px; margin-left:8px; letter-spacing:0.4px; }
+        .slide-checkbox { width:22px; height:22px; accent-color:var(--brand); cursor:pointer; }
+        /* Slides grid cards */
+        .slides-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap:12px; }
+        .slide-card { background:linear-gradient(180deg, #161d30, #131a2a); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:10px; text-align:center; cursor:pointer; transition:.15s ease; }
+        .slide-card:hover { transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.25); }
+        .slide-card.selected { background:#27ae60; border-color:#27ae60; color:#0a121f; }
+        .slide-card img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px; display:block; background:#0f1524; }
+        .slide-card .title { margin-top:8px; font-weight:700; font-size:13px; line-height:1.3; }
+        .slide-card .type { margin-top:4px; font-size:12px; opacity:.8; }
+        @keyframes fadeIn { from {opacity:0} to {opacity:1} }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1>Admin Panel</h1>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="movies">Movies</button>
+            <button class="tab-btn" data-tab="series">Series</button>
+            <button class="tab-btn" data-tab="slides">Slides</button>
+        </div>
+
+        <div id="movies" class="section active">
+            <button class="add-btn" onclick="openModal('movie')"><i class="fas fa-plus"></i> Add Movie</button>
+            <table class="data-table" id="moviesTable">
+                <thead>
+                    <tr>
+                        <th class="img-cell">Image</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                        <th>Duration</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="series" class="section">
+            <button class="add-btn" onclick="openModal('series')"><i class="fas fa-plus"></i> Add Series</button>
+            <table class="data-table" id="seriesTable">
+                <thead>
+                    <tr>
+                        <th class="img-cell">Image</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Rating</th>
+                        <th>Duration</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="slides" class="section">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <h3 style="margin:0;color:#ffd700;">Slides</h3>
+                    <span id="slidesCounter"></span>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <button type="button" id="slidesClearBtn" class="add-btn" style="background:#e74c3c;color:#fff;">Deselect All</button>
+                    <button type="button" id="slidesSaveBtn" class="add-btn">Save changes</button>
+                </div>
+            </div>
+            <table class="data-table" id="slidesAllTable">
+                <thead>
+                    <tr>
+                        <th class="img-cell">Image</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                        <th>Featured</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div style="margin-top:14px;">
+                <h3 style="margin:0 0 8px 0;color:#ffd700;">Current Slides</h3>
+                <table class="data-table" id="slidesCurrentTable">
+                    <thead>
+                        <tr>
+                            <th class="img-cell">Image</th>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Backdrop</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="saveNotification"></div>
+
+    <script src="./admin.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -383,78 +530,20 @@
             font-size: 1.1rem;
             margin-left: 12px;
         }
+        /* Slides grid cards */
+        .slides-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap:12px; }
+        .slide-card { background:linear-gradient(180deg, #161d30, #131a2a); border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:10px; text-align:center; cursor:pointer; transition:.15s ease; }
+        .slide-card:hover { transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,.25); }
+        .slide-card.selected { background:#27ae60; border-color:#27ae60; color:#0a121f; }
+        .slide-card img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px; display:block; background:#0f1524; }
+        .slide-card .title { margin-top:8px; font-weight:700; font-size:13px; line-height:1.3; }
+        .slide-card .type { margin-top:4px; font-size:12px; opacity:.8; }
     </style>
 
 </head>
 
 <body>
-    <div class="admin-container">
-        <div class="admin-header">
-            <h1>Admin Panel</h1>
-        </div>
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="movies">Movies</button>
-            <button class="tab-btn" data-tab="series">Series</button>
-            <button class="tab-btn" data-tab="slides">Slides</button>
-        </div>
-        <div id="movies" class="section active">
-            <button class="add-btn" onclick="openModal('movie')"><i class="fas fa-plus"></i> Add Movie</button>
-            <table class="data-table" id="moviesTable">
-                <thead>
-                    <tr>
-                        <th class="img-cell">Image</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Year</th>
-                        <th>Rating</th>
-                        <th>Duration</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <div id="series" class="section">
-            <button class="add-btn" onclick="openModal('series')"><i class="fas fa-plus"></i> Add Series</button>
-            <table class="data-table" id="seriesTable">
-                <thead>
-                    <tr>
-                        <th class="img-cell">Image</th>
-                        <th>Title</th>
-                        <th>Genre</th>
-                        <th>Year</th>
-                        <th>Status</th>
-                        <th>Rating</th>
-                        <th>Duration</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <div id="slides" class="section">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-                <div style="display:flex;align-items:center;gap:10px;">
-                    <h3 style="margin:0;color:#ffd700;">Slides</h3>
-                    <span id="slidesCounter"></span>
-                </div>
-                <button type="button" id="slidesSaveBtn" class="add-btn">Save changes</button>
-            </div>
-            <table class="data-table" id="slidesAllTable">
-                <thead>
-                    <tr>
-                        <th class="img-cell">Image</th>
-                        <th>Title</th>
-                        <th>Type</th>
-                        <th>Year</th>
-                        <th>Rating</th>
-                        <th>In Slides</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </div>
+
     <div class="modal" id="itemModal">
         <div class="modal-content">
             <h2 id="modalTitle">Add Item</h2>
@@ -587,25 +676,75 @@
 
         let data = { movies: [], series: [] };
 
-        // Fetch data from data.json
+        // Fetch data: try Flask API then fallback to local data.json, with detailed error info
         async function fetchData() {
+            let apiErr = null;
             try {
-                const res = await fetch('data.json');
+                const apiUrl = 'http://127.0.0.1:5000/data?t=' + Date.now();
+                const res = await fetch(apiUrl);
+                if (!res.ok) {
+                    let body = '';
+                    try { body = await res.text(); } catch (e) { body = String(e); }
+                    throw new Error(`API failed: status=${res.status} ${res.statusText} body=${body}`);
+                }
                 data = await res.json();
-                renderTables();
-                populateGenreOptions();
-            } catch (e) {
-                showSaveNotification(false, 'فشل في تحميل البيانات!');
+            } catch (err1) {
+                apiErr = err1;
+                try {
+                    const fileUrl = 'data.json?t=' + Date.now();
+                    const res2 = await fetch(fileUrl);
+                    if (!res2.ok) {
+                        let body2 = '';
+                        try { body2 = await res2.text(); } catch (e) { body2 = String(e); }
+                        throw new Error(`data.json failed: status=${res2.status} ${res2.statusText} body=${body2}`);
+                    }
+                    data = await res2.json();
+                } catch (err2) {
+                    const online = (typeof navigator !== 'undefined' && 'onLine' in navigator) ? navigator.onLine : 'unknown';
+                    const details = [
+                        `API URL: http://127.0.0.1:5000/data`,
+                        `Location: ${typeof location !== 'undefined' && location.href ? location.href : 'n/a'}`,
+                        `Online: ${online}`,
+                        `API Error: ${apiErr && apiErr.message ? apiErr.message : apiErr}`,
+                        `File Error: ${err2 && err2.message ? err2.message : err2}`
+                    ].join('\n');
+                    showSaveNotification(false, 'فشل في تحميل البيانات!');
+                    alert('فشل تحميل البيانات!\n\nتفاصيل:\n' + details);
+                    return;
+                }
             }
+
+            // Ensure defaults
+            data.movies = data.movies || [];
+            data.series = data.series || [];
+            data.featured = data.featured || [];
+
+            renderTables();
+            populateGenreOptions();
         }
         fetchData();
 
         // Render tables
         function renderTables() {
+            function toEpoch(it) {
+                try {
+                    if (typeof it?.id === 'number' && it.id > 1e11) return it.id;
+                    if (it?.releaseDate) {
+                        const t = Date.parse(String(it.releaseDate));
+                        if (!isNaN(t)) return t;
+                    }
+                    if (it?.year) {
+                        const y = String(it.year).slice(0,4);
+                        if (/^\d{4}$/.test(y)) return Date.parse(y + '-01-01');
+                    }
+                } catch (e) {}
+                return 0;
+            }
+            const sortNewest = (a, b) => toEpoch(b) - toEpoch(a);
             // Movies
             const moviesTbody = document.querySelector('#moviesTable tbody');
             moviesTbody.innerHTML = '';
-            data.movies.forEach(movie => {
+            [...data.movies].sort(sortNewest).forEach(movie => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td class="img-cell">
@@ -626,7 +765,7 @@
             // Series
             const seriesTbody = document.querySelector('#seriesTable tbody');
             seriesTbody.innerHTML = '';
-            data.series.forEach(series => {
+            [...data.series].sort(sortNewest).forEach(series => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td class="img-cell">
@@ -653,6 +792,7 @@
                 const rows = [];
                 (data.movies || []).forEach(m => rows.push({ ...m, _type: 'movie' }));
                 (data.series || []).forEach(s => rows.push({ ...s, _type: 'series' }));
+                rows.sort(sortNewest);
                 const featuredSet = new Set((data.featured || []).map(f => `${f.type}:${f.id}`));
                 rows.forEach(item => {
                     const checked = featuredSet.has(`${item._type}:${item.id}`) || !!item.inSlides;
@@ -675,6 +815,22 @@
                 updateSlidesCounter();
                 // Enforce max 6 checked
                 enforceSlidesCheckboxLimit();
+            }
+
+            // Current Slides table
+            const slidesCurrentTbody = document.querySelector('#slidesCurrentTable tbody');
+            if (slidesCurrentTbody) {
+                slidesCurrentTbody.innerHTML = '';
+                [...(data.featured || [])].sort(sortNewest).forEach(f => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td class="img-cell"><img src="${f.image ? f.image : ''}" alt="Image" onerror="this.onerror=null; this.src='13434998.png';"></td>
+                        <td>${f.title || '-'}</td>
+                        <td>${f.type || '-'}</td>
+                        <td style="max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${f.backdrop || '-'}</td>
+                    `;
+                    slidesCurrentTbody.appendChild(tr);
+                });
             }
         }
 

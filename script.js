@@ -1,8 +1,10 @@
 // تهيئة المتغيرات العامة
 let currentSlide = 0;
-let slideInterval;
+let slideInterval; // سيُستخدم كـ setTimeout للتحكم في الوقت المتبقي
 const slideDuration = 5000; // مدة كل سلايد بالمللي ثانية
 const transitionDuration = 500; // مدة الانتقال بين السلايدات
+let slideStartTime = 0;
+let remainingTime = slideDuration;
 
 // عدد العناصر لكل قسم
 const config = {
@@ -188,6 +190,9 @@ function createDots(count) {
     for (let i = 0; i < count; i++) {
         const dot = document.createElement('div');
         dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        const progress = document.createElement('div');
+        progress.className = 'progress';
+        dot.appendChild(progress);
         dot.addEventListener('click', () => {
             stopAutoSlide();
             goToSlide(i);
@@ -195,6 +200,8 @@ function createDots(count) {
         });
         dotsContainer.appendChild(dot);
     }
+    // بدء شريط التقدم لأول نقطة
+    startDotProgress();
 }
 
 function loadLatestMovies(movies) {
@@ -320,6 +327,7 @@ function updateDots() {
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
     });
+    startDotProgress();
 }
 
 function goToSlide(n) {
@@ -344,13 +352,25 @@ function prevSlide() {
 // بدء التحديث التلقائي
 function startAutoSlide() {
     stopAutoSlide();
-    slideInterval = setInterval(nextSlide, slideDuration);
+    remainingTime = slideDuration;
+    slideStartTime = Date.now();
+    startDotProgress();
+    slideInterval = setTimeout(() => {
+        nextSlide();
+        startAutoSlide();
+    }, remainingTime);
 }
 
 // إيقاف التحديث التلقائي
 function stopAutoSlide() {
     if (slideInterval) {
-        clearInterval(slideInterval);
+        clearTimeout(slideInterval);
+        slideInterval = null;
+        if (slideStartTime) {
+            const elapsed = Date.now() - slideStartTime;
+            remainingTime = Math.max(0, remainingTime - elapsed);
+        }
+        pauseDotProgress();
     }
 }
 
@@ -384,12 +404,15 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', () => {
             stopAutoSlide();
             nextSlide();
+            // إعادة الضبط للمدة الكاملة عند التنقل اليدوي
+            remainingTime = slideDuration;
             startAutoSlide();
         });
 
         prevBtn.addEventListener('click', () => {
             stopAutoSlide();
             prevSlide();
+            remainingTime = slideDuration;
             startAutoSlide();
         });
     }
@@ -397,7 +420,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sliderContainer) {
         // إضافة مستمعي الأحداث للفأرة
         sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+        sliderContainer.addEventListener('mouseleave', () => {
+            // استئناف مع الوقت المتبقي
+            slideStartTime = Date.now();
+            resumeDotProgress();
+            slideInterval = setTimeout(() => {
+                nextSlide();
+                startAutoSlide();
+            }, remainingTime);
+        });
 
         // إضافة دعم السحب للموبايل
         let touchStartX = 0;
@@ -445,6 +476,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// إدارة شريط التقدم داخل النقاط
+function startDotProgress() {
+    const dots = document.querySelectorAll('.dot');
+    if (!dots.length) return;
+    dots.forEach(dot => {
+        const bar = dot.querySelector('.progress');
+        if (!bar) return;
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+    });
+
+    const activeDot = document.querySelector('.dot.active');
+    if (!activeDot) return;
+    const bar = activeDot.querySelector('.progress');
+    if (!bar) return;
+
+    // نبدأ ممتلئاً 100% ثم نقلل إلى 0% خلال الوقت المتبقي
+    // إعادة الضبط أولاً
+    bar.style.transition = 'none';
+    bar.style.width = '100%';
+    // إجبار إعادة التدفق لضمان تطبيق الانتقال
+    void bar.offsetWidth; // eslint-disable-line no-unused-expressions
+    const durationMs = Math.max(0, remainingTime || slideDuration);
+    bar.style.transition = `width ${durationMs}ms linear`;
+    bar.style.width = '0%';
+}
+
+function pauseDotProgress() {
+    const activeDot = document.querySelector('.dot.active');
+    if (!activeDot) return;
+    const bar = activeDot.querySelector('.progress');
+    if (!bar) return;
+    // احسب العرض الحالي وتوقف
+    const computed = getComputedStyle(bar);
+    const currentWidth = computed.width;
+    bar.style.transition = 'none';
+    bar.style.width = currentWidth;
+}
+
+function resumeDotProgress() {
+    const activeDot = document.querySelector('.dot.active');
+    if (!activeDot) return;
+    const bar = activeDot.querySelector('.progress');
+    if (!bar) return;
+    // استكمال الانكماش إلى 0% خلال الوقت المتبقي
+    void bar.offsetWidth; // force reflow
+    const durationMs = Math.max(0, remainingTime || slideDuration);
+    bar.style.transition = `width ${durationMs}ms linear`;
+    bar.style.width = '0%';
+}
 
 // تحميل جميع الأفلام إذا وُجدت شبكة الأفلام
 function loadAllMovies(movies) {
