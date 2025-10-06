@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>CineStream</title>
+    <link rel="icon" type="image/png" href="CineStream web.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0f1421;
@@ -1013,14 +1022,19 @@
         }
 
         // Add season
-        window.addSeason = function () {
+        window.addSeason = function (seasonNumberValue = null) {
             const seasonsList = document.getElementById('seasonsList');
             const seasonIdx = seasonsList.children.length + 1;
             const seasonDiv = document.createElement('div');
             seasonDiv.className = 'season-block';
             seasonDiv.style = 'background:#23283a;padding:18px 18px;margin-bottom:18px;border-radius:12px;';
+            // إضافة حقل season_number (نصي أو رقمي)
             seasonDiv.innerHTML = `
-                <strong>Season ${seasonIdx}</strong> <button type="button" onclick="this.parentElement.remove()" style="float:right;background:#e74c3c;color:#fff;border:none;border-radius:4px;padding:6px 16px;font-size:1.1rem;">Delete</button>
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+                    <strong>Season</strong>
+                    <input type="text" class="season-number-input" placeholder="season_number" style="width:110px;padding:8px 10px;border-radius:8px;border:1px solid #ffd700;background:#23283a;color:#fff;" value="${seasonNumberValue !== null && seasonNumberValue !== undefined ? seasonNumberValue : seasonIdx}">
+                    <button type="button" onclick="this.parentElement.parentElement.remove()" style="margin-left:auto;background:#e74c3c;color:#fff;border:none;border-radius:4px;padding:6px 16px;font-size:1.1rem;">Delete</button>
+                </div>
                 <div style="margin-top:12px;">
                     <label style="font-size:1.1rem;">Episodes:</label>
                     <div class="episodes-list"></div>
@@ -1033,14 +1047,31 @@
         // Add episode
         window.addEpisode = function (btn) {
             const episodesList = btn.parentElement.querySelector('.episodes-list');
-            const epIdx = episodesList.children.length + 1;
+            // رقم الحلقة يتضاعف كل خانة جديدة
+            let epIdx = episodesList.children.length;
+            let episodeNumber = 1;
+            if (epIdx > 0) {
+                // Get the last episode's number and double it
+                const lastEp = episodesList.lastElementChild;
+                const lastNumInput = lastEp.querySelector('input.episode-number');
+                let lastNum = 1;
+                if (lastNumInput && lastNumInput.value !== undefined && lastNumInput.value !== null && lastNumInput.value !== '') {
+                    lastNum = Number(lastNumInput.value);
+                    if (isNaN(lastNum)) lastNum = 1;
+                }
+                episodeNumber = lastNum + 1;
+            }
             const epDiv = document.createElement('div');
             epDiv.className = 'episode-block';
             epDiv.style = 'background:#2e3347;padding:12px 12px;margin-bottom:10px;border-radius:10px;';
             epDiv.innerHTML = `
                 <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
                     <label style="font-weight:bold;">Episode #</label>
-                    <input type="number" class="episode-number" value="${epIdx}" min="1" style="width:90px;padding:8px 10px;border-radius:8px;border:1px solid #ffd700;background:#23283a;color:#fff;">
+                    <input type="number" class="episode-number" min="0" step="0.1" style="width:90px;padding:8px 10px;border-radius:8px;border:1px solid #ffd700;background:#23283a;color:#fff;" value="${episodeNumber}">
+                    <label style="margin-left:16px;display:flex;align-items:center;gap:4px;">
+                        <input type="checkbox" class="special-episode-checkbox" style="width:18px;height:18px;margin-left:4px;">
+                        <span style="font-size:1rem;">Special</span>
+                    </label>
                 </div>
                 <input type="text" placeholder="Episode Title" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
                 <input type="text" placeholder="Description" style="margin-right:10px;font-size:1.1rem;padding:10px 10px;">
@@ -1136,15 +1167,37 @@
                         // Load seasons/episodes
                         if (item.seasons && Array.isArray(item.seasons)) {
                             item.seasons.forEach(season => {
-                                addSeason();
+                                // Check if this is a specials season
+                                let isSpecials = false;
+                                if (season.season_number === 'specials' || season.season_number === 'Specials' || season.season_number === 0 || season.name === 'Specials') {
+                                    isSpecials = true;
+                                }
+                                // Add a season block, passing the real season_number (even if string)
+                                window.addSeason(season.season_number !== undefined ? season.season_number : '');
                                 const lastSeason = document.getElementById('seasonsList').lastElementChild;
                                 if (season.episodes && Array.isArray(season.episodes)) {
                                     season.episodes.forEach((ep, epIdx) => {
                                         addEpisode(lastSeason.querySelector('button[onclick^=addEpisode]'));
                                         const lastEp = lastSeason.querySelector('.episodes-list').lastElementChild;
-                                        // Set the episode number in the block
-                                        if (lastEp && lastEp.firstElementChild && lastEp.firstElementChild.tagName === "DIV") {
-                                            lastEp.firstElementChild.textContent = (epIdx + 1);
+                                        // Set the episode number in the block from ep.number if available
+                                        const epNumInput = lastEp.querySelector('input.episode-number');
+                                        if (epNumInput) {
+                                            // Allow 0 and decimal numbers, but if ep.number is present use it, else double previous
+                                            if (typeof ep.number !== "undefined" && ep.number !== null && ep.number !== '') {
+                                                epNumInput.value = ep.number;
+                                            } else if (epIdx > 0) {
+                                                // Double the previous episode number
+                                                const prevEp = lastSeason.querySelectorAll('.episodes-list .episode-block')[epIdx-1];
+                                                const prevNumInput = prevEp.querySelector('input.episode-number');
+                                                let prevNum = 1;
+                                                if (prevNumInput && prevNumInput.value !== undefined && prevNumInput.value !== null && prevNumInput.value !== '') {
+                                                    prevNum = Number(prevNumInput.value);
+                                                    if (isNaN(prevNum)) prevNum = 1;
+                                                }
+                                                epNumInput.value = prevNum + 1;
+                                            } else {
+                                                epNumInput.value = 1;
+                                            }
                                         }
                                         lastEp.querySelector('input[placeholder="Episode Title"]').value = ep.title || '';
                                         lastEp.querySelector('input[placeholder="Description"]').value = ep.description || '';
@@ -1154,6 +1207,15 @@
                                         const ratingInput = lastEp.querySelector('.episode-rating-group input[placeholder="Rating"]');
                                         if (ratingInput) {
                                             ratingInput.value = (typeof ep.rating !== "undefined" && ep.rating !== null) ? ep.rating : '';
+                                        }
+                                        // Set the special checkbox if this episode is special
+                                        const specialCheckbox = lastEp.querySelector('.special-episode-checkbox');
+                                        if (specialCheckbox) {
+                                            if (ep.special === true || (isSpecials && (typeof ep.special === "undefined" || ep.special === null))) {
+                                                specialCheckbox.checked = true;
+                                            } else {
+                                                specialCheckbox.checked = false;
+                                            }
                                         }
                                     });
                                 }
@@ -1224,22 +1286,70 @@
             if (type === 'series') {
                 item.status = document.getElementById('status').value;
                 item.seasons = [];
-                    document.querySelectorAll('#seasonsList .season-block').forEach((seasonDiv, sIdx) => {
-                        const season = { season_number: sIdx + 1, episodes: [] };
-                        seasonDiv.querySelectorAll('.episodes-list .episode-block').forEach((epDiv, epIdx) => {
-                            const epNumInput = epDiv.querySelector('input.episode-number');
-                            const episodeNumber = epNumInput && epNumInput.value ? parseInt(epNumInput.value, 10) : (epIdx + 1);
-                            season.episodes.push({
-                                number: episodeNumber,
-                                title: epDiv.querySelector('input[placeholder="Episode Title"]').value,
-                                description: epDiv.querySelector('input[placeholder="Description"]').value,
-                                image: epDiv.querySelector('input[placeholder="Image URL"]').value,
-                                addedDate: epDiv.querySelector('input[placeholder="Added Date"]')?.value,
-                                rating: epDiv.querySelector('.episode-rating-group input[placeholder="Rating"]')?.value
-                            });
-                        });
-                        item.seasons.push(season);
+
+                // Specials logic: collect specials episodes from all seasons, and remove them from their original season
+                let specialsEpisodes = [];
+
+                document.querySelectorAll('#seasonsList .season-block').forEach((seasonDiv, sIdx) => {
+                    // جلب قيمة season_number من الحقل النصي مباشرة (حتى لو كانت نصية أو رقمية)
+                    const seasonNumberInput = seasonDiv.querySelector('.season-number-input');
+                    let seasonNumberValue = seasonNumberInput ? seasonNumberInput.value : (sIdx + 1);
+                    // إذا كان فارغاً، استخدم رقم الموسم الافتراضي
+                    if (seasonNumberValue === undefined || seasonNumberValue === null || seasonNumberValue === '') {
+                        seasonNumberValue = sIdx + 1;
+                    }
+                    const season = { season_number: seasonNumberValue, episodes: [] };
+                    seasonDiv.querySelectorAll('.episodes-list .episode-block').forEach((epDiv, epIdx) => {
+                        const epNumInput = epDiv.querySelector('input.episode-number');
+                        // عند الحفظ، رقم الحلقة يؤخذ من خانة number حتى لو كان صفر أو عدد عشري
+                        let episodeNumber = null;
+                        if (epNumInput && epNumInput.value !== undefined && epNumInput.value !== null && epNumInput.value !== '') {
+                            episodeNumber = Number(epNumInput.value);
+                        } else if (epIdx > 0) {
+                            // Double the previous episode number
+                            const prevEp = seasonDiv.querySelectorAll('.episodes-list .episode-block')[epIdx-1];
+                            const prevNumInput = prevEp.querySelector('input.episode-number');
+                            let prevNum = 1;
+                            if (prevNumInput && prevNumInput.value !== undefined && prevNumInput.value !== null && prevNumInput.value !== '') {
+                                prevNum = Number(prevNumInput.value);
+                                if (isNaN(prevNum)) prevNum = 1;
+                            }
+                            episodeNumber = prevNum + 1;
+                        } else {
+                            episodeNumber = 1;
+                        }
+                        // Check if this episode is marked as special
+                        const specialCheckbox = epDiv.querySelector('.special-episode-checkbox');
+                        const isSpecial = specialCheckbox && specialCheckbox.checked;
+                        const episodeObj = {
+                            number: episodeNumber,
+                            title: epDiv.querySelector('input[placeholder="Episode Title"]').value,
+                            description: epDiv.querySelector('input[placeholder="Description"]').value,
+                            image: epDiv.querySelector('input[placeholder="Image URL"]').value,
+                            addedDate: epDiv.querySelector('input[placeholder="Added Date"]')?.value,
+                            rating: epDiv.querySelector('.episode-rating-group input[placeholder="Rating"]')?.value,
+                            special: isSpecial ? true : undefined
+                        };
+                        if (isSpecial) {
+                            specialsEpisodes.push(episodeObj);
+                        } else {
+                            season.episodes.push(episodeObj);
+                        }
                     });
+                    // Only push season if it has non-special episodes
+                    if (season.episodes.length > 0) {
+                        item.seasons.push(season);
+                    }
+                });
+
+                // Add specials as a separate "season"
+                if (specialsEpisodes.length > 0) {
+                    item.seasons.push({
+                        season_number: 'specials',
+                        name: 'Specials',
+                        episodes: specialsEpisodes
+                    });
+                }
             }
 
             await saveItem(type, item, id ? 'update' : 'create');

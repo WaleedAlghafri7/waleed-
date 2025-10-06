@@ -1112,6 +1112,7 @@
             "title": "Game of Thrones",
             "genre": "Action, Adventure, Drama",
             "year": 2011,
+            "releaseDate": "2011-01-01",
             "rating": 9.2,
             "duration": "1h",
             "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
@@ -1119,13 +1120,14 @@
             "description": "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
             "language": "English",
             "country": "United States",
-            "ageRating": "18+",
+            "ageRating": "",
             "status": "completed",
             "seasons": [
                 {
                     "season_number": 1,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Winter Is Coming",
                             "description": "Lord Eddard Stark is concerned by news of a deserter from the Night's Watch; King Robert I Baratheon and the Lannisters arrive at Winterfell; the exiled Prince Viserys Targaryen forges a powerful new alliance.",
                             "image": "https://episodes.metahub.space/tt0944947/1/1/w780.jpg",
@@ -1133,6 +1135,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 2,
                             "title": "The Kingsroad",
                             "description": "While Bran recovers from his fall, Ned takes only his daughters to King's Landing. Jon Snow goes with his uncle Benjen to the Wall. Tyrion joins them.",
                             "image": "https://episodes.metahub.space/tt0944947/1/2/w780.jpg",
@@ -1140,6 +1143,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 3,
                             "title": "Lord Snow",
                             "description": "Jon begins his training with the Night's Watch; Ned confronts his past and future at King's Landing; Daenerys finds herself at odds with Viserys.",
                             "image": "https://episodes.metahub.space/tt0944947/1/3/w780.jpg",
@@ -1147,6 +1151,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 4,
                             "title": "Cripples, Bastards, and Broken Things",
                             "description": "Eddard investigates Jon Arryn's murder. Jon befriends Samwell Tarly, a coward who has come to join the Night's Watch.",
                             "image": "https://episodes.metahub.space/tt0944947/1/4/w780.jpg",
@@ -1154,6 +1159,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 5,
                             "title": "The Wolf and the Lion",
                             "description": "Catelyn has captured Tyrion and plans to bring him to her sister, Lysa Arryn, at the Vale, to be tried for his supposed crimes against Bran. Robert plans to have Daenerys killed, but Eddard refuses to be a part of it and quits.",
                             "image": "https://episodes.metahub.space/tt0944947/1/5/w780.jpg",
@@ -1161,6 +1167,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 6,
                             "title": "A Golden Crown",
                             "description": "While recovering from his battle with Jaime, Eddard is forced to run the kingdom while Robert goes hunting. Tyrion demands a trial by combat for his freedom. Viserys is losing his patience with Drogo.",
                             "image": "https://episodes.metahub.space/tt0944947/1/6/w780.jpg",
@@ -1168,6 +1175,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 7,
                             "title": "You Win or You Die",
                             "description": "Robert has been injured while hunting and is dying. Jon and the others finally take their vows to the Night's Watch. A man, sent by Robert, is captured for trying to poison Daenerys. Furious, Drogo vows to attack the Seven Kingdoms.",
                             "image": "https://episodes.metahub.space/tt0944947/1/7/w780.jpg",
@@ -1175,6 +1183,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 8,
                             "title": "The Pointy End",
                             "description": "The Lannisters press their advantage over the Starks; Robb rallies his father's northern allies and heads south to war; The White Walkers attack the Wall; Tyrion returns to his father with some new friends.",
                             "image": "https://episodes.metahub.space/tt0944947/1/8/w780.jpg",
@@ -1182,6 +1191,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 9,
                             "title": "Baelor",
                             "description": "Robb goes to war against the Lannisters. Jon finds himself struggling on deciding if his place is with Robb or the Night's Watch. Drogo has fallen ill from a fresh battle wound. Daenerys is desperate to save him.",
                             "image": "https://episodes.metahub.space/tt0944947/1/9/w780.jpg",
@@ -1189,6 +1199,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 10,
                             "title": "Fire and Blood",
                             "description": "Robb vows to get revenge on the Lannisters. Jon must officially decide if his place is with Robb or the Night's Watch. Daenerys says her final goodbye to Drogo.",
                             "image": "https://episodes.metahub.space/tt0944947/1/10/w780.jpg",
@@ -1201,6 +1212,7 @@
                     "season_number": 2,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "The North Remembers",
                             "description": "Tyrion arrives at King's Landing to take his father's place as Hand of the King. Stannis Baratheon plans to take the Iron Throne for his own. Robb tries to decide his next move in the war. The Night's Watch arrive at the house of Craster.",
                             "image": "https://episodes.metahub.space/tt0944947/2/1/w780.jpg",
@@ -1208,6 +1220,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 2,
                             "title": "The Night Lands",
                             "description": "Arya makes friends with Gendry. Tyrion tries to take control of the Small Council. Theon arrives at his home, Pyke, in order to persuade his father into helping Robb with the war. Jon tries to investigate Craster's secret.",
                             "image": "https://episodes.metahub.space/tt0944947/2/2/w780.jpg",
@@ -1215,6 +1228,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 3,
                             "title": "What Is Dead May Never Die",
                             "description": "Tyrion tries to see who he can trust in the Small Council. Catelyn visits Renly to try and persuade him to join Robb in the war. Theon must decide if his loyalties lie with his own family or with Robb.",
                             "image": "https://episodes.metahub.space/tt0944947/2/3/w780.jpg",
@@ -1222,6 +1236,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 4,
                             "title": "Garden of Bones",
                             "description": "Lord Baelish arrives at Renly's camp just before he faces off against Stannis. Daenerys and her company are welcomed into the city of Qarth. Arya, Gendry, and Hot Pie find themselves imprisoned at Harrenhal.",
                             "image": "https://episodes.metahub.space/tt0944947/2/4/w780.jpg",
@@ -1229,6 +1244,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 5,
                             "title": "The Ghost of Harrenhal",
                             "description": "Tyrion investigates a secret weapon that King Joffrey plans to use against Stannis. Meanwhile, as a token for saving his life, Jaqen H'ghar offers to kill three people that Arya chooses.",
                             "image": "https://episodes.metahub.space/tt0944947/2/5/w780.jpg",
@@ -1236,6 +1252,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 6,
                             "title": "The Old Gods and the New",
                             "description": "Theon seizes control of Winterfell. Jon captures a wildling named Ygritte. The people of King's Landing begin to turn against King Joffrey. Daenerys looks to buy ships to sail for the Seven Kingdoms.",
                             "image": "https://episodes.metahub.space/tt0944947/2/6/w780.jpg",
@@ -1243,6 +1260,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 7,
                             "title": "A Man Without Honor",
                             "description": "Bran and Rickon have escaped Winterfell. Theon tries to hunt them down. Daenerys' dragons have been stolen. Jon travels through the wilderness with Ygritte as his prisoner. Sansa has bled and is now ready to have Joffrey's children.",
                             "image": "https://episodes.metahub.space/tt0944947/2/7/w780.jpg",
@@ -1250,6 +1268,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 8,
                             "title": "The Prince of Winterfell",
                             "description": "Stannis is just days from King's Landing. Tyrion prepares for his arrival. Jon and Qhorin are taken prisoner by the wildlings. Catelyn is arrested for releasing Jaime. Arya, Gendry, and Hot Pie plan to escape from Harrenhal.",
                             "image": "https://episodes.metahub.space/tt0944947/2/8/w780.jpg",
@@ -1257,6 +1276,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 9,
                             "title": "Blackwater",
                             "description": "Stannis Baratheon's fleet and army arrive at King's Landing and the battle for the city begins. Cersei plans for her and her children's future.",
                             "image": "https://episodes.metahub.space/tt0944947/2/9/w780.jpg",
@@ -1264,6 +1284,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 10,
                             "title": "Valar Morghulis",
                             "description": "Joffrey puts Sansa aside for Margaery Tyrell. Robb marries Talisa Maegyr. Jon prepares to meet Mance Rayder. Arya says farewell to Jaqen H'ghar. Daenerys tries to rescue her dragons.",
                             "image": "https://episodes.metahub.space/tt0944947/2/10/w780.jpg",
@@ -1276,6 +1297,7 @@
                     "season_number": 3,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Valar Dohaeris",
                             "description": "Jon is brought before Mance Rayder, the King Beyond the Wall, while the Night's Watch survivors retreat south. In King's Landing, Tyrion asks for his reward. Littlefinger offers Sansa a way out.",
                             "image": "https://episodes.metahub.space/tt0944947/3/1/w780.jpg",
@@ -1283,6 +1305,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 2,
                             "title": "Dark Wings, Dark Words",
                             "description": "Bran and company meet Jojen and Meera Reed. Arya, Gendry, and Hot Pie meet the Brotherhood. Jaime travels through the wilderness with Brienne. Sansa confesses her true feelings about Joffery to Margaery.",
                             "image": "https://episodes.metahub.space/tt0944947/3/2/w780.jpg",
@@ -1290,6 +1313,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 3,
                             "title": "Walk of Punishment",
                             "description": "Robb and Catelyn arrive at Riverrun for Lord Hoster Tully's funeral. Tywin names Tyrion the new Master of Coin. Arya says goodbye to Hot Pie. The Night's Watch returns to Craster's. Brienne and Jaime are taken prisoner.",
                             "image": "https://episodes.metahub.space/tt0944947/3/3/w780.jpg",
@@ -1297,6 +1321,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 4,
                             "title": "And Now His Watch Is Ended",
                             "description": "Jaime mopes over his lost hand. Cersei is growing uncomfortable with the Tyrells. The Night's Watch is growing impatient with Craster. Daenerys buys the Unsullied.",
                             "image": "https://episodes.metahub.space/tt0944947/3/4/w780.jpg",
@@ -1304,6 +1329,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 5,
                             "title": "Kissed by Fire",
                             "description": "Robb's army is falling apart. Jaime reveals a story to Brienne that he has never told anyone. Jon breaks his vows. The Hound is granted his freedom. The Lannisters hatch a new plan.",
                             "image": "https://episodes.metahub.space/tt0944947/3/5/w780.jpg",
@@ -1311,6 +1337,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 6,
                             "title": "The Climb",
                             "description": "Jon and the wildlings scale the Wall. The Brotherhood sells Gendry to Melisandre. Robb does what he can to win back the Freys. Tyrion tells Sansa about their engagement.",
                             "image": "https://episodes.metahub.space/tt0944947/3/6/w780.jpg",
@@ -1318,6 +1345,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 7,
                             "title": "The Bear and the Maiden Fair",
                             "description": "Jon and the wildlings travel south of the Wall. Talisa tells Robb that she's pregnant. Arya runs away from the Brotherhood. Daenerys arrives at Yunkai. Jaime leaves Brienne behind at Harrenhal.",
                             "image": "https://episodes.metahub.space/tt0944947/3/7/w780.jpg",
@@ -1325,6 +1353,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 8,
                             "title": "Second Sons",
                             "description": "Daenerys tries to persuade the Second Sons to join her against Yunkai. Stannis releases Davos from the dungeons. Sam and Gilly are attacked by a White Walker. Sansa and Tyrion wed.",
                             "image": "https://episodes.metahub.space/tt0944947/3/8/w780.jpg",
@@ -1332,6 +1361,7 @@
                             "rating": "8.9"
                         },
                         {
+                            "number": 9,
                             "title": "The Rains of Castamere",
                             "description": "Robb and Catelyn arrive at the Twins for the wedding. Jon is put to the test to see where his loyalties truly lie. Bran's group decides to split up. Daenerys plans an invasion of Yunkai.",
                             "image": "https://episodes.metahub.space/tt0944947/3/9/w780.jpg",
@@ -1339,6 +1369,7 @@
                             "rating": "9.9"
                         },
                         {
+                            "number": 10,
                             "title": "Mhysa",
                             "description": "Bran and company travel beyond the Wall. Sam returns to Castle Black. Jon says goodbye to Ygritte. Jaime returns to King's Landing. The Night's Watch asks for help from Stannis.",
                             "image": "https://episodes.metahub.space/tt0944947/3/10/w780.jpg",
@@ -1351,6 +1382,7 @@
                     "season_number": 4,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Two Swords",
                             "description": "Tyrion welcomes a guest to King's Landing. At Castle Black, Jon stands trial. Daenerys is pointed to Meereen, the mother of all slave cities. Arya runs into an old enemy.",
                             "image": "https://episodes.metahub.space/tt0944947/4/1/w780.jpg",
@@ -1358,6 +1390,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 2,
                             "title": "The Lion and the Rose",
                             "description": "Joffrey and Margaery's wedding has come. Tyrion breaks up with Shae. Ramsay tries to prove his worth to his father. Bran and company find a Weirwood tree.",
                             "image": "https://episodes.metahub.space/tt0944947/4/2/w780.jpg",
@@ -1365,6 +1398,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 3,
                             "title": "Breaker of Chains",
                             "description": "Tyrion is arrested for murder and awaits trial. Sansa escapes King's Landing. Sam sends Gilly to Mole's Town as the Night's Watch finds itself in a tight spot. Meereen challenges Daenerys.",
                             "image": "https://episodes.metahub.space/tt0944947/4/3/w780.jpg",
@@ -1372,6 +1406,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 4,
                             "title": "Oathkeeper",
                             "description": "Jaime entrusts a task to Brienne. Daenerys frees Meereen. Jon is given permission to lead a group of Night's Watchmen to Craster's Keep. Bran and company are taken hostage.",
                             "image": "https://episodes.metahub.space/tt0944947/4/4/w780.jpg",
@@ -1379,6 +1414,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 5,
                             "title": "First of His Name",
                             "description": "Tommen is crowned King of the Seven Kingdoms. Cersei builds her case against Tyrion. Sansa and Lord Baelish arrive at the Eyrie. The Night's Watch attacks Craster's Keep.",
                             "image": "https://episodes.metahub.space/tt0944947/4/5/w780.jpg",
@@ -1386,6 +1422,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 6,
                             "title": "The Laws of Gods and Men",
                             "description": "Tyrion's trial has come. Yara and her troops storm the Dreadfort to free Theon. Daenerys meets Hizdar zo Loraq. Stannis makes a deal with the Iron Bank of Braavos.",
                             "image": "https://episodes.metahub.space/tt0944947/4/6/w780.jpg",
@@ -1393,6 +1430,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 7,
                             "title": "Mockingbird",
                             "description": "Tyrion tries to find a champion. Daenerys sleeps with Daario. The Hound becomes wounded. Jon's advice is ignored at Castle Black. Brienne and Podrick receive a tip on Arya's whereabouts.",
                             "image": "https://episodes.metahub.space/tt0944947/4/7/w780.jpg",
@@ -1400,6 +1438,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 8,
                             "title": "The Mountain and the Viper",
                             "description": "Theon helps Ramsay seize Moat Cailin. The wildlings attack Mole's Town. Sansa comes up with a story to protect Lord Baelish. Daenerys finds out a secret about Jorah Mormont. Oberyn Martell faces Gregor Clegane, the Mountain.",
                             "image": "https://episodes.metahub.space/tt0944947/4/8/w780.jpg",
@@ -1407,6 +1446,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 9,
                             "title": "The Watchers on the Wall",
                             "description": "The battle between the Night's Watch and the wildlings has come.",
                             "image": "https://episodes.metahub.space/tt0944947/4/9/w780.jpg",
@@ -1414,6 +1454,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 10,
                             "title": "The Children",
                             "description": "Bran meets the Three-Eyed Raven. Tyrion makes a choice.",
                             "image": "https://episodes.metahub.space/tt0944947/4/10/w780.jpg",
@@ -1426,6 +1467,7 @@
                     "season_number": 5,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "The Wars to Come",
                             "description": "Cersei and Jaime adjust to a world without Tywin. Tyrion and Varys arrive at Pentos. In Meereen, a new enemy emerges. Jon is caught between two kings.",
                             "image": "https://episodes.metahub.space/tt0944947/5/1/w780.jpg",
@@ -1433,6 +1475,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 2,
                             "title": "The House of Black and White",
                             "description": "Arya arrives in Braavos. Jaime takes on a secret mission. Ellaria Sand seeks revenge for Oberyn's death. Stannis makes Jon a generous offer as the Night's Watch elects a new Lord Commander. Daenerys is faced with a difficult decision.",
                             "image": "https://episodes.metahub.space/tt0944947/5/2/w780.jpg",
@@ -1440,6 +1483,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 3,
                             "title": "High Sparrow",
                             "description": "Tommen and Margaery wed. Arya has trouble adapting to her new life. Littlefinger reveals his plans to Sansa. Jon gives his first orders as Lord Commander. Tyrion and Varys arrive in Volantis.",
                             "image": "https://episodes.metahub.space/tt0944947/5/3/w780.jpg",
@@ -1447,6 +1491,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 4,
                             "title": "Sons of the Harpy",
                             "description": "Jorah Mormont sets sail alongside his prisoner, Tyrion. Cersei makes a move against the Tyrells. Jaime and Bronn sneak into Dorne. Ellaria and the Sand Snakes make their plans. Melisandre tempts Jon. The Harpies attack.",
                             "image": "https://episodes.metahub.space/tt0944947/5/4/w780.jpg",
@@ -1454,6 +1499,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 5,
                             "title": "Kill the Boy",
                             "description": "Daenerys arrests the heads of Meereen's great families. Jon makes a difficult decision. Theon is forced to face Sansa. Stannis rides south. Tyrion and Jorah enter the ruins of Old Valyria.",
                             "image": "https://episodes.metahub.space/tt0944947/5/5/w780.jpg",
@@ -1461,6 +1507,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 6,
                             "title": "Unbowed, Unbent, Unbroken",
                             "description": "Arya is put to the test. Tyrion and Jorah are captured by slavers. Loras Tyrell is judged by the Sparrows. Jaime and Bronn face the Sand Snakes. Sansa marries Ramsay Bolton.",
                             "image": "https://episodes.metahub.space/tt0944947/5/6/w780.jpg",
@@ -1468,6 +1515,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 7,
                             "title": "The Gift",
                             "description": "Jon heads east as trouble begins to stir for Sam and Gilly at Castle Black. Sansa asks Theon for help. Tyrion and Jorah are sold as slaves. Cersei savors her triumph over the Tyrells as new plots are developed in the shadows.",
                             "image": "https://episodes.metahub.space/tt0944947/5/7/w780.jpg",
@@ -1475,6 +1523,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 8,
                             "title": "Hardhome",
                             "description": "Tyrion advises Daenerys. Sansa forces Theon to tell her a secret. Cersei remains stubborn. Arya meets her first target. Jon and Tormund meet with the wildling elders.",
                             "image": "https://episodes.metahub.space/tt0944947/5/8/w780.jpg",
@@ -1482,6 +1531,7 @@
                             "rating": "9.8"
                         },
                         {
+                            "number": 9,
                             "title": "The Dance of Dragons",
                             "description": "Jon and the wildlings return to Castle Black. Jaime meets with Doran Martell. Stannis makes a hard choice. Arya runs into Meryn Trant. Daenerys attends the grand reopening of the fighting pits.",
                             "image": "https://episodes.metahub.space/tt0944947/5/9/w780.jpg",
@@ -1489,6 +1539,7 @@
                             "rating": "9.4"
                         },
                         {
+                            "number": 10,
                             "title": "Mother's Mercy",
                             "description": "Stannis arrives at Winterfell. Tyrion runs Meereen as Daario and Jorah go after Daenerys. Jaime and Myrcella leave Dorne. Jon sends Sam and Gilly to Oldtown. Arya challenges the Many-Faced God. Cersei confesses her sins.",
                             "image": "https://episodes.metahub.space/tt0944947/5/10/w780.jpg",
@@ -1501,6 +1552,7 @@
                     "season_number": 6,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "The Red Woman",
                             "description": "The fate of Jon Snow is revealed. Daenerys is brought before Khal Moro. Tyrion gets used to living in Meereen. Ramsay sends his dogs after Theon and Sansa. Ellaria and the Sand Snakes make their move. Cersei mourns for Myrcella.",
                             "image": "https://episodes.metahub.space/tt0944947/6/1/w780.jpg",
@@ -1508,6 +1560,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 2,
                             "title": "Home",
                             "description": "Bran trains with the Three-Eyed Raven. Tommen meets with Cersei. Tyrion makes a bold move. Theon leaves while at Pyke new issues arise. Ramsay's brother is born. Davos asks Melisandre for a miracle.",
                             "image": "https://episodes.metahub.space/tt0944947/6/2/w780.jpg",
@@ -1515,6 +1568,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 3,
                             "title": "Oathbreaker",
                             "description": "Daenerys arrives at Vaes Dothrak. Sam and Gilly sail for Horn Hill. Arya trains as No One. Varys finds information on the Sons of the Harpy. Ramsay receives a gift. Tommen meets with the High Sparrow. At Castle Black, a miracle occurs.",
                             "image": "https://episodes.metahub.space/tt0944947/6/3/w780.jpg",
@@ -1522,6 +1576,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 4,
                             "title": "Book of the Stranger",
                             "description": "Sansa arrives at Castle Black. Tyrion makes a deal with the slave masters. Jorah and Daario sneak into Vaes Dothrak. Ramsay sends a letter to Jon. Theon arrives at Pyke. Cersei and Olenna Tyrell plot against the High Sparrow.",
                             "image": "https://episodes.metahub.space/tt0944947/6/4/w780.jpg",
@@ -1529,6 +1584,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 5,
                             "title": "The Door",
                             "description": "Sansa and Jon make plans. Arya is given another chance to prove herself. Jorah confesses a secret to Daenerys. Tyrion meets with a red priestess. Yara finds her rule tested. Bran discovers the origin of the White Walkers.",
                             "image": "https://episodes.metahub.space/tt0944947/6/5/w780.jpg",
@@ -1536,6 +1592,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 6,
                             "title": "Blood of My Blood",
                             "description": "Bran and Meera find a new ally. Gilly meets Sam's family. Arya makes a difficult choice. The Lannisters and Tyrells march against the High Sparrow.",
                             "image": "https://episodes.metahub.space/tt0944947/6/6/w780.jpg",
@@ -1543,6 +1600,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 7,
                             "title": "The Broken Man",
                             "description": "Jon and Sansa gather troops. Jaime arrives at Riverrun. Olenna Tyrell plans to leave King's Landing. Theon and Yara plan a destination. Arya makes plans to leave.",
                             "image": "https://episodes.metahub.space/tt0944947/6/7/w780.jpg",
@@ -1550,6 +1608,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 8,
                             "title": "No One",
                             "description": "Brienne arrives at Riverrun. Arya seeks shelter. Jaime meets with Edmure Tully. Cersei challenges the Faith. Sandor Clegane hunts for revenge. Tyrion faces the consequences of earlier decisions.",
                             "image": "https://episodes.metahub.space/tt0944947/6/8/w780.jpg",
@@ -1557,6 +1616,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 9,
                             "title": "Battle of the Bastards",
                             "description": "Jon and Sansa face Ramsay Bolton on the fields of Winterfell. Daenerys strikes back at her enemies. Theon and Yara arrive in Meereen.",
                             "image": "https://episodes.metahub.space/tt0944947/6/9/w780.jpg",
@@ -1564,6 +1624,7 @@
                             "rating": "9.9"
                         },
                         {
+                            "number": 10,
                             "title": "The Winds of Winter",
                             "description": "Cersei and Loras Tyrell stand trial by the gods. Daenerys prepares to set sail for Westeros. Davos confronts Melisandre. Sam and Gilly arrive in the Citadel. Bran discovers a long-kept secret. Lord Frey has an uninvited guest.",
                             "image": "https://episodes.metahub.space/tt0944947/6/10/w780.jpg",
@@ -1576,6 +1637,7 @@
                     "season_number": 7,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Dragonstone",
                             "description": "Jon organizes the North's defenses. Cersei tries to even the odds. Daenerys comes home. Arya reminds the Freys \"the North remembers.\" Sam adapts to life in Oldtown. The Night King makes his way south.",
                             "image": "https://episodes.metahub.space/tt0944947/7/1/w780.jpg",
@@ -1583,6 +1645,7 @@
                             "rating": "8.5"
                         },
                         {
+                            "number": 2,
                             "title": "Stormborn",
                             "description": "Daenerys receives an unexpected visitor. Jon faces resistance. Tyrion plans the conquest of Westeros. Cersei gathers her allies. Arya has a reunion with old friends. Sam risks his career and life.",
                             "image": "https://episodes.metahub.space/tt0944947/7/2/w780.jpg",
@@ -1590,6 +1653,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 3,
                             "title": "The Queen's Justice",
                             "description": "Jon and Daenerys finally meet. Cersei gains a new ally. Sansa receives an unexpected visitor. Sam is confronted for his actions.",
                             "image": "https://episodes.metahub.space/tt0944947/7/3/w780.jpg",
@@ -1597,6 +1661,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 4,
                             "title": "The Spoils of War",
                             "description": "Daenerys takes matters into her own hands. Arya reaches her destination. Jaime and Bronn collect the spoils from the war with the Tyrells.",
                             "image": "https://episodes.metahub.space/tt0944947/7/4/w780.jpg",
@@ -1604,6 +1669,7 @@
                             "rating": "9.7"
                         },
                         {
+                            "number": 5,
                             "title": "Eastwatch",
                             "description": "Daenerys demands loyalty from the surviving Lannister soldiers; Jon heeds Bran's warning about White Walkers on the move; Cersei vows to vanquish anyone or anything that stands in her way.",
                             "image": "https://episodes.metahub.space/tt0944947/7/5/w780.jpg",
@@ -1611,6 +1677,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 6,
                             "title": "Beyond the Wall",
                             "description": "Jon and his team go beyond the wall to capture a wight. Daenerys has to make a tough decision.",
                             "image": "https://episodes.metahub.space/tt0944947/7/6/w780.jpg",
@@ -1618,6 +1685,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 7,
                             "title": "The Dragon and the Wolf",
                             "description": "Everyone meets in King's Landing to discuss the fate of the realm. In Winterfell, Sansa confronts Arya. Sam reaches Winterfell, where he learns from Bran a shocking secret about Jon Snow.",
                             "image": "https://episodes.metahub.space/tt0944947/7/7/w780.jpg",
@@ -1630,6 +1698,7 @@
                     "season_number": 8,
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Winterfell",
                             "description": "Jon and Daenerys arrive in Winterfell and are met with skepticism. Sam learns about the fate of his family. Cersei gives Euron the reward he aims for. Theon follows his heart.",
                             "image": "https://episodes.metahub.space/tt0944947/8/1/w780.jpg",
@@ -1637,6 +1706,7 @@
                             "rating": "7.6"
                         },
                         {
+                            "number": 2,
                             "title": "A Knight of the Seven Kingdoms",
                             "description": "Jaime faces judgment and Winterfell prepares for the battle to come.",
                             "image": "https://episodes.metahub.space/tt0944947/8/2/w780.jpg",
@@ -1644,6 +1714,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 3,
                             "title": "The Long Night",
                             "description": "The Night King and his army have arrived at Winterfell and the great battle begins.",
                             "image": "https://episodes.metahub.space/tt0944947/8/3/w780.jpg",
@@ -1651,6 +1722,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 4,
                             "title": "The Last of the Starks",
                             "description": "The Battle of Winterfell is over and a new chapter for Westeros begins.",
                             "image": "https://episodes.metahub.space/tt0944947/8/4/w780.jpg",
@@ -1658,6 +1730,7 @@
                             "rating": "5.5"
                         },
                         {
+                            "number": 5,
                             "title": "The Bells",
                             "description": "Forces have arrived at King's Landing for the final battle.",
                             "image": "https://episodes.metahub.space/tt0944947/8/5/w780.jpg",
@@ -1665,6 +1738,7 @@
                             "rating": "5.9"
                         },
                         {
+                            "number": 6,
                             "title": "The Iron Throne",
                             "description": "In the aftermath of the devastating attack on King's Landing, Daenerys must face the survivors.",
                             "image": "https://episodes.metahub.space/tt0944947/8/6/w780.jpg",
@@ -1674,7 +1748,7 @@
                     ]
                 }
             ],
-            "inSlides": true
+            "type": "series"
         },
         {
             "id": 19,
@@ -2965,7 +3039,7 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
                             "number": 1,
@@ -3065,11 +3139,11 @@
                         },
                         {
                             "number": 13,
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Utsuro no Hitomi",
+                            "description": "Amo tells the story of how she came to the tower and of the \"angels\" who came to visit her.",
+                            "image": "https://image.tmdb.org/t/p/original/f3Trs8OBxuxrGqh5qkDx6fJvTkX.jpg",
                             "addedDate": "2025-10-05",
-                            "rating": ""
+                            "rating": "9.1"
                         },
                         {
                             "number": 14,
@@ -3162,7 +3236,7 @@
                     ]
                 }
             ],
-            "inSlides": true
+            "type": "series"
         },
         {
             "id": 32,
@@ -5825,11 +5899,11 @@
                     "episodes": [
                         {
                             "number": 1,
-                            "title": "",
-                            "description": "",
+                            "title": "Berlint Panic | The Informant and Nightfall",
+                            "description": "The Forgers enjoy a day off while Nightfall hires Franky to help her on a mission.",
                             "image": "https://image.tmdb.org/t/p/original/5V2F9iskbnkty3UslXcrhQzwnVA.jpg",
                             "addedDate": "2025-10-04",
-                            "rating": ""
+                            "rating": "7.5"
                         },
                         {
                             "number": 2,
@@ -6029,7 +6103,7 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
                             "number": 1,
@@ -6067,9 +6141,9 @@
                             "number": 5,
                             "title": "Vagrants",
                             "description": "With help from an eyewitness, Tom and his team inch closer to breaking the case. Perry pays Maeve a visit, while Robbie puts his plan in motion. Later, Tom follows a lead that takes him down a dangerous path.",
-                            "image": "",
+                            "image": "https://image.tmdb.org/t/p/original/ioRVWIZMNIzV2MU0b4qGagpALnF.jpg",
                             "addedDate": "2025-10-05",
-                            "rating": ""
+                            "rating": "8.9"
                         },
                         {
                             "number": 6,
@@ -6090,7 +6164,7 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 1759342771682,
@@ -6181,7 +6255,7 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
                             "number": 1,
@@ -6290,7 +6364,7 @@
                     ]
                 },
                 {
-                    "season_number": 2,
+                    "season_number": "2",
                     "episodes": [
                         {
                             "number": 1,
@@ -6495,7 +6569,7 @@
                     ]
                 },
                 {
-                    "season_number": 3,
+                    "season_number": "3",
                     "episodes": [
                         {
                             "number": 1,
@@ -6700,7 +6774,7 @@
                     ]
                 },
                 {
-                    "season_number": 4,
+                    "season_number": "4",
                     "episodes": [
                         {
                             "number": 1,
@@ -6905,7 +6979,7 @@
                     ]
                 },
                 {
-                    "season_number": 5,
+                    "season_number": "5",
                     "episodes": [
                         {
                             "number": 1,
@@ -7110,7 +7184,7 @@
                     ]
                 },
                 {
-                    "season_number": 6,
+                    "season_number": "6",
                     "episodes": [
                         {
                             "number": 1,
@@ -7315,7 +7389,7 @@
                     ]
                 },
                 {
-                    "season_number": 7,
+                    "season_number": "7",
                     "episodes": [
                         {
                             "number": 1,
@@ -7488,7 +7562,7 @@
                     ]
                 },
                 {
-                    "season_number": 8,
+                    "season_number": "8",
                     "episodes": [
                         {
                             "number": 1,
@@ -7507,6 +7581,554 @@
                             "rating": ""
                         }
                     ]
+                },
+                {
+                    "season_number": "Specials",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Save! Rescue Training!",
+                            "description": "Four weeks after the attack on class 1A's rescue practice, the students resumed training. This time, the teachers are injured. They are forced to face the villain all by themselves.",
+                            "image": "https://image.tmdb.org/t/p/original/36vxi9KypNmqOPhIANqnzA0FNFc.jpg",
+                            "addedDate": "2016-11-27",
+                            "rating": "7.0",
+                            "special": true
+                        },
+                        {
+                            "number": 2,
+                            "title": "Training of the Dead",
+                            "description": "Class 1-A teams up with Isamu Academy for survival training, but a zombie-themed Quirk turns it into chaotic fun. Tsuyu reconnects with an old friend amid the mayhem.",
+                            "image": "https://image.tmdb.org/t/p/original/2EfWCT3lUrLtyWOMcXWWz5JR7zu.jpg",
+                            "addedDate": "2017-06-02",
+                            "rating": "8.3",
+                            "special": true
+                        },
+                        {
+                            "number": 3,
+                            "title": "All Might Rising",
+                            "description": "A young Toshinori Yagi inherits the will of his mentor, Nana Shimura, and begins his journey to become the Symbol of Peace in this emotional prequel to Two Heroes.",
+                            "image": "https://image.tmdb.org/t/p/original/8aPiyOyWbGV5LYgK9cShf7YqkJ5.jpg",
+                            "addedDate": "2019-02-13",
+                            "rating": "8.3",
+                            "special": true
+                        },
+                        {
+                            "number": 4,
+                            "title": "Make It! Do-or-Die Survival Training 1",
+                            "description": "In preparation for Class 1-A's Provisional Hero License Exam, Eraser Head decides to give the class a training exercise on disaster rescue, due to previous license exams having a disaster rescue test in most cases.",
+                            "image": "https://image.tmdb.org/t/p/original/4CoAL32a8lW84mq9X1MgnLH141E.jpg",
+                            "addedDate": "2020-08-16",
+                            "rating": "6.9",
+                            "special": true
+                        },
+                        {
+                            "number": 5,
+                            "title": "Make It! Do-or-Die Survival Training 2",
+                            "description": "Izuku looks up the elevator shaft and notices that sunlight is pouring in from the top. Momo notes that the elevators only lead to the inside of the first floor, leading Tsuyu to theorize the surface has collapsed.",
+                            "image": "https://image.tmdb.org/t/p/original/9rEGFwA1CvezGybnam7qLDdKX2T.jpg",
+                            "addedDate": "2020-08-16",
+                            "rating": "7.2",
+                            "special": true
+                        },
+                        {
+                            "number": 6,
+                            "title": "Departure",
+                            "description": "As Midoriya, Bakugo, and Todoroki prepare to depart for an overseas mission with the Endeavor Agency, nerves, rivalry, and unexpected chaos erupt at the airport before their journey even begins.",
+                            "image": "https://image.tmdb.org/t/p/original/bxuIzKPUwVpcIlYBdfUUr8jTDq4.jpg",
+                            "addedDate": "2022-02-16",
+                            "rating": "8.4",
+                            "special": true
+                        },
+                        {
+                            "number": 7,
+                            "title": "HLB",
+                            "description": "The \"Hero League Baseball\" is an organization set-up by several Pro Heroes to allow them the chance to play and compete in their spare time. For this year, the \"Orcas\", led by Gang Orca, and the \"Lionels\", led by Shishido, have made it to the finals. Present Mic narrates the game, accompanied by an extremely apathetic Eraser Head.",
+                            "image": "https://image.tmdb.org/t/p/original/owaJpSUd8XvqQc4LHiMJgJIh5T3.jpg",
+                            "addedDate": "2022-06-16",
+                            "rating": "6.6",
+                            "special": true
+                        },
+                        {
+                            "number": 8,
+                            "title": "Laugh! As If You Are in Hell",
+                            "description": "It's been ten months since Izuku en-rolled at U.A. High School, and on top of his regular school work, four days a week he has been continuing his Hero Work-Study at the Endeavor Agency. On one day, they are approached by a police officer, seeking assistance in tracking down a local graffiti artist vandalizing the streets.",
+                            "image": "https://image.tmdb.org/t/p/original/wyLCZSufPRWgtnwf2Dc75u0rnKf.jpg",
+                            "addedDate": "2022-06-16",
+                            "rating": "6.9",
+                            "special": true
+                        },
+                        {
+                            "number": 9,
+                            "title": "U.A. Heroes Battle",
+                            "description": "Third-year Mirio Togata greets the first-year students in Class A with the card game UA Heroes Battle, where each student picks cards and joins the fierce battle.",
+                            "image": "https://image.tmdb.org/t/p/original/sN2vj1E9INL6sDsSZzPaLc3Oqlu.jpg",
+                            "addedDate": "2023-11-30",
+                            "rating": "6.9",
+                            "special": true
+                        }
+                    ]
+                }
+            ],
+            "type": "series"
+        },
+        {
+            "id": 1759691446507,
+            "title": "One Punch Man",
+            "genre": "Action, Animation, Anime, Comedy, Fantasy, Hand-Drawn Animtion, Sci-Fi, Superhero",
+            "year": 2015,
+            "releaseDate": "2015-10-05",
+            "rating": 8.6,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jbYJuxfZMpYDalkiOnBcCv9TaL.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/3AXLSxMuqyZt8HyrKKfrcJtkswD.jpg",
+            "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.\n\n",
+            "language": "Japanese, English",
+            "country": " Japan",
+            "ageRating": "TV-PG",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": "1",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "The Strongest Man",
+                            "description": "Saitama is a guy who's a hero for fun. After saving a child from certain death, he decided to become a hero, training hard for three years.",
+                            "image": "https://image.tmdb.org/t/p/original/r5LjUXSYANLC5f6X9qgvAjeEP2X.jpg",
+                            "addedDate": "2015-10-05",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 2,
+                            "title": "The Lone Cyborg",
+                            "description": "A monster is moving toward City Z--one that has been created by the mysterious organization known as The House of Evolution.",
+                            "image": "https://image.tmdb.org/t/p/original/mps2UuPnmkxOco5oQePVlwioZKG.jpg",
+                            "addedDate": "2015-10-12",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 3,
+                            "title": "The Obsessive Scientist",
+                            "description": "Saitama and Genos glean information about the House of Evolution and its founder, Dr. Genus.",
+                            "image": "https://image.tmdb.org/t/p/original/ywv8d7mCxSnmnS56LNUBjfPzFRd.jpg",
+                            "addedDate": "2015-10-19",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 4,
+                            "title": "The Modern Ninja",
+                            "description": "A group of Bald thugs use body armors to terrorize rich people. Sonic Speed, a hired ninja fights them. Unfortunately he meets with Saitama who is also a Bald.",
+                            "image": "https://image.tmdb.org/t/p/original/kHLdWCkIwT8tw7HPZaNXYoYMpeL.jpg",
+                            "addedDate": "2015-10-25",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 5,
+                            "title": "The Ultimate Mentor",
+                            "description": "Determined to get a little recognition, Saitama decides to become a pro hero, but first, he must pass the Hero Association tests and become a full-fledged member.",
+                            "image": "https://image.tmdb.org/t/p/original/5xdo0OwyWm9oNv2tX6aKj9Gr3Tw.jpg",
+                            "addedDate": "2015-11-01",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 6,
+                            "title": "The Terrifying City",
+                            "description": "To remain on the \"Hero\" list Saitama has to show some activity in every week. Currently the City Z is defined as the 'ghost town'. Heroes are gathered together to find out whats going on.",
+                            "image": "https://image.tmdb.org/t/p/original/oApEUMM4nfTqyXvaVozqCa3B5uQ.jpg",
+                            "addedDate": "2015-11-08",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 7,
+                            "title": "The Ultimate Disciple",
+                            "description": "A giant meteor threatens to destroy City Z. All S-Rank heroes are called to City Z to destroy the meteor before its collision.",
+                            "image": "https://image.tmdb.org/t/p/original/z1Nxh00HGfLCHHPuJ1FcunsR6DY.jpg",
+                            "addedDate": "2015-11-15",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 8,
+                            "title": "The Deep Sea King",
+                            "description": "Several Sea Folk appear and begin attacking citizens. They are easily defeated until The Deep Sea King appears and defeats many heroes including an S-Class.",
+                            "image": "https://image.tmdb.org/t/p/original/vFT8L7RU6U5Il9SvTS1oEU9nhj8.jpg",
+                            "addedDate": "2015-11-22",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Unyielding Justice",
+                            "description": "The fight with the Deep Sea King concludes and Saitama and Genos reflect on it as well as Saitama's promotion to B-Class.",
+                            "image": "https://image.tmdb.org/t/p/original/d5h1EgV1xIjlioPnb0exwLYy1ev.jpg",
+                            "addedDate": "2015-11-30",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Unparalleled Peril",
+                            "description": "Saitama and all class S heroes are gathered together to be informed of an imminent extremely danger threat.",
+                            "image": "https://image.tmdb.org/t/p/original/AbWf8PdF1stcXiOwQXCAP7qGo8u.jpg",
+                            "addedDate": "2015-12-07",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 11,
+                            "title": "The Dominator of the Universe",
+                            "description": "An alien conqueror lands in a spaceship to conquer the Earth during the S class heroes meeting.",
+                            "image": "https://image.tmdb.org/t/p/original/5QqxkbKwSCQOW2XXaoyEpMaKtiZ.jpg",
+                            "addedDate": "2015-12-13",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 12,
+                            "title": "The Strongest Hero",
+                            "description": "Saitama takes on the alien leader in epic battle as the S class heroes fight the alien warriors and destroy the spaceship.",
+                            "image": "https://image.tmdb.org/t/p/original/31qHOAENzfEmYmtbhSahPez9MkZ.jpg",
+                            "addedDate": "2015-12-20",
+                            "rating": "9.5"
+                        }
+                    ]
+                },
+                {
+                    "season_number": "2",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Return of the Hero",
+                            "description": "Saitama and Genos are out shopping when they come across G4, a demonic robot on a mission to eliminate King. Meanwhile, Sitch attempts to recruit various assassins and villains.",
+                            "image": "https://image.tmdb.org/t/p/original/wNeKfTka6lIDQCGpZuOMATv0UJD.jpg",
+                            "addedDate": "2019-04-10",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Human Monster",
+                            "description": "Garou issues a declaration of war on the Hero Association through terrifying means, Hellish Blizzard gives Saitama an ultimatum, and Genos decides to eliminate his master's stalker, Speed-o'.",
+                            "image": "https://image.tmdb.org/t/p/original/b72sZdqHch1PdqUVF86a66KNu09.jpg",
+                            "addedDate": "2019-04-17",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 3,
+                            "title": "The Hunt Begins",
+                            "description": "Garou attacks the S-rank hero Tank top Master, his followers, and Mumen Rider. Garou continues his pursuit of attacking heroes. Saitama buys a wig to join a martial arts tournament after having a brief exchange with Garou.",
+                            "image": "https://image.tmdb.org/t/p/original/gedbotRXMOCUC7P9RblaHgw0LuL.jpg",
+                            "addedDate": "2019-04-24",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Metal Bat",
+                            "description": "Assigned to guard a VIP and his son, Metal Bat couldn't be less thrilled. But when the group is suddenly attacked all hell breaks loose. Meanwhile, Saitama has disguised himself as Charanko in order to enter the \"Super Fight\" martial arts tournament.",
+                            "image": "https://image.tmdb.org/t/p/original/1I29xRhdTy6A1ybdPHc6Ke4fRV2.jpg",
+                            "addedDate": "2019-05-01",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 5,
+                            "title": "The Martial Arts Tournament",
+                            "description": "Metal bat fights Garo. A lot of monsters surface around multiple cities and it is difficult for all the heroes to fight them. Meanwhile, Saitama is at the tournament and Genos is in the audience.",
+                            "image": "https://image.tmdb.org/t/p/original/us7myp7Us2h87nZ1f8ACZ6Fcaoz.jpg",
+                            "addedDate": "2019-05-08",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 6,
+                            "title": "The Uprising of the Monsters",
+                            "description": "Saitama continues facing opponents in the tournament. Genos receives a stress signal depicting that there are 5 monsters in City C and goes to kill them. Blizzard tries to fight a monster but she turns out be very strong.",
+                            "image": "https://image.tmdb.org/t/p/original/sN0T4orzh3HgMBFoKqI7xcYNjBI.jpg",
+                            "addedDate": "2019-05-15",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Class S Heroes",
+                            "description": "As the Super Fight tournament heads for its grand finale, the Class S heroes battle to hold back the tide of monster incursions. Meanwhile, Atomic Samurai is setting in motion a plan of his own.",
+                            "image": "https://image.tmdb.org/t/p/original/c9QhXBPVwOaayJ04FBt3OXjmafV.jpg",
+                            "addedDate": "2019-05-22",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 8,
+                            "title": "The Resistance of the Strong",
+                            "description": "Goketsu, the first Super Fight Tournament champion, arrives in the stadium. Having now become a monster, he's aiming to force the Super Fight competitors to turn into monsters themselves. When several do, it's up to Suiryu to take them on alone.",
+                            "image": "https://image.tmdb.org/t/p/original/tGKbogDzxuL8KlHOkYm6yKlUzFU.jpg",
+                            "addedDate": "2019-05-29",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 9,
+                            "title": "The Troubles of the Strongest",
+                            "description": "Saitama returns to the battle, but is starting to get through a gloomy state because of an obvious reason.",
+                            "image": "https://image.tmdb.org/t/p/original/on2YtDbgc6KdbKpRy2DFHShRZP3.jpg",
+                            "addedDate": "2019-06-12",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 10,
+                            "title": "∙ The Encircling Net of Justice",
+                            "description": "The Monster Association invited all of the S-Class heroes to their hideout in City Z. Meanwhile, Garo encounters a serious threat.",
+                            "image": "https://image.tmdb.org/t/p/original/zD7LqTECY0MKFVCjsNbdOrBWFQs.jpg",
+                            "addedDate": "2019-06-19",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Everyone's Dignity",
+                            "description": "Garou continues his fight against the A Class heroes while some prominent S Class heroes make special entrances.",
+                            "image": "https://image.tmdb.org/t/p/original/pILt8SA33A6x06qRg3CgNEiKxs0.jpg",
+                            "addedDate": "2019-06-26",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Cleaning Up the Disciple's Mess",
+                            "description": "As the fight continues between Garou and his former master, Bang, a prominent threat from the Monster Association reappears.",
+                            "image": "https://image.tmdb.org/t/p/original/vcZkOnTOa9d5K94DkO604RuRuMU.jpg",
+                            "addedDate": "2019-07-03",
+                            "rating": "8.6"
+                        }
+                    ]
+                },
+                {
+                    "season_number": "3",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-12",
+                            "rating": ""
+                        },
+                        {
+                            "number": 2,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-19",
+                            "rating": ""
+                        },
+                        {
+                            "number": 3,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-26",
+                            "rating": ""
+                        },
+                        {
+                            "number": 4,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-02",
+                            "rating": ""
+                        },
+                        {
+                            "number": 5,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-09",
+                            "rating": ""
+                        },
+                        {
+                            "number": 6,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-16",
+                            "rating": ""
+                        },
+                        {
+                            "number": 7,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-23",
+                            "rating": ""
+                        },
+                        {
+                            "number": 8,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-30",
+                            "rating": ""
+                        },
+                        {
+                            "number": 9,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-07",
+                            "rating": ""
+                        },
+                        {
+                            "number": 10,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-14",
+                            "rating": ""
+                        },
+                        {
+                            "number": 11,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-21",
+                            "rating": ""
+                        },
+                        {
+                            "number": 12,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-28",
+                            "rating": ""
+                        }
+                    ]
+                },
+                {
+                    "season_number": "Specials",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "One Punch Man - Wanpanman: Road to Hero",
+                            "description": "Before Saitama became a hero, his local tailor tells him that he must close up shop due to pressure from a local gang and Saitama decides to help him out.",
+                            "image": "https://image.tmdb.org/t/p/original/kYbVo3EOYPWUSvwqA5MaY7Tg2Sf.jpg",
+                            "addedDate": "2015-12-04",
+                            "rating": "7.8",
+                            "special": true
+                        },
+                        {
+                            "number": 2,
+                            "title": "A Shadow That Snuck Up Too Close",
+                            "description": "Genos trying to find out the secret to Saitama's power by stalking him.",
+                            "image": "https://image.tmdb.org/t/p/original/pVvAs2L73gKEEEYzgSqFLkoWeHf.jpg",
+                            "addedDate": "2015-12-24",
+                            "rating": "7.9",
+                            "special": true
+                        },
+                        {
+                            "number": 3,
+                            "title": "The Pupil Who Is an Extremely Poor Talker",
+                            "description": "A story about Genos when he meets Don Pacino, a C class wanted criminal and his gang in a warehouse along with man who is being held captive by the gang.",
+                            "image": "https://image.tmdb.org/t/p/original/ny3DRklL1fheEJ5GqdXnmRaQGSP.jpg",
+                            "addedDate": "2016-01-29",
+                            "rating": "7.5",
+                            "special": true
+                        },
+                        {
+                            "number": 4,
+                            "title": "The Ninja Who Is Too Complicated",
+                            "description": "Sonic faces his fear and meets a new friend.",
+                            "image": "https://image.tmdb.org/t/p/original/tpzlC2GOUglIwv4I2FXsOaZZWjq.jpg",
+                            "addedDate": "2016-02-24",
+                            "rating": "7.7",
+                            "special": true
+                        },
+                        {
+                            "number": 5,
+                            "title": "Bang, Who Is Too Overbearing",
+                            "description": "Silverfang stalks and pursues Saitama and Genos to come to his dojo where he tries to compete with Saitama in old martial arts ways.",
+                            "image": "https://image.tmdb.org/t/p/original/9zzVHlJpgnZQmJA3z39QByzehZo.jpg",
+                            "addedDate": "2016-03-25",
+                            "rating": "8.1",
+                            "special": true
+                        },
+                        {
+                            "number": 6,
+                            "title": "One Punch Man - Special: The Sisters Who Have Too Many Things Happening",
+                            "description": "Story goes around frustrated Fubuki because of her elder sister Tatsumaki. Showing domination of elder sister over little one.",
+                            "image": "https://image.tmdb.org/t/p/original/gvay591W6iLCTyljzpxCB0uhCny.jpg",
+                            "addedDate": "2016-04-22",
+                            "rating": "7.9",
+                            "special": true
+                        },
+                        {
+                            "number": 7,
+                            "title": "The Murder Case That Is Too Impossible",
+                            "description": "Child Emperor investigates the murder of Zombieman.",
+                            "image": "https://image.tmdb.org/t/p/original/4T0l0LSaAuDflbPfVQYFoGqsLiS.jpg",
+                            "addedDate": "2016-05-27",
+                            "rating": "8.0",
+                            "special": true
+                        },
+                        {
+                            "number": 8,
+                            "title": "A Super Serious Look Back!",
+                            "description": "Learn the history of One-Punch Man, and get ready for season 2 with a super serious recap.",
+                            "image": "https://image.tmdb.org/t/p/original/ilWlgMVd22p0eiOOJjBQHZbiITP.jpg",
+                            "addedDate": "2019-04-17",
+                            "rating": "7.2",
+                            "special": true
+                        },
+                        {
+                            "number": 9,
+                            "title": "Saitama and Those with Reasonable Abilities",
+                            "description": "Saitama meets a group of villains in a public restroom who mistake him for their ally, they introduce themselves to Saitama, but when he reveals he's a hero, attempt to defeat him.",
+                            "image": "https://image.tmdb.org/t/p/original/qXx9zsftVDCYYXZ7iqNXtB41C92.jpg",
+                            "addedDate": "2019-10-25",
+                            "rating": "7.2",
+                            "special": true
+                        },
+                        {
+                            "number": 10,
+                            "title": " Old Dudes and Fishing",
+                            "description": "Atomic Samurai and Bang go out fishing to a lake, and Giant Salamander attacks.",
+                            "image": "https://image.tmdb.org/t/p/original/37G5gpfWiwaqwCPf5q3n3UPaJdH.jpg",
+                            "addedDate": "2019-11-26",
+                            "rating": "7.4",
+                            "special": true
+                        },
+                        {
+                            "number": 11,
+                            "title": "Genos and Memory Loss",
+                            "description": "Saitama accidentally hits Genos while opening a bag of chips, which causes Genos to forget who he is.",
+                            "image": "https://image.tmdb.org/t/p/original/o7DCjwvnqbw3phwP6YmlVe80wm9.jpg",
+                            "addedDate": "2019-12-25",
+                            "rating": "7.2",
+                            "special": true
+                        },
+                        {
+                            "number": 12,
+                            "title": "Game and Rivals",
+                            "description": "Saitama brings Genos to a tournament for the fighting video game \"Wild Animals\" where they hope to win the grand prize of five million yen.",
+                            "image": "https://image.tmdb.org/t/p/original/1OUzdQuii4uUS838eoR8fMviqu4.jpg",
+                            "addedDate": "2020-01-28",
+                            "rating": "7.3",
+                            "special": true
+                        },
+                        {
+                            "number": 13,
+                            "title": "Puri Puri Prisoner and the Escaped Prisoners",
+                            "description": "Puri-Puri Prisoner accidentally releases the inmates of Smelly Lid Prison while fighting against a monster. Realizing that the incident may cost a certain cute employee his job, Puri-Puri Prisoner heads out to find the escaped inmates.",
+                            "image": "https://image.tmdb.org/t/p/original/2T8wvhfQOPI53sox3mXP7DjUisa.jpg",
+                            "addedDate": "2020-02-27",
+                            "rating": "6.5",
+                            "special": true
+                        },
+                        {
+                            "number": 14,
+                            "title": "Zombieman Murder Case 2: A Chalet Amid the Blizzard, and the Ones Bothered by the Cold",
+                            "description": "Child Emperor, Zombieman, Superalloy Darkshine, and Metal Bat are dispatched to a forlorn, snowy mountain to hunt down a monster.",
+                            "image": "https://image.tmdb.org/t/p/original/xfsmBSyf8sBlE4TZdT8EwGMMEcx.jpg",
+                            "addedDate": "2020-03-27",
+                            "rating": "7.4",
+                            "special": true
+                        },
+                        {
+                            "number": 15,
+                            "title": "Broadcast Commemorative Episode: A Serious Look Back at the Anime One-Punch Man Season 2",
+                            "description": "We review what's happened so far before the third season begins.",
+                            "image": "https://image.tmdb.org/t/p/original/qJfJmuf5IeYHa49cijfZXCiLaLb.jpg",
+                            "addedDate": "2025-10-05",
+                            "rating": "",
+                            "special": true
+                        }
+                    ]
                 }
             ],
             "type": "series"
@@ -7519,17 +8141,43 @@
                 1,
                 2,
                 3,
+                4
+            ],
+            "id": 1759691446507,
+            "title": "One Punch Man",
+            "backdrop": "https://image.tmdb.org/t/p/original/3AXLSxMuqyZt8HyrKKfrcJtkswD.jpg",
+            "description": "The story of Saitama, a hero that does it just for fun & can defeat his enemies with a single punch.\n\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jbYJuxfZMpYDalkiOnBcCv9TaL.jpg"
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1,
+                2,
+                3,
                 4,
                 5,
                 6,
                 7,
-                8
+                8,
+                9
             ],
             "id": 1759434000966,
             "title": "My Hero Academia",
             "backdrop": "https://image.tmdb.org/t/p/original/cH39aJg9VlEaYo6yY37Iah8RAaz.jpg",
             "description": "A superhero-admiring boy enrolls in a prestigious hero academy and learns what it really means to be a hero, after the strongest superhero grants him his own powers.\n\n",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/phuYuzqWW9ru8EA3HVjE9W2Rr3M.jpg"
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1
+            ],
+            "id": 1759258577665,
+            "title": "Task",
+            "backdrop": "https://image.tmdb.org/t/p/original/hEE8TV5jLQZQnpPN4QmYZ1lCJNq.jpg",
+            "description": "In the working-class suburbs of Philadelphia, an FBI agent heads a task force to put an end to a string of violent robberies led by an unsuspected family man.\n\n",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg"
         },
         {
             "type": "series",
@@ -7578,6 +8226,32 @@
             "backdrop": "https://image.tmdb.org/t/p/original/mrapJp0qb6Fvo3IW9IrjCK9IgSo.jpg",
             "description": "In a floating city, a young boy is framed for the death of his father and exiled. He ends up in a junkyard zone, and swears to return for revenge.",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/oU2SBv5VQCdOHfw3Aw8B0UeAsim.jpg"
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "id": 30,
+            "title": "Stranger Things",
+            "backdrop": "https://images.metahub.space/background/medium/tt4574334/img",
+            "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg"
+        },
+        {
+            "type": "series",
+            "seasons": [
+                1
+            ],
+            "id": 1,
+            "title": "One Piece",
+            "backdrop": "https://image.tmdb.org/t/p/original/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+            "description": "Rubber-bodied dreamer Monkey D. Luffy gathers an eclectic pirate crew and braves the perilous Grand Line, battling tyrants and monsters to claim the legendary \"One Piece\" and become King of the Pirates.",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg"
         }
     ]
 }

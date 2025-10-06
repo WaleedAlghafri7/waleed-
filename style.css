@@ -133,8 +133,8 @@ body {
 }
 
 .search input.active {
-    width: 280px;
-    height: 40px;
+    width: 285px;
+    height: 42px;
     opacity: 1;
     pointer-events: auto;
     z-index: 1002;
@@ -3178,12 +3178,18 @@ body {
     color: #fff;
     font-weight: 700;
     margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .latest-episode-info .series-title {
     font-size: 0.95rem;
     color: #ffd700;
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .latest-episode-info .ep-date {

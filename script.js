@@ -9,7 +9,7 @@ let remainingTime = slideDuration;
 // عدد العناصر لكل قسم
 const config = {
     featured: {
-        count: 6 // عدد العناصر المميزة في السلايدر
+        count: 10 // عدد العناصر المميزة في السلايدر
     },
     movies: {
         count: 16, // عدد الأفلام المعروضة

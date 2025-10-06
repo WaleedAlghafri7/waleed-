@@ -74,6 +74,35 @@ def save_data():
                     return jsonify({ 'error': 'item must be object' }), 400
                 item['type'] = item_type
                 item.setdefault('id', int(datetime.now().timestamp() * 1000))
+                # --- Specials logic for series ---
+                if item_type == 'series' and 'seasons' in item:
+                    # Ensure specials are grouped in a season named 'Specials'
+                    specials = []
+                    normal_seasons = []
+                    for season in item['seasons']:
+                        if str(season.get('season_number')).lower() == 'specials':
+                            # Already a specials season
+                            specials.extend(season.get('episodes', []))
+                        else:
+                            # Split out special episodes from normal ones
+                            season_episodes = season.get('episodes', [])
+                            normal_eps = []
+                            for ep in season_episodes:
+                                if ep.get('special'):
+                                    specials.append(ep)
+                                else:
+                                    normal_eps.append(ep)
+                            season['episodes'] = normal_eps
+                            if len(normal_eps) > 0:
+                                normal_seasons.append(season)
+                    # Add back normal seasons
+                    item['seasons'] = normal_seasons
+                    # Add specials season if any specials exist
+                    if specials:
+                        item['seasons'].append({
+                            'season_number': 'Specials',
+                            'episodes': specials
+                        })
                 target.append(item)
                 write_store(store)
                 return jsonify({ 'message': 'ok', 'id': item['id'] })
@@ -85,6 +114,30 @@ def save_data():
                 if idx == -1:
                     return jsonify({ 'error': 'item not found' }), 404
                 item['type'] = item_type
+                # --- Specials logic for series ---
+                if item_type == 'series' and 'seasons' in item:
+                    specials = []
+                    normal_seasons = []
+                    for season in item['seasons']:
+                        if str(season.get('season_number')).lower() == 'specials':
+                            specials.extend(season.get('episodes', []))
+                        else:
+                            season_episodes = season.get('episodes', [])
+                            normal_eps = []
+                            for ep in season_episodes:
+                                if ep.get('special'):
+                                    specials.append(ep)
+                                else:
+                                    normal_eps.append(ep)
+                            season['episodes'] = normal_eps
+                            if len(normal_eps) > 0:
+                                normal_seasons.append(season)
+                    item['seasons'] = normal_seasons
+                    if specials:
+                        item['seasons'].append({
+                            'season_number': 'Specials',
+                            'episodes': specials
+                        })
                 target[idx] = item
                 write_store(store)
                 return jsonify({ 'message': 'ok' })
@@ -111,4 +164,3 @@ def save_data():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-

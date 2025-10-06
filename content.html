@@ -585,7 +585,7 @@
                     <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
                 </div>
             </div>
-            <div class="name-wab">
+            <div class="name-wab" style="cursor:pointer;" onclick="window.location.href='index.html'">
                 <p>CineStream</p>
             </div>
             <div class="user-list">
@@ -1200,8 +1200,14 @@
             series.seasons.forEach((season, idx) => {
                 const option = document.createElement('option');
                 option.value = idx;
+                // إذا كان season_number رقم، أضف كلمة Season قبله، إذا كان نصي لا تضف الكلمة
+                let seasonText = '';
+                if (!isNaN(season.season_number) && season.season_number !== '' && season.season_number !== null) {
+                    seasonText = `Season ${season.season_number}`;
+                } else {
+                    seasonText = `${season.season_number}`;
+                }
                 // إضافة نوع القسم (part) بجانب رقم الموسم إذا كان موجودًا
-                let seasonText = `Season ${season.season_number}`;
                 if (season.part && season.part !== '') {
                     seasonText += ` - Part ${season.part}`;
                 }
@@ -1263,22 +1269,28 @@
             prevSeasonBtn.disabled = (currentSeasonIdx === 0);
             nextSeasonBtn.disabled = (currentSeasonIdx === series.seasons.length - 1);
 
+            // Helper to get season text (number and part), using same logic as elsewhere
+            function getSeasonText(season) {
+                let seasonText = '';
+                if (!isNaN(season.season_number) && season.season_number !== '' && season.season_number !== null) {
+                    seasonText = `Season ${season.season_number}`;
+                } else {
+                    seasonText = `${season.season_number}`;
+                }
+                if (season.part && season.part !== '') {
+                    seasonText += ` - Part ${season.part}`;
+                }
+                return seasonText;
+            }
+
             // أرقام المواسم مع نوع القسم (part) إذا وجد
             if (currentSeasonIdx > 0) {
-                let prevText = `Season ${series.seasons[currentSeasonIdx - 1].season_number}`;
-                if (series.seasons[currentSeasonIdx - 1].part && series.seasons[currentSeasonIdx - 1].part !== '') {
-                    prevText += ` - Part ${series.seasons[currentSeasonIdx - 1].part}`;
-                }
-                prevSeasonNumber.textContent = prevText;
+                prevSeasonNumber.textContent = getSeasonText(series.seasons[currentSeasonIdx - 1]);
             } else {
                 prevSeasonNumber.textContent = '';
             }
             if (currentSeasonIdx < series.seasons.length - 1) {
-                let nextText = `Season ${series.seasons[currentSeasonIdx + 1].season_number}`;
-                if (series.seasons[currentSeasonIdx + 1].part && series.seasons[currentSeasonIdx + 1].part !== '') {
-                    nextText += ` - Part ${series.seasons[currentSeasonIdx + 1].part}`;
-                }
-                nextSeasonNumber.textContent = nextText;
+                nextSeasonNumber.textContent = getSeasonText(series.seasons[currentSeasonIdx + 1]);
             } else {
                 nextSeasonNumber.textContent = '';
             }
@@ -1305,7 +1317,9 @@
                 const hasDescription = episode.description && episode.description.trim() !== '';
                 const hasReleaseDate = episode.addedDate && episode.addedDate.trim() !== '' && episode.addedDate !== 'TBA';
 
-                const episodeTitle = hasTitle ? `${idx + 1}. ${episode.title}` : `Episode ${idx + 1}`;
+                // رقم الحلقة من episode.number إذا كان موجوداً وصحيحاً، وإلا idx+1
+                let episodeNumber = (typeof episode.number === 'number' && !isNaN(episode.number)) ? episode.number : (parseInt(episode.number, 10) || (idx + 1));
+                const episodeTitle = hasTitle ? `${episodeNumber}. ${episode.title}` : `Episode ${episodeNumber}`;
                 const episodeDescription = hasDescription ? episode.description : '';
 
                 // تحديد التاريخ والنوع
