@@ -323,113 +323,121 @@
         {
             "id": 1754622421306,
             "title": "Demon Slayer: Kimetsu no Yaiba - Sibling's Bond",
-            "genre": "Anime, Action, Animation",
-            "year": 2019,
-            "rating": 8.5,
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion, Japanese",
+            "year": 2021,
+            "releaseDate": "2021-05-20",
+            "rating": 8.4,
             "duration": "1h 45min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xnXeOfHXsgCRi4u75OPU2U3kZsO.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/xnXeOfHXsgCRi4u75OPU2U3kZsO.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/8NEvnVKeGMLEXG45MMNqxJLcM4y.jpg",
             "description": "Tanjiro finds his family massacred and the only survivor, his sister Nezuko Kamado, turned into a demon. However, to his surprise, Nezuko still shows signs of human emotions and thoughts.",
             "language": " Japanese",
             "country": " Japan",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754622545134,
             "title": "Demon Slayer: Kimetsu no Yaiba - Tsuzumi Mansion Arc",
-            "genre": "Anime, Action, Animation",
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion, Japanese, Supernatural Fantasy",
             "year": 2021,
+            "releaseDate": "2021-10-07",
             "rating": 8.5,
             "duration": "1h 27min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2yiDQCDj7hlq2SwLojV9xrFkCnr.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/2yiDQCDj7hlq2SwLojV9xrFkCnr.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/dg0RUo5puPyJjRJQJ87kPs0C6Bd.jpg",
             "description": "Tanjiro ventures to the south-southeast where he encounters a cowardly young man named Zenitsu Agatsuma. He is a fellow survivor from Final Selection and his sparrow asks Tanjiro to help keep him in line.",
             "language": "Japanese",
             "country": "Japan",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754622631424,
             "title": "Demon Slayer: Kimetsu No Yaiba - To the Swordsmith Village",
-            "genre": "Anime, Action, Shonen",
+            "genre": "Action, Adventure, Animation, Anime, Dark Fantasy, Fantasy, Hand-Drawn Animtion, Japanese, Shonen, Supernatural Fantasy",
             "year": 2023,
-            "rating": 7.6,
+            "releaseDate": "2023-03-03",
+            "rating": 7.7,
             "duration": "1h 50min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hEhGrcST85vMd63PBDgPBqih2tR.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hEhGrcST85vMd63PBDgPBqih2tR.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
             "description": "Tanjiro needs to bring a definitive end to Upper Rank Six. After the dust settles, he goes with his sister Nezuko to the Swordsmith Village in search of a new sword.\n",
             "language": " Japanese",
             "country": " Japan",
             "ageRating": "R",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754622695746,
             "title": "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
-            "genre": "Anime, Action, Animation",
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion, Japanese",
             "year": 2021,
+            "releaseDate": "2021-10-07",
             "rating": 8.5,
             "duration": "1h 43min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t2w332ARBJxy1G65abj8C7VNjeW.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/t2w332ARBJxy1G65abj8C7VNjeW.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/6EUCHkb3rmqy08EP07oMPZbjpZR.jpg",
             "description": "Tanjiro ventures to Asakusa, Tokyo for his second mission with the Demon Slayer Corps.",
             "language": " Japanese",
             "country": "Japan",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754622768945,
             "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
-            "genre": "Anime, Action, Shonen",
-            "year": 2020,
+            "genre": "Action, Adult Animation, Anime, Dark Fantasy, Hand-Drawn Animtion, Japanese, Shonen, Superhero, Supernatural Fantasy, Sword & Sorcery",
+            "year": 2021,
+            "releaseDate": "2021-04-23",
             "rating": 8.2,
             "duration": "1h 57min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
             "description": "After his family was brutally murdered and his sister turned into a demon, Tanjiro Kamado's journey as a demon slayer began. Tanjiro and his comrades embark on a new mission aboard the Mugen Train, on track to despair.\n",
             "language": " Japanese",
             "country": " Japan",
-            "ageRating": "18+",
-            "inSlides": false
+            "ageRating": "R",
+            "type": "movie"
         },
         {
             "id": 1754622870862,
             "title": "Demon Slayer: Kimetsu no Yaiba - The Hashira Meeting Arc",
-            "genre": "Anime, Action, Animation",
+            "genre": "Action, Animation, Anime, Fantasy, Hand-Drawn Animtion",
             "year": 2020,
-            "rating": 7.8,
+            "releaseDate": "2020-12-20",
+            "rating": 7.7,
             "duration": "1h 45min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/j1FpReEQXp8JsgNQZcfGvzeXNoI.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/j1FpReEQXp8JsgNQZcfGvzeXNoI.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/daeD5T4MxFk5MppZlaNZoaK6lE9.jpg",
             "description": "Tanjiro and Nezuko have been apprehended by the Demon Slayer Hashira, a group of extremely skilled swordfighters. Tanjiro undergoes trial for violating the Demon Slayer code, specifically smuggling Nezuko, a Demon, onto Mt. Natagumo.",
-            "language": "Japanese",
+            "language": " English",
             "country": "Japan",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754622949726,
             "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Infinity Castle",
-            "genre": "Anime, Action, Shonen",
+            "genre": "Action, Adult Animation, Adventure, Anime, Dark Fantasy, Hand-Drawn Animtion, Japanese, Shonen, Supernatural Fantasy, Sword & Sorcery",
             "year": 2025,
-            "rating": 9,
-            "duration": "2h 30min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
+            "releaseDate": "2025-09-12",
+            "rating": 8.5,
+            "duration": "2h 35min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sUsVimPdA1l162FvdBIlmKBlWHx.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
             "description": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
             "language": "Japanese",
-            "country": " Japan",
-            "ageRating": "",
-            "inSlides": true
+            "country": " Japan, United States",
+            "ageRating": "R",
+            "type": "movie"
         },
         {
             "id": 1754908663602,
             "title": "Violet Evergarden: Recollections",
-            "genre": "Anime, Animation, Drama",
-            "year": 2021,
+            "genre": "Animation, Anime, Drama, Fantasy, Japanese",
+            "year": 2022,
+            "releaseDate": "2022-12-15",
             "rating": 7.5,
             "duration": "1h 35min",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/yNrfz5Mc7IFszxAbivV1Kq0gZrW.jpg",
@@ -437,14 +445,15 @@
             "description": "An emotionally scarred former child soldier becomes a letter writer in this condensed recap of the moving, gorgeously animated award-winning series.\n\n",
             "language": " Japanese",
             "country": "Japan",
-            "ageRating": "16+",
-            "inSlides": false
+            "ageRating": "TV-14",
+            "type": "movie"
         },
         {
             "id": 1754910718050,
             "title": "Violet Evergarden: The Movie",
-            "genre": "Anime, Animation, Drama",
-            "year": 2020,
+            "genre": "Animation, Anime, Drama, Fantasy, Hand-Drawn Animtion, Japanese, Romance",
+            "year": 2021,
+            "releaseDate": "2021-03-30",
             "rating": 8.3,
             "duration": "2h 20min",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/4b7uAGVtgA85Yd911yOJqIsHigx.jpg",
@@ -453,29 +462,31 @@
             "language": " Japanese",
             "country": " Japan, South Korea, Czech Republic, Germany",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754910846817,
             "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
-            "genre": "Anime, Animation, Drama",
-            "year": 2019,
+            "genre": "Animation, Anime, Drama, Family, Hand-Drawn Animtion, Japanese",
+            "year": 2020,
+            "releaseDate": "2020-02-17",
             "rating": 7.5,
             "duration": "1h 30min",
-            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/zjaSw6Ok0MhXjrruPrA27VHyUYC.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3BV1M10SuSi5jOJbSDQQtjX96ov.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/94YK58T5OEKV9hEgPHWHzLtdwK4.jpg",
             "description": "Violet Evergarden, a former soldier returned from war, comes to teach at a women's academy and changes a young girl's life.",
             "language": " Japanese",
             "country": "Japan",
             "ageRating": "",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1754974599132,
             "title": "Solo Leveling: ReAwakening",
-            "genre": "Anime, Action, Adventure",
+            "genre": "Action, Action Epic, Adventure, Animation, Anime, Dark Fantasy, Hand-Drawn Animtion, Supernatural Fantasy, Survival, One-Person Army Action",
             "year": 2024,
-            "rating": 8.8,
+            "releaseDate": "2024-12-06",
+            "rating": 8.7,
             "duration": "2h 1min",
             "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uzHMp5heVLR68kbbUEXFPsmxYsM.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/hlfu6g0h0D65SjkVhQBU20zePTl.jpg",
@@ -483,7 +494,7 @@
             "language": "Japanese",
             "country": " South Korea, Japan",
             "ageRating": "R",
-            "inSlides": false
+            "type": "movie"
         },
         {
             "id": 1758837083741,
@@ -1753,22 +1764,24 @@
         {
             "id": 19,
             "title": "American Murder: Gabby Petito",
-            "genre": "Documentary, Crime",
+            "genre": "Crime, Documentary, True Crime",
             "year": 2025,
+            "releaseDate": "2025-02-17",
             "rating": 7.1,
             "duration": "40min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/83PrIV5PH124m1sR4UIubm7E9sO.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/83PrIV5PH124m1sR4UIubm7E9sO.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt35590630/img",
             "description": "A young couple's cross-country van journey, documented on social media, ends in tragedy when domestic violence shatters their seemingly perfect life. Their story sparks a nationwide investigation and raises questions about family loyalty.\n",
             "language": "English",
             "country": "United States",
-            "ageRating": "18+",
+            "ageRating": "TV-MA",
             "status": "completed",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "We Bought a Van",
                             "description": "In the summer of 2021 Gabby and her fiancé Brian take a \"van life\" trip to the American west, but a 911 call raises alarms about their relationship.",
                             "image": "https://episodes.metahub.space/tt35590630/1/1/w780.jpg",
@@ -1776,6 +1789,7 @@
                             "rating": "7.2"
                         },
                         {
+                            "number": 2,
                             "title": "Where is Gabby?",
                             "description": "Days after a police stop in Utah, Gabby goes missing and parents alert the authorities, setting off a massive search for her - and for Brian.",
                             "image": "https://episodes.metahub.space/tt35590630/1/2/w780.jpg",
@@ -1783,6 +1797,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 3,
                             "title": "Burn After Reading",
                             "description": "Gabby's loved ones grapple with the shocking news of her death. As the Police close in on Brian's location in Florida, suspicions about his parents grow.",
                             "image": "https://episodes.metahub.space/tt35590630/1/3/w780.jpg",
@@ -1792,27 +1807,29 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 20,
             "title": "Surviving Black Hawk Down",
-            "genre": "Documentary, History, War",
+            "genre": "Documentary, History, War, Military Documentary",
             "year": 2025,
+            "releaseDate": "2025-02-10",
             "rating": 7.4,
             "duration": "1h",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/K2pPWcpbkcnECZaUcgYVjPFMHL.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/K2pPWcpbkcnECZaUcgYVjPFMHL.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt35435624/img",
             "description": "An in-depth documentary series revisiting the infamous Battle of Mogadishu through the eyes of survivors.",
             "language": "English",
             "country": "United States",
-            "ageRating": "18+",
+            "ageRating": "TV-MA",
             "status": "completed",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "This is Not New York",
                             "description": "Somalia, 1993. An effort to end famine and civil war turns violent when a US mission to take out a rebel leader ends in the death of multiple civilians.",
                             "image": "https://episodes.metahub.space/tt35435624/1/1/w780.jpg",
@@ -1820,6 +1837,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 2,
                             "title": "A Wall of Lead",
                             "description": "A routine raid to capture two of Aidid's lieutenants turns into a chaotic rescue operation when the Army Rangers are met with fierce Somali counterfire.",
                             "image": "https://episodes.metahub.space/tt35435624/1/2/w780.jpg",
@@ -1827,6 +1845,7 @@
                             "rating": "7.8"
                         },
                         {
+                            "number": 3,
                             "title": "No Way Out",
                             "description": "As news of the botched Black Hawk operation rattles America, video of a captive pilot shocks the globe. Will he be rescued?",
                             "image": "https://episodes.metahub.space/tt35435624/1/3/w780.jpg",
@@ -1836,16 +1855,17 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 21,
             "title": "Newtopia",
-            "genre": "Drama, Comedy, Action",
+            "genre": "Action, Comedy, Fantasy, Horror, Romance, Thriller, Korean, Zombie Horror",
             "year": 2025,
+            "releaseDate": "2025-02-07",
             "rating": 6.6,
             "duration": "1h",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cIC36RA59lg9ruYtPc7UA3f72yy.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/cIC36RA59lg9ruYtPc7UA3f72yy.jpg",
             "backdrop": "https://live.metahub.space/background/medium/tt32199328/img",
             "description": "A soldier faces a zombie outbreak during military service. His girlfriend, an engineer, navigates zombie-ridden Seoul. Both fight through the undead-infested city, striving to reunite amid the chaos.",
             "language": "Korean",
@@ -1854,9 +1874,10 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "",
                             "description": "Young-joo breaks up with her boyfriend, Jae-yoon. He accepts the breakup with a heartfelt voice message. Upon hearing this, Young-joo heads to his workplace, but she encounters an unexpected incident on her way there.",
                             "image": "https://episodes.metahub.space/tt32199328/1/1/w780.jpg",
@@ -1864,6 +1885,7 @@
                             "rating": "6.9"
                         },
                         {
+                            "number": 2,
                             "title": "",
                             "description": "Jae-yoon and In-ho find a plane crashing into the heart of Seoul. Young-joo and Jin-wook confront zombies and team up with Tae-shik. Together, they begin their fight for survival.",
                             "image": "https://episodes.metahub.space/tt32199328/1/2/w780.jpg",
@@ -1871,6 +1893,7 @@
                             "rating": "7.8"
                         },
                         {
+                            "number": 3,
                             "title": "",
                             "description": "Jae-yoon, In-ho, Soo-jeong, and Chef Jung return to the air defense unit. However, even the base they thought was safe begins to face the threat of zombies. Young-joo decides to go alone to Tower 77 A, where Jae-yoon is located.",
                             "image": "https://episodes.metahub.space/tt32199328/1/3/w780.jpg",
@@ -1878,6 +1901,7 @@
                             "rating": "7.2"
                         },
                         {
+                            "number": 4,
                             "title": "",
                             "description": "Jae-yoon and Young-joo reminisce about their happy past. Jae-yoon and his squad mourn the loss of their comrades. Young-joo's group encounters Tripeater, who has been bitten by a zombie but has not yet turned.",
                             "image": "https://episodes.metahub.space/tt32199328/1/4/w780.jpg",
@@ -1885,6 +1909,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 5,
                             "title": "",
                             "description": "A military sergeant must guide his platoon to safety after their base becomes overrun with zombies, while another group of survivors faces danger at the facility's entrance.",
                             "image": "https://episodes.metahub.space/tt32199328/1/5/w780.jpg",
@@ -1892,6 +1917,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 6,
                             "title": "",
                             "description": "Young-joo is left by herself at the Express Bus Terminal Station, but a stroke of luck leads her to a metro staff office, where she gathers supplies to battle the zombies. Meanwhile, Jae-yoon's group reaches Eden Hotel, where they run into Arron Park, who has survived there alone. But the group gets split up by an unexpected attack by the zombies, throwing them into separate hotel rooms.",
                             "image": "https://episodes.metahub.space/tt32199328/1/6/w780.jpg",
@@ -1899,6 +1925,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 7,
                             "title": "",
                             "description": "On her way to Suseo Station, Young-joo meets a special person who helps her. She relentlessly fights the zombies alone on her way to her boyfriend. Meanwhile, Jae-yoon and the squad reach the 35th floor through the ducts.",
                             "image": "https://episodes.metahub.space/tt32199328/1/7/w780.jpg",
@@ -1906,6 +1933,7 @@
                             "rating": "7.2"
                         },
                         {
+                            "number": 8,
                             "title": "",
                             "description": "Jae-yoon escapes the A Tower first and saves others with a brilliant idea. But they must endure another goodbye. In the meantime, Young-joo runs into people who are even more brutal than zombies.",
                             "image": "https://episodes.metahub.space/tt32199328/1/8/w780.jpg",
@@ -1915,7 +1943,7 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 22,
@@ -3143,15 +3171,15 @@
                             "description": "Amo tells the story of how she came to the tower and of the \"angels\" who came to visit her.",
                             "image": "https://image.tmdb.org/t/p/original/f3Trs8OBxuxrGqh5qkDx6fJvTkX.jpg",
                             "addedDate": "2025-10-05",
-                            "rating": "9.1"
+                            "rating": "9.2"
                         },
                         {
                             "number": 14,
-                            "title": "",
+                            "title": "Arashi no Mae no Arashi",
                             "description": "",
-                            "image": "",
+                            "image": "https://image.tmdb.org/t/p/original/efY8OZLlkjYZTXap0CQzXlUkVyH.jpg",
                             "addedDate": "2025-10-12",
-                            "rating": ""
+                            "rating": "8.1"
                         },
                         {
                             "number": 15,
@@ -4190,22 +4218,24 @@
         {
             "id": 1754566250630,
             "title": "Jujutsu Kaisen",
-            "genre": "Animation, Action, Shonen",
+            "genre": "Action, Adult Animation, Adventure, Anime, Dark Fantasy, Hand-Drawn Animtion, Japanese, Shonen, Supernatural Fantasy, Urban Adventure",
             "year": 2020,
+            "releaseDate": "2020-10-02",
             "rating": 8.5,
             "duration": "24min",
-            "image": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kjWDfeq8PY2UNDityFEzj3CF7KA.jpg",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/fHpKWq9ayzSk8nSwqRuaAUemRKh.jpg",
             "backdrop": "https://image.tmdb.org/t/p/original/gmECX1DvFgdUPjtio2zaL8BPYPu.jpg",
             "description": "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.\n",
             "language": " Japanese",
-            "country": "Japan",
-            "ageRating": "16+",
+            "country": "Japan, United States",
+            "ageRating": "TV-MA",
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Ryomen Sukuna",
                             "description": "As Itadori Yuuji cares for his grandpa, Jujutsu sorcerer Fushiguro Megumi worries that he's carrying a cursed object of rare power. The Occult club messes with something far beyond their understanding",
                             "image": "https://image.tmdb.org/t/p/original/3wymoL9HYpllpFrcD8VCvemktGg.jpg",
@@ -4213,6 +4243,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 2,
                             "title": "For Myself",
                             "description": "Following the delay of his secret execution, Yuji is brought to Tokyo Metropolitan Curse Technical School. He's interviewed by the principal, who tests his convictions to see if he's worthy of becoming a sorcerer.",
                             "image": "https://image.tmdb.org/t/p/original/k5U9vkpy31UiqCkEc6x6OPBBB0R.jpg",
@@ -4220,6 +4251,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 3,
                             "title": "Girl of Steel",
                             "description": "A new freshman arrives to join the Itadori and Fushiguro group. She barely arrives in Tokyo, and is already put to the test on her first exorcism mission.",
                             "image": "https://image.tmdb.org/t/p/original/foMCHRzZVfCTvrmfWWeWViBzvZH.jpg",
@@ -4227,6 +4259,7 @@
                             "rating": "7.6"
                         },
                         {
+                            "number": 4,
                             "title": "Curse Womb Must Die",
                             "description": "The three Jujutsu first years are sent to rescue inmates of a detention center haunted by a Cursed Womb. With the potential to spawn a Special Grade Cursed Spirit, the young Sorcerers are faced with the choice to run or die.",
                             "image": "https://image.tmdb.org/t/p/original/7AxWD8EGwgurIeNoS40YidIlbcT.jpg",
@@ -4234,6 +4267,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 5,
                             "title": "Curse Womb Must Die -II-",
                             "description": "Yuuji fails to regain control of his own body, forcing Fushiguro to take drastic measures. Meanwhile, the school's veterans finally introduce themselves.",
                             "image": "https://image.tmdb.org/t/p/original/xXIK0xhHMThQkSkbBMAznaUTubj.jpg",
@@ -4241,6 +4275,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 6,
                             "title": "After Rain",
                             "description": "Yuji and Sukuna have a conversation outside the material plane, while Gojo expresses his desire to bring about a revolution in the Jujutsu world - through education.",
                             "image": "https://image.tmdb.org/t/p/original/p7iB7X4BBr1vxeIjfeIelKZWaeS.jpg",
@@ -4248,6 +4283,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 7,
                             "title": "Assault",
                             "description": "While in transit, Gojo is suddenly attacked by the special-grade cursed spirit, Jogo. After launching several attacks that never hit, Jogo comes face-to-face with Gojo's strength.",
                             "image": "https://image.tmdb.org/t/p/original/ggoWW4AChFzqNkVNr941EhRqTiX.jpg",
@@ -4255,6 +4291,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 8,
                             "title": "Boredom",
                             "description": "Kugisaki and Fushiguro continue to prepare for the Exchange Event, but some visitors from Kyoto decide to jump the gun and test their colleagues in the capital.",
                             "image": "https://image.tmdb.org/t/p/original/6RmiWPTEzDIOLmGI3zYo2GqVeOW.jpg",
@@ -4262,6 +4299,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 9,
                             "title": "Small Fry and Reverse Retribution",
                             "description": "Junpei is a fragile boy, who suffers at school, and who is about to find refuge in the world of curses. Meanwhile, Yuuji investigates murders alongside a new partner: Nanami.",
                             "image": "https://image.tmdb.org/t/p/original/6hsZIkinuai7bAE1cQYXEUIkjju.jpg",
@@ -4269,6 +4307,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 10,
                             "title": "Idle Transfiguration",
                             "description": "Itadori's assignment is to investigate whether or not Junpei possesses sorcerer potential or is just an ordinary person. If he shows he has potential, he is to bring him in for questioning. Kento confronts the curse that is guiding Junpei.",
                             "image": "https://image.tmdb.org/t/p/original/rYa2K1q24GNb3dgAvgZm6K6OTzj.jpg",
@@ -4276,6 +4315,7 @@
                             "rating": "8.1"
                         },
                         {
+                            "number": 11,
                             "title": "Narrow-minded",
                             "description": "Kento's fight with the curse that is manipulating Junpei goes into overtime. Itadori makes contact with Junpei.",
                             "image": "https://image.tmdb.org/t/p/original/dVRE3XvFfgm8BRww4AqxokPMds1.jpg",
@@ -4283,6 +4323,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 12,
                             "title": "To You, Someday",
                             "description": "Yuji tries to reach what's left of Junpei's heart with both his fists and his words.",
                             "image": "https://image.tmdb.org/t/p/original/yCvQNEZA4FC4yupgV9Ll8Hp7dCZ.jpg",
@@ -4290,6 +4331,7 @@
                             "rating": "9.4"
                         },
                         {
+                            "number": 13,
                             "title": "Tomorrow",
                             "description": "Yuji and Kento continue their battle against Mahito, who develops his powers in unexpected ways.",
                             "image": "https://image.tmdb.org/t/p/original/ritCXU7BUcNodAVMMiTOAkrSigF.jpg",
@@ -4297,6 +4339,7 @@
                             "rating": "9.3"
                         },
                         {
+                            "number": 14,
                             "title": "Kyoto Sister School Exchange Event: Group Battle 0",
                             "description": "In the aftermath of the battle with Mahito, both sides have returned to their usual routines. Yuji finally goes back to school, but his surprise return doesn't exactly go over well with his peers.",
                             "image": "https://image.tmdb.org/t/p/original/wzimi19uWzAboYzDjYUDpdhEMUO.jpg",
@@ -4304,6 +4347,7 @@
                             "rating": "7.6"
                         },
                         {
+                            "number": 15,
                             "title": "Kyoto Sister School Exchange Event: Group Battle 1",
                             "description": "Itadori Yuji and the rest of Tokyo Metropolitan Curse Technical School engage into their team battle against their sister school from Kyoto. However with the entire Kyoto team against Yuji, will he be able to last with his short training?",
                             "image": "https://image.tmdb.org/t/p/original/hoZfRWj2ROpzPnuKf45CUPzCRQE.jpg",
@@ -4311,6 +4355,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 16,
                             "title": "Kyoto Sister School Exchange Event: Group Battle 2",
                             "description": "Aoi Todo and Itadori Yuji continue to battle it out, with the former determined to strengthen his new best friend. Meanwhile, Panda discovers Ultimate Mechamaru's secrets while showing a more powerful side of him during their battle",
                             "image": "https://image.tmdb.org/t/p/original/bDM0qdyzYUMhNpIH9AUkz7okbRE.jpg",
@@ -4318,6 +4363,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 17,
                             "title": "Kyoto Sister School Exchange Event: Group Battle 3",
                             "description": "Miwa and Maki engage in a battle of strength while Nishimiya tackles Nobara. The battle is interrupted by Mai and the twins battle it out revealing secrets about their clan.",
                             "image": "https://image.tmdb.org/t/p/original/7BMedKvP6i1wIK7vLgL3v2BnRHe.jpg",
@@ -4325,6 +4371,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 18,
                             "title": "Sage",
                             "description": "Megumi and Noritoshi confront their similarities and differences through battle. However, the Goodwill Event is suddenly upheaved by a sudden invasion!",
                             "image": "https://image.tmdb.org/t/p/original/haxqbRAfpDuS9MIEBk9ToRLNuxt.jpg",
@@ -4332,6 +4379,7 @@
                             "rating": "8.8"
                         },
                         {
+                            "number": 19,
                             "title": "Black Flash",
                             "description": "The special grade cursed spirit Hanami has invaded the Goodwill Event! Can the students survive the onslaught and escape the curtain with their lives?",
                             "image": "https://image.tmdb.org/t/p/original/qpDxYXnn0ZkoLPz0lB6iQZVIkHM.jpg",
@@ -4339,6 +4387,7 @@
                             "rating": "9.4"
                         },
                         {
+                            "number": 20,
                             "title": "Nonstandard",
                             "description": "Yuji and Todo continue their battle with the special grade curse. Satoru finds a way to enter the battlefield.",
                             "image": "https://image.tmdb.org/t/p/original/f15D3bnszZigSKbc85wL8ItwLKn.jpg",
@@ -4346,6 +4395,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 21,
                             "title": "Jujutsu Koshien",
                             "description": "After the events interruption, the school tournament continues with a baseball match.",
                             "image": "https://image.tmdb.org/t/p/original/jhTrnQKXpc7rxDwM1Wm7ulKf71P.jpg",
@@ -4353,6 +4403,7 @@
                             "rating": "7.4"
                         },
                         {
+                            "number": 22,
                             "title": "The Origin of Blind Obedience",
                             "description": "Megumi, Nobara, and Yuji are sent out to investigate the mysterious deaths connected to the Saitama Urami East Junior High. Meanwhile, Mahito and Geto continue their schemes, incarnating one of the Cursed Womb: Death Paintings.",
                             "image": "https://image.tmdb.org/t/p/original/y1dNQyQtjmhYRIhdU6arnUPagcl.jpg",
@@ -4360,6 +4411,7 @@
                             "rating": "7.7"
                         },
                         {
+                            "number": 23,
                             "title": "The Origin of Blind Obedience - 2 -",
                             "description": "The battle begins, and the group is split. Fighting a familiar foe, Megumi uses a new technique, and reflects on his past. Nobara and Yuji fight Cursed Womb: Death Paintings Kechizu and Eso.",
                             "image": "https://image.tmdb.org/t/p/original/eLxlqoRzD7HPe8JgiJd5iGpXpaf.jpg",
@@ -4367,6 +4419,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 24,
                             "title": "Accomplices",
                             "description": "The Cursed Wombs: Death Paintings, Eso and Kechizu, face off against Itadori and Kugisaki--however, the two begin to rot after they're bathed in the blood of Eso and Kechizu.",
                             "image": "https://image.tmdb.org/t/p/original/zIG6nADGUqJYDBXEsDaYyzYjHgH.jpg",
@@ -4376,9 +4429,10 @@
                     ]
                 },
                 {
-                    "season_number": 2,
+                    "season_number": "2",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "Hidden Inventory",
                             "description": "Year 2006. Sorceress Utahime and Mei Mei are investigating a Western-style mansion that has a history. Suddenly, the building begins to collapse and they are thrown into the air.",
                             "image": "https://image.tmdb.org/t/p/original/wR1ss0SiN0EjKOPgrGfCm9FzdVD.jpg",
@@ -4386,6 +4440,7 @@
                             "rating": "8.0"
                         },
                         {
+                            "number": 2,
                             "title": "Hidden Inventory: Part 2",
                             "description": "Gojo and Geto are assigned the task of guarding and erasing a \"Star Plasma Vessel\" Riko Amanai when two groups try to get rid of her.",
                             "image": "https://image.tmdb.org/t/p/original/xNMW94wR8jfsXZbMK3XD2ftOUd0.jpg",
@@ -4393,6 +4448,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 3,
                             "title": "Hidden Inventory: Part 3",
                             "description": "Gojo, Geto and Amanai rescue Kuroi. They then set off together to the island of Okinawa. However, back in Tokyo, the group is ambushed by somebody with only one goal - to prevent the fusion of Riko Amanai and Tengen.",
                             "image": "https://image.tmdb.org/t/p/original/sxJNdWf4K2SWwW48vM0wrd3q72j.jpg",
@@ -4400,6 +4456,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 4,
                             "title": "Hidden Inventory: Part 4",
                             "description": "\"Let's go home, Riko-chan.\" The moment Geto extends a hand to Amanai, the worst that could possibly happen does. Geto is left dumbstruck as Toji Fushiguro makes his appearance. Toji then declares that he killed Satoru Gojo.",
                             "image": "https://image.tmdb.org/t/p/original/rdZ34EfVGxAQG6cYd14ILdZH4HY.jpg",
@@ -4407,6 +4464,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 5,
                             "title": "Premature Death",
                             "description": "Gojo becomes the strongest and starts handling missions alone. Geto feels lost while tirelessly exorcising and absorbing cursed spirits until another sorcerer appears, spreading her ideology on Geto.",
                             "image": "https://image.tmdb.org/t/p/original/gjWLlxTUqzf7t4HsMQhUCxke5EW.jpg",
@@ -4414,6 +4472,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 6,
                             "title": "It's Like That",
                             "description": "After finishing a mission one day, Itadori decides to go to the movies, Kugisaki decides to go shopping, and Fushiguro goes home. After parting ways Kugisaki is approached by a woman who suddenly asks if she was with Itadori.",
                             "image": "https://image.tmdb.org/t/p/original/5sVDG2UKlryQ3YhAMzSHKwXE0nF.jpg",
@@ -4421,6 +4480,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 7,
                             "title": "Evening Festival",
                             "description": "The fight between Mahito and Mechamaru continues. A few days later, on October 31, 2018, an unknown curtain is cast over Shibuya. The people trapped inside repeat only one thing: \"Bring Satoru Gojo.\"",
                             "image": "https://image.tmdb.org/t/p/original/AwgGz4NcjZEv65DoCx4sOoZ2hdn.jpg",
@@ -4428,6 +4488,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 8,
                             "title": "The Shibuya Incident",
                             "description": "Satoru Gojo enters Shibuya. The fight between the strongest sorcerer and the most evil curses begins. Meanwhile, Yuji works with Mei Mei and Ui Ui in order to get Yuji to be Gojo's backup as soon as possible.",
                             "image": "https://image.tmdb.org/t/p/original/A4ORKOp3WUrBBgAOJ9TuVsXXM0d.jpg",
@@ -4435,6 +4496,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 9,
                             "title": "Shibuya Incident - Gate, Open",
                             "description": "The battle between Gojo and the cursed spirits continues and reaches a climax with an unexpected arrival.",
                             "image": "https://image.tmdb.org/t/p/original/b282HYBGD5IrWs4Upt8ziJe7cqC.jpg",
@@ -4442,6 +4504,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 10,
                             "title": "Pandemonium",
                             "description": "Gojo has been sealed in the Prison realm. It's time for the three sorcerer groups to enter Shibuya, save entrapped civilians and rescue Satoru Gojo.",
                             "image": "https://image.tmdb.org/t/p/original/dwk4fLKU6gXpYBdUkCgRWuhhqvA.jpg",
@@ -4449,6 +4512,7 @@
                             "rating": "8.2"
                         },
                         {
+                            "number": 11,
                             "title": "Seance",
                             "description": "Team Nanami regroups with Yuji and formulate a plan to rescue Satoru Gojo. Yuji, Megumi and Takuma encounter a sorcerer capable of contacting the dead.",
                             "image": "https://image.tmdb.org/t/p/original/2r3m0ITrrs5KXZyrvXnr3o1tdLN.jpg",
@@ -4456,6 +4520,7 @@
                             "rating": "8.6"
                         },
                         {
+                            "number": 12,
                             "title": "Dull Knife",
                             "description": "The curtain preventing the sorcerers from entering Shibuya Station is finally lifted and the teams can continue their rescue operation. However, with Ino heavily injured, Yuji and Megumi must split up. Nobara encounters a curse user.",
                             "image": "https://image.tmdb.org/t/p/original/cgtji6H4ir93jaEYr47dTvhgWJ5.jpg",
@@ -4463,6 +4528,7 @@
                             "rating": "9.0"
                         },
                         {
+                            "number": 13,
                             "title": "Red Scale",
                             "description": "Yuji finally arrives at Shibuya Station, but is met with unexpected opposition.",
                             "image": "https://image.tmdb.org/t/p/original/1E35zqL4Q6GKkqYOmrM8hFHtNjr.jpg",
@@ -4470,6 +4536,7 @@
                             "rating": "9.5"
                         },
                         {
+                            "number": 14,
                             "title": "Fluctuations",
                             "description": "As Mei Mei approaches Shibuya Station, Kenjaku meets her midway and calls out a special grade disease curse that she must defeat. Meanwhile, Naobito, Nanami and Maki encounter a curse.",
                             "image": "https://image.tmdb.org/t/p/original/uUIXH9nBl7HFoaomIlL4CTolq39.jpg",
@@ -4477,6 +4544,7 @@
                             "rating": "8.7"
                         },
                         {
+                            "number": 15,
                             "title": "Fluctuations - Part 2",
                             "description": "Nanami, Maki, and Naobito are driven to the edge after the Special-Grade Cursed Spirit, Dagon, activates his Domain Expansion. Fushiguro gives them a glimpse of a way to escape death, then Toji intrudes upon the fight.",
                             "image": "https://image.tmdb.org/t/p/original/vzNGwCOfpuytEmR2UO29trlodjy.jpg",
@@ -4484,6 +4552,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 16,
                             "title": "Thunderclap",
                             "description": "Megumi is overwhelmed by Toji's pure power as he attacks the young sorcerer. Meanwhile, Panda and Kusakabe get entangled in the battle between Jogo and Sukuna.",
                             "image": "https://image.tmdb.org/t/p/original/g9yiVw2BHqThSeevyuKBoJrsTpM.jpg",
@@ -4491,6 +4560,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 17,
                             "title": "Thunderclap - Part 2",
                             "description": "In a desperate situation, Megumi forces Haruta into an unbeatable exorcism ritual against the out-of-control Mahoraga, his strongest shikigami, but Sukuna intervenes to ensure his plans with Megumi go on without any problems.",
                             "image": "https://image.tmdb.org/t/p/original/ibeda2mrG8pZu26gVvlZaQfDW5E.jpg",
@@ -4498,6 +4568,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 18,
                             "title": "Right and Wrong",
                             "description": "Yuji regains control of his body, only to witness the damage caused by Sukuna's merciless rampage. Meanwhile, Nanami, badly injured and delirious, confronts a group of transfigured humans and reunites with a familiar foe.",
                             "image": "https://image.tmdb.org/t/p/original/rAZeDUOFLQoLgEqcjvNoMy7lmpB.jpg",
@@ -4505,6 +4576,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 19,
                             "title": "Right and Wrong - Part 2",
                             "description": "Yuji and Mahito's fight continues. However, Yuji is unaware that Mahito has already divided into two beings, one of which is battling Nobara elsewhere. He intends to use her to permanently crush Yuji's spirit.",
                             "image": "https://image.tmdb.org/t/p/original/irunrX4hAbsTWUTZpWNJXg1Asbv.jpg",
@@ -4512,6 +4584,7 @@
                             "rating": "9.1"
                         },
                         {
+                            "number": 20,
                             "title": "Right and Wrong - Part 3",
                             "description": "Yuji's determination falters when Mahito attacks Nobara, but just as things appear bleak, Yuji's best friend arrives, reigniting his spirit. Now all three go beyond their limits as they fight to kill.",
                             "image": "https://image.tmdb.org/t/p/original/lItVwAU21e8qp14AaulanGtkJDY.jpg",
@@ -4519,6 +4592,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 21,
                             "title": "Metamorphosis",
                             "description": "Mahito's fight against Yuji and Todo continues. Thanks to everything that happened during his battle with these sorcerers, Mahito finally discovers the true nature of his soul and takes on a new deadly form.",
                             "image": "https://image.tmdb.org/t/p/original/pg4bblgq3ywpFOphH5tEerg7Tu8.jpg",
@@ -4526,6 +4600,7 @@
                             "rating": "9.6"
                         },
                         {
+                            "number": 22,
                             "title": "Metamorphosis - Part 2",
                             "description": "The Shibuya incident is coming to an end and many groups of jujutsu sorcerers are getting ready for what may happen next. Meanwhile, Yuji's victory over Mahito is short-lived as the two are confronted by the mastermind behind everything.",
                             "image": "https://image.tmdb.org/t/p/original/sBcwd2U4aVIGixTIuxjOe8QBDEY.jpg",
@@ -4533,6 +4608,7 @@
                             "rating": "9.2"
                         },
                         {
+                            "number": 23,
                             "title": "Shibuya Incident - Gate, Close",
                             "description": "The Shibuya Incident comes to a close. Yuki and Geto argue over their ideals of cursed energy. A long awaited sorcerer returns to the cursed filled Japan to execute.",
                             "image": "https://image.tmdb.org/t/p/original/oZXG2hKiueV4A9RSbV6ZMNdhWyz.jpg",
@@ -4542,9 +4618,10 @@
                     ]
                 },
                 {
-                    "season_number": 3,
+                    "season_number": "3",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "",
                             "description": "",
                             "image": "",
@@ -4554,7 +4631,7 @@
                     ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 1754620258505,
@@ -5589,7 +5666,7 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
                             "number": 1,
@@ -5794,7 +5871,7 @@
                     ]
                 },
                 {
-                    "season_number": 2,
+                    "season_number": "2",
                     "episodes": [
                         {
                             "number": 1,
@@ -5895,7 +5972,7 @@
                     ]
                 },
                 {
-                    "season_number": 3,
+                    "season_number": "3",
                     "episodes": [
                         {
                             "number": 1,
@@ -5907,11 +5984,11 @@
                         },
                         {
                             "number": 2,
-                            "title": "",
+                            "title": "Avoid Getting Tonitrus Bolts | XXXX's Memories I",
                             "description": "",
-                            "image": "",
+                            "image": "https://image.tmdb.org/t/p/original/uF220JVf5fJVejUy88g67KMsfII.jpg",
                             "addedDate": "2025-10-11",
-                            "rating": ""
+                            "rating": "8.2"
                         },
                         {
                             "number": 3,
@@ -6023,9 +6100,10 @@
             "status": "ongoing",
             "seasons": [
                 {
-                    "season_number": 1,
+                    "season_number": "1",
                     "episodes": [
                         {
+                            "number": 1,
                             "title": "I'm Luffy! The Man Who Will Become the Pirate King!",
                             "description": "Rubber-bodied rookie Monkey D. Luffy drifts out of Foosha Village in a barrel, clobbers iron-mace Alvida, liberates timid deckhand Koby, and vows to claim the legendary One Piece and crown himself Pirate King.",
                             "image": "https://image.tmdb.org/t/p/original/jQFsHzYKQDxvIpX42PqszYUmpn5.jpg",
@@ -6033,6 +6111,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 2,
                             "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro",
                             "description": "In Shells Town, Luffy frees feared bounty hunter Roronoa Zoro from corrupt Marine Captain Morgan's clutches, gaining a swordsman crewmate and drawing Navy fire.",
                             "image": "https://image.tmdb.org/t/p/original/him2IAMOhTToCMGwCzBxHCD9cPf.jpg",
@@ -6040,6 +6119,7 @@
                             "rating": "8.4"
                         },
                         {
+                            "number": 3,
                             "title": "Morgan vs. Luffy! Who's This Beautiful Young Girl?",
                             "description": "Luffy and Zoro battle axe-armed Captain Morgan and cowardly son Helmeppo to save Coby and a captive girl, toppling the tyrant and earning a Marine bounty on Luffy's head.",
                             "image": "https://image.tmdb.org/t/p/original/x1sa7mhf3J7514uGnnGczYydCL0.jpg",
@@ -6047,6 +6127,7 @@
                             "rating": "7.9"
                         },
                         {
+                            "number": 4,
                             "title": " Luffy's Past! The Red-haired Shanks Appears!",
                             "description": "On their first voyage together, Luffy recalls how red-haired pirate Shanks inspired his dream--and sacrificed an arm to save him--while Coby stays behind to join the Marines.",
                             "image": "https://image.tmdb.org/t/p/original/8gqdS3yFEL1OvMXbeyftGGphUSz.jpg",
@@ -6054,6 +6135,7 @@
                             "rating": "8.3"
                         },
                         {
+                            "number": 5,
                             "title": "Fear, Mysterious Power! Pirate Clown Captain Buggy!",
                             "description": "Luffy and Zoro arrive in Orange Town, reluctantly ally with thief Nami, and clash with body-splitting clown captain Buggy, whose devastating Buggy Balls threaten to level the city along with their Grand Line dreams.",
                             "image": "https://image.tmdb.org/t/p/original/1N8bpV584Hi4tv1oOLCEmVuaQBx.jpg",
@@ -6061,6 +6143,7 @@
                             "rating": "7.4"
                         },
                         {
+                            "number": 6,
                             "title": "Desperate Situation! Beast Tamer Mohji vs. Luffy!",
                             "description": "To save Orange Town, Luffy faces beast-tamer Mohji and his giant lion Richie, while Nami slips off with Buggy's loot and an injured Zoro shields the townsfolk.",
                             "image": "https://image.tmdb.org/t/p/original/qTE8AafunxIsQv9m4sK8VB7zGJa.jpg",
@@ -6068,6 +6151,7 @@
                             "rating": "7.6"
                         },
                         {
+                            "number": 7,
                             "title": " Souzetsu Kettou! Kengou Zoro vs Kyokugei no Cabaji!",
                             "description": "Bleeding but unbowed, Zoro duels acrobat Cabaji atop Buggy's circus ruins; Luffy reassembles and launches the clown captain skyward, liberating Orange Town.",
                             "image": "https://image.tmdb.org/t/p/original/bisy5k84xvYCquPx94Bz6MiO2jh.jpg",
@@ -6075,6 +6159,7 @@
                             "rating": "7.5"
                         },
                         {
+                            "number": 8,
                             "title": "Shousha wa Dotchi? Akuma no Mi no Nouryoku Taiketsu!",
                             "description": "Buggy reunites his body, fires a colossal Buggy Ball, but Luffy ricochets it back, wrecking the pirate's ship; Nami steals the Grand Line map and joins the voyage.",
                             "image": "https://image.tmdb.org/t/p/original/7tQnl9cLghQfRqgtx5i7oc1vZJZ.jpg",
@@ -6082,9 +6167,366 @@
                             "rating": "7.7"
                         }
                     ]
+                },
+                {
+                    "season_number": "2",
+                    "episodes": [
+                        {
+                            "number": 9,
+                            "title": "Seigi no Usotsuki? Captain Usopp",
+                            "description": "In Syrup Village, tall-tale spinner Usopp's fake pirate alarms hide real bravery; meeting Luffy ignites his dream to sail and defend sickly heiress Kaya.",
+                            "image": "https://image.tmdb.org/t/p/original/eEMUBvJRLhBqbJpNdORCnAATstc.jpg",
+                            "addedDate": "2000-01-12",
+                            "rating": "7.1"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Shijou Saikyou no Hen na Yatsu! Saiminjutsushi Jango",
+                            "description": "Usopp's hypnotist guardian Jango conspires with ex-butler Kuro to kill Kaya; his trance turns the Straw Hats into accidental strongmen until Luffy snaps free to foil the plot.",
+                            "image": "https://image.tmdb.org/t/p/original/7dlCYKECzQDn2DlJlspR1nWn9V6.jpg",
+                            "addedDate": "2000-01-19",
+                            "rating": "7.3"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Inbou wo Abake! Kaizoku Shitsuji Captain Kuro",
+                            "description": "Usopp discovers Kaya's mild-mannered butler is the infamous Captain Kuro, who plans to murder her at dawn; ignored by the villagers, he rushes to enlist Luffy, Zoro, and Nami to ambush the incoming Black Cat Pirates.",
+                            "image": "https://image.tmdb.org/t/p/original/b08je5NHtJwFnU5zXAH242fEuPT.jpg",
+                            "addedDate": "2000-01-26",
+                            "rating": "7.2"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Gekitotsu! Kuroneko Kaizoku-dan Sakamichi no Daikoubou!",
+                            "description": "Before sunrise, Luffy's crew and Usopp's pint-sized pirates barricade the village slope, but the Black Cat raiders charge ashore, forcing Zoro, Nami, and the kids to stall the assault while Luffy wriggles free of a hypnotic blunder.",
+                            "image": "https://image.tmdb.org/t/p/original/o1pUdqIr0CdNxZBg3Bn0sYqpfja.jpg",
+                            "addedDate": "2000-02-02",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Kyoufu no Futarigumi! Nyaban Brothers VS Zoro",
+                            "description": "Wounded yet unyielding, Zoro duels the claw-whirling Meowban Brothers as Nami hunts for Kaya's stolen treasure; Luffy finally snaps awake and catapults through the feline pirates, tipping the battle uphill.",
+                            "image": "https://image.tmdb.org/t/p/original/5o58dYDGjB9dwpJiRxV5yZvQIoP.jpg",
+                            "addedDate": "2000-02-09",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Luffy Fukkatsu! Kaya-ojousama no Kesshi no Teikou",
+                            "description": "Kaya flees into the woods with Usopp and the kids while hypnotist Jango gives chase; on the beach Luffy squares off against Kuro's lightning-fast \"Shakushi\" attack, vowing to smash the decade-long scheme.",
+                            "image": "https://image.tmdb.org/t/p/original/qxDzdk87cJ6PB1d8m9ERN3TWf41.jpg",
+                            "addedDate": "2000-02-16",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Kuro wo Taose! Otoko Usopp Namida no Ketsui!",
+                            "description": "Luffy pummels Kuro into defeat, exposing the butler's plot; a grateful Kaya promises reparations, and a tearful Usopp parts with his village's disbelief, accepting Luffy's invitation to chase pirate dreams on the high seas.",
+                            "image": "https://image.tmdb.org/t/p/original/1ovO4PrIv7kqnlzZ42ozTRNwSMi.jpg",
+                            "addedDate": "2000-02-23",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Kayaw wo Mamore! Usopp Kaizoku-dan dai Katsuyaku!",
+                            "description": "Hypnotist Jango hunts heiress Kaya through the forest until Usopp's kid pirates and Zoro stall him; Luffy flattens the moon-walking mesmerist, ending the Black Cat plot and keeping Kaya safe.",
+                            "image": "https://image.tmdb.org/t/p/original/bx1Edb8ItY1B7SaDT9yS3VugOzh.jpg",
+                            "addedDate": "2000-03-01",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 17,
+                            "title": "Ikari Bakuhatsu! Kuro vs Luffy Ketchaku no Yukue!",
+                            "description": "A grateful Kaya gifts Luffy's crew their first ship, the Going Merry; Usopp tearfully leaves Syrup Village, joins the Straw Hats, and they chart a course for new horizons.",
+                            "image": "https://image.tmdb.org/t/p/original/fMBJQazBNwpA6dqWd0M78ELMsuZ.jpg",
+                            "addedDate": "2000-03-08",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 18,
+                            "title": "Anta ga Chinju! Gaimon to Kimyou na Nakama",
+                            "description": "On a lonely cliff-isle, the crew meets Gaimon, a castaway fused to a treasure chest who protects quirky animal pals and empty chests; Luffy's empathy rekindles his hope before they sail on.",
+                            "image": "https://image.tmdb.org/t/p/original/kxD9r4qzHAcwPmOMJ9txzp8dOrF.jpg",
+                            "addedDate": "2000-03-15",
+                            "rating": "6.8"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Santouryuu no Kako! Zoro to Kuina no Chikai!",
+                            "description": "A storm stirs Zoro's memory of sparring prodigy Kuina and their pledge to be the world's greatest swordsman; her sudden death ignites his unwavering three-blade resolve aboard the Going Merry.",
+                            "image": "https://image.tmdb.org/t/p/original/4UJiy2qHw51qBcfT4wCiHwoe6of.jpg",
+                            "addedDate": "2000-03-22",
+                            "rating": "8.9"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Meibutsu Kokku! Kaijou Restaurant no Sanji",
+                            "description": "At the Baratie ocean-restaurant, suave chef Sanji knocks out pompous Marine Fullbody and feeds the Straw Hats--until Luffy smashes a mast into the galley and must work off the damage.",
+                            "image": "https://image.tmdb.org/t/p/original/gUjPAnmZ2zEr2uJQaDN9Y84gqnC.jpg",
+                            "addedDate": "2000-04-12",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Manekarezaru Kyaku! Sanji no Meshi to Gin no On",
+                            "description": "Starving pirate Gin collapses in Baratie, and soft-hearted chef Sanji risks Marine wrath to feed him--an act that soon lures fearsome warlord Don Krieg to the floating restaurant.",
+                            "image": "https://image.tmdb.org/t/p/original/7a0bQdtRMeczMBFYXbTMkjnxFql.jpg",
+                            "addedDate": "2000-04-12",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 22,
+                            "title": "Saikyou no Kaizoku Kantai! Teitoku Don Krieg",
+                            "description": "Gin returns leading a ravaged but ruthless Don Krieg, who demands supplies and control of Baratie, forcing Luffy and the cooks to defend their galley against an armada.",
+                            "image": "https://image.tmdb.org/t/p/original/ZK41o4OIPD2PYC3fjEUNQZ5d1j.jpg",
+                            "addedDate": "2000-04-26",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Mamore Baratie! Dai Kaizoku: Akaashi no Zeff",
+                            "description": "Krieg's siege exposes Zeff's past as legendary Red-Leg Zeff; Luffy vows to safeguard the restaurant, repaying his debt with bare-knuckle resolve instead of broken dishes.",
+                            "image": "https://image.tmdb.org/t/p/original/x3CIxzC7szHLmwg6EV8CHzwszuv.jpg",
+                            "addedDate": "2000-05-03",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Taka no Me no Mihawk! Kengou Zoro Umi ni Chiru",
+                            "description": "Dracule \"Hawk-Eyes\" Mihawk bisects Krieg's flagship for sport; Zoro challenges the world's greatest swordsman, loses decisively, yet renews his oath to surpass him.",
+                            "image": "https://image.tmdb.org/t/p/original/dsP1wWbhhCOs7OruKqOmOPxvN6L.jpg",
+                            "addedDate": "2000-05-10",
+                            "rating": "9.2"
+                        },
+                        {
+                            "number": 25,
+                            "title": "Hissatsu Ashiwaza Sakuretsu! Sanji vs Teppeki no Pearl",
+                            "description": "With Zoro wounded, pearl-plated bruiser Pearl sets Baratie ablaze; Sanji's blistering kicks ignite, shielding Zeff's dream restaurant from Krieg's relentless assault.",
+                            "image": "https://image.tmdb.org/t/p/original/8I3LPJDrLilieh1EXEXzuCQw6pV.jpg",
+                            "addedDate": "2000-05-17",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 26,
+                            "title": "Zeff to Sanji no Yume Maboroshi no All Blue",
+                            "description": "Flashbacks show Zeff losing a leg saving shipwrecked Sanji; their shared dream of the mythical All Blue steels the chef's resolve as Don Krieg circles Baratie.",
+                            "image": "https://image.tmdb.org/t/p/original/rrhh1TzYgqnGZ0a4OmnZiDdcCe5.jpg",
+                            "addedDate": "2000-05-24",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 27,
+                            "title": "Reitetsu Hijou no Kijin Kaizoku Kantai Souchou Gin",
+                            "description": "Obeying Krieg, Gin brutalizes Sanji yet can't finish the man who once fed him, proving kindness infectious and enraging his war-lord captain.",
+                            "image": "https://image.tmdb.org/t/p/original/3qioZkwBjjxTAVZq7wu4GIW4sGr.jpg",
+                            "addedDate": "2000-05-31",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 28,
+                            "title": "Shinanee yo! Gekitou Luffy vs Krieg!",
+                            "description": "Luffy smashes through Krieg's spiked armor and poison gas, declaring guts trump weapons, while Sanji vows to seek All Blue aboard the Going Merry.",
+                            "image": "https://image.tmdb.org/t/p/original/eEyhBf5cJ7iHVDJjfK2Sm3Tt31j.jpg",
+                            "addedDate": "2000-06-07",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 29,
+                            "title": "Shitou no Ketchaku! Hara ni Kukutta Ippon no Yari!",
+                            "description": "Krieg's giant spear, rockets, and battle-suit shatter under Luffy's Gum-Gum Bazooka, sending the tyrant sinking and lifting Baratie's siege.",
+                            "image": "https://image.tmdb.org/t/p/original/2wtjXYJ2823f3EDCPEOgEciY6Lt.jpg",
+                            "addedDate": "2000-06-21",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 30,
+                            "title": "Tabidachi! Umi no Kokku wa Luffy to Tomo Ni",
+                            "description": "Sanji tearfully parts with Zeff and the kitchen crew, joins the Straw Hats as chef, and the team heads toward Nami's troubled hometown--next stop, Arlong Park.",
+                            "image": "https://image.tmdb.org/t/p/original/59m5g59ttMAWhf67bq9vqfcx62y.jpg",
+                            "addedDate": "2000-06-28",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 31,
+                            "title": "Higashi no Umi Saiaku no Otoko! Gyojin Kaizoku Arlong!",
+                            "description": "Luffy's crew races to Arlong Park after Nami steals the Going Merry, but fish-man tyrant Arlong seizes Zoro and shocks everyone by revealing that Nami is one of his officers.",
+                            "image": "https://image.tmdb.org/t/p/original/isZ805jKzB8wt1qig4SzoS2t96m.jpg",
+                            "addedDate": "2000-07-12",
+                            "rating": "7.6"
+                        },
+                        {
+                            "number": 32,
+                            "title": " Kokoyashi Mura no Majo! Arlong no Onna Kanbu",
+                            "description": "Luffy, Sanji, and Yosaku wrangle sea-cow Momoo toward Arlong Park while, in Cocoyasi, Arlong terrorizes Genzo until Usopp's slingshot and Zoro's jailbreak sow chaos and further test Nami's divided loyalties.",
+                            "image": "https://image.tmdb.org/t/p/original/sTRjaR522NEkOu2juGRqtCxBrMh.jpg",
+                            "addedDate": "2000-07-19",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 33,
+                            "title": "Usopp Shisu? Luffy Jouriku wa Mada?",
+                            "description": "To prove her \"loyalty,\" Nami appears to kill Usopp before Arlong; Zoro unknowingly hitches a ride with octopus Hatchan; Luffy's party finally lands, unaware Usopp survived and Nami's act masks a deeper plan.",
+                            "image": "https://image.tmdb.org/t/p/original/98jeknfqfW9AQVioEqrRXAyQZcS.jpg",
+                            "addedDate": "2000-07-19",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 34,
+                            "title": "Zenin Shuuketsu! Usopp ga Kataru Nami no Shinjitsu",
+                            "description": "Arlong's officers sink a Marine rescue ship as Usopp reunites with the crew and Nojiko starts unveiling Nami's painful past; Luffy plants himself in the road, vowing not to leave without his navigator.",
+                            "image": "https://image.tmdb.org/t/p/original/cpkpAMYyi4OtLwu7FoAnCEochnY.jpg",
+                            "addedDate": "2000-07-26",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 35,
+                            "title": "Himerareta Kako! Onna Senshi Bellemere!",
+                            "description": "Flashbacks show ex-Marine Bellemere rescuing war orphans Nami and Nojiko and raising them in Cocoyasi until Arlong's brutal takeover forces villagers to pay tribute, setting the stage for Nami's desperate bargain.",
+                            "image": "https://image.tmdb.org/t/p/original/uJV7dayzJmBKF1LBHSCWsEHFqBH.jpg",
+                            "addedDate": "2000-08-02",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 36,
+                            "title": "Ikinuke! Haha Bellemere to Nami no Kizuna!",
+                            "description": "Bellemere's shocking last stand against Arlong reveals Nami's tragic past. A crushed Nami vows to buy back Cocoyashi Village, forging the impossible promise that has bound her to the fish-man ever since.",
+                            "image": "https://image.tmdb.org/t/p/original/aJuGgd2nds1MOcQAcKRiVYngsEe.jpg",
+                            "addedDate": "2000-08-09",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 37,
+                            "title": "Luffy Tatsu! Uragirareta Yakusoku no Ketsumatsu!",
+                            "description": "Moved by Nami's sacrifice, the Straw Hats storm Arlong Park. With Zoro wounded and Usopp cornered, Sanji's fiery kick clears a path while Luffy smashes the gates, declaring he'll end Nami's nightmare himself.",
+                            "image": "https://image.tmdb.org/t/p/original/vhpPmkbQa2WASoU3ysGTbGV9ROc.jpg",
+                            "addedDate": "2000-08-16",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 38,
+                            "title": "Luffy Dai Pinchi! Gyojin vs Luffy Kaizoku-dan",
+                            "description": "Luffy battles Arlong head-on but becomes trapped underwater by a concrete anchor. As Zoro, Sanji, and Usopp fight Arlong's officers, Nami races to free Luffy before his last breath slips away.",
+                            "image": "https://image.tmdb.org/t/p/original/vjbrVt5mPAr5BTJydbbUILRc9Yd.jpg",
+                            "addedDate": "2000-08-23",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 39,
+                            "title": "Luffy Suibotsu! Zoro vs Tako no Hatchan",
+                            "description": "With Luffy still immobilized, Zoro duels octopus-swordsman Hachi despite his own wounds, and Sanji takes to the sea against the ruthless Kuroobi. Every second counts as Nami dives to unshackle her captain.",
+                            "image": "https://image.tmdb.org/t/p/original/vIEwxwXtYCCz14DHZeXiaJluNWV.jpg",
+                            "addedDate": "2000-08-30",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 40,
+                            "title": "Hokoritakaki Senshi! Gekitou Sanji to Usopp",
+                            "description": "Freed at last, Luffy wrecks Arlong Park and shatters Arlong's saw-blade sword. Realizing Nami's charts were chains, Luffy demolishes the map room, defeating Arlong and liberating Cocoyashi Village.",
+                            "image": "https://image.tmdb.org/t/p/original/sHFMU7pQbfpB1m8X46LdyaOS7pO.jpg",
+                            "addedDate": "2000-09-06",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 41,
+                            "title": "Luffy Zenkai! Nami no Ketsui to Mugiwara Boushi",
+                            "description": "Luffy breaks into Arlong Park and duels the saw-shark captain to free Nami, shattering the fish-men's pride-filled fortress in a furious, water-logged showdown.",
+                            "image": "https://image.tmdb.org/t/p/original/7dWGWAxqt9sx9GAqYiDLUNp4tqg.jpg",
+                            "addedDate": "2000-09-13",
+                            "rating": "8.1"
+                        },
+                        {
+                            "number": 42,
+                            "title": "Sakuretsu! Gyojin Arlong Umi kara no Moukougeki!",
+                            "description": "Nami's courage ignites the crew as Luffy smashes Arlong's chart room, erasing years of her bondage; the tyrant falls and Cocoyasi is finally liberated.",
+                            "image": "https://image.tmdb.org/t/p/original/pDz4ikUgf6v0ZDT83DfDTRWUbzb.jpg",
+                            "addedDate": "2000-09-27",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 43,
+                            "title": " Gyojin Teikoku no Owari! Nami wa Ore no Nakama Da!",
+                            "description": "While the village celebrates freedom, Luffy's first bounty-30 million berries-arrives, painting a target on the Straw Hats and alerting foes across the seas.",
+                            "image": "https://image.tmdb.org/t/p/original/bYgszCXq8oBIWCmq2kUg0xx3ob6.jpg",
+                            "addedDate": "2000-09-27",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 44,
+                            "title": "Egao no Tabidachi! Saraba Furusato Cocoyashi Mura",
+                            "description": "The crew departs Cocoyasi, sharing dreams aboard the newly named Going Merry, unaware that Marine Captain Smoker is already tracking the infamous rookie.",
+                            "image": "https://image.tmdb.org/t/p/original/3odfZYUygc377xeIP1wc29G7k8q.jpg",
+                            "addedDate": "2000-10-11",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 45,
+                            "title": "Joukinkubi! Mugiwara no Luffy Yo ni Shirewataru",
+                            "description": "Stranded and tiny, Buggy teams up with iron-mace Alvida to hunt Luffy, stealing a Loguetown map and setting sail in comically improvised fashion.",
+                            "image": "https://image.tmdb.org/t/p/original/zudSaw2jWjeZdcsFqZXOZAtJKR7.jpg",
+                            "addedDate": "2000-10-25",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 46,
+                            "title": "Mugiwara o Oe! Chiisana Buggy no Daibouken",
+                            "description": "Captured by cannibals, mini-Buggy improvises explosive tricks to escape and regains his body, vowing loudly to claim Straw Hat's head.",
+                            "image": "https://image.tmdb.org/t/p/original/x9RD6hNiEYTh0wgSVBuy6AbT97q.jpg",
+                            "addedDate": "2000-11-01",
+                            "rating": "6.3"
+                        },
+                        {
+                            "number": 47,
+                            "title": "Omachikane! Aa Fukkatsu no Buggy Senchou!",
+                            "description": "In Loguetown-the city of beginnings and endings-Luffy seeks Roger's scaffold while Zoro hunts new swords, even as Smoker springs his trap.",
+                            "image": "https://image.tmdb.org/t/p/original/st3mXHLwFLXpJqsYWNoeL3RtRBJ.jpg",
+                            "addedDate": "2000-11-08",
+                            "rating": "6.1"
+                        },
+                        {
+                            "number": 48,
+                            "title": "Hajimari to Owari no Machi: Loguetown Jouriku",
+                            "description": "A storm turns lethal when Buggy and Alvida seize Luffy atop the scaffold; lightning and Smoker's smoke collide, fate sparing the Straw Hat.",
+                            "image": "https://image.tmdb.org/t/p/original/fM2lMSUMAKej9ZzrKJh96gvszCb.jpg",
+                            "addedDate": "2000-11-22",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 49,
+                            "title": "Sandai Kitetsu to Yubashiri! Zoro no Shintou to Onna Souchou",
+                            "description": "Navy hounds close in, but mysterious revolutionary Dragon whips up a gale that lets the crew flee Loguetown and sprint toward the Grand Line.",
+                            "image": "https://image.tmdb.org/t/p/original/ob9wZYfIekvRFJMCSMdpGz7uJdg.jpg",
+                            "addedDate": "2000-11-22",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 50,
+                            "title": "Usopp Tai Kozure no Daddy: Mahiru no Kettou",
+                            "description": "At Reverse Mountain, the Straw Hats brave a colossal whirlpool, soothe Laboon the giant whale, and shoot through the daring passage into the Grand Line.",
+                            "image": "https://image.tmdb.org/t/p/original/wPp8pgICIMtO6170v7ZLPCSk9tU.jpg",
+                            "addedDate": "2000-11-29",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 51,
+                            "title": "Honoo no Ryouri Battle? Sanji VS Bijin Chef",
+                            "description": "Sanji enters a cooking contest against a woman named Five-Alarm Carmen for a fish that he has always dreamed of cooking.",
+                            "image": "https://image.tmdb.org/t/p/original/v6LG9uvEPo202jxo9BIOFHoc98r.jpg",
+                            "addedDate": "2000-12-06",
+                            "rating": "6.9"
+                        },
+                        {
+                            "number": 52,
+                            "title": "Buggy no Revenge! Shokeidai de Warau Otoko!",
+                            "description": "Zoro and Sanji show up too late to stop Buggy.",
+                            "image": "https://image.tmdb.org/t/p/original/kA7mSWeR3xI60RczrROyDZQadmL.jpg",
+                            "addedDate": "2000-12-13",
+                            "rating": "8.2"
+                        }
+                    ]
                 }
             ],
-            "inSlides": false
+            "type": "series"
         },
         {
             "id": 1759258577665,
@@ -6127,7 +6569,7 @@
                             "description": "As Robbie and Cliff try to find a potential buyer, Tom and Grasso level with the Dark Hearts, and Aleah and Lizzie question Peaches' former coworkers. Later, a raid leads Tom to a shocking revelation.",
                             "image": "https://image.tmdb.org/t/p/original/wl9bj8k9PkmrverZ4kq58qCz5hG.jpg",
                             "addedDate": "2025-09-21",
-                            "rating": "8.2"
+                            "rating": "8.1"
                         },
                         {
                             "number": 4,
@@ -6135,7 +6577,7 @@
                             "description": "Tom doubts his Task Force's loyalty during operation prep. Robbie and Cliff plan their park meeting. Perry investigates the gang, finding startling info. Maeve questions Robbie's escape strategy.",
                             "image": "https://image.tmdb.org/t/p/original/2yZh9qf39Z1BcsxX6ucKJMQCIRt.jpg",
                             "addedDate": "2025-09-28",
-                            "rating": "8.4"
+                            "rating": "8.2"
                         },
                         {
                             "number": 5,
@@ -6148,10 +6590,10 @@
                         {
                             "number": 6,
                             "title": "Out Beyond Ideas of Wrongdoing and Rightdoing, There Is a River.",
-                            "description": "",
-                            "image": "",
+                            "description": "Multiple factions clash in a forest confrontation, sparking an intense battle that changes everything. Robbie and the opposing groups face off in a pivotal encounter with lasting impact.",
+                            "image": "https://image.tmdb.org/t/p/original/odiEuSGo3Vw4hCE9IJHbzoZgz1K.jpg",
                             "addedDate": "2025-10-12",
-                            "rating": ""
+                            "rating": "9.3"
                         },
                         {
                             "number": 7,
@@ -7567,17 +8009,97 @@
                         {
                             "number": 1,
                             "title": " Toshinori Yagi: Rising Origin",
-                            "description": "",
+                            "description": "The fierce battle continues between Armored All Might and All For One. Can All Might possibly win?",
                             "image": "https://image.tmdb.org/t/p/original/o5IgdwAKJ6MWRmYKinCGepmRoJO.jpg",
                             "addedDate": "2025-10-04",
-                            "rating": ""
+                            "rating": "9.0"
                         },
                         {
                             "number": 2,
+                            "title": "The End of an Era, and -",
+                            "description": "",
+                            "image": "https://image.tmdb.org/t/p/original/A7tBAcy4Hv5jyWvLBRpRM6lvPio.jpg",
+                            "addedDate": "2025-10-11",
+                            "rating": ""
+                        },
+                        {
+                            "number": 3,
                             "title": "",
                             "description": "",
                             "image": "",
-                            "addedDate": "2025-10-11",
+                            "addedDate": "2025-10-18",
+                            "rating": ""
+                        },
+                        {
+                            "number": 4,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-10-25",
+                            "rating": ""
+                        },
+                        {
+                            "number": 5,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-01",
+                            "rating": ""
+                        },
+                        {
+                            "number": 6,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-08",
+                            "rating": ""
+                        },
+                        {
+                            "number": 7,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-15",
+                            "rating": ""
+                        },
+                        {
+                            "number": 8,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-22",
+                            "rating": ""
+                        },
+                        {
+                            "number": 9,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-11-29",
+                            "rating": ""
+                        },
+                        {
+                            "number": 10,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-06",
+                            "rating": ""
+                        },
+                        {
+                            "number": 11,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-13",
+                            "rating": ""
+                        },
+                        {
+                            "number": 12,
+                            "title": "",
+                            "description": "",
+                            "image": "",
+                            "addedDate": "2025-12-20",
                             "rating": ""
                         }
                     ]
@@ -7894,11 +8416,11 @@
                     "episodes": [
                         {
                             "number": 1,
-                            "title": "",
-                            "description": "",
-                            "image": "",
+                            "title": "Strategy Meeting",
+                            "description": "The heroes plan a rescue of a child kidnapped by monsters, while Garou awakens deep underground.",
+                            "image": "https://image.tmdb.org/t/p/original/vcyxcIh8GeQBFaFlyDxhbEMB2Ta.jpg",
                             "addedDate": "2025-10-12",
-                            "rating": ""
+                            "rating": "6.6"
                         },
                         {
                             "number": 2,
@@ -8127,6 +8649,470 @@
                             "addedDate": "2025-10-05",
                             "rating": "",
                             "special": true
+                        }
+                    ]
+                }
+            ],
+            "type": "series"
+        },
+        {
+            "id": 1760367984309,
+            "title": "Ragna Crimson",
+            "genre": "Action, Adventure, Animation, Anime, Dark Fantasy, Drama, Fantasy, Mystery",
+            "year": 2023,
+            "releaseDate": "2023-09-30",
+            "rating": 7.1,
+            "duration": "24min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/ba7Mav3rU1FSyt7ZJRFHlVJ9N8K.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/8Tv140K71PVsiU5z0vRNrgZpKAM.jpg",
+            "description": "In a world where dragons rule sky, sea, and land, dragon hunter Ragna joins forces with the mysterious Crimson to fight the dragons at any cost and destroy the dragon monarchs.",
+            "language": "Japanese, English",
+            "country": "Japan",
+            "ageRating": "TV-14",
+            "status": "completed",
+            "seasons": [
+                {
+                    "season_number": "1",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "The Day the Reaper was Born",
+                            "description": "Death and fire haunt Ragna's dreams and, deep within his heart, he somehow knows they're omens. If he doesn't grow stronger, and soon, all that awaits him is lifelong regret.",
+                            "image": "https://image.tmdb.org/t/p/original/1pniXDtlnXZWbYaIcnldhealmfd.jpg",
+                            "addedDate": "2023-09-30",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 2,
+                            "title": "The Beginning of the Story",
+                            "description": "Temruogtaf must be stopped. But Ragna loses interest in the dragon and turns his attention to one of his maids. Thanks to his new old memories, he knows who she really is.",
+                            "image": "https://image.tmdb.org/t/p/original/dYFJC30C2yLnRjngQRSTHHIRPFU.jpg",
+                            "addedDate": "2023-09-30",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 3,
+                            "title": "Agitation",
+                            "description": "Crimson is no hero. He will manipulate and use others if it furthers his goal, and that callousness is precisely what makes him a needed ally against dragons.",
+                            "image": "https://image.tmdb.org/t/p/original/c7ZRPxZQ784DHa88MXKMK6thQZM.jpg",
+                            "addedDate": "2023-10-14",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Action",
+                            "description": "Dragons have another weakness aside from sunlight and silverine: pride. But Ultimatia is not like other dragons.",
+                            "image": "https://image.tmdb.org/t/p/original/9io8tEyp0h9HKohG8BM4daZNCyC.jpg",
+                            "addedDate": "2023-10-22",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Wing",
+                            "description": "Ragna met Ultimatia before in another life and he did not emerge from that encounter unscathed. Now, in this life, dragons are disappearing and Ultimatia needs to know why.",
+                            "image": "https://image.tmdb.org/t/p/original/vHGp7gfc01CRdsbG0nwea3p9D68.jpg",
+                            "addedDate": "2023-10-29",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Reunion",
+                            "description": "Ultimatia may have control over time itself, but Crimson knows her powers must have a weakness. Uncover it and all variables will be accounted for. Or so Crimson thinks.",
+                            "image": "https://image.tmdb.org/t/p/original/AhvvyVB6ypdkfnPW21YocK3Ee3A.jpg",
+                            "addedDate": "2023-11-05",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Act and Guilt",
+                            "description": "Ragna's relentless assault forces Ultimatia on the defensive. Unaware of his identity, an unexpected emotion overtakes the dragon monarch as their battle rages on: Fear.",
+                            "image": "https://image.tmdb.org/t/p/original/82gdXcb2QFfsxaGSYj3Tm4b2S9t.jpg",
+                            "addedDate": "2023-11-12",
+                            "rating": "8.8"
+                        },
+                        {
+                            "number": 8,
+                            "title": "A Painful Blow",
+                            "description": "Ultimatia made an impossible choice and, with Nebulim out for their blood, Ragna and Crimson must now withdraw. However, they may have only exchanged one problem for another.",
+                            "image": "https://image.tmdb.org/t/p/original/1ryTSQNpXbZOMtA8pesd9ekmJGX.jpg",
+                            "addedDate": "2023-11-18",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Negotiation and True Nature",
+                            "description": "Starlia Reese's ability to see a person's true nature puts Crimson at a disadvantage, but when Ragna suddenly appears, the princess sees something in him she's never seen before.",
+                            "image": "https://image.tmdb.org/t/p/original/53jab5gjzmkbcsgIjkZQTKPiLBE.jpg",
+                            "addedDate": "2023-11-25",
+                            "rating": "7.5"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Stakes and Cooperation",
+                            "description": "While Crimson uses Ragna as a bargaining chip to convince Starlia to accept their aid, Voltekamui vows to remain at Ultimatia's side and gives her much needed encouragement.",
+                            "image": "https://image.tmdb.org/t/p/original/4LkcI9SMsShBYy4crKatB8ECSEg.jpg",
+                            "addedDate": "2023-12-03",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Tactics and Knowledge",
+                            "description": "Ragna spars with the Argentum Corps and infuses their weapons while Crimson assists with the teleportation circles. But they are not the only ones preparing for battle.",
+                            "image": "https://image.tmdb.org/t/p/original/1ZRKfFHNWwmtHZ1KPConEwyPw6r.jpg",
+                            "addedDate": "2023-12-10",
+                            "rating": "7.0"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Determination and Readiness",
+                            "description": "The battle begins at sunset, but before they confront an uncertain fate, Starlia asks Ragna to listen to a heartfelt request.",
+                            "image": "https://image.tmdb.org/t/p/original/yaZMp4HKtlgS5ouVJ7gKIUeoGV6.jpg",
+                            "addedDate": "2023-12-17",
+                            "rating": "7.4"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Hero of the Battle",
+                            "description": "The battle has begun, but Ragna and the Argentum Corps are not facing just any enemy. They are facing those who mean to exterminate them by any means necessary.",
+                            "image": "https://image.tmdb.org/t/p/original/hOtUT29knFaS6iEpT8KDv2Olj4Q.jpg",
+                            "addedDate": "2024-01-14",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Impatience and Vigilance",
+                            "description": "Olto Zora's cunning plan overwhelms the corps as they face the power of mature dragons. However, Crimson's impending offensive and Starlia's resolve may be the key to victory.",
+                            "image": "https://image.tmdb.org/t/p/original/9ABaloFO9RAluVUDjessfvz3rn8.jpg",
+                            "addedDate": "2024-01-21",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Latent Awakening",
+                            "description": "The tide is turning as the corps claw their way through the battlefield--Ragna and Starlia the source of their inspiration. But none are aware of Crimson's callous scheme.",
+                            "image": "https://image.tmdb.org/t/p/original/mG5OY9XGLYcKNLnRZJtfOjULevL.jpg",
+                            "addedDate": "2024-01-28",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Will of Resistance",
+                            "description": "Olto Zora used to be someone else once, and Starlia reminds him of someone he knew long ago.",
+                            "image": "https://image.tmdb.org/t/p/original/sQgqad29S1LHymYjTTewVut6W4C.jpg",
+                            "addedDate": "2024-02-04",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 17,
+                            "title": "My Comrade",
+                            "description": "Olto Zora and Taratectora are lifelong friends who stand at a crossroads that could determine the battle. Now, Ragna and Starlia may be the only ones who can prevent calamity.",
+                            "image": "https://image.tmdb.org/t/p/original/7JgPXqBH13LZJOWcbOw3lxPzGZp.jpg",
+                            "addedDate": "2024-02-11",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 18,
+                            "title": "End of the Battle to the Death",
+                            "description": "The battle is over, but at a heavy price. While a weary corps mourn their losses, representatives from the Solarian Church arrive to meet the fabled Reaper.",
+                            "image": "https://image.tmdb.org/t/p/original/rkJqo3ouvFzL3HJ9q55K12p50FQ.jpg",
+                            "addedDate": "2024-02-18",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 19,
+                            "title": " Reason to Fight",
+                            "description": "Ragna has found a reason to fight, and he and the Argentum Corps will take the battle to the Blood of the Wing, no matter what Crimson thinks.",
+                            "image": "https://image.tmdb.org/t/p/original/jViLlcN9z8WW3iiqfrxiKg1SkoL.jpg",
+                            "addedDate": "2024-02-25",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Just Watch Me",
+                            "description": "Four superior dragons stand between them and the Winged Monarch. With unyielding resolve, the Argentum Corps storm a dead capital for the final battle.",
+                            "image": "https://image.tmdb.org/t/p/original/tIBCIaAvShS6MlW6kqsYohklyQO.jpg",
+                            "addedDate": "2024-03-03",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Words Aren't Needed",
+                            "description": "Multiple battles erupt in an all-out war against the Blood of the Wing. As each side engages in mortal combat, a crucial decision awaits Crimson.",
+                            "image": "https://image.tmdb.org/t/p/original/krj5RPWibgMXf7BNfIS4BwnVZnr.jpg",
+                            "addedDate": "2024-03-10",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 22,
+                            "title": "The Winged Monarch",
+                            "description": "The darkest hour is at hand. As cherished comrades fall on both sides, bittersweet memories of the past surge to the forefront.",
+                            "image": "https://image.tmdb.org/t/p/original/dVKkHqC6CajIJoALABVIceWKqgK.jpg",
+                            "addedDate": "2024-03-17",
+                            "rating": "8.1"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Lightning God",
+                            "description": "As Ragna and Voltekamui's titanic battle rages across the heavens, the dragon is reminded of another encounter, one that shaped him into the warrior he is today.",
+                            "image": "https://image.tmdb.org/t/p/original/iQeSJvTSXIqMBlGAdsqLEY3Jzgl.jpg",
+                            "addedDate": "2024-03-24",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Light",
+                            "description": "Just as Ragna, Crimson and the Argentum Corps stand at the cusp of victory, the worst case scenario occurs: Against all odds, Ultimatia reclaims her dominion over time.",
+                            "image": "https://image.tmdb.org/t/p/original/dTy5Vu0yTxVpTihOsO1eMAnlHSa.jpg",
+                            "addedDate": "2024-03-31",
+                            "rating": "8.1"
+                        }
+                    ]
+                }
+            ],
+            "type": "series"
+        },
+        {
+            "id": 1760370231947,
+            "title": "Frieren: Beyond Journey's End",
+            "genre": "Adult Animation, Adventure, Animation, Anime, Fantasy Epic, Hand-Drawn Animtion, Japanese, Shonen, Sword & Sorcery, Iyashikei",
+            "year": 2023,
+            "releaseDate": "2023-09-29",
+            "rating": 8.9,
+            "duration": "25min",
+            "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aejg5U3xVdGCMsDYCGBwPRg3WhY.jpg",
+            "backdrop": "https://image.tmdb.org/t/p/original/emGCHnRPru5LLWcKbSFzUEUisac.jpg",
+            "description": "Elf mage Frieren and her fellow adventurers have defeated the Demon King and brought peace to the land. But Frieren will long outlive the rest of her former party. How will she come to understand what life means to the people around her?\n",
+            "language": " Japanese, Portuguese, Spanish, English",
+            "country": "Japan",
+            "ageRating": "TV-14",
+            "status": "ongoing",
+            "seasons": [
+                {
+                    "season_number": "1",
+                    "episodes": [
+                        {
+                            "number": 1,
+                            "title": "Bôken no owari",
+                            "description": "The world celebrates the Demon King's defeat at the hands of the Hero and his companions. Now that their great adventure is over, what will Frieren the mage do next?",
+                            "image": "https://image.tmdb.org/t/p/original/2nWCvV3yzLcofyo3LVyS1w7uu2s.jpg",
+                            "addedDate": "2023-09-29",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 2,
+                            "title": "Betsuni mahô janakutatte...",
+                            "description": "Frieren instructs Fern in the use of magic while deciphering a grimoire for Heiter.",
+                            "image": "https://image.tmdb.org/t/p/original/gITvubxmFPVx8ZaCsbgcXC0jXJ7.jpg",
+                            "addedDate": "2023-09-29",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 3,
+                            "title": " Hito o korosu mahô",
+                            "description": "While retracing the path she took on her adventure with her former traveling companions, Frieren confronts an old enemy.",
+                            "image": "https://image.tmdb.org/t/p/original/y6WA0Ke8VBEji8h18hsJrP8jXgR.jpg",
+                            "addedDate": "2023-09-29",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 4,
+                            "title": "Tamashii no nemuru chi",
+                            "description": "Frieren and Fern pay a visit to Eisen, who requests their help in finding the notes of Flamme the Legendary Mage.",
+                            "image": "https://image.tmdb.org/t/p/original/1rAbuUkh16gkhnM2IyhVXHZWmar.jpg",
+                            "addedDate": "2023-09-29",
+                            "rating": "8.2"
+                        },
+                        {
+                            "number": 5,
+                            "title": "Shisha no gen'ei",
+                            "description": "Frieren and Fern investigate ghost sightings at a village where people have started going missing.",
+                            "image": "https://image.tmdb.org/t/p/original/gI8xcR6tT8beCGbxXFewOuNAVpM.jpg",
+                            "addedDate": "2023-10-06",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 6,
+                            "title": "Mura no eiyû",
+                            "description": "Frieren and Fern enlist Stark's help to fight the solar dragon - but is he up to the task?",
+                            "image": "https://image.tmdb.org/t/p/original/fmH8PHZcH4Gc4PvdibnvtxCcjWy.jpg",
+                            "addedDate": "2023-10-13",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 7,
+                            "title": "Otogibanashi no yô na mono",
+                            "description": "After reflecting on the transient nature of the past as it exists in people's collective memories, Frieren unexpectedly runs into a sworn enemy.",
+                            "image": "https://image.tmdb.org/t/p/original/60LCMgI9HBCwoOe2nSx98W7OJvG.jpg",
+                            "addedDate": "2023-10-20",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 8,
+                            "title": "Sôsô no Furîren",
+                            "description": "As tensions in Graf Granat's domain reach a breaking point, Fern and Stark find their own resolve - and Frieren resumes an old duty.",
+                            "image": "https://image.tmdb.org/t/p/original/7ih2cTXwErFzHgSkfD4rH65n9fT.jpg",
+                            "addedDate": "2023-10-27",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 9,
+                            "title": "Dantôdai no Aura",
+                            "description": "While Fern and Stark make a temporary retreat with Graf Granat, Frieren's true foe awaits her outside the city.",
+                            "image": "https://image.tmdb.org/t/p/original/j3CR2wjqSQcW7kegNQ7nq8tawAB.jpg",
+                            "addedDate": "2023-11-03",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 10,
+                            "title": "Tsuyoi mahôtsukai",
+                            "description": "The great mage Flamme meets Frieren, the sole survivor of an elven village attacked by the demon king's army, and shares her knowledge. The battle between Frieren and Aura comes to an end.",
+                            "image": "https://image.tmdb.org/t/p/original/zdiNxh4kkK7FWr5FmwOVJXFY3ua.jpg",
+                            "addedDate": "2023-11-10",
+                            "rating": "9.4"
+                        },
+                        {
+                            "number": 11,
+                            "title": "Kitagawa shokoku no fuyu",
+                            "description": "Frieren, Fern and Stark continue their journey, but the winter road in the northern countries is much harder than they had imagined.",
+                            "image": "https://image.tmdb.org/t/p/original/sximpBYuLNLPTIRdw7BUx2jRRKB.jpg",
+                            "addedDate": "2023-11-17",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 12,
+                            "title": "Honmono no yûsha",
+                            "description": "Frieren's Party reaches the Village of Swords where Himmel wielded the Hero's Sword 80 years ago - a weapon reserved for those capable of defeating world-threatening evil. Memories from that time flood Frieren's mind.",
+                            "image": "https://image.tmdb.org/t/p/original/gSALjGge72BtvjJBrwrCKR3gfc0.jpg",
+                            "addedDate": "2023-11-24",
+                            "rating": "8.7"
+                        },
+                        {
+                            "number": 13,
+                            "title": "Dôzoku ken'o",
+                            "description": "While passing by a village in the woods of the northern lands, Frieren and party meet Sein, a gifted priest who is nonetheless corrupt enough to give even Heiter a run for his money. But what happened in his past?",
+                            "image": "https://image.tmdb.org/t/p/original/vbGdQvJVn9jE9U1ByPzmFta1Hwh.jpg",
+                            "addedDate": "2023-12-01",
+                            "rating": "7.7"
+                        },
+                        {
+                            "number": 14,
+                            "title": "Wakamono no tokken",
+                            "description": "Stark and Fern quarrel. Sein, who has recently joined Frieren's group, gives them advice on how to work things out, which sparks Frieren's memories of her deceased friends.",
+                            "image": "https://image.tmdb.org/t/p/original/js4TrCNaQLTMhnFJhoYTyEjNOan.jpg",
+                            "addedDate": "2023-12-08",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 15,
+                            "title": "Yakkaigoto no nioi",
+                            "description": "When the party happens upon a town whose inhabitants are all mysteriously asleep, it's time for their newest traveling companion to prove his mettle.",
+                            "image": "https://image.tmdb.org/t/p/original/2WBR0Dg3xZeLs8yXxTElIDyjRTj.jpg",
+                            "addedDate": "2023-12-15",
+                            "rating": "8.5"
+                        },
+                        {
+                            "number": 16,
+                            "title": "Chôju tomodachi",
+                            "description": "Frieren pays a visit to Old Man Voll, a long-lived friend of hers, with traveling companions in tow.",
+                            "image": "https://image.tmdb.org/t/p/original/k8lmaH6EWTTGiRUKJVWx44Ydhhh.jpg",
+                            "addedDate": "2023-12-22",
+                            "rating": "8.0"
+                        },
+                        {
+                            "number": 17,
+                            "title": "Jâ genki de",
+                            "description": "The time has come for Sein to decide whether he will continue traveling with his companions or begin his personal journey to find his friend.",
+                            "image": "https://image.tmdb.org/t/p/original/lXdScCGXK4bzjJ9LAhwY6FfhoQX.jpg",
+                            "addedDate": "2024-01-05",
+                            "rating": "7.9"
+                        },
+                        {
+                            "number": 18,
+                            "title": "Ikkyû mahôtsukai senbatsu shiken",
+                            "description": "Frieren and party finally arrive in Äußerst, ready to undergo the first-class mage exam, and meet a number of colorful characters who are there to do the same.",
+                            "image": "https://image.tmdb.org/t/p/original/qBw6DCySMaM70kyjsQcvLNzFuBg.jpg",
+                            "addedDate": "2024-01-12",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 19,
+                            "title": "Nyûnen na keikaku",
+                            "description": "Frieren and her new teammates hatch a plan to capture a Stille, but are the other teams just going to stand by and let it happen?",
+                            "image": "https://image.tmdb.org/t/p/original/jsHto8FYO4mrGDI04H8Qiee0Ail.jpg",
+                            "addedDate": "2024-01-19",
+                            "rating": "8.3"
+                        },
+                        {
+                            "number": 20,
+                            "title": "Hitsuyôna koroshi",
+                            "description": "The first-class mage exam intensifies as fighting breaks out between the participants, and what's at stake might even be worth killing for.",
+                            "image": "https://image.tmdb.org/t/p/original/nmqYMMrIkSnKeaYnoi37oQK8ELy.jpg",
+                            "addedDate": "2024-01-26",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 21,
+                            "title": "Mahô no sekai",
+                            "description": "Frieren, Kanne, and Lawine struggle with the 13th party over possession of the Stille, but there'll be more surprises in store before their battle, and the first test, reach their conclusion.",
+                            "image": "https://image.tmdb.org/t/p/original/sLJXZmbXRXA4Q2Y0sjvY9AxFmd8.jpg",
+                            "addedDate": "2024-02-02",
+                            "rating": "9.1"
+                        },
+                        {
+                            "number": 22,
+                            "title": "Tsugi kara wa katakidôshi",
+                            "description": "After the conclusion of the first test, the exam participants have some time to kill in town. What do mages get up to on their days off?",
+                            "image": "https://image.tmdb.org/t/p/original/xylNLFcYzGoaeTj8kMDEwDSULFb.jpg",
+                            "addedDate": "2024-02-09",
+                            "rating": "7.8"
+                        },
+                        {
+                            "number": 23,
+                            "title": "Danjon kôryaku",
+                            "description": "Aspiring mages undertake their next trial: overcoming the untouched Ruins of the King's Tomb, purportedly easy by the examiner but with unknown risks.",
+                            "image": "https://image.tmdb.org/t/p/original/bHaX3C0z95D4TZHtBl7sxP5de7S.jpg",
+                            "addedDate": "2024-02-16",
+                            "rating": "8.6"
+                        },
+                        {
+                            "number": 24,
+                            "title": "Kanpeki na fukuseitai",
+                            "description": "Due to the Spiegel, a legendary monster that can create perfect replicas of others, the test-takers who would conquer the Ruins of the King's Tomb must first face the ultimate enemy: themselves.",
+                            "image": "https://image.tmdb.org/t/p/original/iCfAHlszCRtLsVvZgwM9N8gQNRV.jpg",
+                            "addedDate": "2024-02-23",
+                            "rating": "8.4"
+                        },
+                        {
+                            "number": 25,
+                            "title": "Chimei tekina suki",
+                            "description": "A perfect imitation of Frieren stands between the test-takers and victory, but Fern believes she knows how to win. Is it time for the student to surpass the master?",
+                            "image": "https://image.tmdb.org/t/p/original/wwXkIfBR1l7EitGpzixuhWK8HJK.jpg",
+                            "addedDate": "2024-03-01",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 26,
+                            "title": "Mahô no takami",
+                            "description": "While the other Mages defend themselves against the remaining clones, Fern experiences the heights of Frieren's power as they battle the copycat Frieren.",
+                            "image": "https://image.tmdb.org/t/p/original/fr9fzn9LcBWgfajgW14YT9xE2RB.jpg",
+                            "addedDate": "2024-03-08",
+                            "rating": "9.3"
+                        },
+                        {
+                            "number": 27,
+                            "title": " Ningen no jidai",
+                            "description": "With the second test behind them, only one remains - but first, Frieren and Fern need to settle an important matter in town. What awaits them in the third test?",
+                            "image": "https://image.tmdb.org/t/p/original/5sn3fu5Mag4oDwfGpSM6KqV0zNt.jpg",
+                            "addedDate": "2024-03-15",
+                            "rating": "9.0"
+                        },
+                        {
+                            "number": 28,
+                            "title": "Mata atta toki ni hazukashii kara ne",
+                            "description": "Serie concludes the third and final stage of the First-Class Mage Exam. Many examinees remain in Äußerst to prepare for their next plans. Frieren, Fern and Stark depart from the city to head further north.",
+                            "image": "https://image.tmdb.org/t/p/original/yBspktN9s3qqwCQW8qFXRRYHTcH.jpg",
+                            "addedDate": "2024-03-22",
+                            "rating": "9.1"
                         }
                     ]
                 }

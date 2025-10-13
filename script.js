@@ -283,7 +283,6 @@ function loadLatestSeries(series) {
             <img src="${show.image}" alt="${show.title}">
             <div class="series-info">
                 <h3>${show.title}</h3>
-                <div class="genre">${show.genre}</div>
                 <div class="movie-details">
                     <div class="rating">
                         <i class="fas fa-star"></i>
