@@ -81,94 +81,126 @@
     }
     const sortNewest = (a, b) => toEpoch(b) - toEpoch(a);
 
-    function renderMovies() {
-        const tbody = document.querySelector('#moviesTable tbody');
-        if (!tbody) return;
-        tbody.innerHTML = '';
-        [...(data.movies || [])].sort(sortNewest).forEach(m => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td class="img-cell"><img src="${m.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';"></td>
-                <td>${m.title || ''}</td>
-                <td>${m.genre || ''}</td>
-                <td>${getYear(m.year)}</td>
-                <td>${m.rating || ''}</td>
-                <td>${m.duration || ''}</td>
-                <td>
-                    <button class="action-btn" onclick="openModal('movie', ${m.id})">Edit</button>
-                    <button class="action-btn delete" onclick="deleteItem('movie', ${m.id})">Delete</button>
-                </td>
+    function renderMovies(searchQuery = '') {
+        const container = document.getElementById('moviesCards');
+        if (!container) return;
+        container.innerHTML = '';
+        [...(data.movies || [])]
+            .filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase()))
+            .sort(sortNewest).forEach(m => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${m.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';">
+                <div class="card-info">
+                    <div class="card-title">${m.title || ''}</div>
+                    <div class="card-actions">
+                        <button class="action-btn" onclick="openModal('movie', ${m.id})">Edit</button>
+                        <button class="action-btn delete" onclick="deleteItem('movie', ${m.id})">Delete</button>
+                    </div>
+                </div>
             `;
-            tbody.appendChild(tr);
+            container.appendChild(card);
         });
     }
 
-    function renderSeries() {
-        const tbody = document.querySelector('#seriesTable tbody');
-        if (!tbody) return;
-        tbody.innerHTML = '';
-        [...(data.series || [])].sort(sortNewest).forEach(s => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td class="img-cell"><img src="${s.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';"></td>
-                <td>${s.title || ''}</td>
-                <td>${s.genre || ''}</td>
-                <td>${getYear(s.year)}</td>
-                <td>${s.status || ''}</td>
-                <td>${s.rating || ''}</td>
-                <td>${s.duration || ''}</td>
-                <td>
-                    <button class="action-btn" onclick="openModal('series', ${s.id})">Edit</button>
-                    <button class="action-btn delete" onclick="deleteItem('series', ${s.id})">Delete</button>
-                </td>
+    function renderSeries(searchQuery = '') {
+        const container = document.getElementById('seriesCards');
+        if (!container) return;
+        container.innerHTML = '';
+        [...(data.series || [])]
+            .filter(s => s.title.toLowerCase().includes(searchQuery.toLowerCase()))
+            .sort(sortNewest).forEach(s => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${s.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';">
+                <div class="card-info">
+                    <div class="card-title">${s.title || ''}</div>
+                    <div class="card-actions">
+                        <button class="action-btn" onclick="openModal('series', ${s.id})">Edit</button>
+                        <button class="action-btn delete" onclick="deleteItem('series', ${s.id})">Delete</button>
+                    </div>
+                </div>
             `;
-            tbody.appendChild(tr);
+            container.appendChild(card);
         });
     }
 
-    function renderSlidesAll() {
-        const tbody = document.querySelector('#slidesAllTable tbody');
-        if (!tbody) return;
-        tbody.innerHTML = '';
+    function renderSlidesAll(searchQuery = '') {
+        const container = document.getElementById('slidesSlider');
+        if (!container) return;
+        container.innerHTML = '';
         const all = [
             ...(data.movies || []).map(x => ({ ...x, _type: 'movie' })),
             ...(data.series || []).map(x => ({ ...x, _type: 'series' }))
         ].sort(sortNewest);
+
         const featuredKey = new Set((data.featured || []).map(f => `${f.type}:${f.id}`));
-        all.forEach(item => {
-            const tr = document.createElement('tr');
-            const isChecked = featuredKey.has(`${item._type}:${item.id}`);
-            tr.innerHTML = `
-                <td class="img-cell"><img src="${item.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';"></td>
-                <td>${item.title || ''}</td>
-                <td>${item._type}</td>
-                <td>${getYear(item.year)}</td>
-                <td>${item.rating || ''}</td>
-                <td><input type="checkbox" class="slide-checkbox" data-type="${item._type}" data-id="${item.id}" ${isChecked ? 'checked' : ''}></td>
-            `;
-            tbody.appendChild(tr);
-        });
-        tbody.querySelectorAll('.slide-checkbox').forEach(cb => cb.addEventListener('change', updateSlidesCounter));
+        all
+            .filter(item => (item.title || '').toLowerCase().includes(searchQuery.toLowerCase()))
+            .forEach(item => {
+                const slideItem = document.createElement('div');
+                slideItem.className = 'slide-item';
+                slideItem.dataset.type = item._type;
+                slideItem.dataset.id = item.id;
+                const isChecked = featuredKey.has(`${item._type}:${item.id}`);
+                if (isChecked) {
+                    slideItem.classList.add('selected');
+                }
+                slideItem.innerHTML = `
+                    <img src="${item.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';">
+                    <div class="slide-info">
+                        <div class="slide-title">${item.title || ''}</div>
+                        <div class="slide-type">${item._type === 'movie' ? 'Movie' : 'Series'}</div>
+                        <div class="slide-checkbox-container">
+                            <input type="checkbox" class="slide-checkbox" data-type="${item._type}" data-id="${item.id}" ${isChecked ? 'checked' : ''}>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(slideItem);
+
+                // Event listener for clicking the slide item to toggle checkbox and 'selected' class
+                slideItem.addEventListener('click', (e) => {
+                    // Prevent event from bubbling up from checkbox click
+                    if (e.target.classList.contains('slide-checkbox')) {
+                        e.stopPropagation();
+                        return;
+                    }
+                    const checkbox = slideItem.querySelector('.slide-checkbox');
+                    checkbox.checked = !checkbox.checked;
+                    slideItem.classList.toggle('selected', checkbox.checked);
+                    updateSlidesCounter();
+                });
+
+                // Event listener for checkbox change to toggle 'selected' class
+                const checkbox = slideItem.querySelector('.slide-checkbox');
+                checkbox.addEventListener('change', () => {
+                    slideItem.classList.toggle('selected', checkbox.checked);
+                    updateSlidesCounter();
+                });
+            });
+        // The updateSlidesCounter is now called by individual checkbox/slide item events
     }
 
     function renderSlidesCurrent() {
-        const tbody = document.querySelector('#slidesCurrentTable tbody');
+        const tbody = document.querySelector("#slidesCurrentTable tbody");
         if (!tbody) return;
-        tbody.innerHTML = '';
+        tbody.innerHTML = "";
         [...(data.featured || [])].sort(sortNewest).forEach(f => {
-            const tr = document.createElement('tr');
+            const tr = document.createElement("tr");
             tr.innerHTML = `
-                <td class="img-cell"><img src="${f.image || '13434998.png'}" onerror="this.onerror=null;this.src='13434998.png';"></td>
-                <td>${f.title || ''}</td>
-                <td>${f.type || ''}</td>
-                <td style="max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${f.backdrop || ''}</td>
+                <td class="img-cell"><img src="${f.image || "13434998.png"}" onerror="this.onerror=null;this.src=\'13434998.png\';"></td>
+                <td>${f.title || ""}</td>
+                <td>${f.type || ""}</td>
+                <td style="max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${f.backdrop || ""}</td>
             `;
             tbody.appendChild(tr);
         });
     }
 
     function updateSlidesCounter() {
-        const cbs = Array.from(document.querySelectorAll('.slide-checkbox'));
+        const cbs = Array.from(document.querySelectorAll(".slides-slider .slide-checkbox"));
         const count = cbs.filter(cb => cb.checked).length;
         const el = document.getElementById('slidesCounter');
         if (el) el.textContent = `(${count} selected)`;
@@ -198,9 +230,13 @@
                     type: 'movie',
                     id: src.id,
                     title: src.title,
+                    imgname: src.imgname,
                     backdrop: src.backdrop,
                     description: src.description,
-                    image: src.image
+                    image: src.image,
+                    rating: src.rating,
+                    duration: src.duration,
+                    video: src.video
                 });
             } else {
                 const seasons = Array.isArray(src.seasons) ? src.seasons.map((s, idx) => {
@@ -213,9 +249,12 @@
                     seasons,
                     id: src.id,
                     title: src.title,
+                    imgname: src.imgname,
                     backdrop: src.backdrop,
                     description: src.description,
-                    image: src.image
+                    image: src.image,
+                    rating: src.rating,
+                    duration: src.duration,
                 });
             }
         }
@@ -243,15 +282,14 @@
             saveSlides();
         }
         if (e.target && e.target.id === 'slidesClearBtn') {
-            const cbs = Array.from(document.querySelectorAll('.slide-checkbox'));
-            if (cbs.length) {
-                cbs.forEach(cb => cb.checked = false);
-                updateSlidesCounter();
-                return;
-            }
-            // grid card mode fallback
-            const cards = Array.from(document.querySelectorAll('.slide-card'));
-            cards.forEach(card => card.classList.remove('selected'));
+            const cbs = Array.from(document.querySelectorAll(".slides-slider .slide-checkbox"));
+            cbs.forEach(cb => {
+                cb.checked = false;
+                const slideItem = cb.closest('.slide-item');
+                if (slideItem) {
+                    slideItem.classList.remove('selected');
+                }
+            });
             updateSlidesCounter();
         }
     });
@@ -263,7 +301,17 @@
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             btn.classList.add('active');
             document.getElementById(btn.dataset.tab).classList.add('active');
-            if (btn.dataset.tab === 'slides') {
+            // Clear all search inputs
+            document.getElementById('movieSearch').value = '';
+            document.getElementById('seriesSearch').value = '';
+            document.getElementById('slidesSearch').value = '';
+
+            // Re-render content for the active tab without search filter
+            if (btn.dataset.tab === 'movies') {
+                renderMovies();
+            } else if (btn.dataset.tab === 'series') {
+                renderSeries();
+            } else if (btn.dataset.tab === 'slides') {
                 renderSlidesAll();
                 renderSlidesCurrent();
                 updateSlidesCounter();
@@ -286,6 +334,11 @@
             showNotification('Delete failed: ' + (e && e.message ? e.message : e), false);
         }
     };
+
+    // Wire search inputs
+    document.getElementById('movieSearch').addEventListener('input', (e) => renderMovies(e.target.value));
+    document.getElementById('seriesSearch').addEventListener('input', (e) => renderSeries(e.target.value));
+    document.getElementById('slidesSearch').addEventListener('input', (e) => renderSlidesAll(e.target.value));
 
     // Kick off
     fetchData();

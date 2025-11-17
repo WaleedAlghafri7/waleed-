@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="icon" type="image/png" href="CineStream web.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -20,6 +24,9 @@
                 </div>
                 <div class="search-input-container">
                     <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
+                    <div class="search-results-dropdown">
+                        <!-- سيتم تعبئة نتائج البحث هنا -->
+                    </div>
                 </div>
             </div>
             <div class="name-wab" style="cursor:pointer;" onclick="window.location.href='index.html'">
@@ -54,7 +61,8 @@
 
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
-                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+                    <img id="user-avatar-img" alt="Avatar"
+                        style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
@@ -121,7 +129,8 @@
         <div id="footer-container"></div>
         <button class="back-arrow" onclick="history.back()" aria-label="رجوع">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
     </div>
@@ -136,15 +145,15 @@
                 return null;
             }
         }
-    
+
         function isAuthenticated() {
             return !!localStorage.getItem('auth_token');
         }
-    
+
         function updateAuthUI() {
             const isLoggedIn = isAuthenticated();
             const user = getCurrentUser();
-    
+
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
             const userAvatarImg = document.getElementById('user-avatar-img');
@@ -153,7 +162,7 @@
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
             const userMenu = document.querySelector('.user-menu');
-    
+
             if (isLoggedIn && user) {
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
@@ -191,9 +200,9 @@
                     menuItems.forEach(item => item.style.display = 'none');
                 }
             }
-    
+
             if (logoutBtn) {
-                logoutBtn.onclick = function() {
+                logoutBtn.onclick = function () {
                     localStorage.removeItem('auth_token');
                     localStorage.removeItem('auth_user');
                     updateAuthUI();
@@ -201,72 +210,164 @@
                 };
             }
         }
-    
+
         fetch('header.html')
             .then(res => res.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
                 updateAuthUI();
             });
-    
+
         document.addEventListener('DOMContentLoaded', updateAuthUI);
-    
+
         // ==== البحث وقائمة المستخدم ====
+        // متغيرات البحث السريع
+        let searchDebounceTimer = null;
+        let allContentData = null;
+
         function initializeSearch() {
             const searchIcon = document.querySelector('.search-icon');
             const searchInput = document.querySelector('.search input');
             const searchContainer = document.querySelector('.search-input-container');
-    
+
             searchIcon.addEventListener('click', () => {
                 searchIcon.classList.toggle('active');
                 searchInput.classList.toggle('active');
-                if (searchInput.classList.contains('active')) searchInput.focus();
+                if (searchInput.classList.contains('active')) {
+                    searchInput.focus();
+                } else {
+                    hideSearchResults();
+                }
             });
-    
+
+            // البحث عند الكتابة (Live Search)
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.trim();
+                clearTimeout(searchDebounceTimer);
+
+                if (query.length < 2) {
+                    hideSearchResults();
+                    return;
+                }
+
+                searchDebounceTimer = setTimeout(() => {
+                    performQuickSearch(query);
+                }, 300);
+            });
+
             searchInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     const searchQuery = searchInput.value.trim();
-                    if (searchQuery) window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
+                    if (searchQuery) {
+                        hideSearchResults();
+                        window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
+                    }
                 }
             });
-    
+
             document.addEventListener('click', (e) => {
                 if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
                     searchIcon.classList.remove('active');
                     searchInput.classList.remove('active');
+                    hideSearchResults();
                 }
             });
         }
-    
+
+        // إظهار نتائج البحث
+        function showSearchResults(results) {
+            const resultsDropdown = document.querySelector('.search-results-dropdown');
+            if (!resultsDropdown) return;
+
+            if (results.length === 0) {
+                resultsDropdown.innerHTML = '<div class="search-result-item-no-results">No results found</div>';
+            } else {
+                resultsDropdown.innerHTML = results.map(item => {
+                    const type = item.seasons ? 'series' : 'movie';
+                    const typeLabel = type === 'series' ? 'Series' : 'Movie';
+                    // الأزرق للمسلسل، الأحمر للفيلم
+                    const typeColor = type === 'series' ? '#2980f3' : '#c0392b';
+                    return `
+                <div class="search-result-item" onclick="window.location.href='content.html?id=${item.id}&type=${type}'">
+                    <img src="${item.image}" alt="${item.title}" class="search-result-item-image" onerror="this.onerror=null; this.src='https://cdn-icons-png.freepik.com/512/13434/13434998.png';">
+                    <div class="search-result-item-content">
+                        <div class="search-result-item-title">${item.title}</div>
+                        <div class="search-result-item-meta">
+                            <span class="search-result-item-type" style="color: ${typeColor}; font-weight: bold;">
+                                ${typeLabel}
+                            </span>
+                            <span class="search-result-item-rating">
+                                <i class="fas fa-star"></i> ${item.rating || 'N/A'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+                }).join('');
+            }
+
+            resultsDropdown.classList.add('show');
+        }
+
+        function hideSearchResults() {
+            const resultsDropdown = document.querySelector('.search-results-dropdown');
+            if (resultsDropdown) {
+                resultsDropdown.classList.remove('show');
+            }
+        }
+
+        async function performQuickSearch(query) {
+            try {
+                if (!allContentData) {
+                    const response = await fetch('data.json');
+                    allContentData = await response.json();
+                }
+
+                const searchTerm = query.toLowerCase();
+                const allItems = [...allContentData.movies, ...allContentData.series];
+
+                const results = allItems
+                    .filter(item => item.title && item.title.toLowerCase().includes(searchTerm))
+                    .map(item => ({
+                        ...item,
+                        type: item.seasons ? 'series' : 'movie'
+                    }));
+
+                showSearchResults(results);
+            } catch (error) {
+                console.error('Error performing quick search:', error);
+            }
+        }
+
         function initializeUserMenu() {
             const userIcon = document.querySelector('.user-icon');
             const userDropdown = document.querySelector('.user-dropdown');
             const menuButton = document.querySelector('.list-siting-button');
             const menuItems = document.querySelector('.list-siting-item');
-    
+
             userIcon.addEventListener('click', (e) => {
                 e.stopPropagation();
                 userDropdown.classList.toggle('active');
                 menuItems.classList.remove('active');
                 menuButton.classList.remove('active');
             });
-    
+
             menuButton.addEventListener('click', (e) => {
                 e.stopPropagation();
                 menuItems.classList.toggle('active');
                 menuButton.classList.toggle('active');
                 userDropdown.classList.remove('active');
             });
-    
+
             userDropdown.addEventListener('click', (e) => e.stopPropagation());
             menuItems.addEventListener('click', (e) => e.stopPropagation());
-    
+
             document.addEventListener('click', () => {
                 userDropdown.classList.remove('active');
                 menuItems.classList.remove('active');
                 menuButton.classList.remove('active');
             });
-    
+
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     userDropdown.classList.remove('active');
@@ -275,11 +376,11 @@
                 }
             });
         }
-    
+
         // ==== عرض المحتوى وإدارة الفلاتر ====
         let globalData = null;
         let genresPopulated = false;
-    
+
         function extractGenres(data) {
             const genresSet = new Set();
             const addGenres = (arr) => {
@@ -294,7 +395,7 @@
             addGenres(data.series || []);
             return Array.from(genresSet).filter(g => g && g.toLowerCase() !== 'unknown').sort();
         }
-    
+
         async function loadContent() {
             try {
                 if (!globalData) {
@@ -303,10 +404,10 @@
                 }
                 const data = globalData;
                 let allContent = [...data.series];
-    
+
                 const params = new URLSearchParams(window.location.search);
                 const initialGenre = params.get('genre');
-    
+
                 if (!genresPopulated) {
                     const genres = extractGenres(data);
                     const genreSelect = document.querySelector('.genre-select');
@@ -319,14 +420,14 @@
                     genresPopulated = true;
                     if (initialGenre) genreSelect.value = initialGenre;
                 }
-    
+
                 const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
                 if (activeFilter !== 'all') {
-                    allContent = allContent.filter(item => 
+                    allContent = allContent.filter(item =>
                         activeFilter === 'series' ? !item.seasons : item.seasons
                     );
                 }
-    
+
                 const genreValue = document.querySelector('.genre-select').value;
                 if (genreValue && genreValue !== 'all') {
                     allContent = allContent.filter(item => {
@@ -339,7 +440,7 @@
                         return false;
                     });
                 }
-    
+
                 const sortValue = document.querySelector('.sort-select').value;
                 // ترتيب حسب النوع (rating, popularity, oldest, az, za, latest)
                 allContent.sort((a, b) => {
@@ -358,17 +459,17 @@
                             return new Date(b.releaseDate || b.addedDate || `${b.year}-01-01`) - new Date(a.releaseDate || a.addedDate || `${a.year}-01-01`);
                     }
                 });
-    
+
                 displayContent(allContent);
             } catch (error) {
                 console.error('Error loading content:', error);
             }
         }
-    
+
         function displayContent(content) {
             const contentGrid = document.querySelector('.content-grid');
             contentGrid.innerHTML = '';
-    
+
             if (content.length === 0) {
                 contentGrid.innerHTML = `
                     <div class="no-results">
@@ -378,26 +479,33 @@
                     </div>`;
                 return;
             }
-    
+
             content.forEach(item => {
                 const card = document.createElement('div');
                 card.className = item.seasons ? 'series-card' : 'movie-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}`;
-                
+
+                // Determine type label for display
+                let typeLabel = item.seasons ? 'Series' : 'Movie';
+
                 card.innerHTML = `
-                    ${item.seasons ? `<div class="status-indicator ${item.status}"><i class="fas ${item.status==='ongoing'?'fa-play-circle':'fa-check-circle'}"></i></div>` : ''}
+                    ${item.seasons ? `<div class="status-indicator ${item.status}"><i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i></div>` : ''}
                     <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="${item.seasons ? 'series-name' : 'movie-name'}">${typeLabel}</h3>
                     <div class="series-info">
-                        <h3>${item.title}</h3>
                         <div class="movie-details">
                             <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
-                            <div class="year"><span>${item.year ? (typeof item.year==='string'?item.year.slice(0,4):item.year) : ''}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0, 4) : item.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${item.duration ? item.duration : '--'}</span>
+                            </div>
                         </div>
                     </div>
                 `;
-    
+
                 contentGrid.appendChild(card);
-    
+
                 card.querySelectorAll('.genre-chip').forEach(chip => {
                     chip.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -411,27 +519,28 @@
                 });
             });
         }
-    
+
         document.addEventListener('DOMContentLoaded', () => {
             initializeSearch();
             initializeUserMenu();
             loadContent();
-    
+
             const filterButtons = document.querySelectorAll('.filter-btn');
             filterButtons.forEach(button => button.addEventListener('click', () => {
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 loadContent();
             }));
-    
+
             document.querySelector('.sort-select').addEventListener('change', loadContent);
             document.querySelector('.genre-select').addEventListener('change', loadContent);
         });
-    
+
         // Load header and footer (fallback)
         fetch('header.html').then(res => res.text()).then(data => document.getElementById('header-container').innerHTML = data);
         fetch('footer.html').then(res => res.text()).then(data => document.getElementById('footer-container').innerHTML = data);
     </script>
-    
+
 </body>
-</html> 
+
+</html>

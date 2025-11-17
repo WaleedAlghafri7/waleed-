@@ -1,89 +1,197 @@
-// تهيئة المتغيرات العامة
-let currentSlide = 0;
-let slideInterval; // سيُستخدم كـ setTimeout للتحكم في الوقت المتبقي
-const slideDuration = 5000; // مدة كل سلايد بالمللي ثانية
-const transitionDuration = 500; // مدة الانتقال بين السلايدات
-let slideStartTime = 0;
-let remainingTime = slideDuration;
+/********************************************************************
+ *            تهيئة المتغيرات العامة والإعدادات الأساسية               *
+ *      (المتغيرات العامة + الإعدادات الخاصة بعدد ومحتوى الأقسام)    *
+ ********************************************************************/
 
-// عدد العناصر لكل قسم
+let currentSlide = 0;                    // رقم السلايد الحالي في السلايدر
+let slideInterval;                       // سيتم استعماله للتحكم في التايمر التلقائي للسلايدر
+const slideDuration = 5000;              // مدة إظهار كل سلايد بالمللي ثانية
+const transitionDuration = 500;          // مدة الحركة الانتقالية بين السلايدات
+let slideStartTime = 0;                  // بداية زمن السلايد الحالي
+let remainingTime = slideDuration;       // الوقت المتبقي في السلايد الحالي
+
+// إعدادات عدد العناصر في كل قسم بالسلايدر أو الشبكات
 const config = {
-    featured: {
-        count: 10 // عدد العناصر المميزة في السلايدر
-    },
-    movies: {
-        count: 16, // عدد الأفلام المعروضة
-        sortBy: 'year' // ترتيب حسب السنة
-    },
-    series: {
-        count: 16, // عدد المسلسلات المعروضة
-        sortBy: 'year' // ترتيب حسب السنة
-    }
+    featured: { count: 10 },                             // عدد العناصر المميزة في السلايدر
+    movies:   { count: 16, sortBy: 'year' },             // عدد الأفلام المعروضة مع الترتيب
+    series:   { count: 16, sortBy: 'year' }              // عدد المسلسلات المعروضة مع الترتيب
 };
 
-// جلب الهيدر والفوتر في أي صفحة HTML إذا وُجدت الحاويات
+/********************************************************************
+ *                     تحميل الهيدر والفوتر                          *
+ *   (في كل صفحة HTML: إدراج ملفات الهيدر والفوتر إن وُجدت الحاويات)  *
+ ********************************************************************/
 function loadHeaderFooter() {
     const headerContainer = document.getElementById('header-container');
     if (headerContainer) {
         fetch('header.html')
             .then(res => res.text())
-            .then(data => {
-                headerContainer.innerHTML = data;
-            });
+            .then(data => { headerContainer.innerHTML = data; });
     }
     const footerContainer = document.getElementById('footer-container');
     if (footerContainer) {
         fetch('footer.html')
             .then(res => res.text())
-            .then(data => {
-                footerContainer.innerHTML = data;
-            });
+            .then(data => { footerContainer.innerHTML = data; });
     }
 }
 
-// تهيئة البحث إذا وُجدت عناصر البحث
+/********************************************************************
+ *                     البحث والتحكم في حقل البحث                    *
+ *   (يظهر حقل البحث/إخفاؤه وينقل المستخدم لصفحة نتائج البحث)         *
+ ********************************************************************/
+let searchDebounceTimer = null;
+let allContentData = null;
+
 function initializeSearch() {
-    const searchIcon = document.querySelector('.search-icon');
-    const searchInput = document.querySelector('.search input');
+    const searchIcon      = document.querySelector('.search-icon');
+    const searchInput     = document.querySelector('.search input');
     const searchContainer = document.querySelector('.search-input-container');
+    const resultsDropdown = document.querySelector('.search-results-dropdown');
     if (!searchIcon || !searchInput || !searchContainer) return;
 
-    // Toggle search input
+    // عرض أو إخفاء حقل البحث
     searchIcon.addEventListener('click', () => {
         searchIcon.classList.toggle('active');
         searchInput.classList.toggle('active');
         if (searchInput.classList.contains('active')) {
             searchInput.focus();
+        } else {
+            hideSearchResults();
         }
     });
 
-    // Handle search
+    // البحث عند الكتابة (Live Search)
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+        clearTimeout(searchDebounceTimer);
+        
+        if (query.length < 2) {
+            hideSearchResults();
+            return;
+        }
+
+        // بحث بتأخير 300ms لتقليل الاستعلامات
+        searchDebounceTimer = setTimeout(() => {
+            performQuickSearch(query);
+        }, 300);
+    });
+
+    // البحث عند الضغط على Enter في الإدخال
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             const searchQuery = searchInput.value.trim();
             if (searchQuery) {
+                hideSearchResults();
                 window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
             }
         }
     });
 
-    // Close search when clicking outside
+    // غلق الحقل إذا ضغطنا خارج البحث
     document.addEventListener('click', (e) => {
         if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
             searchIcon.classList.remove('active');
             searchInput.classList.remove('active');
+            hideSearchResults();
         }
     });
 }
 
-// تهيئة قائمة المستخدم إذا وُجدت عناصر القائمة
+// إظهار نتائج البحث
+function showSearchResults(results) {
+    const resultsDropdown = document.querySelector('.search-results-dropdown');
+    if (!resultsDropdown) return;
+
+    if (results.length === 0) {
+        resultsDropdown.innerHTML = '<div class="search-result-item-no-results">No results found</div>';
+    } else {
+        resultsDropdown.innerHTML = results.map(item => {
+            const type = item.seasons ? 'series' : 'movie';
+            const typeLabel = type === 'series' ? 'Series' : 'Movie';
+            // الأزرق للمسلسل، الأحمر للفيلم
+            const typeColor = type === 'series' ? '#2980f3' : '#c0392b';
+            return `
+                <div class="search-result-item" onclick="window.location.href='content.html?id=${item.id}&type=${type}'">
+                    <img src="${item.image}" alt="${item.title}" class="search-result-item-image" onerror="this.onerror=null; this.src='https://cdn-icons-png.freepik.com/512/13434/13434998.png';">
+                    <div class="search-result-item-content">
+                        <div class="search-result-item-title">${item.title}</div>
+                        <div class="search-result-item-meta">
+                            <span class="search-result-item-type" style="color: ${typeColor}; font-weight: bold;">
+                                ${typeLabel}
+                            </span>
+                            <span class="search-result-item-rating">
+                                <i class="fas fa-star"></i> ${item.rating || 'N/A'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    resultsDropdown.classList.add('show');
+}
+
+// إخفاء نتائج البحث
+function hideSearchResults() {
+    const resultsDropdown = document.querySelector('.search-results-dropdown');
+    if (resultsDropdown) {
+        resultsDropdown.classList.remove('show');
+    }
+}
+
+// البحث السريع في البيانات
+async function performQuickSearch(query) {
+    try {
+        // إذا لم نكن قد حمّلنا البيانات بعد، قم بتحميلها
+        if (!allContentData) {
+            const response = await fetch('data.json');
+            allContentData = await response.json();
+        }
+
+        const searchTerm = query.toLowerCase();
+        const allItems = [...allContentData.movies, ...allContentData.series];
+        
+        // البحث فقط عن العناوين التي تبدأ بـ searchTerm وترتيب النتائج حسب الترتيب الأبجدي للاسم
+        let results = allItems
+            .filter(item => item.title && item.title.toLowerCase().startsWith(searchTerm))
+            .map(item => ({
+                ...item,
+                type: item.seasons ? 'series' : 'movie'
+            }));
+
+        // ثم أضف بقية النتائج التي تحتوي على searchTerm ولكن لا تبدأ به، مع نفس نوع الترتيب
+        let containsResults = allItems
+            .filter(item => item.title && !item.title.toLowerCase().startsWith(searchTerm) && item.title.toLowerCase().includes(searchTerm))
+            .map(item => ({
+                ...item,
+                type: item.seasons ? 'series' : 'movie'
+            }));
+
+        // جمع النتائج الكلية
+        results = results.concat(containsResults);
+
+        // ترتيب جميع النتائج أبجدياً حسب الاسم
+        results = results.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
+
+        showSearchResults(results);
+    } catch (error) {
+        console.error('Error performing quick search:', error);
+    }
+}
+
+/********************************************************************
+ *               قائمة المستخدم (قائمة الهويات/التسجيل)              *
+ ********************************************************************/
 function initializeUserMenu() {
-    const userIcon = document.querySelector('.user-icon');
+    const userIcon   = document.querySelector('.user-icon');
     const userDropdown = document.querySelector('.user-dropdown');
-    const menuButton = document.querySelector('.list-siting-button');
-    const menuItems = document.querySelector('.list-siting-item');
+    const menuButton   = document.querySelector('.list-siting-button');
+    const menuItems    = document.querySelector('.list-siting-item');
     if (!userIcon || !userDropdown || !menuButton || !menuItems) return;
 
+    // عرض أو إخفاء قائمة المستخدم
     userIcon.addEventListener('click', (e) => {
         e.stopPropagation();
         userDropdown.classList.toggle('active');
@@ -91,6 +199,7 @@ function initializeUserMenu() {
         menuButton.classList.remove('active');
     });
 
+    // عرض أو إخفاء قائمة الإعدادات الجانبية
     menuButton.addEventListener('click', (e) => {
         e.stopPropagation();
         menuItems.classList.toggle('active');
@@ -98,20 +207,17 @@ function initializeUserMenu() {
         userDropdown.classList.remove('active');
     });
 
-    userDropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
+    userDropdown.addEventListener('click',      (e) => { e.stopPropagation(); });
+    menuItems.addEventListener('click',         (e) => { e.stopPropagation(); });
 
-    menuItems.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-
+    // غلق جميع القوائم عند الضغط خارجها
     document.addEventListener('click', () => {
         userDropdown.classList.remove('active');
         menuItems.classList.remove('active');
         menuButton.classList.remove('active');
     });
 
+    // غلق القوائم عند الضغط على Esc
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             userDropdown.classList.remove('active');
@@ -121,56 +227,171 @@ function initializeUserMenu() {
     });
 }
 
-// تحميل وعرض البيانات إذا وُجدت الحاويات المناسبة
+/*********************************************************************
+ * تحميل وعرض البيانات من ملف البيانات وتهيئة الأقسام (أفلام/مسلسلات)  *
+ *   (يستدعي تحميل السلايدر وشبكات الأفلام والمسلسلات)                *
+ *********************************************************************/
 async function loadData() {
     try {
         const response = await fetch('data.json');
-        const data = await response.json();
+        const data     = await response.json();
 
-        // ترتيب البيانات حسب الـ id تنازلياً
+        // ترتيب كل قسم حسب ID تنازلياً
         const sortedData = {
             featured: Array.isArray(data.featured) ? [...data.featured].sort((a, b) => b.id - a.id) : [],
-            movies: Array.isArray(data.movies) ? [...data.movies].sort((a, b) => b.id - a.id) : [],
-            series: Array.isArray(data.series) ? [...data.series].sort((a, b) => b.id - a.id) : []
+            movies:   Array.isArray(data.movies)   ? [...data.movies].sort((a, b) => b.id - a.id) : [],
+            series:   Array.isArray(data.series)   ? [...data.series].sort((a, b) => b.id - a.id) : []
         };
 
-        // تحميل العناصر المميزة إذا وُجد السلايدر
-        if (document.querySelector('.slider')) {
+        // تحميل العناصر المميزة للسلايدر
+        if (document.querySelector('.slider'))
             loadFeaturedItems(sortedData.featured.slice(0, config.featured.count));
-        }
 
-        // تحميل أحدث الأفلام إذا وُجدت شبكة الأفلام
-        if (document.querySelector('.movies-grid')) {
+        // تحميل قائمة آخر الأفلام
+        if (document.querySelector('.movies-grid'))
             loadLatestMovies(sortedData.movies);
-        }
 
-        // تحميل أحدث المسلسلات إذا وُجدت شبكة المسلسلات
-        if (document.querySelector('.series-grid')) {
+        // تحميل قائمة آخر المسلسلات
+        if (document.querySelector('.series-grid'))
             loadLatestSeries(sortedData.series);
-        }
     } catch (error) {
         console.error('Error loading data:', error);
     }
 }
 
-// تحميل وعرض العناصر المميزة
+/********************************************************************
+ *            قسم تحميل السلايدر الرئيسي (العناصر المميزة)            *
+ *  (ينشئ عناصر السلايدر ويعدل العنوان حسب وجود صورة أم نص العنوان)    *
+ ********************************************************************/
 function loadFeaturedItems(featured) {
     const slider = document.querySelector('.slider');
     if (!slider) return;
     slider.innerHTML = '';
 
     featured.forEach(item => {
+        // تفضيل صورة العنوان إذا وُجدت، وإلا اظهر نص العنوان
+        let titleContent;
+        if (item['imgname'] && String(item['imgname']).trim() !== '') {
+            titleContent = `
+                <img 
+                    src="${item['imgname']}" 
+                    alt="${item.title}" 
+                    class="slide-title-img" 
+                    style="
+                        width: 150px; 
+                        max-width: 200px; 
+                        margin-bottom: 10px;
+                    " 
+                    onload="
+                        if(window.innerWidth > 767) 
+                            this.style.width='250px';
+                        else 
+                            this.style.width='150px';
+                    "
+                >
+            `;
+        } else {
+            titleContent = `<h2>${item.title}</h2>`;
+        }
+
+        // type label (Movie or Series)
+        let typeLabel = item.seasons ? 'Series' : 'Movie';
+        let ratingValue = item.rating !== undefined ? item.rating : '--';
+        let durationValue = item.duration ? item.duration : '--';
+
         const slide = document.createElement('div');
         slide.className = 'slide';
         slide.innerHTML = `
             <img src="${item.backdrop}" alt="${item.title}" loading="lazy">
             <div class="slide-content">
-                <h2>${item.title}</h2>
-                <p class="description">${item.description}</p>
-                <button class="watch-btn" aria-label="شاهد ${item.title}" onclick="event.stopPropagation(); window.location.href='content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}'">
-                    <i class="fas fa-play"></i>
-                    Watch Now
-                </button>
+                ${titleContent}
+                <p class="description" style="
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size:1.45rem;
+                    font-family:'Lamahki', 'Tajawal', Arial, sans-serif;
+                    font-weight:bold;
+                    letter-spacing:0.03em;
+                    max-height:3.1em;
+                    line-height:1.55;
+                ">${item.description}</p>
+                <div class="slide-meta" style="
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 12px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                ">
+                    <span class="type-label" style="
+                        font-weight: bold;
+                        color: #${item.seasons ? '00aeff' : 'ff0000'};
+                        background: rgba(255,255,255,0.12);
+                        padding: 6px 10px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+                        font-size: 0.93rem;
+                        min-width: 78px;
+                        max-width: 120px;
+                        height: 30px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        backdrop-filter: blur(6px);
+                        -webkit-backdrop-filter: blur(6px);
+                    ">${typeLabel}</span>
+                    <span class="rating0" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(255,255,255,0.12);
+                        padding: 6px 10px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+                        font-size: 0.93rem;
+                        min-width: 78px;
+                        max-width: 120px;
+                        height: 30px;
+                        text-align: center;
+                        backdrop-filter: blur(6px);
+                        -webkit-backdrop-filter: blur(6px);
+                    ">
+                        <i class="fas fa-star" style="color: gold; margin-inline-end:4px; font-size:16px;"></i> ${ratingValue}
+                    </span>
+                    <span class="duration" style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(255,255,255,0.12);
+                        padding: 6px 10px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+                        font-size: 0.93rem;
+                        min-width: 78px;
+                        max-width: 120px;
+                        height: 30px;
+                        text-align: center;
+                        backdrop-filter: blur(6px);
+                        -webkit-backdrop-filter: blur(6px);
+                    ">
+                        <i class="fas fa-clock" style="margin-inline-end:4px; font-size:15px;"></i> ${durationValue}
+                    </span>
+                </div>
+                <div class="buttonslid">
+                    ${item.seasons ? '' : `
+                    <button class="watch-btn" aria-label="Watch ${item.title}" onclick="event.stopPropagation();">
+                        <i class="fas fa-play"></i>
+                        Watch Now
+                    </button>
+                    `}
+                    <button class="more-info-btn" aria-label="More info about ${item.title}" onclick="event.stopPropagation(); window.location.href='content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}#more-info'">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
             </div>
         `;
         slider.appendChild(slide);
@@ -181,7 +402,10 @@ function loadFeaturedItems(featured) {
     startAutoSlide();
 }
 
-// إنشاء نقاط التنقل إذا وُجدت الحاوية
+/********************************************************************
+ *                إنشاء نقاط تنقل السلايدر (الدوتس)                  *
+ *  (لكل عنصر سلايدر نقطة يمكن النقر عليها والتنقل، مع شريط تقدم)     *
+ ********************************************************************/
 function createDots(count) {
     const dotsContainer = document.querySelector('.slider-dots');
     if (!dotsContainer) return;
@@ -200,110 +424,13 @@ function createDots(count) {
         });
         dotsContainer.appendChild(dot);
     }
-    // بدء شريط التقدم لأول نقطة
-    startDotProgress();
+    startDotProgress(); // بدء شريط التقدم لأول نقطة
 }
 
-function loadLatestMovies(movies) {
-    const moviesGrid = document.querySelector('.movies-grid');
-    if (!moviesGrid) return;
 
-    moviesGrid.innerHTML = '';
-
-    // ترتيب الأفلام حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
-    const latestMovies = [...movies]
-        .sort((a, b) => {
-            const getYear = (y) => {
-                if (y === undefined || y === null) return NaN;
-                const s = String(y);
-                const yy = parseInt(s.slice(0, 4), 10);
-                return isNaN(yy) ? NaN : yy;
-            };
-            return getYear(b.year) - getYear(a.year);
-        })
-        .slice(0, config.movies.count);
-
-    latestMovies.forEach(movie => {
-        const card = document.createElement('div');
-        card.className = 'movie-card';
-        card.setAttribute('data-id', movie.id);
-        card.setAttribute('data-type', 'movie');
-        card.innerHTML = `
-            <img src="${movie.image}" alt="${movie.title}">
-            <div class="movie-info">
-                <h3>${movie.title}</h3>
-                <p class="genre">${movie.genre}</p>
-                <div class="movie-details">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <span>${movie.rating}</span>
-                    </div>
-                    <div class="duration">
-                        <i class="fas fa-clock"></i>
-                        <span>${movie.duration}</span>
-                    </div>
-                </div>
-            </div>
-            <button class="play-btn" data-id="${movie.id}" data-type="movie">
-                <i class="fas fa-play"></i>
-            </button>
-        `;
-        moviesGrid.appendChild(card);
-    });
-}
-
-function loadLatestSeries(series) {
-    const seriesGrid = document.querySelector('.series-grid');
-    if (!seriesGrid) return;
-
-    seriesGrid.innerHTML = '';
-
-    // ترتيب المسلسلات حسب السنة (الأحدث أولاً) وأخذ العدد المحدد
-    const latestSeries = [...series]
-        .sort((a, b) => {
-            const getYear = (y) => {
-                if (y === undefined || y === null) return NaN;
-                const s = String(y);
-                const yy = parseInt(s.slice(0, 4), 10);
-                return isNaN(yy) ? NaN : yy;
-            };
-            return getYear(b.year) - getYear(a.year);
-        })
-        .slice(0, config.series.count);
-
-    latestSeries.forEach(show => {
-        const card = document.createElement('div');
-        card.className = 'series-card';
-        card.setAttribute('data-id', show.id);
-        card.setAttribute('data-type', 'series');
-        card.innerHTML = `
-            <div class="status-indicator ${show.status}">
-                <i class="fas ${show.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
-            </div>
-            <img src="${show.image}" alt="${show.title}">
-            <div class="series-info">
-                <h3>${show.title}</h3>
-                <div class="movie-details">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <span>${show.rating}</span>
-                    </div>
-                    <div class="duration">
-                        <i class="fas fa-clock"></i>
-                        <span>${show.duration}</span>
-                    </div>
-                </div>
-                <div class="episodes">${show.seasons} Seasons | ${show.episodes} Episodes</div>
-            </div>
-            <button class="play-btn" data-id="${show.id}" data-type="series">
-                <i class="fas fa-play"></i>
-            </button>
-        `;
-        seriesGrid.appendChild(card);
-    });
-}
-
-// دالة تحديث السلايدر
+/********************************************************************
+ *             دوال التحكم/التنقل في السلايدر (أسهم - دوتس)           *
+ ********************************************************************/
 function updateSlider() {
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
@@ -314,13 +441,13 @@ function updateSlider() {
 
     slides.forEach((slide, index) => {
         slide.style.transition = `opacity ${transitionDuration}ms ease-in-out`;
-        slide.style.opacity = index === currentSlide ? '1' : '0.5';
+        slide.style.opacity = (index === currentSlide ? '1' : '0.5');
     });
 
     updateDots();
 }
 
-// دالة تحديث النقاط
+// تحديث حالة النقاط الدلالية
 function updateDots() {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
@@ -329,26 +456,31 @@ function updateDots() {
     startDotProgress();
 }
 
+// الانتقال لسلايد محدد
 function goToSlide(n) {
     currentSlide = n;
     updateSlider();
 }
 
+// السلايد التالي
 function nextSlide() {
     const slides = document.querySelectorAll('.slide');
-    if (slides.length === 0) return;
+    if (!slides.length) return;
     currentSlide = (currentSlide + 1) % slides.length;
     updateSlider();
 }
 
+// السلايد السابق
 function prevSlide() {
     const slides = document.querySelectorAll('.slide');
-    if (slides.length === 0) return;
+    if (!slides.length) return;
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     updateSlider();
 }
 
-// بدء التحديث التلقائي
+/********************************************************************
+ *                إدارة التقدم التلقائي للسلايدر                      *
+ ********************************************************************/
 function startAutoSlide() {
     stopAutoSlide();
     remainingTime = slideDuration;
@@ -360,7 +492,6 @@ function startAutoSlide() {
     }, remainingTime);
 }
 
-// إيقاف التحديث التلقائي
 function stopAutoSlide() {
     if (slideInterval) {
         clearTimeout(slideInterval);
@@ -373,14 +504,18 @@ function stopAutoSlide() {
     }
 }
 
-// تحديث تهيئة الصفحة في أي صفحة HTML
+/********************************************************************
+ *    أحداث تحميل الصفحة وتهيئة السلايدر وعناصر التحكم والبطاقات       *
+ ********************************************************************/
 document.addEventListener('DOMContentLoaded', () => {
     loadHeaderFooter();
     initializeSearch();
     initializeUserMenu();
     loadData();
+    initializeGridNavigation();
+    // تم حذف initializePricingToggle بناءً على التعليمات
 
-    // Add click handlers for "View All" buttons إذا وُجدت
+    // ازرار "عرض الكل" في الأقسام
     document.querySelectorAll('.view-all').forEach(button => {
         button.addEventListener('click', () => {
             const section = button.closest('.content-section');
@@ -394,7 +529,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add slider controls إذا وُجدت
+    // التحكم بالسلايدر بالأسهم
     const sliderContainer = document.querySelector('.slider-container');
     const nextBtn = document.querySelector('.next-btn');
     const prevBtn = document.querySelector('.prev-btn');
@@ -403,7 +538,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', () => {
             stopAutoSlide();
             nextSlide();
-            // إعادة الضبط للمدة الكاملة عند التنقل اليدوي
             remainingTime = slideDuration;
             startAutoSlide();
         });
@@ -416,11 +550,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // إيقاف السلايدر عند المرور وإعادته عند الخروج أو السحب للموبايل
     if (sliderContainer) {
-        // إضافة مستمعي الأحداث للفأرة
+        // إيقاف تلقائي عند مرور الفأرة
         sliderContainer.addEventListener('mouseenter', stopAutoSlide);
         sliderContainer.addEventListener('mouseleave', () => {
-            // استئناف مع الوقت المتبقي
             slideStartTime = Date.now();
             resumeDotProgress();
             slideInterval = setTimeout(() => {
@@ -429,32 +563,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }, remainingTime);
         });
 
-        // إضافة دعم السحب للموبايل
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // دعم السحب يمين/يسار لكل من الاجهزة المكتبية والموبايل - حركة واحدة = سلايد واحد
+        let dragStartX = 0;
+        let dragging = false;
 
+        // لمس (موبايل)
         sliderContainer.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            stopAutoSlide();
+            if (e.touches.length === 1) {
+                dragStartX = e.touches[0].clientX;
+                dragging = true;
+                stopAutoSlide();
+            }
+        });
+
+        sliderContainer.addEventListener('touchmove', (e) => {
+            if (!dragging) return;
+            // ممكن استخدام لاحقا لعمل FX/جر للشرائح (حاليا غير مستخدم)
         });
 
         sliderContainer.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
+            if (!dragging) return;
+            let dragEndX = e.changedTouches[0].clientX;
+            let diff = dragEndX - dragStartX;
+            const threshold = 50;
+            if (diff > threshold) {
+                prevSlide();
+            } else if (diff < -threshold) {
+                nextSlide();
+            }
+            dragging = false;
             startAutoSlide();
         });
 
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            if (touchEndX < touchStartX - swipeThreshold) {
-                nextSlide();
-            } else if (touchEndX > touchStartX + swipeThreshold) {
+        sliderContainer.addEventListener('touchcancel', () => {
+            dragging = false;
+            startAutoSlide();
+        });
+
+        // سحب بالفأرة (دسكتوب)
+        let mouseDown = false;
+        let mouseStartX = 0;
+
+        sliderContainer.addEventListener('mousedown', (e) => {
+            mouseDown = true;
+            mouseStartX = e.clientX;
+            stopAutoSlide();
+        });
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            // ممكن: عمل تأثيرجر خفيف (اختياري غير مطلوب حسب الطلب الحالي)
+        });
+
+        sliderContainer.addEventListener('mouseup', (e) => {
+            if (!mouseDown) return;
+            let mouseEndX = e.clientX;
+            let diff = mouseEndX - mouseStartX;
+            const threshold = 50;
+            if (diff > threshold) {
                 prevSlide();
+            } else if (diff < -threshold) {
+                nextSlide();
             }
-        }
+            mouseDown = false;
+            startAutoSlide();
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            mouseDown = false;
+            // لا تبدأ أو توقف السلايد حتى الإفلات
+        });
+
     }
 
-    // Add click event listeners to all content cards إذا وُجدت
+    // فتح صفحة تفاصيل المحتوى عند الضغط على البطاقة ما عدا زر التشغيل
     document.querySelectorAll('.movie-card, .series-card').forEach(card => {
         card.addEventListener('click', function(e) {
             if (!e.target.closest('.play-btn')) {
@@ -465,7 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add click event listeners to all play buttons إذا وُجدت
+    // المشغل (زر التشغيل الصغير)
     document.querySelectorAll('.play-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -476,7 +657,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// إدارة شريط التقدم داخل النقاط
+/********************************************************************
+ * إدارة تقدم شريط الدوت النشط - دوال بدء/توقيف/استئناف التحريك     *
+ ********************************************************************/
 function startDotProgress() {
     const dots = document.querySelectorAll('.dot');
     if (!dots.length) return;
@@ -492,12 +675,10 @@ function startDotProgress() {
     const bar = activeDot.querySelector('.progress');
     if (!bar) return;
 
-    // نبدأ ممتلئاً 100% ثم نقلل إلى 0% خلال الوقت المتبقي
-    // إعادة الضبط أولاً
+    // يبدأ ممتلئ ثم يقل للـ 0% حسب الوقت المتبقي
     bar.style.transition = 'none';
     bar.style.width = '100%';
-    // إجبار إعادة التدفق لضمان تطبيق الانتقال
-    void bar.offsetWidth; // eslint-disable-line no-unused-expressions
+    void bar.offsetWidth;
     const durationMs = Math.max(0, remainingTime || slideDuration);
     bar.style.transition = `width ${durationMs}ms linear`;
     bar.style.width = '0%';
@@ -508,7 +689,6 @@ function pauseDotProgress() {
     if (!activeDot) return;
     const bar = activeDot.querySelector('.progress');
     if (!bar) return;
-    // احسب العرض الحالي وتوقف
     const computed = getComputedStyle(bar);
     const currentWidth = computed.width;
     bar.style.transition = 'none';
@@ -520,21 +700,21 @@ function resumeDotProgress() {
     if (!activeDot) return;
     const bar = activeDot.querySelector('.progress');
     if (!bar) return;
-    // استكمال الانكماش إلى 0% خلال الوقت المتبقي
-    void bar.offsetWidth; // force reflow
+    void bar.offsetWidth;
     const durationMs = Math.max(0, remainingTime || slideDuration);
     bar.style.transition = `width ${durationMs}ms linear`;
     bar.style.width = '0%';
 }
 
-// تحميل جميع الأفلام إذا وُجدت شبكة الأفلام
+/********************************************************************
+ *        تحميل كافة الأفلام لجميع صفحات الأفلام (عرض الكل)           *
+ ********************************************************************/
 function loadAllMovies(movies) {
     const moviesGrid = document.querySelector('.movies-grid');
     if (!moviesGrid) return;
-
     moviesGrid.innerHTML = '';
 
-    // ترتيب الأفلام حسب الـ id تنازلياً
+    // ترتيب الأفلام حسب ID تنازلي
     const sortedMovies = [...movies].sort((a, b) => b.id - a.id);
 
     sortedMovies.forEach(movie => {
@@ -545,17 +725,13 @@ function loadAllMovies(movies) {
         card.innerHTML = `
             <div class="type-indicator movie">فيلم</div>
             <img src="${movie.image}" alt="${movie.title}">
+            <h3 class="movie-name">movie</h3>
             <div class="movie-info">
                 <h3>${movie.title}</h3>
-                <p class="genre">${movie.genre}</p>
                 <div class="movie-details">
                     <div class="rating">
                         <i class="fas fa-star"></i>
                         <span>${movie.rating}</span>
-                    </div>
-                    <div class="duration">
-                        <i class="fas fa-clock"></i>
-                        <span>${movie.duration}</span>
                     </div>
                 </div>
             </div>
@@ -567,14 +743,15 @@ function loadAllMovies(movies) {
     });
 }
 
-// تحميل جميع المسلسلات إذا وُجدت شبكة المسلسلات
+/********************************************************************
+ *     تحميل كافة المسلسلات لجميع صفحات المسلسلات (عرض الكل)          *
+ ********************************************************************/
 function loadAllSeries(series) {
     const seriesGrid = document.querySelector('.series-grid');
     if (!seriesGrid) return;
-
     seriesGrid.innerHTML = '';
 
-    // ترتيب المسلسلات حسب الـ id تنازلياً
+    // ترتيب المسلسلات حسب ID تنازلي
     const sortedSeries = [...series].sort((a, b) => b.id - a.id);
 
     sortedSeries.forEach(show => {
@@ -586,6 +763,7 @@ function loadAllSeries(series) {
             <div class="type-indicator series">مسلسل</div>
             <div class="status-indicator ${show.status}"></div>
             <img src="${show.image}" alt="${show.title}">
+            <h3 class="series-name">Series</h3>
             <div class="series-info">
                 <h3>${show.title}</h3>
                 <p class="genre">${show.genre}</p>
@@ -601,4 +779,81 @@ function loadAllSeries(series) {
         `;
         seriesGrid.appendChild(card);
     });
-} 
+}
+
+/********************************************************************
+ *                تهيئة أزرار التنقل للشبكات                        *
+ ********************************************************************/
+function initializeGridNavigation() {
+    // إضافة مستمعي الأحداث لأزرار التنقل
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetSelector = this.getAttribute('data-target');
+            const grid = document.querySelector(targetSelector);
+            if (!grid) return;
+
+            const isNext = this.classList.contains('next-btn-grid');
+            const scrollAmount = 1000; // مقدار التمرير بالبكسل (تمت زيادته)
+            
+            // إضافة تأثير بصري عند النقر
+            this.style.transform = 'translateY(-50%) scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-50%) scale(1)';
+            }, 150);
+            
+            if (isNext) {
+                grid.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else {
+                grid.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // إظهار/إخفاء أزرار التنقل حسب موضع التمرير
+    document.querySelectorAll('.best-rated-grid, .movies-grid, .popular-movies-grid, .series-grid, .popular-series-grid, .latest-episodes-grid, .similar-grid').forEach(grid => {
+        // بداية: جعل زر السابق غير نشط عند بدء التشغيل فقط
+        const container = grid.closest('.grid-container');
+        if (container) {
+            const prevBtn = container.querySelector('.prev-btn-grid');
+            if (prevBtn) {
+                prevBtn.style.opacity = '0.5';
+                prevBtn.style.pointerEvents = 'none';
+            }
+        }
+        // نهاية: زر السابق فقط
+
+        grid.addEventListener('scroll', function() {
+            const container = this.closest('.grid-container');
+            if (!container) return;
+            
+            const prevBtn = container.querySelector('.prev-btn-grid');
+            const nextBtn = container.querySelector('.next-btn-grid');
+            
+            if (prevBtn && nextBtn) {
+                // إظهار/إخفاء زر السابق
+                if (this.scrollLeft <= 10) {
+                    prevBtn.style.opacity = '0.5';
+                    prevBtn.style.pointerEvents = 'none';
+                } else {
+                    prevBtn.style.opacity = '1';
+                    prevBtn.style.pointerEvents = 'auto';
+                }
+                
+                // إظهار/إخفاء زر التالي
+                if (this.scrollLeft >= this.scrollWidth - this.clientWidth - 10) {
+                    nextBtn.style.opacity = '0.5';
+                    nextBtn.style.pointerEvents = 'none';
+                } else {
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.pointerEvents = 'auto';
+                }
+            }
+        });
+    });
+}

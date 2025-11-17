@@ -11,6 +11,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        .similar-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+        }
+
+        .similar-grid::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, and Opera */
+        }
+
+        .similar-grid>* {
+            min-width: 250px;
+            flex: 1 1 200px;
+            width: auto;
+            max-width: 1fr;
+        }
+
+        @media screen and (max-width: 750px) {
+            .similar-grid>* {
+                min-width: 150px;
+            }
+        }
+
         /* Mobile Layout Styles */
         @media screen and (max-width: 768px) {
             .hero-section {
@@ -583,6 +614,9 @@
                 </div>
                 <div class="search-input-container">
                     <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
+                    <div class="search-results-dropdown">
+                        <!-- سيتم تعبئة نتائج البحث هنا -->
+                    </div>
                 </div>
             </div>
             <div class="name-wab" style="cursor:pointer;" onclick="window.location.href='index.html'">
@@ -677,16 +711,41 @@
 
                         <div class="content-info">
                             <div class="content-header">
-                                <h1 id="contentTitle"></h1>
+                                <style>
+                                    @media screen and (max-width: 768px) {
+
+                                        #contentTitleArea,
+                                        .content-title-area-responsive {
+                                            justify-content: center !important;
+                                            text-align: center;
+                                        }
+                                    }
+                                </style>
+                                <div id="contentTitleArea"
+                                    style="display: flex; align-items: center; margin-bottom: 20px;"
+                                    class="content-title-area-responsive">
+                                    <span id="imgNameContainer">
+                                    </span>
+                                    <h1 id="contentTitle" style="margin: 0;"></h1>
+                                </div>
                                 <div class="content-meta">
                                     <span id="contentYear"></span>
                                     <span id="contentDuration"></span>
-                                    <div class="rating">
+                                    <div class="rating" style="
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            background: rgba(255, 215, 0, 0.1);
+                                            padding: 8px 15px;
+                                            border-radius: 18px;
+                                            border: 1px solid rgba(255, 215, 0, 0.2);
+                                            backdrop-filter: blur(5px);
+                                            color: rgb(255, 217, 0);
+                                        ">
                                         <div class="stars">
-                                            <h4 style="color: gold;">IMDb</h1>
+                                            <h4 style="color: gold; margin: 0;">IMDb</h4>
                                         </div>
-                                        <span id="contentRating" class="rating-value"
-                                            style="color: rgb(255, 217, 0);"></span>
+                                        <span id="contentRating" class="rating-value" style="color: gold;"></span>
                                     </div>
                                 </div>
                             </div>
@@ -759,10 +818,6 @@
                                 <div class="detail-card">
                                     <h3>Language</h3>
                                     <p id="contentLanguage"></p>
-                                </div>
-                                <div class="detail-card">
-                                    <h3>Country</h3>
-                                    <p id="contentCountry"></p>
                                 </div>
                                 <div class="detail-card">
                                     <h3>Age Rating</h3>
@@ -838,8 +893,16 @@
 
                         <!-- Similar Content Tab -->
                         <div class="tab-pane" id="similar">
-                            <div class="similar-grid">
-                                <!-- سيتم تعبئة المحتوى المشابه ديناميكياً -->
+                            <div class="grid-container">
+                                <button class="nav-btn prev-btn-grid" data-target=".similar-grid">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="similar-grid">
+                                    <!-- سيتم تعبئة المحتوى المشابه ديناميكياً -->
+                                </div>
+                                <button class="nav-btn next-btn-grid" data-target=".similar-grid">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
 
@@ -864,18 +927,18 @@
     </div>
     <script src="script.js"></script>
     <script type="module">
+        // ================== استيراد واعلان المتغيرات الأساسية ==================
         import DataManager from './dataManager.js';
-
         const dataManager = new DataManager();
         let currentContent = null;
-        let currentSeasonIdx = 0; // متغير لتتبع الموسم الحالي
+        let currentSeasonIdx = 0;
 
-        // استخراج المعرف والنوع من الرابط بالطريقة الجديدة
+        // ================== استخراج البيانات من الرابط ==================
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
         const type = params.get('type');
 
-        // دالة استخراج اللون السائد من الصورة
+        // ================== استخراج اللون السائد من صورة ==================
         function getDominantColor(imageUrl) {
             return new Promise((resolve) => {
                 const img = new Image();
@@ -886,43 +949,34 @@
                     canvas.width = img.width;
                     canvas.height = img.height;
                     ctx.drawImage(img, 0, 0);
-
                     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-                    let r = 0, g = 0, b = 0;
-                    let count = 0;
-
+                    let r = 0, g = 0, b = 0, count = 0;
                     for (let i = 0; i < imageData.length; i += 4) {
                         r += imageData[i];
                         g += imageData[i + 1];
                         b += imageData[i + 2];
                         count++;
                     }
-
                     r = Math.floor(r / count);
                     g = Math.floor(g / count);
                     b = Math.floor(b / count);
-
                     resolve({ r, g, b });
                 };
                 img.src = imageUrl;
             });
         }
 
-        // دالة التحكم في التبويبات
+        // =========== تحكم التبويبات ===========
         function setupTabs() {
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabPanes = document.querySelectorAll('.tab-pane');
-
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // إزالة التفعيل من جميع الأزرار والتبويبات
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     tabPanes.forEach(pane => {
                         pane.classList.remove('active');
                         pane.style.display = 'none';
                     });
-
-                    // تفعيل الزر والتبويب المطلوب
                     button.classList.add('active');
                     const tabId = button.getAttribute('data-tab');
                     const activePane = document.getElementById(tabId);
@@ -932,13 +986,9 @@
                     }
                 });
             });
-
-            // إظهار أول تبويب افتراضياً
             if (tabButtons.length > 0 && tabPanes.length > 0) {
                 tabButtons[0].click();
             }
-
-            // Wire Watch Now to open Episodes tab for series only
             const watchBtn = document.getElementById('watchNowBtn');
             if (watchBtn) {
                 watchBtn.addEventListener('click', (e) => {
@@ -946,7 +996,6 @@
                         const episodesTabBtn = document.querySelector('.tab-btn[data-tab="episodes"]');
                         if (episodesTabBtn) {
                             episodesTabBtn.click();
-                            // Scroll to episodes section smoothly
                             const episodesPane = document.getElementById('episodes');
                             if (episodesPane) {
                                 episodesPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -956,42 +1005,68 @@
                     }
                 });
             }
+            const seasonSelect = document.getElementById('seasonSelect');
+            if (seasonSelect) {
+                seasonSelect.addEventListener('change', (e) => {
+                    const episodesTabBtn = document.querySelector('.tab-btn[data-tab="episodes"]');
+                    if (episodesTabBtn) {
+                        episodesTabBtn.click();
+                        const episodesPane = document.getElementById('episodes');
+                        if (episodesPane) {
+                            episodesPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            }
         }
 
-        // دالة جلب وعرض بيانات المحتوى
+        // ================== جلب وعرض بيانات المحتوى ==================
         async function loadContent() {
             try {
-                // جلب البيانات من ملف data.json
                 const response = await fetch('data.json');
                 const data = await response.json();
 
-                // استخدام المتغيرات الجديدة id و type
                 let contentId = parseInt(id);
                 let contentType = type;
-
                 if (type === 'series') {
-                    // تحميل بيانات المسلسل
                     currentContent = data.series.find(series => series.id === contentId);
                 } else if (type === 'movie') {
-                    // تحميل بيانات الفيلم
                     currentContent = data.movies.find(movie => movie.id === contentId);
                 } else {
                     currentContent = null;
                 }
-
                 if (!currentContent) {
                     console.error('Content not found');
                     window.location.href = 'index.html';
                     return;
                 }
-
-                // تحديث عنوان الصفحة
                 document.title = `${currentContent.title} - CineStream`;
 
-                // تحديث تفاصيل المحتوى
+                // ============= [صورة الاسم] ===============
                 const backdropImage = document.getElementById('backdropImage');
                 const contentImage = document.getElementById('contentImage');
                 const contentTitle = document.getElementById('contentTitle');
+                const imgNameContainer = document.getElementById('imgNameContainer');
+
+                if (imgNameContainer) {
+                    imgNameContainer.innerHTML = '';
+                    if (currentContent.imgname && typeof currentContent.imgname === 'string' && currentContent.imgname.trim() !== '') {
+                        const img = document.createElement('img');
+                        img.src = currentContent.imgname;
+                        img.alt = currentContent.title;
+                        img.style.cssText = 'width:335px;object-fit:contain;border-radius:8px;margin-bottom: 20px;';
+                        img.onerror = function () {
+                            img.style.display = 'none';
+                            if (contentTitle) contentTitle.textContent = currentContent.title;
+                        };
+                        imgNameContainer.appendChild(img);
+                        if (contentTitle) contentTitle.textContent = '';
+                    } else {
+                        imgNameContainer.innerHTML = '';
+                        if (contentTitle) contentTitle.textContent = currentContent.title;
+                    }
+                }
+
                 const contentYear = document.getElementById('contentYear');
                 const contentYearTab = document.getElementById('contentYearTab');
                 const contentDuration = document.getElementById('contentDuration');
@@ -1007,60 +1082,38 @@
                 const contentAgeRating = document.getElementById('contentAgeRating');
 
                 if (backdropImage) backdropImage.src = currentContent.backdrop || currentContent.image;
-                if (contentImage) {
-                    contentImage.src = currentContent.image;
-                    contentImage.alt = currentContent.title;
-                }
-                if (contentTitle) contentTitle.textContent = currentContent.title;
+                if (contentImage) { contentImage.src = currentContent.image; contentImage.alt = currentContent.title; }
+
                 const displayYear = currentContent.year
                     ? (typeof currentContent.year === 'string' ? currentContent.year.slice(0, 4) : String(currentContent.year))
                     : '';
-                // في الهيدر نعرض السنة فقط
                 if (contentYear) contentYear.textContent = displayYear;
 
-                // في تبويب التفاصيل نعرض تاريخ الإصدار الكامل بالشكل: شهر (كامل) يوم, سنة
                 let displayFullReleaseDate = '';
                 function formatFullDate(dateObj) {
                     if (!(dateObj instanceof Date) || isNaN(dateObj)) return '';
-                    // مثال: January 5, 2024
                     const month = dateObj.toLocaleString('en-US', { month: 'long' });
                     const day = dateObj.getDate();
                     const year = dateObj.getFullYear();
                     return `${month} ${day}, ${year}`;
                 }
-
                 if (currentContent.releaseDate && String(currentContent.releaseDate).trim() !== '') {
                     const d = new Date(currentContent.releaseDate);
-                    if (!isNaN(d)) {
-                        displayFullReleaseDate = formatFullDate(d);
-                    } else {
-                        // إذا لم يكن تاريخ صالح، اعرض كما هو
-                        displayFullReleaseDate = String(currentContent.releaseDate);
-                    }
+                    displayFullReleaseDate = (!isNaN(d)) ? formatFullDate(d) : String(currentContent.releaseDate);
                 } else if (currentContent.year) {
                     if (typeof currentContent.year === 'string' && /^\d{4}-\d{2}-\d{2}/.test(currentContent.year)) {
-                        // year بصيغة yyyy-mm-dd
                         const d = new Date(currentContent.year.slice(0, 10));
-                        if (!isNaN(d)) {
-                            displayFullReleaseDate = formatFullDate(d);
-                        } else {
-                            displayFullReleaseDate = currentContent.year.slice(0, 10);
-                        }
+                        displayFullReleaseDate = (!isNaN(d)) ? formatFullDate(d) : currentContent.year.slice(0, 10);
                     } else {
-                        // فقط السنة متوفرة
                         const y = typeof currentContent.year === 'string' ? parseInt(currentContent.year.slice(0, 4), 10) : currentContent.year;
-                        if (y) {
-                            // استخدم 1 يناير كسنة افتراضية
-                            const d = new Date(y, 0, 1);
-                            displayFullReleaseDate = formatFullDate(d);
-                        } else {
-                            displayFullReleaseDate = '';
-                        }
+                        displayFullReleaseDate = y ? formatFullDate(new Date(y, 0, 1)) : '';
                     }
                 }
                 if (contentYearTab) contentYearTab.textContent = displayFullReleaseDate;
+
                 if (contentDuration) contentDuration.textContent = currentContent.duration || '';
                 if (contentDurationTab) contentDurationTab.textContent = currentContent.duration || '';
+
                 function renderGenres(targetEl, genreField) {
                     if (!targetEl) return;
                     targetEl.innerHTML = '';
@@ -1079,7 +1132,6 @@
                 renderGenres(contentGenre, currentContent.genre);
                 renderGenres(contentGenreTab, currentContent.genre);
 
-                // Genre chip click: navigate to the appropriate listing with preselected genre
                 document.querySelectorAll('.genre-chip').forEach(chip => {
                     chip.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -1088,37 +1140,14 @@
                         window.location.href = `${targetPage}?genre=${encodeURIComponent(g)}`;
                     });
                 });
+
                 if (contentRating) contentRating.textContent = currentContent.rating || '';
                 if (contentRatingTab) contentRatingTab.textContent = currentContent.rating || '';
 
-                // جلب اللغة
-                if (contentLanguage) {
-                    if (currentContent.language && currentContent.language !== '') {
-                        contentLanguage.textContent = currentContent.language;
-                    } else {
-                        contentLanguage.textContent = '';
-                    }
-                }
+                if (contentLanguage) contentLanguage.textContent = currentContent.language || '';
+                if (contentCountry) contentCountry.textContent = currentContent.country || '';
+                if (contentAgeRating) contentAgeRating.textContent = currentContent.ageRating || '';
 
-                // جلب الدولة
-                if (contentCountry) {
-                    if (currentContent.country && currentContent.country !== '') {
-                        contentCountry.textContent = currentContent.country;
-                    } else {
-                        contentCountry.textContent = '';
-                    }
-                }
-
-                // جلب التصنيف العمري
-                if (contentAgeRating) {
-                    if (currentContent.ageRating && currentContent.ageRating !== '') {
-                        contentAgeRating.textContent = currentContent.ageRating;
-                    } else {
-                        contentAgeRating.textContent = '';
-                    }
-                }
-
-                // تحقق من وجود وصف صالح للفيلم أو المسلسل
                 let descriptionText = '';
                 if (
                     typeof currentContent.description === 'string' &&
@@ -1134,7 +1163,6 @@
                 if (contentDescription) contentDescription.textContent = descriptionText;
                 if (contentDescriptionTab) contentDescriptionTab.textContent = descriptionText;
 
-                // إظهار تبويب الحلقات فقط للمسلسلات التي تحتوي على مواسم
                 const episodesTab = document.getElementById('episodesTab');
                 if (contentType === 'series' && currentContent.seasons && currentContent.seasons.length > 0) {
                     episodesTab.style.display = 'inline-block';
@@ -1143,37 +1171,25 @@
                     episodesTab.style.display = 'none';
                 }
 
-                // Update series specific details if it's a series
                 const seriesInfo = document.getElementById('seriesInfo');
                 if (contentType === 'series' && currentContent.seasons && currentContent.seasons.length > 0 && seriesInfo) {
                     seriesInfo.style.display = 'block';
-                    // حساب عدد المواسم وعدد الحلقات تلقائياً
                     const seasonsCount = currentContent.seasons.length;
                     const episodesCount = currentContent.seasons.reduce((sum, s) => sum + (s.episodes ? s.episodes.length : 0), 0);
                     const seriesMeta = document.querySelector('.series-meta');
                     if (seriesMeta) {
                         seriesMeta.innerHTML = `
-                            <span id="contentSeasons" style="background:#27ae60;color:#fff;display:inline-flex;align-items:center;gap:6px;">
-                                <i class="fas fa-layer-group"></i> ${seasonsCount} Seasons
-                            </span>
-                            <span id="contentEpisodes" style="background:#2980ef;color:#fff;display:inline-flex;align-items:center;gap:6px;">
-                                <i class="fas fa-clapperboard"></i> ${episodesCount} Episodes
-                            </span>
+                            <span id="contentSeasons" style="background:#27ae60;color:#fff;display:inline-flex;align-items:center;gap:6px;"><i class="fas fa-layer-group"></i> ${seasonsCount} Seasons</span>
+                            <span id="contentEpisodes" style="background:#2980ef;color:#fff;display:inline-flex;align-items:center;gap:6px;"><i class="fas fa-clapperboard"></i> ${episodesCount} Episodes</span>
                             <span id="contentStatus" class="${currentContent.status || 'unknown'}">${currentContent.status || 'Unknown'}</span>
                         `;
                     }
                 }
 
-                // Load similar content
                 await loadSimilarContent(currentContent, contentType);
-
-                // Load cast information
                 loadCastInfo(currentContent);
-
-                // Initialize tabs
                 setupTabs();
 
-                // Apply color theme
                 if (currentContent.image) {
                     const color = await getDominantColor(currentContent.image);
                     applyColorTheme(color);
@@ -1183,31 +1199,21 @@
             }
         }
 
-        // Initialize episodes functionality (بنية المواسم الجديدة)
+        // ================== إدارة المواسم والحلقات (للمسلسلات) ==================
         function initializeEpisodes(series) {
             const seasonSelect = document.getElementById('seasonSelect');
-            const episodesGrid = document.getElementById('episodesGrid');
             const seasonNavButtons = document.getElementById('seasonNavButtons');
-            const prevSeasonBtn = document.getElementById('prevSeasonBtn');
-            const nextSeasonBtn = document.getElementById('nextSeasonBtn');
-            const prevSeasonNumber = document.getElementById('prevSeasonNumber');
-            const nextSeasonNumber = document.getElementById('nextSeasonNumber');
 
-            // Clear existing options
             seasonSelect.innerHTML = '';
-
-            // Add season options from series.seasons
             series.seasons.forEach((season, idx) => {
                 const option = document.createElement('option');
                 option.value = idx;
-                // إذا كان season_number رقم، أضف كلمة Season قبله، إذا كان نصي لا تضف الكلمة
                 let seasonText = '';
                 if (!isNaN(season.season_number) && season.season_number !== '' && season.season_number !== null) {
                     seasonText = `Season ${season.season_number}`;
                 } else {
                     seasonText = `${season.season_number}`;
                 }
-                // إضافة نوع القسم (part) بجانب رقم الموسم إذا كان موجودًا
                 if (season.part && season.part !== '') {
                     seasonText += ` - Part ${season.part}`;
                 }
@@ -1215,34 +1221,35 @@
                 seasonSelect.appendChild(option);
             });
 
-            // Load episodes for first season by default
             if (series.seasons.length > 0) {
                 currentSeasonIdx = 0;
                 loadEpisodes(series, currentSeasonIdx);
             }
+            seasonNavButtons.style.display = (series.seasons.length > 1) ? 'flex' : 'none';
 
-            // Show/hide nav buttons
-            if (series.seasons.length > 1) {
-                seasonNavButtons.style.display = 'flex';
-            } else {
-                seasonNavButtons.style.display = 'none';
-            }
-
-            // عند تغيير الموسم
             seasonSelect.onchange = function () {
-                const selectedSeasonIdx = parseInt(this.value);
-                currentSeasonIdx = selectedSeasonIdx;
+                currentSeasonIdx = parseInt(this.value);
                 loadEpisodes(series, currentSeasonIdx);
                 updateSeasonNavButtons(series);
             };
 
-            // أزرار الانتقال
+            const prevSeasonBtn = document.getElementById('prevSeasonBtn');
+            const nextSeasonBtn = document.getElementById('nextSeasonBtn');
             prevSeasonBtn.onclick = function () {
                 if (currentSeasonIdx > 0) {
                     currentSeasonIdx--;
                     seasonSelect.value = currentSeasonIdx;
                     loadEpisodes(series, currentSeasonIdx);
                     updateSeasonNavButtons(series);
+
+                    const episodesTabBtn = document.querySelector('.tab-btn[data-tab="episodes"]');
+                    if (episodesTabBtn) {
+                        episodesTabBtn.click();
+                        const episodesPane = document.getElementById('episodes');
+                        if (episodesPane) {
+                            episodesPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
                 }
             };
             nextSeasonBtn.onclick = function () {
@@ -1251,25 +1258,41 @@
                     seasonSelect.value = currentSeasonIdx;
                     loadEpisodes(series, currentSeasonIdx);
                     updateSeasonNavButtons(series);
+
+                    const episodesTabBtn = document.querySelector('.tab-btn[data-tab="episodes"]');
+                    if (episodesTabBtn) {
+                        episodesTabBtn.click();
+                        const episodesPane = document.getElementById('episodes');
+                        if (episodesPane) {
+                            episodesPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
                 }
             };
-
-            // تحديث حالة الأزرار عند البداية
             updateSeasonNavButtons(series);
         }
 
-        // تحديث تفعيل أزرار المواسم وتغيير النص إلى رقم الموسم
+        // دالة التمرير إلى أول حلقة في الشبكة
+        function scrollToFirstEpisode() {
+            setTimeout(() => {
+                const episodesGrid = document.getElementById('episodesGrid');
+                if (!episodesGrid) return;
+                const firstCard = episodesGrid.querySelector('.season-selector');
+                if (firstCard) {
+                    firstCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    episodesGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 25);
+        }
+
         function updateSeasonNavButtons(series) {
             const prevSeasonBtn = document.getElementById('prevSeasonBtn');
             const nextSeasonBtn = document.getElementById('nextSeasonBtn');
             const prevSeasonNumber = document.getElementById('prevSeasonNumber');
             const nextSeasonNumber = document.getElementById('nextSeasonNumber');
-
-            // أزرار التفعيل
             prevSeasonBtn.disabled = (currentSeasonIdx === 0);
             nextSeasonBtn.disabled = (currentSeasonIdx === series.seasons.length - 1);
-
-            // Helper to get season text (number and part), using same logic as elsewhere
             function getSeasonText(season) {
                 let seasonText = '';
                 if (!isNaN(season.season_number) && season.season_number !== '' && season.season_number !== null) {
@@ -1282,21 +1305,10 @@
                 }
                 return seasonText;
             }
-
-            // أرقام المواسم مع نوع القسم (part) إذا وجد
-            if (currentSeasonIdx > 0) {
-                prevSeasonNumber.textContent = getSeasonText(series.seasons[currentSeasonIdx - 1]);
-            } else {
-                prevSeasonNumber.textContent = '';
-            }
-            if (currentSeasonIdx < series.seasons.length - 1) {
-                nextSeasonNumber.textContent = getSeasonText(series.seasons[currentSeasonIdx + 1]);
-            } else {
-                nextSeasonNumber.textContent = '';
-            }
+            prevSeasonNumber.textContent = (currentSeasonIdx > 0) ? getSeasonText(series.seasons[currentSeasonIdx - 1]) : '';
+            nextSeasonNumber.textContent = (currentSeasonIdx < series.seasons.length - 1) ? getSeasonText(series.seasons[currentSeasonIdx + 1]) : '';
         }
 
-        // Load episodes for selected season (بنية المواسم الجديدة)
         function loadEpisodes(series, seasonIdx) {
             const episodesGrid = document.getElementById('episodesGrid');
             const season = series.seasons[seasonIdx];
@@ -1304,142 +1316,204 @@
                 episodesGrid.innerHTML = `<div class="no-episodes"><i class="fas fa-tv"></i><h3>No Episodes Available</h3><p>Episodes for this season are not available yet.</p></div>`;
                 return;
             }
-            displayEpisodes(season.episodes);
+            displayEpisodes(season.episodes, season, seasonIdx);
         }
 
-        // Display episodes in the grid
-        function displayEpisodes(episodes) {
+        // ============== displayEpisodes مع منطق S2.E20 ∙ Episode #2.20 اذا لم يوجد عنوان ==========
+        function displayEpisodes(episodes, season, seasonIdx) {
             const episodesGrid = document.getElementById('episodesGrid');
             episodesGrid.innerHTML = '';
-
             episodes.forEach((episode, idx) => {
                 const hasTitle = episode.title && episode.title.trim() !== '';
                 const hasDescription = episode.description && episode.description.trim() !== '';
                 const hasReleaseDate = episode.addedDate && episode.addedDate.trim() !== '' && episode.addedDate !== 'TBA';
 
-                // رقم الحلقة من episode.number إذا كان موجوداً وصحيحاً، وإلا idx+1
-                let episodeNumber = (typeof episode.number === 'number' && !isNaN(episode.number)) ? episode.number : (parseInt(episode.number, 10) || (idx + 1));
-                const episodeTitle = hasTitle ? `${episodeNumber}. ${episode.title}` : `Episode ${episodeNumber}`;
-                const episodeDescription = hasDescription ? episode.description : '';
+                let episodeNumber = (typeof episode.number === 'number' && !isNaN(episode.number))
+                    ? episode.number : (parseInt(episode.number, 10) || (idx + 1));
+                let seasonNumber = 1;
+                if (season && typeof season.season_number !== 'undefined' && season.season_number !== null && season.season_number !== '') {
+                    seasonNumber = season.season_number;
+                } else if (typeof currentSeasonIdx !== 'undefined') {
+                    seasonNumber = currentSeasonIdx + 1;
+                }
 
-                // تحديد التاريخ والنوع
-                let episodeDate = '';
-                let actionsHTML = '';
+                const isSpecial = (season && (season.isSpecial || season.special)) || (episode.isSpecial || episode.special);
+
+                let episodeShortNum = '';
+                if (isSpecial) {
+                    episodeShortNum = `SP${episodeNumber}`;
+                } else {
+                    episodeShortNum = `S${seasonNumber}.E${episodeNumber}`;
+                }
+                let episodeHashNum = `${episodeNumber}`;
+
+                let episodeTitle = '';
+                if (hasTitle) {
+                    episodeTitle = `${episodeShortNum} &bull; ${episode.title}`;
+                } else {
+                    if (isSpecial) {
+                        episodeTitle = `${episodeShortNum}`;
+                    } else {
+                        episodeTitle = `${episodeShortNum} &bull; Episode ${episodeHashNum}`;
+                    }
+                }
+
+                const episodeDescription = hasDescription ? episode.description : '';
+                let episodeDate = '', actionsHTML = '';
                 const now = new Date();
 
+                let formattedDate = '';
                 if (hasReleaseDate) {
                     const releaseDate = new Date(episode.addedDate);
+                    formattedDate = releaseDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
                     const daysDiff = Math.ceil((releaseDate - now) / (1000 * 60 * 60 * 24));
-
-                    const formattedDate = releaseDate.toLocaleDateString('en-US', {
-                        month: 'long',
-                        day: 'numeric',
-                        year: 'numeric'
-                    });
-
                     episodeDate = `<p class="episode-release-date"> ${formattedDate}</p>`;
-
                     if (daysDiff <= 0) {
-                        // تاريخ مضى أو اليوم - عرض أزرار التشغيل والتنزيل
                         actionsHTML = `
-                    <button class="episode-play-btn" onclick="event.stopPropagation(); playEpisode(${JSON.stringify(episode).replace(/"/g, '&quot;')})">
-                        <i class="fas fa-play"></i>
-                        Play
-                    </button>
-                    <button class="episode-download-btn"
-                        onclick="event.stopPropagation(); window.location.href='download.html?magnet=' + encodeURIComponent(episode.download_url || episode.video_url || '')">
-                        <i class="fas fa-download"></i>
-                        Download
-                    </button>
-                    <button class="episode-viewed-btn"
-                        style="
-                               display: flex; align-items: center; justify-content: center; width: 100%;">
-                        <i class="fas fa-eye"></i>
-                        Viewed
-                    </button>
-                    <button class="episode-rate-btn"
-                        onclick="event.stopPropagation(); showEpisodeRatingModal(${idx})"
-                        style="
-                               display: flex; align-items: center; justify-content: center; width: 100%;">
-                        <i class="fas fa-star"></i>
-                        Rate
-                    </button>
-                `;
+                        <button class="episode-play-btn"
+                                style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                                <div class="rating" style="display:flex; align-items:center; gap:4px;">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                            </button>
+                            <button class="episode-viewed-btn" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        `;
                     } else if (daysDiff <= 14) {
-                        // أقل من أسبوعين
                         actionsHTML = `
-                    <button class="episode-upcoming-btn" disabled
-                        style="background: green; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
-                               font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                               display: flex; align-items: center; justify-content: center; width: 100%;">
-                        Upcoming
-                    </button>
-                `;
+                            <button class="episode-upcoming-btn" disabled
+                                style="background: green; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
+                                    font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                                    display: flex; align-items: center; justify-content: center; width: 100%;">
+                                Upcoming
+                            </button>
+                        `;
                     } else {
-                        // أكثر من أسبوعين
                         actionsHTML = `
-                    <button class="episode-upcoming-btn" disabled
-                        style="background: #0099ff; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
-                               font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                               display: flex; align-items: center; justify-content: center; width: 100%;">
-                        Soon
-                    </button>
-                `;
+                            <button class="episode-upcoming-btn" disabled
+                                style="background: #0099ff; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
+                                    font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                                    display: flex; align-items: center; justify-content: center; width: 100%;">
+                                Soon
+                            </button>
+                        `;
                     }
                 } else {
-                    // تاريخ غير معروف
                     episodeDate = `<p class="episode-release-date" style="color: gray;"></p>`;
                     actionsHTML = `
-                <button class="episode-upcoming-btn" disabled
-                    style="background: gray; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
-                           font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                           display: flex; align-items: center; justify-content: center; width: 100%;">
-                    Unknown
-                </button>
-            `;
+                        <button class="episode-upcoming-btn" disabled
+                            style="background: gray; color: #fff; border: none; border-radius: 8px; padding: 8px 24px;
+                                font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                                display: flex; align-items: center; justify-content: center; width: 100%;">
+                            Unknown
+                        </button>
+                    `;
                 }
 
                 const episodeCard = document.createElement('div');
                 episodeCard.className = 'episode-card';
+                episodeCard.style.position = "relative";
 
-                // تفعيل المشغل فقط إذا كان متاحًا التشغيل
-                episodeCard.onclick = () => {
-                    if (hasReleaseDate && new Date(episode.addedDate) <= now) {
-                        playEpisode(episode);
+                // ========== عرض/إخفاء البطاقة عند الضغط على بطاقة الحلقة ==========
+
+                // popover متغير لإدارة بطاقة المعلومات
+                let popoverDiv = null;
+
+                // لإدارة الاستماع على الضغط خارج البطاقة
+                let outsideClickHandler = null;
+
+                function removePopover() {
+                    if (popoverDiv && popoverDiv.parentNode) {
+                        popoverDiv.parentNode.removeChild(popoverDiv);
+                        popoverDiv = null;
                     }
-                };
-
-                let ratingHTML = '';
-                if (typeof episode.rating !== 'undefined' && episode.rating !== null && episode.rating !== '') {
-                    ratingHTML = `
-                        <div class="episode-rating" style="margin: 6px 0 0 0; color: #ffd93d; font-weight: bold; font-size: 1.05em;">
-                            <i class="fas fa-star" style="color: #ffd93d; margin-inline-end: 4px;"></i>
-                            ${episode.rating}
-                        </div>
-                    `;
+                    if (outsideClickHandler) {
+                        document.removeEventListener('mousedown', outsideClickHandler, true);
+                        outsideClickHandler = null;
+                    }
                 }
 
-                episodeCard.innerHTML = `
-            <div class="episode-image-container">
-                <img src="${episode.image}" alt="${episodeTitle}" class="episode-image"
-                    onerror="this.onerror=null; this.src='https://cdn-icons-png.freepik.com/512/13434/13434998.png?ga=GA1.1.111088102.1753586924';
-                             this.style.width='120px'; this.style.height='120px'; this.style.objectFit='contain';
-                             this.style.display='block'; this.style.margin='40px auto 0 auto'; this.style.borderRadius='16px';">
-            </div>
-            <div class="episode-content">
-                <h3 class="episode-title">${episodeTitle}</h3>
-                ${episodeDate}
-                <p class="episode-description">${episodeDescription}</p>
-                ${ratingHTML}
-                <div class="episode-actions">
-                    ${actionsHTML}
-                </div>
-            </div>
-        `;
+                function showPopover() {
+                    removePopover();
+                    popoverDiv = createEpisodePopoverWithCloseAndRating(episode, episodeNumber, episodeCard, season, seasonIdx, idx);
+                    episodeCard.appendChild(popoverDiv);
 
+                    // إغلاق البطاقة عند الضغط خارجها
+                    outsideClickHandler = function (event) {
+                        // إذا لم يكن الضغط داخل البطاقة نفسها، قم بإزالة البطاقة
+                        if (!episodeCard.contains(event.target)) {
+                            removePopover();
+                        }
+                    };
+                    // نستخدم capture mode لمنع تعارضات bubbling الأخيرة
+                    setTimeout(() => {
+                        document.addEventListener('mousedown', outsideClickHandler, true);
+                    }, 0);
+                }
+
+                // عند أول ضغطة تظهر المعلومات, عند الضغطة الثانية تختفي
+                episodeCard.addEventListener('click', (e) => {
+                    // في حال الضغط على أزرار أخرى، لا نتصرف (نسمح للأزرار تنفذ عملها الطبيعي)
+                    if (
+                        e.target.closest('.episode-play-btn') ||
+                        e.target.closest('.episode-viewed-btn') ||
+                        e.target.closest('.episode-rate-btn') ||
+                        e.target.closest('.episode-download-btn')
+                    ) {
+                        return;
+                    }
+
+                    // إذا البطاقة مفتوحة أغلقها، إذا مغلقة افتحها
+                    if (popoverDiv) {
+                        removePopover();
+                    } else {
+                        showPopover();
+                    }
+                    e.stopPropagation();
+                });
+
+                // محتوى البطاقة
+                let imageContainerHTML = `
+                    <div class="episode-image-container" style="position:relative;">
+                        <img src="${episode.image}" alt="${episodeTitle}" class="episode-image"
+                        onerror="this.onerror=null; this.src='https://cdn-icons-png.freepik.com/512/13434/13434998.png?ga=GA1.1.111088102.1753586924';
+                                this.style.width='120px'; this.style.height='120px'; this.style.objectFit='contain';
+                                this.style.display='block'; this.style.margin='40px auto 0 auto'; this.style.borderRadius='16px';">
+                    </div>
+                `;
+
+                episodeCard.innerHTML = `
+                    ${imageContainerHTML}
+                    <div class="episode-content">
+                        <h3 class="episode-title">${episodeTitle}</h3>
+                        <div class="episode-actions">
+                            ${actionsHTML}
+                        </div>
+                    </div>
+                `;
                 episodesGrid.appendChild(episodeCard);
 
-                // Wire up Viewed toggle and initialize state
+                // إضافة event listener لزر المشاهدة (episode-play-btn) لإظهار إشعار إذا لم يكن مسجلاً الدخول
+                const playBtn = episodeCard.querySelector('.episode-play-btn');
+                if (playBtn) {
+                    playBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (!isAuthenticated()) {
+                            showToast('Please login to watch the episodes');
+                        } else {
+                        }
+                    });
+                }
+
+                const downloadBtn = episodeCard.querySelector('.episode-download-btn');
+                if (downloadBtn) {
+                    downloadBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                }
+
+                // تفعيل زر المشاهدة كمشاهدة (toggle viewed)
                 const viewedBtn = episodeCard.querySelector('.episode-viewed-btn');
                 if (viewedBtn) {
                     const episodeKey = getEpisodeStorageKey(currentContent?.id, currentSeasonIdx, idx);
@@ -1460,17 +1534,170 @@
             });
         }
 
+        // ========= popover تظهر بالضغط وتتضمن زر اغلاق في الزاوية العلوية =========
+        // وتعرض رقم الحلقة والعنوان والوصف والتاريخ وتقييم المشاهد
+        function createEpisodePopoverWithCloseAndRating(episode, episodeNumber, cardEl, season, seasonIdx, epIdx) {
+            const popover = document.createElement('div');
+            popover.className = 'episode-info-popover';
+            Object.assign(popover.style, {
+                position: 'absolute',
+                top: '416px',
+                left: '50%',
+                transform: 'translate(-50%,-110%) scale(0.97)',
+                background: '#23262e',
+                color: '#fff',
+                boxShadow: '0 6px 26px rgba(0,0,0,0.82)',
+                zIndex: 99,
+                padding: '20px 26px 16px 26px',
+                minWidth: '100%',
+                height: "100%",
+                fontFamily: 'inherit',
+                fontSize: '1em',
+                pointerEvents: 'auto',
+                border: '2px solid #fff',
+                borderRadius: '10px', // حواف دائرية
+                opacity: '0',
+                transition: 'opacity 0.18s cubic-bezier(.4,.7,.6,1.2), transform 0.23s cubic-bezier(.44,1.48,.64,1)',
+            });
+
+            // إظهار الانميشن عند الظهور
+            setTimeout(() => {
+                popover.style.opacity = '1';
+                popover.style.transform = 'translate(-50%,-110%) scale(1)';
+            }, 12);
+
+            // انميشن لطريقة الاختفاء أيضاً
+            popover.animateOut = () => {
+                popover.style.opacity = '0';
+                popover.style.transform = 'translate(-50%,-107%) scale(0.98)';
+                setTimeout(() => {
+                    if (popover.parentNode) popover.parentNode.removeChild(popover);
+                }, 200);
+            };
+
+        // زر الإغلاق يضاف هنا (يمكن للمستخدم تجاهله الآن ويمكن حذفه إن أحببت)
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'episode-info-close-btn';
+        closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        Object.assign(closeBtn.style, {
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            background: '#181c22',
+            color: '#f36',
+            border: 'none',
+            borderRadius: '55%',
+            width: '30px',
+            height: '30px',
+            fontSize: '1.07em',
+            cursor: 'pointer',
+            zIndex: 100,
+            display: 'none' // إخفاء زر الإغلاق إذا أردت! (أو احذفه من هنا لو أحببت)
+        });
+        closeBtn.onclick = (ev) => {
+            ev.stopPropagation();
+            if (popover.parentNode) popover.parentNode.removeChild(popover);
+        };
+        popover.appendChild(closeBtn);
+
+        // استخراج رقم الموسم مع دعم حلقات خاصة (SP)
+        let seasonNumber = 1;
+        if (season && typeof season.season_number !== 'undefined' && season.season_number !== null && season.season_number !== '') {
+            seasonNumber = season.season_number;
+        } else if (typeof seasonIdx !== 'undefined') {
+            seasonNumber = seasonIdx + 1;
+        } else if (typeof currentSeasonIdx !== 'undefined') {
+            seasonNumber = (currentSeasonIdx + 1);
+        }
+
+        const isSpecial = (season && (season.isSpecial || season.special)) || (episode.isSpecial || episode.special);
+
+        let episodeShortNum = '';
+        if (isSpecial) {
+            episodeShortNum = `SP${episodeNumber}`;
+        } else {
+            episodeShortNum = `S${seasonNumber}.E${episodeNumber}`;
+        }
+        let episodeHashNum = `${episodeNumber}`;
+
+        let titleText = '';
+        if (episode.title && episode.title.trim() !== '') {
+            titleText = `${episodeShortNum} &bull; ${episode.title}`;
+        } else {
+            if (isSpecial) {
+                titleText = `${episodeShortNum}`;
+            } else {
+                titleText = `${episodeShortNum} &bull; Episode ${episodeHashNum}`;
+            }
+        }
+
+        const epTitleHtml = `
+                <div style="font-weight:900; font-size:1.07em; margin-bottom:4px; align-items:center; gap:8px;">
+                    ${titleText}
+                </div>
+            `;
+        const epDescHtml = episode.description?.trim()
+            ? `<div style="margin:8px 0 5px; line-height:1.7; font-size:.99em;">${episode.description}</div>`
+            : '';
+        const dateHtml = (episode.addedDate && episode.addedDate !== "TBA")
+            ? (() => {
+                const dateObj = new Date(episode.addedDate);
+                return !isNaN(dateObj)
+                    ? `<div style="margin-top:9px; color:#93e0ffb7; font-size:.97em;">
+                            <i class="fas fa-calendar-day"></i> ${dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                           </div>`
+                    : '';
+            })()
+            : '';
+
+        // تقييم المستخدم الحالي من localStorage (التقييم من 1-10)
+        let ratingDisplay = '';
+        const user = getCurrentUser && getCurrentUser();
+        const userId = user && user.id ? user.id : 'anon';
+        const ratingKey = `rating:${userId}:${currentContent?.id}:${currentSeasonIdx}:${epIdx}`;
+        let userRating = parseInt(localStorage.getItem(ratingKey) || '0', 10);
+
+        if (userRating && !isNaN(userRating)) {
+            ratingDisplay = `
+                    <div style="margin-top:10px; color:#ffd93d; font-weight:600; font-size:1.1em;">
+                        <span class="user-episode-rating" style="margin-inline-start:6px;">
+                            <i class="fas fa-star"></i> 
+                            <span>${userRating}</span>
+                        </span>
+                    </div>
+                `;
+        } else {
+            const hasAvgRating = typeof episode.rating !== 'undefined' && episode.rating !== null && episode.rating !== '';
+            ratingDisplay = hasAvgRating
+                ? `<div class="rating" style="display:flex; align-items:center; gap:4px; color: rgb(255, 217, 0); margin-top: 10px;">
+                            <i class="fas fa-star"></i>
+                            <span>${episode.rating}</span>
+                       </div>`
+                : ``;
+        }
+
+        popover.innerHTML += `
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    ${epTitleHtml}
+                </div>
+                ${epDescHtml}
+                ${dateHtml}
+                ${ratingDisplay}
+            `;
+        return popover;
+        }
+
+        // ... باقي الكود كما هو (بدون تغيير)
 
         async function loadSimilarContent(currentContent, contentType) {
             const similarGrid = document.querySelector('.similar-grid');
             if (!similarGrid) return;
-
             try {
                 const response = await fetch('data.json');
                 const data = await response.json();
-
                 let similarContent = [];
 
+                const getTitleKey = (item) => String(item.title || '').trim().toLowerCase();
                 const getPrimaryGenre = (item) => {
                     const g = item.genre;
                     if (!g) return '';
@@ -1478,78 +1705,80 @@
                     return String(g).split(',')[0].trim().toLowerCase();
                 };
 
+                let allItems = [];
                 if (contentType === 'movie') {
-                    similarContent = data.movies
-                        .filter(movie => movie.id !== currentContent.id)
-                        .map(movie => ({ ...movie }))
-                        .sort((a, b) => {
-                            const ga = getPrimaryGenre(a);
-                            const gb = getPrimaryGenre(b);
-                            const byGenre = ga.localeCompare(gb, undefined, { sensitivity: 'base' });
-                            if (byGenre !== 0) return byGenre;
-                            return a.title.localeCompare(b.title);
-                        })
-                        .slice(0, 8);
-
+                    allItems = data.movies.filter(movie => movie.id !== currentContent.id);
                 } else if (contentType === 'series') {
-                    similarContent = data.series
-                        .filter(series => series.id !== currentContent.id)
-                        .map(series => ({ ...series }))
-                        .sort((a, b) => {
-                            const ga = getPrimaryGenre(a);
-                            const gb = getPrimaryGenre(b);
-                            const byGenre = ga.localeCompare(gb, undefined, { sensitivity: 'base' });
-                            if (byGenre !== 0) return byGenre;
-                            return a.title.localeCompare(b.title);
-                        })
-                        .slice(0, 8);
+                    allItems = data.series.filter(series => series.id !== currentContent.id);
                 }
 
+                function titleSimilarity(titleA, titleB) {
+                    titleA = String(titleA).toLowerCase();
+                    titleB = String(titleB).toLowerCase();
+                    if (!titleA || !titleB) return 0;
+                    let splitA = titleA.split(/\s+/);
+                    let splitB = titleB.split(/\s+/);
+                    let minLen = Math.min(splitA.length, splitB.length);
+                    let score = 0;
+                    for (let i = 0; i < minLen; i++) {
+                        if (splitA[i] === splitB[i]) score++;
+                        else break;
+                    }
+                    if (titleA === titleB) return 100;
+                    if (titleA.startsWith(titleB) || titleB.startsWith(titleA)) return 10 + score;
+                    let intersect = splitA.filter(w => splitB.includes(w)).length;
+                    return score + intersect;
+                }
+
+                similarContent = allItems
+                    .map(item => {
+                        let titleScore = titleSimilarity(item.title, currentContent.title);
+                        let sameGenre = 0;
+                        let gA = getPrimaryGenre(item);
+                        let gB = getPrimaryGenre(currentContent);
+                        if (gA && gB && gA === gB) sameGenre = 1;
+                        return {
+                            ...item,
+                            _score: titleScore * 10 + sameGenre
+                        }
+                    })
+                    .sort((a, b) => b._score - a._score || a.title.localeCompare(b.title))
+                    .slice(0, 10);
+
                 displaySimilarContent(similarContent, contentType);
+
             } catch (error) {
                 console.error('Error loading similar content:', error);
             }
         }
 
-
         function displaySimilarContent(content, contentType) {
             const similarGrid = document.querySelector('.similar-grid');
             similarGrid.innerHTML = '';
-
             if (content.length === 0) {
-                similarGrid.innerHTML = `
-                    <div class="no-results">
-                        <p>No similar content found</p>
-                    </div>`;
+                similarGrid.innerHTML = `<div class="no-results"><p>No similar content found</p></div>`;
                 return;
             }
-
             content.forEach(item => {
                 const card = document.createElement('div');
                 card.className = contentType === 'movie' ? 'movie-card' : 'series-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${contentType}`;
-
+                let typeLabel = contentType === 'series' ? 'Series' : 'Movie';
+                let typeClass = contentType === 'series' ? 'series-name' : 'movie-name';
                 card.innerHTML = `
-                    ${contentType === 'series' ? `
-                        <div class="status-indicator ${item.status || 'unknown'}">
-                            <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
-                        </div>
-                    ` : ''}
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="${typeClass}">${typeLabel}</h3>
                     <div class="series-info">
-                        <h3>${item.title}</h3>
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${item.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${item.year ? item.year : ''}</span>
+                            <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0, 4) : item.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${item.duration ? item.duration : '--'}</span>
                             </div>
                         </div>
                     </div>
                 `;
-
                 similarGrid.appendChild(card);
             });
         }
@@ -1557,9 +1786,7 @@
         function loadCastInfo(content) {
             const castGrid = document.querySelector('.cast-grid');
             if (!castGrid || !content.cast) return;
-
             castGrid.innerHTML = '';
-
             content.cast.forEach(person => {
                 const card = document.createElement('div');
                 card.className = 'cast-card';
@@ -1572,27 +1799,21 @@
             });
         }
 
-        // Add CSS for animations
+        // ================== التحكم في الحركات المرئية (Animation) ==================
         const style = document.createElement('style');
         style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
+            @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+            @keyframes slideOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
         `;
         document.head.appendChild(style);
 
-        // Load content when page loads
+        // ================== تحميل الصفحة ==================
         document.addEventListener('DOMContentLoaded', () => {
             loadContent();
             updateAuthUI();
         });
 
-        // Helpers: Viewed toggle
+        // ================== توابع مساعدة للحلقات ==================
         function getEpisodeStorageKey(seriesId, seasonIdx, episodeIdx) {
             const user = getCurrentUser();
             const userId = user && user.id ? user.id : 'anon';
@@ -1601,19 +1822,19 @@
         function applyViewedState(buttonEl, isViewed) {
             if (!buttonEl) return;
             if (isViewed) {
-                buttonEl.innerHTML = '<i class="fas fa-check"></i> Viewed';
-                buttonEl.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+                buttonEl.innerHTML = '<i class="fas fa-check"></i> ';
+                buttonEl.style.background = 'rgba(0, 183, 255, 0.514)';
                 buttonEl.style.color = '#fff';
                 buttonEl.classList.add('is-viewed');
             } else {
-                buttonEl.innerHTML = '<i class="fas fa-eye"></i> Viewed';
+                buttonEl.innerHTML = '<i class="fas fa-eye"></i> ';
                 buttonEl.style.background = '';
                 buttonEl.style.color = 'rgba(0, 183, 255, 0.8)';
                 buttonEl.classList.remove('is-viewed');
             }
         }
 
-        // Auth helpers
+        // ================== التوثيق والأعضاء (Authentication) ==================
         function isAuthenticated() {
             try {
                 const token = localStorage.getItem('auth_token');
@@ -1621,8 +1842,6 @@
                 return Boolean(token && user);
             } catch (_) { return false; }
         }
-
-        // Get current user data
         function getCurrentUser() {
             try {
                 const userData = localStorage.getItem('auth_user');
@@ -1632,11 +1851,9 @@
             }
         }
 
-        // Show toast notification for errors only
+        // ================== شريط التوست (الإشعارات) ==================
         function showToast(message, type = 'error') {
-            // Only show error messages, ignore success messages
             if (type !== 'error') return;
-
             let container = document.getElementById('toast-container');
             if (!container) {
                 container = document.createElement('div');
@@ -1644,59 +1861,31 @@
                 container.style.cssText = `
                     position: sticky;
                     z-index: 10000;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    position: sticky;
-                    bottom: 85%;
-                    cursor: pointer;
-                    pointer-events: auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    display: flex; flex-direction: column; gap: 10px;
+                    position: sticky; bottom: 85%; cursor: pointer; pointer-events: auto;
+                    display: flex; align-items: center; justify-content: center;
                     transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
                 `;
                 document.body.appendChild(container);
             }
-
             const toast = document.createElement('div');
             toast.style.cssText = `
-                background: #e74c3c;
-                color: white;
-                padding: 12px 16px;
-                border-radius: 8px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                min-width: 250px;
-                max-width: 400px;
-                animation: slideIn 0.3s ease;
+                background: #e74c3c; color: white; padding: 12px 16px; border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 8px;
+                min-width: 250px; max-width: 400px; animation: slideIn 0.3s ease;
             `;
-
-            toast.innerHTML = `
-                <span style="font-size: 16px;">⚠️</span>
-                <span>${message}</span>
-            `;
-
+            toast.innerHTML = `<span style="font-size: 16px;">⚠️</span><span>${message}</span>`;
             container.appendChild(toast);
-
             setTimeout(() => {
                 toast.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => {
-                    if (toast.parentNode) {
-                        toast.parentNode.removeChild(toast);
-                    }
-                }, 300);
+                setTimeout(() => { if (toast.parentNode) toast.parentNode.removeChild(toast); }, 300);
             }, 3000);
         }
 
-        // Update UI based on authentication status
+        // ================== التحكم في واجهة الأعضاء بحسب التوثيق ==================
         function updateAuthUI() {
             const isLoggedIn = isAuthenticated();
             const user = getCurrentUser();
-
-            // Update user info in header
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
             const userAvatarImg = document.getElementById('user-avatar-img');
@@ -1707,7 +1896,6 @@
             const userMenu = document.querySelector('.user-menu');
 
             if (isLoggedIn && user) {
-                // Show user info
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
                 if (userAvatarImg) {
@@ -1722,23 +1910,14 @@
                         if (userTopIcon) userTopIcon.style.display = 'inline-block';
                     }
                 }
-                // Hide login/register buttons, show logout
                 if (authButtons) authButtons.style.display = 'none';
                 if (logoutBtn) logoutBtn.style.display = 'block';
-
-                // Show all menu options for logged in users
                 if (userMenu) {
-                    const menuItems = userMenu.querySelectorAll('button');
-                    menuItems.forEach(item => {
-                        item.style.display = 'block';
-                    });
+                    userMenu.querySelectorAll('button').forEach(item => { item.style.display = 'block'; });
                 }
             } else {
-                // Show default info
                 if (userNameEl) userNameEl.textContent = 'User Name';
                 if (userEmailEl) userEmailEl.textContent = 'user@email.com';
-
-                // Show only login button, hide register and all other options
                 if (authButtons) {
                     const loginBtn = authButtons.querySelector('.btn-login');
                     const registerBtn = authButtons.querySelector('.btn-register');
@@ -1747,17 +1926,11 @@
                     authButtons.style.display = 'flex';
                 }
                 if (logoutBtn) logoutBtn.style.display = 'none';
-
-                // Hide all menu options except login
                 if (userMenu) {
-                    const menuItems = userMenu.querySelectorAll('button');
-                    menuItems.forEach(item => {
-                        item.style.display = 'none';
-                    });
+                    userMenu.querySelectorAll('button').forEach(item => { item.style.display = 'none'; });
                 }
             }
 
-            // Add logout functionality
             if (logoutBtn) {
                 logoutBtn.onclick = function () {
                     localStorage.removeItem('auth_token');
@@ -1768,31 +1941,7 @@
             }
         }
 
-        // Rating Modal
-        function ensureRatingModal() {
-            let overlay = document.getElementById('episodeRatingModal');
-            if (overlay) return overlay;
-            overlay = document.createElement('div');
-            overlay.id = 'episodeRatingModal';
-            overlay.className = 'rating-modal-overlay';
-            overlay.innerHTML = `
-                <div class="rating-modal" role="dialog" aria-modal="true" aria-labelledby="ratingModalTitle">
-                    <div class="rating-modal-header">
-                        <h3 id="ratingModalTitle" class="rating-modal-title">Rate Episode</h3>
-                        <button class="rating-modal-close" aria-label="Close" onclick="document.getElementById('episodeRatingModal').classList.remove('active')">×</button>
-                    </div>
-                    <div class="rating-modal-body">
-                        <div class="rating-stars" id="ratingStars"></div>
-                    </div>
-                    <div class="rating-modal-actions">
-                        <button class="rating-btn cancel" onclick="document.getElementById('episodeRatingModal').classList.remove('active')">Cancel</button>
-                        <button class="rating-btn submit" id="ratingSubmitBtn">Submit</button>
-                    </div>
-                </div>`;
-            document.body.appendChild(overlay);
-            return overlay;
-        }
-
+        // فتح نافذة التقييم لحلقة
         window.showEpisodeRatingModal = function (epIndex) {
             if (!isAuthenticated()) {
                 showToast('Please login to rate episodes');
@@ -1806,6 +1955,7 @@
             const userId = user && user.id ? user.id : 'anon';
             const ratingKey = `rating:${userId}:${currentContent?.id}:${currentSeasonIdx}:${epIndex}`;
             let selected = parseInt(localStorage.getItem(ratingKey) || '0', 10);
+
             const renderStars = () => {
                 starsContainer.innerHTML = '';
                 for (let s = 1; s <= 10; s++) {
@@ -1821,7 +1971,6 @@
                 e.stopPropagation();
                 if (selected > 0) {
                     localStorage.setItem(ratingKey, String(selected));
-                    // Update card rating display if exists
                     const episodesGrid = document.getElementById('episodesGrid');
                     const card = episodesGrid?.children?.[epIndex];
                     if (card) {
@@ -1843,7 +1992,14 @@
             };
             overlay.classList.add('active');
         };
-    </script>
-</body>
 
-</html>
+        function playEpisode(episode) {
+            if (!episode) return;
+            const seriesId = currentContent?.id;
+            const seasonNumber = currentSeasonIdx + 1;
+            const episodeNumber = episode.number;
+            const episodeTitle = episode.title || `Episode ${episodeNumber}`;
+            const episodeDescription = episode.description || '';
+            const watchUrl = `watch.html?id=${seriesId}&type=series&season=${seasonNumber}&episode=${episodeNumber}&title=${encodeURIComponent(episodeTitle)}&quality=HD&description=${encodeURIComponent(episodeDescription)}`;
+        }
+    </script>

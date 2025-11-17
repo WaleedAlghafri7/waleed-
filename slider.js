@@ -141,9 +141,7 @@ class Slider {
                         <span class="popularity-value">${item.popularity || 0}%</span>
                     </div>
                     <p class="description">${item.description || ''}</p>
-                    <button class="watch-btn" aria-label="شاهد ${item.title}" onclick="event.stopPropagation(); window.location.href='content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}'">
-                        شاهد الآن
-                    </button>
+
                 </div>
             </div>
         `;

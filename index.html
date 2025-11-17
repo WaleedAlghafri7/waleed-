@@ -16,6 +16,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+<style>
+    /* Grid Layout with horizontal scroll (hidden scrollbar) - العناصر تتمدد مع تمدد الصفحة */
+    .movies-grid,
+    .series-grid,
+    .trending-grid,
+    .best-rated-grid,
+    .content-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    .movies-grid::-webkit-scrollbar,
+    .series-grid::-webkit-scrollbar,
+    .trending-grid::-webkit-scrollbar,
+    .best-rated-grid::-webkit-scrollbar,
+    .content-grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, and Opera */
+    }
+    .description{
+        display: -webkit-box;
+    }
+
+    .movies-grid>*,
+    .series-grid>*,
+    .trending-grid>*,
+    .best-rated-grid>*,
+    .content-grid>* {
+        min-width: 250px;
+        flex: 1 1 200px;
+        width: auto;
+        max-width: 1fr;
+    }
+    @media screen and (max-width: 750px) {
+        .movies-grid>*,
+    .series-grid>*,
+    .trending-grid>*,
+    .best-rated-grid>*,
+    .content-grid>* {
+        min-width: 150px;
+    }
+    .description{
+        display: none;
+    }
+    }
+</style>
 
 <body>
     <div class="container">
@@ -27,6 +81,9 @@
                 </div>
                 <div class="search-input-container">
                     <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
+                    <div class="search-results-dropdown">
+                        <!-- سيتم تعبئة نتائج البحث هنا -->
+                    </div>
                 </div>
             </div>
             <div class="name-wab" style="cursor:pointer;" onclick="window.location.href='index.html'">
@@ -61,7 +118,8 @@
 
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
-                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+                    <img id="user-avatar-img" alt="Avatar"
+                        style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
@@ -99,9 +157,9 @@
         </div>
         <div class="content">
             <!-- Best Rated Section -->
-            
+
             <div class="slider-container">
-                <div class="slider"> 
+                <div class="slider">
                     <!-- This section will be filled dynamically from data.json -->
                 </div>
                 <div class="slider-controls">
@@ -111,107 +169,32 @@
                 </div>
             </div>
             <div class="content-section" id="best-rated-section">
-                <div class="section-header">
-                    <h2>Top Rated</h2>
-                </div>
-                <div class="best-rated-grid">
-                    <!-- سيتم تعبئة أفضل 3 أفلام وأفضل 3 مسلسلات ديناميكياً -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".best-rated-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="best-rated-grid">
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".best-rated-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            <section class="pricing-section">
-                <h2>Choose Your Subscription Plan</h2>
-                <p class="pricing-subtitle">Enjoy an unmatched viewing experience with our diverse plans.</p>
-            
-                <div class="pricing-cards-container">
-                    
-                    <div class="pricing-card standard-plan">
-                        <div class="plan-content">
-                            <div class="plan-details">
-                                <div class="plan-header">
-                                    <h3>Standard Plan</h3>
-                                    <p class="price">$10/Month</p>
-                                </div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
-                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
-                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
-                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> 4K UHD Quality</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> 2 Concurrent Streams</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> Download for Offline Viewing</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> Premium & Exclusive Content</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> 4 Concurrent Streams</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> Dedicated 24/7 Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-action">
-                            <div onclick="checkAuthAndSubscribe('Standard')" class="select-plan-btn standard-btn">Subscribe Now</div>
-                        </div>
-                    </div>
-            
-                    <div class="pricing-card premium-plan">
-                        <div class="plan-content">
-                             <div class="plan-details">
-                                <div class="plan-header">
-                                    <h3>Premium Plan</h3>
-                                    <p class="price">$20/Month</p>
-                                </div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
-                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
-                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
-                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
-                                    <li><i class="fas fa-check"></i> 4K UHD Quality</li>
-                                    <li><i class="fas fa-check"></i> 2 Concurrent Streams</li>
-                                    <li><i class="fas fa-check"></i> Download for Offline Viewing</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> Premium & Exclusive Content</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> 4 Concurrent Streams</li>
-                                    <li class="disabled"><i class="fas fa-times"></i> Dedicated 24/7 Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-action">
-                            <div onclick="checkAuthAndSubscribe('Premium')" class="select-plan-btn premium-btn">Subscribe Now</div>
-                        </div>
-                    </div>
-            
-                    <div class="pricing-card exclusive-plan">
-                        <div class="plan-content">
-                            <div class="plan-details">
-                                <div class="plan-header">
-                                    <h3>Exclusive Plan</h3>
-                                    <p class="price">$40/Month</p>
-                                </div>
-                                <ul class="features-list">
-                                    <li><i class="fas fa-check"></i> HD Quality Streaming</li>
-                                    <li><i class="fas fa-check"></i> Ad-Free Viewing</li>
-                                    <li><i class="fas fa-check"></i> 1 Concurrent Stream</li>
-                                    <li><i class="fas fa-check"></i> Basic Movie & Series Library</li>
-                                    <li><i class="fas fa-check"></i> 4K UHD Quality</li>
-                                    <li><i class="fas fa-check"></i> 2 Concurrent Streams</li>
-                                    <li><i class="fas fa-check"></i> Download for Offline Viewing</li>
-                                    <li><i class="fas fa-check"></i> Premium & Exclusive Content</li>
-                                    <li><i class="fas fa-check"></i> 4 Concurrent Streams</li>
-                                    <li><i class="fas fa-check"></i> Dedicated 24/7 Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="plan-action">
-                            <div onclick="checkAuthAndSubscribe('Exclusive')" class="select-plan-btn exclusive-btn">Subscribe Now</div>
-                        </div>
-                    </div>
-            
-                </div>
-            </section>
 
             <div class="content-section">
                 <div class="section-header">
                     <h2>Latest Movies</h2>
                     <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
                 </div>
-                <div class="movies-grid">
-                    <!-- This section will be filled dynamically from data.json -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".movies-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="movies-grid">
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".movies-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
@@ -220,8 +203,15 @@
                     <h2>Most Popular Movies</h2>
                     <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
                 </div>
-                <div class="movies-grid popular-movies-grid">
-                    <!-- This section will be filled dynamically from data.json -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".popular-movies-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="movies-grid popular-movies-grid">
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".popular-movies-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
@@ -230,8 +220,15 @@
                     <h2>Latest TV Series</h2>
                     <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
                 </div>
-                <div class="series-grid">
-                    <!-- This section will be filled dynamically from data.json -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".series-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="series-grid">
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".series-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
 
@@ -240,21 +237,38 @@
                     <h2>Most Popular Series</h2>
                     <button class="view-all">View All <i class="fas fa-arrow-left"></i></button>
                 </div>
-                <div class="series-grid popular-series-grid">
-                    <!-- This section will be filled dynamically from data.json -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".popular-series-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="series-grid popular-series-grid">
+                        <!-- This section will be filled dynamically from data.json -->
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".popular-series-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
             <div class="content-section" id="latest-episodes-section">
                 <div class="section-header">
                     <h2>Latest Episodes</h2>
                 </div>
-                <div class="latest-episodes-grid">
-                    <!-- سيتم تعبئة آخر الحلقات ديناميكياً -->
+                <div class="grid-container">
+                    <button class="nav-btn prev-btn-grid" data-target=".latest-episodes-grid">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="latest-episodes-grid">
+                        <!-- سيتم تعبئة آخر الحلقات ديناميكياً -->
+                    </div>
+                    <button class="nav-btn next-btn-grid" data-target=".latest-episodes-grid">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
         <div id="footer-container"></div>
     </div>
+
 
     <script src="script.js"></script>
     <script src="slider.js"></script>
@@ -269,11 +283,11 @@
                 return null;
             }
         }
-    
+
         function isAuthenticated() {
             return !!localStorage.getItem('auth_token');
         }
-    
+
         function updateAuthUI() {
             // ...
             const isLoggedIn = isAuthenticated();
@@ -290,7 +304,7 @@
             const userMenu = document.querySelector('.user-menu');
             // جلب العنصر الجديد
             const userSubscriptionPlan = document.getElementById('userSubscriptionPlan');
-            
+
             // ...
 
             if (isLoggedIn && user) {
@@ -356,7 +370,7 @@
             }
 
             if (logoutBtn) {
-                logoutBtn.onclick = function() {
+                logoutBtn.onclick = function () {
                     localStorage.removeItem('auth_token');
                     localStorage.removeItem('auth_user');
                     updateAuthUI();
@@ -364,7 +378,7 @@
                 };
             }
         }
-    
+
         // تحميل الهيدر أولًا ثم تحديث واجهة المستخدم
         fetch('header.html')
             .then(res => res.text())
@@ -372,40 +386,39 @@
                 document.getElementById('header-container').innerHTML = data;
                 updateAuthUI();
             });
-    
+
         document.addEventListener('DOMContentLoaded', updateAuthUI);
-    
+
         // ----- إدارة المحتوى -----
         import DataManager from './dataManager.js';
         import Slider from './slider.js';
-    
+
         const dataManager = new DataManager();
         let slider;
-    
+
         async function loadContent() {
             try {
                 await dataManager.loadData();
-    
-                // أفضل 3 عناصر مختلطة
-                displayBestRatedMixed(getTopRatedMixed(8));
-    
+
+                displayBestRatedMixed(getTopRatedMixed(12));
+
                 // آخر وأشهر الأفلام
-                displayMovies(dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 8), '.movies-grid');
-                displayMovies(dataManager.sortMovies(dataManager.movies, 'rating-desc').slice(0, 8), '.popular-movies-grid');
-    
+                displayMovies(dataManager.sortMovies(dataManager.movies, 'year-desc').slice(0, 12), '.movies-grid');
+                displayMovies(dataManager.sortMovies(dataManager.movies, 'rating-desc').slice(0, 12), '.popular-movies-grid');
+
                 // آخر وأشهر المسلسلات
-                displaySeries(dataManager.sortSeries(dataManager.series, 'year-desc').slice(0, 8), '.series-grid');
-                displaySeries(dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 8), '.popular-series-grid');
-    
+                displaySeries(dataManager.sortSeries(dataManager.series, 'year-desc').slice(0, 12), '.series-grid');
+                displaySeries(dataManager.sortSeries(dataManager.series, 'rating-desc').slice(0, 12), '.popular-series-grid');
+
                 // أحدث الحلقات
-                displayLatestEpisodes(dataManager.getLatestEpisodes(10));
-    
+                displayLatestEpisodes(dataManager.getLatestEpisodes(12));
+
                 initializeSlider();
             } catch (error) {
                 console.error('Error loading content:', error);
             }
         }
-    
+
         // ----- دوال عرض المحتوى -----
         function displayMovies(movies, containerSelector) {
             const moviesGrid = document.querySelector(containerSelector);
@@ -416,18 +429,22 @@
                 card.onclick = () => window.location.href = `content.html?id=${movie.id}&type=movie`;
                 card.innerHTML = `
                     <img src="${movie.image}" alt="${movie.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="movie-name">Movie</h3>
                     <div class="movie-info">
-                        <h3>${movie.title}</h3>
                         <div class="movie-details">
                             <div class="rating"><i class="fas fa-star"></i><span>${movie.rating}</span></div>
-                            <div class="year"><span>${movie.year ? (typeof movie.year==='string'?movie.year.slice(0,4):movie.year) : ''}</span></div>
+                            <div class="year"><span>${movie.year ? (typeof movie.year === 'string' ? movie.year.slice(0, 4) : movie.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${movie.duration ? movie.duration : '--'}</span>
+                            </div>
                         </div>
                     </div>
                 `;
                 moviesGrid.appendChild(card);
             });
         }
-    
+
         function displaySeries(series, containerSelector) {
             const seriesGrid = document.querySelector(containerSelector);
             seriesGrid.innerHTML = '';
@@ -437,20 +454,24 @@
                 card.onclick = () => window.location.href = `content.html?id=${show.id}&type=series`;
                 card.innerHTML = `
                     <img src="${show.image}" alt="${show.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="series-name">Series</h3>
                     <div class="series-info">
-                        <h3>${show.title}</h3>
                         <div class="movie-details">
                             <div class="rating"><i class="fas fa-star"></i><span>${show.rating}</span></div>
-                            <div class="year"><span>${show.year ? (typeof show.year==='string'?show.year.slice(0,4):show.year) : ''}</span></div>
+                            <div class="year"><span>${show.year ? (typeof show.year === 'string' ? show.year.slice(0, 4) : show.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${show.duration ? show.duration : '--'}</span>
+                            </div>
                         </div>
                     </div>
                 `;
                 seriesGrid.appendChild(card);
             });
         }
-        function getTopRatedMixed(count=3) {
-            const all = [...dataManager.movies.map(m => ({...m,_type:'movie'})), ...dataManager.series.map(s => ({...s,_type:'series'}))];
-            return all.filter(item => item.rating && item.rating!=='--').sort((a,b)=>parseFloat(b.rating)-parseFloat(a.rating)).slice(0,count);
+        function getTopRatedMixed(count = 3) {
+            const all = [...dataManager.movies.map(m => ({ ...m, _type: 'movie' })), ...dataManager.series.map(s => ({ ...s, _type: 'series' }))];
+            return all.filter(item => item.rating && item.rating !== '--').sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)).slice(0, count);
         }
 
         function displayBestRatedMixed(items) {
@@ -460,20 +481,27 @@
                 const card = document.createElement('div');
                 card.className = 'best-rated-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item._type}`;
+                // اضف شارة Movie أو Series أعلى البطاقة حسب النوع
+                let typeLabel = item._type === 'series' ? 'Series' : 'Movie';
+                let typeClass = item._type === 'series' ? 'series-name' : 'movie-name';
                 card.innerHTML = `
                     <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="${typeClass}">${typeLabel}</h3>
                     <div class="series-info">
-                        <h3>${item.title}</h3>
                         <div class="movie-details">
                             <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
-                            <div class="year"><span>${item.year ? (typeof item.year==='string'?item.year.slice(0,4):item.year) : ''}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0, 4) : item.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${item.duration ? item.duration : '--'}</span>
+                            </div>
                         </div>
                     </div>
                 `;
                 grid.appendChild(card);
             });
         }
-    
+
         function displayLatestEpisodes(episodes) {
             const grid = document.querySelector('.latest-episodes-grid');
             grid.innerHTML = '';
@@ -481,34 +509,48 @@
                 const card = document.createElement('div');
                 card.className = 'latest-episode-card';
                 card.onclick = () => window.location.href = `content.html?id=${ep.seriesId}&type=series`;
+
                 const parentSeries = dataManager.getSeriesById(ep.seriesId);
                 const imageSource = (ep.image && ep.image.trim()) ? ep.image : (parentSeries && parentSeries.backdrop ? parentSeries.backdrop : 'https://via.placeholder.com/110x110?text=No+Image');
+                
+                // استبدال اسم الحلقة برقم الحلقة إذا لم يكن الاسم متواجدًا
+                let epTitle;
+                if (ep.title && ep.title.trim() !== '') {
+                    epTitle = ep.title;
+                } else if (typeof ep.episodeNumber !== 'undefined') {
+                    epTitle = 'Episode ' + ep.episodeNumber;
+                } else if (typeof ep.number !== 'undefined') {
+                    epTitle = 'Episode ' + ep.number;
+                } else {
+                    epTitle = 'Episode';
+                }
+
                 card.innerHTML = `
-                    <img src="${imageSource}" alt="${ep.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <img src="${imageSource}" alt="${epTitle}" onerror="this.onerror=null; this.src='13434998.png';">
                     <div class="latest-episode-info">
-                        <div class="ep-title">${ep.title || ''}</div>
+                        <div class="ep-title">${epTitle}</div>
                         <div class="series-title">${ep.seriesTitle || ''}</div>
                     </div>
                 `;
                 grid.appendChild(card);
             });
         }
-    
+
         function initializeSlider() {
             const sliderContainer = document.querySelector('.slider-container');
             // هنا يجب أن تستخدم dataManager.featured إذا كانت محملة
-            const slides = dataManager.featured; 
-            slider = new Slider(sliderContainer, { autoplay:true, autoplaySpeed:5000, transitionSpeed:800, showDots:true, showArrows:true, loop:true });
+            const slides = dataManager.featured;
+            slider = new Slider(sliderContainer, { autoplay: true, autoplaySpeed: 5000, transitionSpeed: 800, showDots: true, showArrows: true, loop: true });
             slider.updateSlides(slides);
 
             // 🏆 هذا هو الكود الذي يحل مشكلة الرابط:
             sliderContainer.addEventListener('click', (e) => {
-                const slide = e.target.closest('.slide'); 
+                const slide = e.target.closest('.slide');
                 if (!slide) return;
 
                 // يفترض هذا الكود أن مكتبة Slider تضيف data-id و data-type للعناصر
                 const contentId = slide.dataset.id;
-                const contentType = slide.dataset.type; 
+                const contentType = slide.dataset.type;
 
                 if (contentId && contentType) {
                     window.location.href = `content.html?id=${contentId}&type=${contentType}`;
@@ -516,12 +558,12 @@
             });
             // ----------------------------------------------------
         }
-    
+
         // تحميل الفوتر
         fetch('footer.html').then(res => res.text()).then(data => {
             document.getElementById('footer-container').innerHTML = data;
         });
-    
+
         document.addEventListener('DOMContentLoaded', loadContent);
     </script>
     <script>
@@ -533,16 +575,16 @@
         function checkAuthAndSubscribe(plan) {
             // التحقق من وجود رمز (Token) للدلالة على تسجيل الدخول
             const authToken = localStorage.getItem('auth_token');
-    
+
             if (authToken) {
-    
+
             } else {
                 // المستخدم غير مسجل دخول
                 window.location.href = 'login.html';
             }
         }
     </script>
-    
+
 </body>
 
 </html>

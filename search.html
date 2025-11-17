@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="icon" type="image/png" href="CineStream web.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -20,6 +24,9 @@
                 </div>
                 <div class="search-input-container">
                     <input type="text" placeholder="Search for movies or series..." style="padding: 12px 15px;">
+                    <div class="search-results-dropdown">
+                        <!-- سيتم تعبئة نتائج البحث هنا -->
+                    </div>
                 </div>
             </div>
             <div class="name-wab" style="cursor:pointer;" onclick="window.location.href='index.html'">
@@ -54,7 +61,8 @@
 
                 <div class="user-icon">
                     <i class="fa-solid fa-user"></i>
-                    <img id="user-avatar-img" alt="Avatar" style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+                    <img id="user-avatar-img" alt="Avatar"
+                        style="display:none; width:40px; height:40px; border-radius:50%; object-fit:cover;" />
                 </div>
                 <div class="user-dropdown">
                     <div class="user-info">
@@ -92,90 +100,94 @@
         </div>
         <script>
             // ==== إدارة تسجيل الدخول ====
-        function getCurrentUser() {
-            try {
-                const userStr = localStorage.getItem('auth_user');
-                if (!userStr) return null;
-                return JSON.parse(userStr);
-            } catch (e) {
-                return null;
+            function getCurrentUser() {
+                try {
+                    const userStr = localStorage.getItem('auth_user');
+                    if (!userStr) return null;
+                    return JSON.parse(userStr);
+                } catch (e) {
+                    return null;
+                }
             }
-        }
-    
-        function isAuthenticated() {
-            return !!localStorage.getItem('auth_token');
-        }
-    
-        function updateAuthUI() {
-            const isLoggedIn = isAuthenticated();
-            const user = getCurrentUser();
-    
-            const userNameEl = document.getElementById('user-name');
-            const userEmailEl = document.getElementById('user-email');
-            const userAvatarImg = document.getElementById('user-avatar-img');
-            const userAvatarIcon = document.querySelector('.user-avatar i');
-            const userTopIcon = document.querySelector('.user-icon i');
-            const authButtons = document.querySelector('.auth-buttons');
-            const logoutBtn = document.querySelector('.logout-btn');
-            const userMenu = document.querySelector('.user-menu');
-    
-            if (isLoggedIn && user) {
-                if (userNameEl) userNameEl.textContent = user.fullName || 'User';
-                if (userEmailEl) userEmailEl.textContent = user.email || '';
-                if (userAvatarImg) {
-                    if (user.avatarUrl) {
-                        userAvatarImg.src = user.avatarUrl;
-                        userAvatarImg.style.display = 'block';
-                        if (userAvatarIcon) userAvatarIcon.style.display = 'none';
-                        if (userTopIcon) userTopIcon.style.display = 'none';
-                    } else {
-                        userAvatarImg.style.display = 'none';
-                        if (userAvatarIcon) userAvatarIcon.style.display = 'inline-block';
-                        if (userTopIcon) userTopIcon.style.display = 'inline-block';
+
+            function isAuthenticated() {
+                return !!localStorage.getItem('auth_token');
+            }
+
+            function updateAuthUI() {
+                const isLoggedIn = isAuthenticated();
+                const user = getCurrentUser();
+
+                const userNameEl = document.getElementById('user-name');
+                const userEmailEl = document.getElementById('user-email');
+                const userAvatarImg = document.getElementById('user-avatar-img');
+                const userAvatarIcon = document.querySelector('.user-avatar i');
+                const userTopIcon = document.querySelector('.user-icon i');
+                const authButtons = document.querySelector('.auth-buttons');
+                const logoutBtn = document.querySelector('.logout-btn');
+                const userMenu = document.querySelector('.user-menu');
+
+                if (isLoggedIn && user) {
+                    if (userNameEl) userNameEl.textContent = user.fullName || 'User';
+                    if (userEmailEl) userEmailEl.textContent = user.email || '';
+                    if (userAvatarImg) {
+                        if (user.avatarUrl) {
+                            userAvatarImg.src = user.avatarUrl;
+                            userAvatarImg.style.display = 'block';
+                            if (userAvatarIcon) userAvatarIcon.style.display = 'none';
+                            if (userTopIcon) userTopIcon.style.display = 'none';
+                        } else {
+                            userAvatarImg.style.display = 'none';
+                            if (userAvatarIcon) userAvatarIcon.style.display = 'inline-block';
+                            if (userTopIcon) userTopIcon.style.display = 'inline-block';
+                        }
+                    }
+                    if (authButtons) authButtons.style.display = 'none';
+                    if (logoutBtn) logoutBtn.style.display = 'block';
+                    if (userMenu) {
+                        const menuItems = userMenu.querySelectorAll('button');
+                        menuItems.forEach(item => item.style.display = 'block');
+                    }
+                } else {
+                    if (userNameEl) userNameEl.textContent = 'User Name';
+                    if (userEmailEl) userEmailEl.textContent = 'user@email.com';
+                    if (authButtons) {
+                        const loginBtn = authButtons.querySelector('.btn-login');
+                        const registerBtn = authButtons.querySelector('.btn-register');
+                        if (loginBtn) loginBtn.style.display = 'block';
+                        if (registerBtn) registerBtn.style.display = 'none';
+                        authButtons.style.display = 'flex';
+                    }
+                    if (logoutBtn) logoutBtn.style.display = 'none';
+                    if (userMenu) {
+                        const menuItems = userMenu.querySelectorAll('button');
+                        menuItems.forEach(item => item.style.display = 'none');
                     }
                 }
-                if (authButtons) authButtons.style.display = 'none';
-                if (logoutBtn) logoutBtn.style.display = 'block';
-                if (userMenu) {
-                    const menuItems = userMenu.querySelectorAll('button');
-                    menuItems.forEach(item => item.style.display = 'block');
-                }
-            } else {
-                if (userNameEl) userNameEl.textContent = 'User Name';
-                if (userEmailEl) userEmailEl.textContent = 'user@email.com';
-                if (authButtons) {
-                    const loginBtn = authButtons.querySelector('.btn-login');
-                    const registerBtn = authButtons.querySelector('.btn-register');
-                    if (loginBtn) loginBtn.style.display = 'block';
-                    if (registerBtn) registerBtn.style.display = 'none';
-                    authButtons.style.display = 'flex';
-                }
-                if (logoutBtn) logoutBtn.style.display = 'none';
-                if (userMenu) {
-                    const menuItems = userMenu.querySelectorAll('button');
-                    menuItems.forEach(item => item.style.display = 'none');
+
+                if (logoutBtn) {
+                    logoutBtn.onclick = function () {
+                        localStorage.removeItem('auth_token');
+                        localStorage.removeItem('auth_user');
+                        updateAuthUI();
+                        window.location.href = 'index.html';
+                    };
                 }
             }
-    
-            if (logoutBtn) {
-                logoutBtn.onclick = function() {
-                    localStorage.removeItem('auth_token');
-                    localStorage.removeItem('auth_user');
+
+            fetch('header.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
                     updateAuthUI();
-                    window.location.href = 'index.html';
-                };
-            }
-        }
-    
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-                updateAuthUI();
-            });
-    
-        document.addEventListener('DOMContentLoaded', updateAuthUI);
+                });
+
+            document.addEventListener('DOMContentLoaded', updateAuthUI);
             // تهيئة البحث
+            // متغيرات البحث السريع
+            let searchDebounceTimer = null;
+            let allContentData = null;
+
             function initializeSearch() {
                 const searchIcon = document.querySelector('.search-icon');
                 const searchInput = document.querySelector('.search input');
@@ -187,7 +199,24 @@
                     searchInput.classList.toggle('active');
                     if (searchInput.classList.contains('active')) {
                         searchInput.focus();
+                    } else {
+                        hideSearchResults();
                     }
+                });
+
+                // البحث عند الكتابة (Live Search)
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.trim();
+                    clearTimeout(searchDebounceTimer);
+
+                    if (query.length < 2) {
+                        hideSearchResults();
+                        return;
+                    }
+
+                    searchDebounceTimer = setTimeout(() => {
+                        performQuickSearch(query);
+                    }, 300);
                 });
 
                 // Handle search
@@ -195,6 +224,7 @@
                     if (e.key === 'Enter') {
                         const searchQuery = searchInput.value.trim();
                         if (searchQuery) {
+                            hideSearchResults();
                             window.location.href = `search.html?q=${encodeURIComponent(searchQuery)}`;
                         }
                     }
@@ -205,8 +235,74 @@
                     if (!searchContainer.contains(e.target) && !searchIcon.contains(e.target)) {
                         searchIcon.classList.remove('active');
                         searchInput.classList.remove('active');
+                        hideSearchResults();
                     }
                 });
+            }
+
+            // إظهار نتائج البحث
+            function showSearchResults(results) {
+                const resultsDropdown = document.querySelector('.search-results-dropdown');
+                if (!resultsDropdown) return;
+
+                if (results.length === 0) {
+                    resultsDropdown.innerHTML = '<div class="search-result-item-no-results">No results found</div>';
+                } else {
+                    resultsDropdown.innerHTML = results.map(item => {
+                        const type = item.seasons ? 'series' : 'movie';
+                        const typeLabel = type === 'series' ? 'Series' : 'Movie';
+                        // الأزرق للمسلسل، الأحمر للفيلم
+                        const typeColor = type === 'series' ? '#2980f3' : '#c0392b';
+                        return `
+                <div class="search-result-item" onclick="window.location.href='content.html?id=${item.id}&type=${type}'">
+                    <img src="${item.image}" alt="${item.title}" class="search-result-item-image" onerror="this.onerror=null; this.src='https://cdn-icons-png.freepik.com/512/13434/13434998.png';">
+                    <div class="search-result-item-content">
+                        <div class="search-result-item-title">${item.title}</div>
+                        <div class="search-result-item-meta">
+                            <span class="search-result-item-type" style="color: ${typeColor}; font-weight: bold;">
+                                ${typeLabel}
+                            </span>
+                            <span class="search-result-item-rating">
+                                <i class="fas fa-star"></i> ${item.rating || 'N/A'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+                    }).join('');
+                }
+
+                resultsDropdown.classList.add('show');
+            }
+
+            function hideSearchResults() {
+                const resultsDropdown = document.querySelector('.search-results-dropdown');
+                if (resultsDropdown) {
+                    resultsDropdown.classList.remove('show');
+                }
+            }
+
+            async function performQuickSearch(query) {
+                try {
+                    if (!allContentData) {
+                        const response = await fetch('data.json');
+                        allContentData = await response.json();
+                    }
+
+                    const searchTerm = query.toLowerCase();
+                    const allItems = [...allContentData.movies, ...allContentData.series];
+
+                    const results = allItems
+                        .filter(item => item.title && item.title.toLowerCase().includes(searchTerm))
+                        .map(item => ({
+                            ...item,
+                            type: item.seasons ? 'series' : 'movie'
+                        }));
+
+                    showSearchResults(results);
+                } catch (error) {
+                    console.error('Error performing quick search:', error);
+                }
             }
 
             // تهيئة قائمة المستخدم
@@ -279,7 +375,8 @@
         </div>
         <button class="back-arrow" onclick="history.back()" aria-label="رجوع">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </button>
     </div>
@@ -295,20 +392,20 @@
                 return null;
             }
         }
-    
+
         function isAuthenticated() {
             return !!localStorage.getItem('auth_token');
         }
-    
+
         function updateAuthUI() {
             const user = getCurrentUser();
             const isLoggedIn = isAuthenticated();
-    
+
             const userNameEl = document.getElementById('user-name');
             const userEmailEl = document.getElementById('user-email');
             const authButtons = document.querySelector('.auth-buttons');
             const logoutBtn = document.querySelector('.logout-btn');
-    
+
             if (isLoggedIn && user) {
                 if (userNameEl) userNameEl.textContent = user.fullName || 'User';
                 if (userEmailEl) userEmailEl.textContent = user.email || '';
@@ -320,9 +417,9 @@
                 if (authButtons) authButtons.style.display = 'flex';
                 if (logoutBtn) logoutBtn.style.display = 'none';
             }
-    
+
             if (logoutBtn) {
-                logoutBtn.onclick = function() {
+                logoutBtn.onclick = function () {
                     localStorage.removeItem('auth_token');
                     localStorage.removeItem('auth_user');
                     updateAuthUI();
@@ -330,32 +427,37 @@
                 };
             }
         }
-    
+
         document.addEventListener('DOMContentLoaded', updateAuthUI);
         // Get search query from URL
         const urlParams = new URLSearchParams(window.location.search);
         const searchQuery = urlParams.get('q');
 
-        // Load and filter data
+        // Load and filter data based on the search text, similar to script.js dropdown behavior
         async function loadSearchResults() {
             try {
                 const response = await fetch('data.json');
                 const data = await response.json();
-                
-                let results = [...data.movies, ...data.series].filter(item => 
-                    item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    item.genre.toLowerCase().includes(searchQuery.toLowerCase())
-                );
 
-                // Apply filter if active
+                let results = [...data.movies, ...data.series];
+
+                // Filter by title only, similar to script.js, case insensitive
+                if (searchQuery && searchQuery.trim() !== "") {
+                    const searchTerm = searchQuery.toLowerCase();
+                    results = results.filter(item =>
+                        item.title && item.title.toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                // Apply filter by type (movies/series/all)
                 const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
                 if (activeFilter !== 'all') {
-                    results = results.filter(item => 
+                    results = results.filter(item =>
                         activeFilter === 'movies' ? !item.seasons : item.seasons
                     );
                 }
 
-                // Sort results by title (الترتيب حسب الاسم)
+                // Sort results by title
                 results.sort((a, b) => {
                     const titleA = (a.title || '').toLowerCase();
                     const titleB = (b.title || '').toLowerCase();
@@ -388,23 +490,18 @@
                 const card = document.createElement('div');
                 card.className = item.seasons ? 'series-card' : 'movie-card';
                 card.onclick = () => window.location.href = `content.html?id=${item.id}&type=${item.seasons ? 'series' : 'movie'}`;
-                
+
                 card.innerHTML = `
-                    ${item.seasons ? `
-                        <div class="status-indicator ${item.status}">
-                            <i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i>
-                        </div>
-                    ` : ''}
-                    <img src="${item.image}" alt="${item.title}"  onerror="this.onerror=null; this.src='13434998.png';">
-                    <div class="series-info">
-                        <h3>${item.title}</h3>
+                    ${item.seasons ? `<div class="status-indicator ${item.status}"><i class="fas ${item.status === 'ongoing' ? 'fa-play-circle' : 'fa-check-circle'}"></i></div>` : ''}
+                    <img src="${item.image}" alt="${item.title}" onerror="this.onerror=null; this.src='13434998.png';">
+                    <h3 class="${item.seasons ? 'series-name' : 'movie-name'}">${item.seasons ? 'Series' : 'Movie'}</h3>
+                    <div class="${item.seasons ? 'series-info' : 'movie-info'}">
                         <div class="movie-details">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <span>${item.rating}</span>
-                            </div>
-                            <div class="year">
-                                <span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0,4) : item.year) : ''}</span>
+                            <div class="rating"><i class="fas fa-star"></i><span>${item.rating}</span></div>
+                            <div class="year"><span>${item.year ? (typeof item.year === 'string' ? item.year.slice(0, 4) : item.year) : ''}</span></div>
+                            <div class="duration">
+                                <i class="fas fa-clock"></i>
+                                <span>${item.duration ? item.duration : '--'}</span>
                             </div>
                         </div>
                     </div>
@@ -467,4 +564,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>
